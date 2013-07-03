@@ -1,0 +1,112 @@
+<p><h1><%= ((params[:validado]=="true")  or (params[:search] && params[:search][:validado_equals].to_i == 1)) ? "Prospectos" : "Prospectos" %></h1>
+<style type="text/css">
+fieldset {
+  display: block;
+  -webkit-margin-start: 2px;
+  -webkit-margin-end: 2px;
+  -webkit-padding-before: 0.35em;
+  -webkit-padding-start: 0.75em;
+  -webkit-padding-end: 0.75em;
+  -webkit-padding-after: 0.625em;
+  border: 2px groove threedface;
+}
+legend
+{
+margin-bottom: 0!important;
+border-bottom: 0px solid #e5e5e5!important;
+}
+</style>
+<%=link_to "Borrar parametros de busqueda", prospectos_path%>
+<%= search_form_for @q, url: advanced_search_prospectos_path, html: {method: :post} do |f| %>
+    <% setup_search_form f %>
+    <input type="button" value="Mostrar Busqueda Avanzada" id="avanzada"/>
+    <fieldset>
+      <legend>Busqueda Basica</legend>
+      <table CELLPADDING=10>
+        <thead></thead>
+        <tbody>
+          <tr>
+            <td>
+              <%= f.label :validado_eq %>
+              <%= f.check_box :validado_eq %>
+            </td>
+            <td>
+              <%= f.label :programa_nivel_cont %>
+              <%= f.collection_select :programa_nivel_cont, Programa.order(:nivel), :nivel, :nivel %>
+
+              <%= f.label :programa_programa_cont %>
+              <%= f.collection_select :programa_programa_cont, Programa.order(:programa), :programa, :programa%>
+            </td>
+            <td>
+              <%= f.label :archivado_eq %>
+              <%= f.check_box :archivado_eq %>
+            </td>      
+            <td>
+              <%= f.label :importado_revisado_eq %>
+              <%= f.check_box :importado_revisado_eq %>
+            </td>                               
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <div id="busquedaAvanzada">
+    <fieldset>
+      <legend>Ordenamiento</legend>
+      <%= f.sort_fields do |s| %>
+        <%= render 'sort_fields', f: s %>
+      <% end %>
+      <%= button_to_add_fields "Agregar Campo de ordenamiento", f, :sort %>
+    </fieldset>
+
+    <fieldset>
+      <legend>Grupos de condiciones</legend>
+      <%= f.grouping_fields do |g| %>
+        <%= render 'grouping_fields', f: g %>
+      <% end %>
+      <%= button_to_add_fields "Agregar Grupo de condiciones", f, :grouping %>
+    </fieldset>
+    </div>
+
+    <%= f.submit %>        
+  <% end %>
+
+<%= render 'results' %>
+
+<script type="text/javascript">
+(function($) {
+$(document).ready(function(){
+  $('#avanzada').click(function()
+  {
+    $('#busquedaAvanzada').toggle();
+  });
+
+<%if params[:q] == nil%>
+$('#busquedaAvanzada').hide();
+<%end%>
+
+
+var seen = {};
+jQuery('#q_programa_nivel_cont').children().each(function() {
+    var txt = jQuery(this).clone().wrap('<select>').parent().html();
+    if (seen[txt]) {
+        jQuery(this).remove();
+    } else {
+        seen[txt] = true;
+    }
+});
+var seen = {};
+jQuery('#q_programa_programa_cont').children().each(function() {
+    var txt = jQuery(this).clone().wrap('<select>').parent().html();
+    if (seen[txt]) {
+        jQuery(this).remove();
+    } else {
+        seen[txt] = true;
+    }
+});
+
+
+
+});
+})(jQuery);
+
+</script>

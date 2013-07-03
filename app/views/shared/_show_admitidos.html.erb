@@ -1,0 +1,77 @@
+<%
+  if not defined?(prospectoid)
+    prospectoid=""
+  end
+%>
+<%
+  if not defined?(isactive)
+    isactive = ""
+  end
+  if request.path_parameters[:controller] == "admitidos"
+    isactive = " in  active  "
+  end
+%>
+
+<div class="tab-pane fade" id="admitido<%=prospectoid%>">
+  <fieldset>
+<p>
+  <%valor=f.status_admision.valor rescue nil %>
+  <%=printIfAvailable("Status de Admisión",valor)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Comentarios de la Dirección",f.comentarios_de_la_direccion)%>
+</p>
+
+<p>
+  <%valor=f.status_de_la_notificacion.valor rescue nil%>
+  <%=printIfAvailable("Status de Notificación",valor)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Comentarios de notificación",f.cometnarios_de_notificacion)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Solicitud de Admisión",f.solicitud_de_admision)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Copia del Acta de Nacimiento",f.copia_del_acta_de_nacimiento)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Copia del Certificado de preparatoria / licenciatura",f.copia_del_certificado_de_preparatoria_licenciatura)%>
+</p>
+
+<p>
+  <%=printIfAvailable("4 Fotografías; Tamaño infantil, blanco y negro, papel mate",f.fotografias_tamano_infantil_blanco_y_negro_papel_mate)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Copia del comprobante de pago de inscripción",f.copia_del_comprobante_de_pago_de_inscripcion)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Comentarios Documentación",f.comentarios_documentacion)%>
+</p>
+
+<p>
+  <%valor=f.status_ref_pago_insc.valor rescue nil%>
+  <%=printIfAvailable("Status referente al pago de inscripción",valor)%>
+</p>
+
+<p>
+  <%=printIfAvailable("Fecha límite  marcada en la FPI",f.fecha_lim_fpi)%>
+</p>
+
+<p>
+  <%valor=f.status_ref_pago_insc.valor rescue nil%>
+  <%=printIfAvailable("Status de Referencia de Pago de Inscripcion",valor)%>
+</p>
+      <p>
+        <%=printIfAvailable("Archivado",f.archivado ? "Archivado": "")%>
+      </p>
+</fieldset>
+</div>
+<%=render :partial=>"shared/show_examinados", :locals=>{:f=>f.examinados.first,:prospectoid=>prospectoid}%>

@@ -1,0 +1,22 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1360513955.2456489:@value{	I"length:EFižI"digest;
+F"%830c320672e06faa4f9215d2cee8a56eI"source;
+FI"žvar lastEscTime = 0
+jQuery(function($) {
+    $('#clearResults').click(function() { $('#results').empty() })
+    $('#runScript').click(function() {
+        $.post('/console/run', {script: $('#script').val()}, function(data) {
+            $('<div/>').attr('class', 'console_result').html(data).appendTo('#results')
+        })
+    })
+    $('#script').keydown(function(ev) {
+        if (ev.ctrlKey && ev.keyCode == 13) $('#runScript').click() // Ctrl + Enter
+        if (ev.keyCode == 27) {
+            if (new Date().getTime() - lastEscTime < 1000) $('#clearResults').click() // Esc, Esc within a second
+            lastEscTime = new Date().getTime()
+        }
+    })
+})
+;
+;
+FI"_version;
+F"%c3b328f819a271eb494cc26967923414

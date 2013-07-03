@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1355079926.7509289:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%150cf92a89d561a0041ebbb010b9e278I"logical_path;
+FI"fontawesome-webfont.woff;
+TI"pathname;
+FI"|$root/RAILS_ENV=production/ruby/1.9.1/gems/font-awesome-sass-rails-2.0.0.0/vendor/assets/fonts/fontawesome-webfont.woff;
+FI"content_type;
+FI"application/octet-stream;
+FI"
+mtime;
+FI"2012-12-09T12:55:39-06:00;
+FI"length;
+FI"
+41752;
+FI"digest;
+F"%c07584685486ee116b2954fcdf351b30I"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c

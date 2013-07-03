@@ -1,0 +1,15 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1360513955.313693:@value{	I"length:EFi•I"digest;
+F"%bb0afcc560d7f20439a898078fccd967I"source;
+FI"•#script {width: 100%}
+.console_result {
+    background-color: black;
+    color: white;
+    margin: 1em 0;
+}
+
+.return {
+    background-color: blue;
+}
+;
+FI"_version;
+F"%c3700a5a1d5d2c7860c9a4f802ab65fc

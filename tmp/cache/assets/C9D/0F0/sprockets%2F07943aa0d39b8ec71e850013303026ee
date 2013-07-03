@@ -1,0 +1,1090 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347543082.2691698:@value{I"
+class:EFI"BundledAsset;
+FI"id;
+F"%83da9b333a607509bc65bbd1021a5cc8I"logical_path;
+F"engage.cssI"pathname;
+FI"f$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb;
+FI"content_type;
+FI"text/css;
+FI"
+mtime;
+FI"2012-09-13T08:17:43-05:00;
+FI"	body;
+FI"*Í/**
+*/
+/* line 6, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form, .engage_body form {
+  font-size: 100%;
+}
+/* line 9, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form label, .engage_body form label {
+  line-height: 18px;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+/* line 15, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form label input[type=checkbox], .engage_body form label input[type=checkbox] {
+  margin-right: 5px;
+}
+/* line 20, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input[type=checkbox], #engage form input[type=radio], .engage_body form input[type=checkbox], .engage_body form input[type=radio] {
+  cursor: pointer;
+}
+/* line 24, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input, #engage form textarea, #engage form select, .engage_body form input, .engage_body form textarea, .engage_body form select {
+  display: inline-block;
+  width: 99%;
+  height: 18px;
+  padding: 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: gray;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -o-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 5px;
+}
+/* line 38, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form select, .engage_body form select {
+  padding: initial;
+}
+/* line 42, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input[type=checkbox], #engage form input[type=radio], .engage_body form input[type=checkbox], .engage_body form input[type=radio] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE6-7 */
+  line-height: normal;
+  border: none;
+}
+/* line 53, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input[type=file], .engage_body form input[type=file] {
+  background-color: white;
+  padding: initial;
+  border: initial;
+  line-height: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 62, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input[type=button], #engage form input[type=reset], #engage form input[type=submit], .engage_body form input[type=button], .engage_body form input[type=reset], .engage_body form input[type=submit] {
+  width: auto;
+  height: auto;
+}
+/* line 66, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form select, #engage form input[type=file], .engage_body form select, .engage_body form input[type=file] {
+  height: 27px;
+  *height: auto;
+  line-height: 27px;
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+}
+/* line 74, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form select[multiple], .engage_body form select[multiple] {
+  height: inherit;
+  background-color: white;
+}
+/* line 78, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form textarea, .engage_body form textarea {
+  height: 70px;
+}
+/* line 82, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form :-moz-placeholder, .engage_body form :-moz-placeholder {
+  color: #bfbfbf;
+}
+/* line 85, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form ::-webkit-input-placeholder, .engage_body form ::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+/* line 88, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input, #engage form textarea, .engage_body form input, .engage_body form textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+/* line 97, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input:focus, #engage form textarea:focus, .engage_body form input:focus, .engage_body form textarea:focus {
+  outline: 0;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: 0 0 6px rgba(0, 132, 189, 0.25);
+  -moz-box-shadow: 0 0 6px rgba(0, 132, 189, 0.25);
+  -o-box-shadow: 0 0 6px rgba(0, 132, 189, 0.25);
+  -ms-box-shadow: 0 0 6px rgba(0, 132, 189, 0.25);
+  box-shadow: 0 0 6px rgba(0, 132, 189, 0.25);
+}
+/* line 103, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form input[type=file]:focus, #engage form input[type=checkbox]:focus, #engage form select:focus, .engage_body form input[type=file]:focus, .engage_body form input[type=checkbox]:focus, .engage_body form select:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: 1px dotted #cccccc;
+}
+/* line 111, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .error label, #engage form .error p, #engage form .error h2, #engage form .error li, #engage form .field_with_errors label, #engage form .field_with_errors p, #engage form .field_with_errors h2, #engage form .field_with_errors li, #engage form #error_explanation label, #engage form #error_explanation p, #engage form #error_explanation h2, #engage form #error_explanation li, .engage_body form .error label, .engage_body form .error p, .engage_body form .error h2, .engage_body form .error li, .engage_body form .field_with_errors label, .engage_body form .field_with_errors p, .engage_body form .field_with_errors h2, .engage_body form .field_with_errors li, .engage_body form #error_explanation label, .engage_body form #error_explanation p, .engage_body form #error_explanation h2, .engage_body form #error_explanation li {
+  color: #dd4b39;
+}
+/* line 114, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .error p, #engage form .field_with_errors p, #engage form #error_explanation p, .engage_body form .error p, .engage_body form .field_with_errors p, .engage_body form #error_explanation p {
+  margin-top: 5px;
+}
+/* line 117, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .error h2, #engage form .field_with_errors h2, #engage form #error_explanation h2, .engage_body form .error h2, .engage_body form .field_with_errors h2, .engage_body form #error_explanation h2 {
+  font-size: 100%;
+  margin-bottom: 5px;
+}
+/* line 121, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .error li, #engage form .field_with_errors li, #engage form #error_explanation li, .engage_body form .error li, .engage_body form .field_with_errors li, .engage_body form #error_explanation li {
+  margin-bottom: 10px;
+}
+/* line 124, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .error input, #engage form .error textarea, #engage form .field_with_errors input, #engage form .field_with_errors textarea, #engage form #error_explanation input, #engage form #error_explanation textarea, .engage_body form .error input, .engage_body form .error textarea, .engage_body form .field_with_errors input, .engage_body form .field_with_errors textarea, .engage_body form #error_explanation input, .engage_body form #error_explanation textarea {
+  color: #dd4b39;
+  border-color: #dd4b39;
+}
+/* line 127, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .error input:focus, #engage form .error textarea:focus, #engage form .field_with_errors input:focus, #engage form .field_with_errors textarea:focus, #engage form #error_explanation input:focus, #engage form #error_explanation textarea:focus, .engage_body form .error input:focus, .engage_body form .error textarea:focus, .engage_body form .field_with_errors input:focus, .engage_body form .field_with_errors textarea:focus, .engage_body form #error_explanation input:focus, .engage_body form #error_explanation textarea:focus {
+  border-color: #dd4b39;
+  -webkit-box-shadow: 0 0 6px rgba(238, 95, 91, 0.25);
+  -moz-box-shadow: 0 0 6px rgba(238, 95, 91, 0.25);
+  -o-box-shadow: 0 0 6px rgba(238, 95, 91, 0.25);
+  -ms-box-shadow: 0 0 6px rgba(238, 95, 91, 0.25);
+  box-shadow: 0 0 6px rgba(238, 95, 91, 0.25);
+}
+/* line 134, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .inline-errors, .engage_body form .inline-errors {
+  color: #dd4b39;
+  margin-bottom: 10px;
+}
+/* line 140, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .checkbox-with-label input, #engage form .checkbox-with-label label, .engage_body form .checkbox-with-label input, .engage_body form .checkbox-with-label label {
+  float: left;
+  margin-right: 10px;
+}
+/* line 144, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form .checkbox-with-label input, .engage_body form .checkbox-with-label input {
+  margin: 2px 5px 0 0;
+}
+/* line 150, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage form.user-search input[type=text], .engage_body form.user-search input[type=text] {
+  width: 200px;
+  margin-right: 10px;
+}
+/* line 158, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage #topic-form-container label, #engage .user-profile-fields label, .engage_body #topic-form-container label, .engage_body .user-profile-fields label {
+  float: left;
+  width: 8%;
+  padding-top: 5px;
+}
+/* line 164, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage #topic-form-container input[type='text'], #engage #topic-form-container select, #engage #topic-form-container textarea, #engage .user-profile-fields input[type='text'], #engage .user-profile-fields select, #engage .user-profile-fields textarea, .engage_body #topic-form-container input[type='text'], .engage_body #topic-form-container select, .engage_body #topic-form-container textarea, .engage_body .user-profile-fields input[type='text'], .engage_body .user-profile-fields select, .engage_body .user-profile-fields textarea {
+  width: 90.5%;
+  margin-bottom: 12px;
+}
+/* line 169, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage #topic-form-container .checkbox-with-label, #engage #topic-form-container .inline-errors, #engage .user-profile-fields .checkbox-with-label, #engage .user-profile-fields .inline-errors, .engage_body #topic-form-container .checkbox-with-label, .engage_body #topic-form-container .inline-errors, .engage_body .user-profile-fields .checkbox-with-label, .engage_body .user-profile-fields .inline-errors {
+  margin-left: 8%;
+}
+/* line 171, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage #topic-form-container .checkbox-with-label label, #engage #topic-form-container .inline-errors label, #engage .user-profile-fields .checkbox-with-label label, #engage .user-profile-fields .inline-errors label, .engage_body #topic-form-container .checkbox-with-label label, .engage_body #topic-form-container .inline-errors label, .engage_body .user-profile-fields .checkbox-with-label label, .engage_body .user-profile-fields .inline-errors label {
+  float: none;
+  width: auto;
+  padding-top: 0;
+}
+/* line 178, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage #topic-form-container p.title, #engage .user-profile-fields p.title, .engage_body #topic-form-container p.title, .engage_body .user-profile-fields p.title {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+/* line 185, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss */
+#engage .ui-dialog input, .engage_body .ui-dialog input {
+  width: 97%;
+}
+
+/* line 4, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage, .engage_body {
+  /* IE7 */
+}
+/* line 53, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage h1,
+#engage h2,
+#engage h3,
+#engage h4,
+#engage h5,
+#engage h6,
+#engage p,
+#engage blockquote,
+#engage pre,
+#engage a,
+#engage abbr,
+#engage acronym,
+#engage address,
+#engage cite,
+#engage code,
+#engage del,
+#engage dfn,
+#engage em,
+#engage img,
+#engage q,
+#engage s,
+#engage samp,
+#engage small,
+#engage strike,
+#engage strong,
+#engage sub,
+#engage sup,
+#engage tt,
+#engage var,
+#engage dd,
+#engage dl,
+#engage dt,
+#engage li,
+#engage ol,
+#engage ul,
+#engage form,
+#engage fieldset,
+#engage label,
+#engage input,
+#engage legend,
+#engage button,
+#engage table,
+#engage caption,
+#engage tbody,
+#engage tfoot,
+#engage thead,
+#engage tr,
+#engage th,
+#engage td, .engage_body h1,
+.engage_body h2,
+.engage_body h3,
+.engage_body h4,
+.engage_body h5,
+.engage_body h6,
+.engage_body p,
+.engage_body blockquote,
+.engage_body pre,
+.engage_body a,
+.engage_body abbr,
+.engage_body acronym,
+.engage_body address,
+.engage_body cite,
+.engage_body code,
+.engage_body del,
+.engage_body dfn,
+.engage_body em,
+.engage_body img,
+.engage_body q,
+.engage_body s,
+.engage_body samp,
+.engage_body small,
+.engage_body strike,
+.engage_body strong,
+.engage_body sub,
+.engage_body sup,
+.engage_body tt,
+.engage_body var,
+.engage_body dd,
+.engage_body dl,
+.engage_body dt,
+.engage_body li,
+.engage_body ol,
+.engage_body ul,
+.engage_body form,
+.engage_body fieldset,
+.engage_body label,
+.engage_body input,
+.engage_body legend,
+.engage_body button,
+.engage_body table,
+.engage_body caption,
+.engage_body tbody,
+.engage_body tfoot,
+.engage_body thead,
+.engage_body tr,
+.engage_body th,
+.engage_body td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  text-transform: none;
+}
+/* line 61, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .clear, .engage_body .clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+/* line 67, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .floatleft, .engage_body .floatleft {
+  float: left;
+}
+/* line 71, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .floatright, .engage_body .floatright {
+  float: right;
+}
+/* line 75, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .hidden, .engage_body .hidden {
+  display: none;
+}
+/* line 79, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .clearfloat, .engage_body .clearfloat {
+  clear: both;
+}
+/* line 83, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .center, .engage_body .center {
+  text-align: center;
+}
+/* line 87, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .align-right, .engage_body .align-right {
+  text-align: right;
+}
+/* line 91, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .align-left, .engage_body .align-left {
+  text-align: left;
+}
+/* line 95, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage .clearfix:after, .engage_body .clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 104, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+#engage *:first-child + html .clearfix, .engage_body *:first-child + html .clearfix {
+  zoom: 1;
+}
+
+/* line 106, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss */
+* html .clearfix {
+  zoom: 1;
+}
+
+/* IE6 */
+/* line 9, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage, .engage_body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #404040;
+  letter-spacing: normal;
+  text-align: left;
+}
+/* line 17, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #engage-content, .engage_body #engage-content {
+  text-align: center;
+  width: 900px;
+  margin: 20px auto;
+  background: white;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  text-align: left;
+  position: relative;
+  padding-bottom: 20px;
+}
+/* line 30, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #user-data, .engage_body #user-data {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  background: #ebf9ff;
+  border: 1px solid #d4f2ff;
+  border-top: 0;
+  -moz-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  position: absolute;
+  text-shadow: 0 0 1px white;
+}
+/* line 43, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .box, .engage_body .box {
+  background: #f3f3f3;
+  padding: 10px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #dedede;
+}
+/* line 48, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .box .white-box, .engage_body .box .white-box {
+  padding: 10px;
+  background: white;
+  border: 1px solid #dedede;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+/* line 56, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .pagination, .engage_body .pagination {
+  margin: 10px 0;
+  text-align: center;
+}
+/* line 61, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .pagination .page a, .engage_body .pagination .page a {
+  background: #cccccc;
+  color: white;
+  padding: 1px 5px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -o-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+}
+/* line 66, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .pagination .page a:hover, .engage_body .pagination .page a:hover {
+  text-decoration: none;
+}
+/* line 70, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .pagination .page.current, .engage_body .pagination .page.current {
+  background: #0084bd;
+  color: white;
+  padding: 1px 2px 1px 5px;
+  margin-right: 3px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -o-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+}
+/* line 80, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage h1, #engage h2, #engage h3, #engage h4, .engage_body h1, .engage_body h2, .engage_body h3, .engage_body h4 {
+  margin: 5px 0 10px 0;
+  text-transform: none;
+  font-weight: bold;
+  color: #404040;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 88, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage h2, .engage_body h2 {
+  margin-bottom: 15px;
+  font-size: 130%;
+}
+/* line 93, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage h3, .engage_body h3 {
+  font-size: 110%;
+}
+/* line 97, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage h4, #engage h5, .engage_body h4, .engage_body h5 {
+  font-size: 100%;
+}
+/* line 101, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage a, .engage_body a {
+  color: #0084bd;
+  text-decoration: none;
+}
+/* line 104, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage a:hover, .engage_body a:hover {
+  text-decoration: none;
+}
+/* line 107, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage a img, .engage_body a img {
+  border: none;
+}
+/* line 112, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage ol, #engage ul, .engage_body ol, .engage_body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 118, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #flash-messages, .engage_body #flash-messages {
+  list-style: none;
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 124, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #flash-messages .flash-message, .engage_body #flash-messages .flash-message {
+  margin: 10px 0;
+  padding: 7px 15px;
+  color: white;
+  font-size: 90%;
+  background: #0084bd;
+  background-image: -o-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -moz-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -webkit-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -ms-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #0084bd), color-stop(0.87, #0aa1e2));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0084bd', endColorstr='#0aa1e2',GradientType=0 );
+  background-image: linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+/* line 136, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #flash-messages .flash-message.notice, .engage_body #flash-messages .flash-message.notice {
+  background: #51a351;
+  background-image: -o-linear-gradient(bottom, #51a351 23%, #62c462 87%);
+  background-image: -moz-linear-gradient(bottom, #51a351 23%, #62c462 87%);
+  background-image: -webkit-linear-gradient(bottom, #51a351 23%, #62c462 87%);
+  background-image: -ms-linear-gradient(bottom, #51a351 23%, #62c462 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #51a351), color-stop(0.87, #62c462));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#51a351', endColorstr='#62c462',GradientType=0 );
+  background-image: linear-gradient(bottom, #51a351 23%, #62c462 87%);
+}
+/* line 139, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #flash-messages .flash-message.error, #engage #flash-messages .flash-message.alert, .engage_body #flash-messages .flash-message.error, .engage_body #flash-messages .flash-message.alert {
+  background: #dd4b39;
+  background-image: -o-linear-gradient(bottom, #dd4b39 23%, #f89406 87%);
+  background-image: -moz-linear-gradient(bottom, #dd4b39 23%, #f89406 87%);
+  background-image: -webkit-linear-gradient(bottom, #dd4b39 23%, #f89406 87%);
+  background-image: -ms-linear-gradient(bottom, #dd4b39 23%, #f89406 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #dd4b39), color-stop(0.87, #f89406));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dd4b39', endColorstr='#f89406',GradientType=0 );
+  background-image: linear-gradient(bottom, #dd4b39 23%, #f89406 87%);
+}
+/* line 142, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #flash-messages .flash-message.warning, .engage_body #flash-messages .flash-message.warning {
+  background: #f89406;
+  background-image: -o-linear-gradient(bottom, #f89406 23%, #fbb450 87%);
+  background-image: -moz-linear-gradient(bottom, #f89406 23%, #fbb450 87%);
+  background-image: -webkit-linear-gradient(bottom, #f89406 23%, #fbb450 87%);
+  background-image: -ms-linear-gradient(bottom, #f89406 23%, #fbb450 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #f89406), color-stop(0.87, #fbb450));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f89406', endColorstr='#fbb450',GradientType=0 );
+  background-image: linear-gradient(bottom, #f89406 23%, #fbb450 87%);
+}
+/* line 148, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #flash-messages .engage-close, .engage_body #flash-messages .engage-close {
+  color: #eeeeee;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+  top: 5px;
+}
+/* line 157, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header, .engage_body .header {
+  padding: 5px 15px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -o-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #dedede;
+  background-image: -o-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -moz-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -webkit-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -ms-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #dedede), color-stop(0.87, #eeeeee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 0 white inset;
+  -moz-box-shadow: 0 1px 0 white inset;
+  -o-box-shadow: 0 1px 0 white inset;
+  -ms-box-shadow: 0 1px 0 white inset;
+  box-shadow: 0 1px 0 white inset;
+}
+/* line 165, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header #topic-filters, .engage_body .header #topic-filters {
+  float: left;
+}
+/* line 167, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header #topic-filters .filter-name, .engage_body .header #topic-filters .filter-name {
+  padding: 7px 0px;
+  display: block;
+  float: left;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+/* line 174, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header #topic-filters #status-filter, #engage .header #topic-filters #style-filter, .engage_body .header #topic-filters #status-filter, .engage_body .header #topic-filters #style-filter {
+  position: relative;
+  float: left;
+}
+/* line 178, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header #topic-filters #status-filter .dropdown, #engage .header #topic-filters #style-filter .dropdown, .engage_body .header #topic-filters #status-filter .dropdown, .engage_body .header #topic-filters #style-filter .dropdown {
+  cursor: pointer;
+  display: block;
+  margin: 5px 10px;
+  background: #b0b0b0;
+  background-image: -o-linear-gradient(bottom, #b0b0b0 23%, #b1b1b1 87%);
+  background-image: -moz-linear-gradient(bottom, #b0b0b0 23%, #b1b1b1 87%);
+  background-image: -webkit-linear-gradient(bottom, #b0b0b0 23%, #b1b1b1 87%);
+  background-image: -ms-linear-gradient(bottom, #b0b0b0 23%, #b1b1b1 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #b0b0b0), color-stop(0.87, #b1b1b1));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b0b0b0', endColorstr='#b1b1b1',GradientType=0 );
+  background-image: linear-gradient(bottom, #b0b0b0 23%, #b1b1b1 87%);
+  background-image: url("/assets/dropdown.png");
+  background-repeat: no-repeat;
+  background-position: 103px 6px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #a8a8a8;
+  border-top: 1px solid #a3a3a3;
+  padding: 1px 10px;
+  width: 100px;
+  color: white;
+  -webkit-box-shadow: 0 1px 0 #cccccc inset;
+  -moz-box-shadow: 0 1px 0 #cccccc inset;
+  -o-box-shadow: 0 1px 0 #cccccc inset;
+  -ms-box-shadow: 0 1px 0 #cccccc inset;
+  box-shadow: 0 1px 0 #cccccc inset;
+}
+/* line 195, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header #topic-filters #status-filter .options, #engage .header #topic-filters #style-filter .options, .engage_body .header #topic-filters #status-filter .options, .engage_body .header #topic-filters #style-filter .options {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 25px;
+  margin: 0 10px;
+  padding: 5px 5px 5px 10px;
+  background: #dedede;
+  background-image: -o-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -moz-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -webkit-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -ms-linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #dedede), color-stop(0.87, #eeeeee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(bottom, #dedede 23%, #eeeeee 87%);
+  -moz-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  width: 105px;
+  border: 1px solid #cccccc;
+  z-index: 300;
+}
+/* line 207, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header #topic-filters #status-filter .options li, #engage .header #topic-filters #style-filter .options li, .engage_body .header #topic-filters #status-filter .options li, .engage_body .header #topic-filters #style-filter .options li {
+  line-height: 16px;
+  color: #999;
+}
+/* line 210, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .header #topic-filters #status-filter .options li a, #engage .header #topic-filters #style-filter .options li a, .engage_body .header #topic-filters #status-filter .options li a, .engage_body .header #topic-filters #style-filter .options li a {
+  color: #404040;
+}
+/* line 219, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .toggle-new-topic, .engage_body .toggle-new-topic {
+  margin: 2px 0 0;
+  float: right;
+  display: block;
+}
+/* line 225, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .cancel, .engage_body .cancel {
+  line-height: 24px;
+  margin-right: 15px;
+}
+/* line 230, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .actions, .engage_body .actions {
+  font-size: 90%;
+  white-space: nowrap;
+}
+/* line 235, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container, #engage .topic-details, .engage_body .topic-container, .engage_body .topic-details {
+  padding: 8px 0px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -o-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+/* line 239, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic, #engage .topic-details .topic, .engage_body .topic-container .topic, .engage_body .topic-details .topic {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #cccccc;
+  position: relative;
+}
+/* line 246, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .author .created_at, #engage .topic-details .topic .author .created_at, .engage_body .topic-container .topic .author .created_at, .engage_body .topic-details .topic .author .created_at {
+  font-weight: normal;
+}
+/* line 249, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .author img, #engage .topic-details .topic .author img, .engage_body .topic-container .topic .author img, .engage_body .topic-details .topic .author img {
+  float: left;
+  margin: 5px 10px 20px 0px;
+  border: 2px solid #cccccc;
+}
+/* line 256, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic.last, #engage .topic-container .topic:last-child, #engage .topic-details .topic.last, #engage .topic-details .topic:last-child, .engage_body .topic-container .topic.last, .engage_body .topic-container .topic:last-child, .engage_body .topic-details .topic.last, .engage_body .topic-details .topic:last-child {
+  border-bottom: none;
+}
+/* line 260, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .about, #engage .topic-details .topic .about, .engage_body .topic-container .topic .about, .engage_body .topic-details .topic .about {
+  line-height: 1.3;
+  color: #545454;
+  margin-left: 46px;
+  font-size: 95%;
+}
+/* line 266, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .about .user a, #engage .topic-details .topic .about .user a, .engage_body .topic-container .topic .about .user a, .engage_body .topic-details .topic .about .user a {
+  color: #545454;
+}
+/* line 272, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .style, #engage .topic-details .topic .style, .engage_body .topic-container .topic .style, .engage_body .topic-details .topic .style {
+  font-weight: normal;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -o-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  color: white;
+  font-size: 95%;
+  padding: 1px 3px;
+  position: relative;
+  top: 5px;
+  min-width: 40px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  float: right;
+  margin-bottom: 5px;
+}
+/* line 288, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .style.problem, #engage .topic-details .topic .style.problem, .engage_body .topic-container .topic .style.problem, .engage_body .topic-details .topic .style.problem {
+  background: #dd4b39;
+}
+/* line 291, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .style.idea, #engage .topic-details .topic .style.idea, .engage_body .topic-container .topic .style.idea, .engage_body .topic-details .topic .style.idea {
+  background: #62c462;
+}
+/* line 294, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .style.question, #engage .topic-details .topic .style.question, .engage_body .topic-container .topic .style.question, .engage_body .topic-details .topic .style.question {
+  background: #49afcd;
+}
+/* line 297, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .style.praise, #engage .topic-details .topic .style.praise, .engage_body .topic-container .topic .style.praise, .engage_body .topic-details .topic .style.praise {
+  background: #fbb450;
+}
+/* line 301, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .title, #engage .topic-details .topic .title, .engage_body .topic-container .topic .title, .engage_body .topic-details .topic .title {
+  font-size: 120%;
+  font-weight: bold;
+  color: #0084bd;
+}
+/* line 305, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .title a, #engage .topic-details .topic .title a, .engage_body .topic-container .topic .title a, .engage_body .topic-details .topic .title a {
+  font-weight: bold;
+}
+/* line 308, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .title a:hover, #engage .topic-details .topic .title a:hover, .engage_body .topic-container .topic .title a:hover, .engage_body .topic-details .topic .title a:hover {
+  text-decoration: underline;
+}
+/* line 312, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .title .actions, #engage .topic-details .topic .title .actions, .engage_body .topic-container .topic .title .actions, .engage_body .topic-details .topic .title .actions {
+  margin-left: 10px;
+}
+/* line 314, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .title .actions a, #engage .topic-details .topic .title .actions a, .engage_body .topic-container .topic .title .actions a, .engage_body .topic-details .topic .title .actions a {
+  font-weight: normal;
+  font-size: 90%;
+}
+/* line 321, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .status, #engage .topic-details .topic .status, .engage_body .topic-container .topic .status, .engage_body .topic-details .topic .status {
+  font-weight: bold;
+}
+/* line 325, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .topic .votes, #engage .topic-details .topic .votes, .engage_body .topic-container .topic .votes, .engage_body .topic-details .topic .votes {
+  float: right;
+}
+/* line 330, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .links, #engage .topic-details .links, .engage_body .topic-container .links, .engage_body .topic-details .links {
+  margin: 10px 0 5px;
+}
+/* line 334, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .icon-comments, #engage .topic-details .icon-comments, .engage_body .topic-container .icon-comments, .engage_body .topic-details .icon-comments {
+  background: url("/assets/comment.png") no-repeat left center;
+  padding-left: 16px;
+}
+/* line 338, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .icon-votes-add, #engage .topic-details .icon-votes-add, .engage_body .topic-container .icon-votes-add, .engage_body .topic-details .icon-votes-add {
+  background: url("/assets/vote-add.png") no-repeat left center;
+  padding: 0px 0 0px 20px;
+  text-indent: -99999px;
+  display: inline-block;
+}
+/* line 344, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-container .icon-followers, #engage .topic-details .icon-followers, .engage_body .topic-container .icon-followers, .engage_body .topic-details .icon-followers {
+  background: url("/assets/followers.png") no-repeat top left;
+  padding: 0px 0 0px 22px;
+  display: inline-block;
+}
+/* line 351, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details, .engage_body .topic-details {
+  padding: 0px 0 10px 0;
+  -moz-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
+  position: relative;
+}
+/* line 356, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details .topic, .engage_body .topic-details .topic {
+  border: none;
+  padding-bottom: 10px;
+}
+/* line 360, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details .topic .author img, .engage_body .topic-details .topic .author img {
+  margin: 7px 10px 5px 0px;
+}
+/* line 364, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details .topic .about, .engage_body .topic-details .topic .about {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+/* line 367, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details .topic .about .created_at, .engage_body .topic-details .topic .about .created_at {
+  float: left;
+}
+/* line 371, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details .topic .message, .engage_body .topic-details .topic .message {
+  margin: 5px 0;
+  padding: 10px 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 377, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details .topic #follow, .engage_body .topic-details .topic #follow {
+  float: left;
+  line-height: 20px;
+}
+/* line 381, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .topic-details .topic .votes, .engage_body .topic-details .topic .votes {
+  float: left;
+  margin-right: 10px;
+  line-height: 20px;
+}
+/* line 389, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .task-status, .engage_body .task-status {
+  font-weight: normal;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -o-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  color: white;
+  font-size: 95%;
+  padding: 2px 5px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+/* line 402, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .task-status.done, .engage_body .task-status.done {
+  background: #62c462;
+}
+/* line 405, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .task-status.pending, .engage_body .task-status.pending {
+  background: #49afcd;
+}
+/* line 408, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .task-status.accepted, .engage_body .task-status.accepted {
+  background: #fbb450;
+}
+/* line 413, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .back, .engage_body .back {
+  font-size: 80%;
+}
+/* line 418, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .nav-back a, .engage_body .nav-back a {
+  font-weight: bold !important;
+}
+/* line 424, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .comments-container .comment, .engage_body .comments-container .comment {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #cccccc;
+}
+/* line 429, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .comments-container .comment.last, #engage .comments-container .comment:last-child, .engage_body .comments-container .comment.last, .engage_body .comments-container .comment:last-child {
+  border-bottom: none;
+}
+/* line 433, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .comments-container .comment .avatar, .engage_body .comments-container .comment .avatar {
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+/* line 437, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .comments-container .comment .avatar img, .engage_body .comments-container .comment .avatar img {
+  border: 2px solid #cccccc;
+}
+/* line 442, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .comments-container .comment .comment-content, .engage_body .comments-container .comment .comment-content {
+  float: left;
+  width: 90%;
+}
+/* line 446, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .comments-container .comment .comment-content .author, .engage_body .comments-container .comment .comment-content .author {
+  color: #545454;
+}
+/* line 453, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .buttons, .engage_body .buttons {
+  margin: 10px 0;
+}
+/* line 457, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage a.button, #engage button, #engage input[type=submit], .engage_body a.button, .engage_body button, .engage_body input[type=submit] {
+  padding: 4px 8px;
+  color: white;
+  text-decoration: none;
+  line-height: 18px;
+  background: #0084bd;
+  background-image: -o-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -moz-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -webkit-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -ms-linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.23, #0084bd), color-stop(0.87, #0aa1e2));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0084bd', endColorstr='#0aa1e2',GradientType=0 );
+  background-image: linear-gradient(bottom, #0084bd 23%, #0aa1e2 87%);
+  -moz-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border-color: rgba(10, 161, 226, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  border-style: solid;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 469, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage a.button:hover, #engage button:hover, #engage input[type=submit]:hover, .engage_body a.button:hover, .engage_body button:hover, .engage_body input[type=submit]:hover {
+  text-decoration: none;
+  background: #0aa1e2;
+}
+/* line 474, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage a.button.create, #engage a.button.update, #engage button.create, #engage button.update, #engage input[type=submit].create, #engage input[type=submit].update, .engage_body a.button.create, .engage_body a.button.update, .engage_body button.create, .engage_body button.update, .engage_body input[type=submit].create, .engage_body input[type=submit].update {
+  float: right;
+}
+/* line 479, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .back-link, .engage_body .back-link {
+  float: right;
+  line-height: 20px;
+  margin-left: 10px;
+  padding: 5px;
+}
+/* line 487, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .shared-links a:after, .engage_body .shared-links a:after {
+  content: " | ";
+}
+/* line 490, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage .shared-links a:last-child:after, .engage_body .shared-links a:last-child:after {
+  content: "";
+}
+/* line 495, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage table, .engage_body table {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  background: white;
+}
+/* line 501, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage table td, #engage table th, .engage_body table td, .engage_body table th {
+  border: 1px solid #cccccc;
+  padding: 2px 3px;
+}
+/* line 505, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage table th, .engage_body table th {
+  padding: 4px 5px;
+  background: #dedede;
+  text-align: center;
+}
+/* line 511, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage table tbody tr:nth-child(2n), .engage_body table tbody tr:nth-child(2n) {
+  background: none repeat scroll 0 0 #eeeeee;
+}
+/* line 514, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage table tbody tr:nth-child(2n+1), .engage_body table tbody tr:nth-child(2n+1) {
+  background: none repeat scroll 0 0 white;
+}
+/* line 518, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage table thead tr th, .engage_body table thead tr th {
+  color: #404040;
+}
+/* line 523, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #engage_popup #flash-messages, .engage_body #engage_popup #flash-messages {
+  width: 100%;
+}
+/* line 525, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #engage_popup #flash-messages .flash-message, .engage_body #engage_popup #flash-messages .flash-message {
+  margin-top: 0;
+}
+/* line 529, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #engage_popup form, .engage_body #engage_popup form {
+  margin-top: 10px;
+}
+/* line 532, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #engage_popup a, .engage_body #engage_popup a {
+  color: #0084bd;
+}
+/* line 536, ../../RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb */
+#engage #topic-form-container, .engage_body #topic-form-container {
+  margin-bottom: 10px;
+}
+;
+FI"asset_paths;
+F[I"e$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/theme.scss.erb;
+FI"f$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb;
+FI"dependency_paths;
+F[{I"	path;
+FI"f$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/engage.scss.erb;
+FI"
+mtime;
+FIu:	Time­!€  °F:@_zoneI"%Hora de verano central (MÎ˜xico);
+T:offsetiþ°¹I"hexdigest;
+F"%1c6794dc58347d901906e7c01a43e05a{I"	path;
+FI"`$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_var.scss;
+FI"
+mtime;
+FIu;­!€  °F;I"%Hora de verano central (MÎ˜xico);
+T;iþ°¹I"hexdigest;
+F"%eaa243407ba03005551c010b8258f66e{I"	path;
+FI"c$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_mixins.scss;
+FI"
+mtime;
+FIu;­!€  °F;I"%Hora de verano central (MÎ˜xico);
+T;iþ°¹I"hexdigest;
+F"%346a6b3772718f935a2b23cdcfcc886b{I"	path;
+FI"b$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_forms.scss;
+FI"
+mtime;
+FIu;­!€  °F;I"%Hora de verano central (MÎ˜xico);
+T;iþ°¹I"hexdigest;
+F"%6193f9fabfba5a5ef176886563bd175e{I"	path;
+FI"c$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/_common.scss;
+FI"
+mtime;
+FIu;­!€  °F;I"%Hora de verano central (MÎ˜xico);
+T;iþ°¹I"hexdigest;
+F"%c29224ab60b5999afa2fcbfa85fd3943{I"	path;
+FI"e$root/RAILS_ENV=production/ruby/1.9.1/gems/engagecsm-1.0.8/app/assets/stylesheets/theme.scss.erb;
+FI"
+mtime;
+FIu;­!€  °F;I"%Hora de verano central (MÎ˜xico);
+T;iþ°¹I"hexdigest;
+F"%f77154977d46d7cbde65eae2fc369737I"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c
