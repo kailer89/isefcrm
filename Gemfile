@@ -62,7 +62,8 @@ gem "letter_opener", :group => :development
 gem 'gchartrb'
 gem "squeel"#, :git => "git://github.com/ernie/squeel.git" # Track git repo
 gem 'has_permalink'
-gem 'exception_notification'#, :require => 'exception_notifier', :git => "https://github.com/smartinez87/exception_notification.git"
+gem "exception_notification", git: "git://github.com/smartinez87/exception_notification.git"
+#gem 'exception_notification'#, :require => 'exception_notifier', :git => "https://github.com/smartinez87/exception_notification.git"
 gem 'paper_trail', '~> 2'
 gem 'rails_admin'#, :git=>"git://github.com/sferik/rails_admin.git",:branch => "rails-3.x"
 gem "pdfkit"
