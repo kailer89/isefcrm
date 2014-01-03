@@ -67,7 +67,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "CP"
 @role.descripcion = "Coordinador de Promocion"
@@ -125,7 +125,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "D"
 @role.descripcion = "Director"
@@ -183,7 +183,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "A"
 @role.descripcion = "Administrador"
@@ -241,7 +241,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "CA"
 @role.descripcion = "Coordinador Academico"
@@ -298,7 +298,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "AL"
 @role.descripcion = "Asesores Locales"
@@ -356,7 +356,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "TL"
 @role.descripcion = "Todos los Locales"
@@ -414,7 +414,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "DN"
 @role.descripcion = "Director Nacional"
@@ -472,7 +472,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "ACRM"
 @role.descripcion = "Coordinadora Nacional de Promocion"
@@ -530,7 +530,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "AN"
 @role.descripcion = "Administradora Nacional"
@@ -588,7 +588,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "CAN"
 @role.descripcion = "Coordinador Academico Nacional"
@@ -646,7 +646,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "TN"
 @role.descripcion = "Todos los Nacionales"
@@ -704,7 +704,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "AS"
 @role.descripcion = "Asesores de todas las sedes"
@@ -762,7 +762,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "CPS"
 @role.descripcion = "Coordinadores de Promocion de todas las sedes"
@@ -820,7 +820,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "CAS"
 @role.descripcion = "Coodinadores Academicos de todas las sedes"
@@ -878,7 +878,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "CASS"
 @role.descripcion = "Coordinadores Administrativos de todas las sedes"
@@ -995,7 +995,7 @@ else
 end
 @role_permision.save
     end
-	
+  
 @role = Role.new
 @role.nombre = "ALYN"
 @role.descripcion = "Abierto para todos Locales y Nacionales"

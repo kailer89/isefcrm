@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130131031711) do
+ActiveRecord::Schema.define(:version => 20140103054706) do
+
+  create_table "Duraciontextos", :force => true do |t|
+    t.string   "valor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "accion_estrategicas", :force => true do |t|
     t.string   "accion_promocional_1"
@@ -340,6 +346,18 @@ ActiveRecord::Schema.define(:version => 20130131031711) do
     t.datetime "updated_at"
   end
 
+  create_table "duracion_en_textos", :force => true do |t|
+    t.string   "valor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "efectividads", :force => true do |t|
+    t.string   "valor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "employmentships", :force => true do |t|
     t.integer  "user_id"
     t.integer  "empleado_id"
@@ -640,6 +658,8 @@ ActiveRecord::Schema.define(:version => 20130131031711) do
     t.integer  "sede_id"
     t.text     "comentarios"
     t.boolean  "pendiente"
+    t.string   "duracion_texto"
+    t.string   "efectividad"
   end
 
   create_table "medio_de_contactos", :force => true do |t|

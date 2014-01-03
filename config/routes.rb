@@ -1,5 +1,9 @@
 ProtoCRM3::Application.routes.draw do
 
+  resources :efectividads
+
+  resources :duracion_en_textos
+
   resources :configuraciones
 
   resources :dictamen_psicometria
@@ -191,6 +195,8 @@ resources :prospectos, only: :index do
   match "/admitidos/:id/convertir_admitido" => "admitidos#convertir_admitido", as: :convertir_admitido
   match "/prospectos/:id/validar" => "prospectos#validar", as: :validar,:validado=>false
   match "/prospectos/:id/convertir" => "prospectos#convertir", as: :convertir, :validado=>true
+
+
 
   
   match "/purge_admitidos"=>"purges#purge_admitidos",as: :purge_admitidos

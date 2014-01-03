@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
       logger.debug request.path_parameters[:controller].include? "admin"
       
       logger.debug "--------------------------------1"
+      if not request.path_parameters[:controller].include? "efectividad" 
       if not request.path_parameters[:controller].include? "console" 
       if not request.path_parameters[:controller].include? "configuraciones" 
       if not request.path_parameters[:controller].include? "imports" 
@@ -96,6 +97,7 @@ class ApplicationController < ActionController::Base
       end
     end
   end
+end
 end
 end
 end

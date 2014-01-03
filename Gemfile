@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby "1.9.3"
+#ruby "1.9.3"
 gem 'rails', '3.1.4'
 
 # Bundle edge Rails instead:
@@ -18,13 +18,12 @@ group :assets do
   gem 'compass-rails'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static"
+  gem 'bootstrap-sass'
   gem 'jquery-ui-rails'
 end
 
 
 gem 'jquery-rails'
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -47,10 +46,10 @@ gem 'bootstrap-will_paginate'
 gem 'carrierwave'
 gem "cancan"
 gem 'geocoder'
-gem "ransack", :git => "git://github.com/ernie/ransack.git" # Track git repo
+gem "ransack"#, :git => "git://github.com/ernie/ransack.git" # Track git repo
 gem "watu_table_builder", :require => "table_builder"
-gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails',
-                              :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git' 
+gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails'#,
+                              #:git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git' 
 gem 'omniauth'
 #gem 'twitter'
 #gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'
@@ -61,16 +60,18 @@ gem 'omniauth'
 gem 'fb_graph'       
 gem "letter_opener", :group => :development    
 gem 'gchartrb'
-gem "squeel", :git => "git://github.com/ernie/squeel.git" # Track git repo
+gem "squeel"#, :git => "git://github.com/ernie/squeel.git" # Track git repo
 gem 'has_permalink'
-gem 'exception_notification', git: 'git://github.com/alanjds/exception_notification.git'
+gem 'exception_notification'#, :require => 'exception_notifier', :git => "https://github.com/smartinez87/exception_notification.git"
 gem 'paper_trail', '~> 2'
-gem 'rails_admin', :git=>"git://github.com/sferik/rails_admin.git",:branch => "rails-3.x"
+gem 'rails_admin'#, :git=>"git://github.com/sferik/rails_admin.git",:branch => "rails-3.x"
 gem "pdfkit"
-gem "wkhtmltopdf-heroku", :git => 'git://github.com/camdez/wkhtmltopdf-heroku.git'
+gem "wkhtmltopdf-heroku"#, :git => 'git://github.com/camdez/wkhtmltopdf-heroku.git'
 
 gem 'honeybadger'
 gem 'intercom-rails'
 gem "default_value_for"
 gem 'newrelic_rpm'
 gem 'rack-webconsole'
+
+gem 'seed_dump'

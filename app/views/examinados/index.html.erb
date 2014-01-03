@@ -24,6 +24,13 @@ border-bottom: 0px solid #e5e5e5!important;
     <input type="button" value="Mostrar Busqueda Avanzada" id="avanzada"/>
     <div id="busquedaAvanzada">
     <fieldset>
+      <legend>Filtros</legend>
+      <%= f.condition_fields do |c| %>
+        <%= render "condition_fields", f: c%>
+      <% end %>
+      <%= button_to_add_fields "Agregar Filtro", f, :condition %>
+    </fieldset>      
+    <fieldset>
       <legend>Ordenamiento</legend>
       <%= f.sort_fields do |s| %>
         <%= render 'sort_fields', f: s %>

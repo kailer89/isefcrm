@@ -32,10 +32,10 @@ border-bottom: 0px solid #e5e5e5!important;
             </td>
             <td>
               <%= f.label :programa_nivel_cont %>
-              <%= f.collection_select :programa_nivel_cont, Programa.order(:nivel), :nivel, :nivel %>
+              <%= f.collection_select :programa_nivel_cont, Programa.order(:nivel), :nivel, :nivel,:include_blank =>true %>
 
-              <%= f.label :programa_programa_cont %>
-              <%= f.collection_select :programa_programa_cont, Programa.order(:programa), :programa, :programa%>
+              <%= f.label :programa_programa_cont_any %>
+              <%= f.collection_select :programa_programa_cont, Programa.order(:programa), :programa, :programa,:include_blank =>true%>
             </td>
             <td>
               <%= f.label :archivado_eq %>
@@ -49,9 +49,16 @@ border-bottom: 0px solid #e5e5e5!important;
         </tbody>
       </table>
     </fieldset>
-
-
     <div id="busquedaAvanzada">
+
+    <fieldset>
+      <legend>Filtros</legend>
+      <%= f.condition_fields do |c| %>
+        <%= render "condition_fields", f: c%>
+      <% end %>
+      <%= button_to_add_fields "Agregar Filtro", f, :condition %>
+    </fieldset>
+
     <fieldset>
       <legend>Ordenamiento</legend>
       <%= f.sort_fields do |s| %>

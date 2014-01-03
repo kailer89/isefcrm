@@ -13,14 +13,16 @@ class ImportsController < ApplicationController
         csv_text = File.read("public/" + @import.filename_url.to_s)
         utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
         csv = CSV.parse(utf8_string.gsub('"', '').gsub(/[^\n\r;]+/, '"\0"').gsub(';', ','), :headers => true) 
+
         csv.each do |row| 
           begin
             logger.debug "INFO************************************************"
             logger.debug row
-            logger.debug "INFO************************************************"
+
             row = row.to_hash.with_indifferent_access 
             prospecto=row
-            direccion= row.to_hash
+            direccion= row.to_hash            
+            logger.debug "INFO************************************************" 
             #remove extra fields
             if prospecto["nombre"] == "*Nombre(s):" 
               

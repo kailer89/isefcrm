@@ -1,72 +1,3 @@
-GIT
-  remote: git://github.com/Nerian/bootstrap-wysihtml5-rails.git
-  revision: 75d8c060fcee2b5967603abcad5b02a82f83d093
-  specs:
-    bootstrap-wysihtml5-rails (0.3.1.20)
-      railties (>= 3.0)
-
-GIT
-  remote: git://github.com/alanjds/exception_notification.git
-  revision: 048fc6be972189e62ca3b9453d19233ec5773016
-  specs:
-    exception_notification (2.6.1)
-      actionmailer (>= 3.0.4)
-      tinder (~> 1.8)
-
-GIT
-  remote: git://github.com/camdez/wkhtmltopdf-heroku.git
-  revision: 09f42e0fd9cf98361343738ccd7fdf6395df7dd0
-  specs:
-    wkhtmltopdf-heroku (0.2.0)
-
-GIT
-  remote: git://github.com/ernie/ransack.git
-  revision: f60123591e59af6b69f3e17927cdca62177f2306
-  specs:
-    ransack (0.7.3)
-      actionpack (~> 3.0)
-      activerecord (~> 3.0)
-      polyamorous (~> 0.6.0)
-
-GIT
-  remote: git://github.com/ernie/squeel.git
-  revision: c232bf9ea9240f96cf84c18d6ea2bd8d11ab563e
-  specs:
-    squeel (1.1.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
-      polyamorous (~> 0.6.0)
-
-GIT
-  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 36060be332ffc8408daca5cee20ea5694261105b
-  branch: static
-  specs:
-    twitter-bootstrap-rails (2.0.7)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-
-GIT
-  remote: git://github.com/sferik/rails_admin.git
-  revision: d0af3380182ed7b991a9a23eae3c114b88fe0a14
-  branch: rails-3.x
-  specs:
-    rails_admin (0.4.9)
-      bootstrap-sass (~> 2.2)
-      builder (~> 3.0)
-      coffee-rails (>= 3.1, < 5)
-      font-awesome-rails (~> 3.0)
-      haml (~> 4.0)
-      jquery-rails (>= 2.1, < 4)
-      jquery-ui-rails (>= 3.0, < 5)
-      kaminari (~> 0.14)
-      nested_form (~> 0.3)
-      rack-pjax (~> 0.6)
-      rails (~> 3.1)
-      remotipart (~> 1.0)
-      safe_yaml (~> 0.6)
-      sass-rails (~> 3.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -102,23 +33,26 @@ GEM
     ansi (1.4.3)
     arel (2.2.3)
     attr_required (0.0.5)
-    bcrypt-ruby (3.0.1-x86-mingw32)
-    bootstrap-sass (2.3.2.0)
+    bcrypt-ruby (3.1.2-x86-mingw32)
+    bond (0.4.3)
+    bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
-    bootstrap-will_paginate (0.0.9)
+    bootstrap-will_paginate (0.0.10)
       will_paginate
+    bootstrap-wysihtml5-rails (0.3.1.23)
+      railties (>= 3.0)
     builder (3.0.4)
     cancan (1.6.10)
     carrierwave (0.5.8)
       activesupport (~> 3.0)
-    chunky_png (1.2.8)
+    chunky_png (1.2.9)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.2)
+    coffee-script-source (1.6.3)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -127,22 +61,23 @@ GEM
       compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
     default_value_for (2.0.3)
-    devise (2.2.4)
+    devise (2.2.7)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
-    faraday (0.8.7)
-      multipart-post (~> 1.1)
-    faraday_middleware (0.9.0)
-      faraday (>= 0.7.4, < 0.9)
-    fb_graph (2.7.6)
+    exception_notification (4.0.1)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
+    execjs (2.0.2)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
+    fb_graph (2.6.0)
       httpclient (>= 2.2.0.2)
-      multi_json (>= 1.3)
+      multi_json
       rack-oauth2 (>= 0.14.4)
       tzinfo
     font-awesome-rails (3.1.1.0)
@@ -153,22 +88,22 @@ GEM
     haml (4.0.3)
       tilt
     has_permalink (0.1.6)
-    hashie (1.2.0)
+    hashie (2.0.5)
     hike (1.2.3)
-    honeybadger (1.7.0)
+    honeybadger (1.9.2)
+      faraday
       json
-    http_parser.rb (0.5.3-x86-mingw32)
-    httpclient (2.3.3)
-    i18n (0.6.4)
-    intercom-rails (0.2.23)
+    httpclient (2.3.4.1)
+    i18n (0.6.5)
+    intercom-rails (0.2.24)
       activesupport (> 3.0)
-    jquery-rails (3.0.1)
+    jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (4.0.3)
+    jquery-ui-rails (3.0.1)
       jquery-rails
       railties (>= 3.1.0)
-    json (1.8.0)
+    json (1.8.1)
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -180,12 +115,14 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.23)
-    mini_portile (0.5.0)
-    multi_json (1.7.7)
+    mime-types (1.25)
+    mini_portile (0.5.2)
+    multi_json (1.0.4)
     multipart-post (1.2.0)
     nested_form (0.3.2)
-    newrelic_rpm (3.6.5.130)
+    newrelic_rpm (3.6.8.168)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     nokogiri (1.6.0-x86-mingw32)
       mini_portile (~> 0.5.0)
     omniauth (1.1.4)
@@ -196,8 +133,8 @@ GEM
       activerecord (~> 3.0)
       railties (~> 3.0)
     pdfkit (0.5.4)
-    pg (0.15.1-x86-mingw32)
-    polyamorous (0.6.3)
+    pg (0.17.0-x86-mingw32)
+    polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.3)
     rack (1.3.10)
@@ -205,11 +142,12 @@ GEM
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
-    rack-oauth2 (1.0.5)
+    rack-oauth2 (0.14.8)
       activesupport (>= 2.3)
       attr_required (>= 0.0.5)
       httpclient (>= 2.2.0.2)
-      multi_json (>= 1.3.6)
+      i18n
+      json (>= 1.4.3)
       rack (>= 1.1)
     rack-pjax (0.7.0)
       nokogiri (~> 1.5)
@@ -218,9 +156,11 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rack-webconsole (0.1.2)
-      json
+    rack-webconsole (0.1.4)
+      multi_json (~> 1.0.3)
       rack
+      ripl (~> 0.5.1)
+      ripl-multi_line (~> 0.3.0)
     rails (3.1.4)
       actionmailer (= 3.1.4)
       actionpack (= 3.1.4)
@@ -229,6 +169,21 @@ GEM
       activesupport (= 3.1.4)
       bundler (~> 1.0)
       railties (= 3.1.4)
+    rails_admin (0.4.9)
+      bootstrap-sass (~> 2.2)
+      builder (~> 3.0)
+      coffee-rails (>= 3.1, < 5)
+      font-awesome-rails (~> 3.0)
+      haml (~> 4.0)
+      jquery-rails (>= 2.1, < 4)
+      jquery-ui-rails (~> 3.0)
+      kaminari (~> 0.14)
+      nested_form (~> 0.3)
+      rack-pjax (~> 0.6)
+      rails (~> 3.1)
+      remotipart (~> 1.0)
+      safe_yaml (~> 0.6)
+      sass-rails (~> 3.1)
     railties (3.1.4)
       actionpack (= 3.1.4)
       activesupport (= 3.1.4)
@@ -237,73 +192,75 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (10.1.0)
+    ransack (1.0.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      polyamorous (~> 0.6.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    remotipart (1.0.5)
-    safe_yaml (0.9.3)
-    sass (3.2.9)
+    remotipart (1.2.1)
+    ripl (0.5.1)
+      bond (~> 0.4.0)
+    ripl-multi_line (0.3.1)
+      ripl (>= 0.3.6)
+    safe_yaml (0.9.7)
+    sass (3.2.12)
     sass-rails (3.1.4)
       actionpack (~> 3.1.0)
       railties (~> 3.1.0)
       sass (>= 3.1.4)
       sprockets (~> 2.0.0)
       tilt (~> 1.3.2)
+    seed_dump (3.0.1)
+      activerecord
+      activesupport
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    simple_oauth (0.1.9)
     sprockets (2.0.4)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.7-x86-mingw32)
+    sqlite3 (1.3.8-x86-mingw32)
+    squeel (1.1.1)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      polyamorous (~> 0.6.0)
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     thor (0.14.6)
     tilt (1.3.7)
-    tinder (1.9.1)
-      eventmachine (>= 0.12.0, < 2)
-      faraday (~> 0.8)
-      faraday_middleware (~> 0.8)
-      hashie (~> 1.0)
-      json (~> 1.6)
-      mime-types (~> 1.16)
-      multi_json (~> 1.0)
-      multipart-post (~> 1.1)
-      twitter-stream (~> 0.1)
-    treetop (1.4.14)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     turn (0.9.6)
       ansi
-    twitter-stream (0.1.16)
-      eventmachine (>= 0.12.8)
-      http_parser.rb (~> 0.5.1)
-      simple_oauth (~> 0.1.4)
-    tzinfo (0.3.37)
-    uglifier (2.1.1)
+    tzinfo (0.3.38)
+    uglifier (2.3.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
-    warden (1.2.1)
+      json (>= 1.8.0)
+    warden (1.2.3)
       rack (>= 1.0)
     watu_table_builder (0.3.0)
-    will_paginate (3.0.4)
+    will_paginate (3.0.5)
+    wkhtmltopdf-heroku (1.0.0)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bootstrap-sass
   bootstrap-will_paginate
-  bootstrap-wysihtml5-rails!
+  bootstrap-wysihtml5-rails
   cancan
   carrierwave
   coffee-rails (~> 3.1.1)
   compass-rails
   default_value_for
   devise
-  exception_notification!
+  exception_notification
   fb_graph
   gchartrb
   geocoder
@@ -320,16 +277,16 @@ DEPENDENCIES
   pg
   rack-webconsole
   rails (= 3.1.4)
-  rails_admin!
-  ransack!
+  rails_admin
+  ransack
   sass-rails (= 3.1.4)
+  seed_dump
   simple_form
   sqlite3
-  squeel!
+  squeel
   thin (= 1.3.1)
   turn
-  twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
   watu_table_builder
   will_paginate
-  wkhtmltopdf-heroku!
+  wkhtmltopdf-heroku
