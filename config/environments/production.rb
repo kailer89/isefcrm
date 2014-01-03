@@ -65,6 +65,5 @@ ProtoCRM3::Application.configure do
 
   config.middleware.use ExceptionNotifier,
     sender_address: 'admin@protocrm.com',
-    exception_recipients: 'israel.valdez.89@gmail.com,ngl_88@hotmail.com',
-    ignore_exceptions: ExceptionNotifier.default_ignore_exceptions # + [RuntimeError]
+    exception_recipients: 'israel.valdez.89@gmail.com,ngl_88@hotmail.com'
 end
