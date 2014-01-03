@@ -50,20 +50,12 @@ border-bottom: 0px solid #e5e5e5!important;
       </table>
     </fieldset>
     <div id="busquedaAvanzada">
-
     <fieldset>
       <legend>Filtros</legend>
       <%= f.condition_fields do |c| %>
-      <div class="field">
-        <%= c.attribute_fields do |a| %>
-          <%= a.attribute_select  associations: [:nacionalidad, :programa,:user,:sede,:grupo,:direccions,:interes_basicos,:interes_academicos,:plan_de_descuentos]%>
-        <% end %>
-        <%= c.predicate_select %>
-        <%= c.value_fields do |v| %>
-          <%= v.text_field :value %>
-        <% end %>
-        </div>
+        <%= render "condition_fields", f: c%>
       <% end %>
+      <%= button_to_add_fields "Agregar Filtro", f, :condition %>
     </fieldset>
         
     <fieldset>
