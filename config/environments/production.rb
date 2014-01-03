@@ -62,8 +62,13 @@ ProtoCRM3::Application.configure do
   config.active_support.deprecation = :notify
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp #:smtp
+  
+  config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[Whatever] ",
+    :sender_address => %{"notifier" <admin@protocrm.com>},
+    :exception_recipients => %w{israel.valdez.89@gmail.com,ngl_88@hotmail.com}
+  }
 
-  config.middleware.use ExceptionNotifier,
-    sender_address: 'admin@protocrm.com',
-    exception_recipients: 'israel.valdez.89@gmail.com,ngl_88@hotmail.com'
+
 end
