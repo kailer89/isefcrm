@@ -4,7 +4,7 @@
 <%=render :partial=>"shared/breadcrumbs", :locals=>{:model_name=>request.path_parameters[:controller],:model_id=>@llamada.id, :parent_model=>@llamada.model_name, :parent_id=>@llamada.model_id}%>
 
 <%rol = Role.where(:id=>current_user.role).first rescue nil%>
-              <%if ["D","ACRM","AL","A"].include?(rol.nombre) != true && request.path_parameters[:action] =="edit"  %>
+              <%if ["D","ACRM","AL","A", "CP"].include?(rol.nombre) != true && request.path_parameters[:action] =="edit"  %>
 <div class="well">
 <h1>Llamada</h1>
 
