@@ -12,7 +12,7 @@ class ImportsController < ApplicationController
         begin
         csv_text = File.read("public/" + @import.filename_url.to_s)
         utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
-        csv = CSV.parse(utf8_string.gsub('"', '').gsub(/[^\n\r;]+/, '"\0"').gsub(';', ','), :headers => true) 
+        csv = CSV.parse(utf8_string.gsub('"', '').gsub(/[^\n\r;]+/, '"\0"'), :headers => true) 
 
         csv.each do |row| 
           begin
