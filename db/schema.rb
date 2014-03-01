@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140103054706) do
+ActiveRecord::Schema.define(:version => 20140301153004) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -106,6 +106,17 @@ ActiveRecord::Schema.define(:version => 20140103054706) do
     t.date     "fecha_lim_fpi"
     t.integer  "status_ref_pago_insc_id"
     t.boolean  "archivado"
+    t.integer  "periodo_para_ingresar_id"
+    t.boolean  "solicitud_de_beca"
+    t.boolean  "certificado_de_estudios"
+    t.boolean  "titulo_profesional"
+    t.boolean  "cedula_profesional"
+    t.boolean  "curp"
+    t.boolean  "identificacion_oficial"
+    t.boolean  "curriculum_vitae"
+    t.boolean  "cartas_de_recomendacion"
+    t.boolean  "comprobante_de_domicilio"
+    t.boolean  "comprobante_pago_inscripcion"
   end
 
   create_table "articles", :force => true do |t|
@@ -591,6 +602,9 @@ ActiveRecord::Schema.define(:version => 20140103054706) do
     t.integer  "status_de_la_inscripcion_id"
     t.integer  "status_del_pago_de_la_inscripcion_id"
     t.boolean  "archivado"
+    t.date     "fecha_de_pago_de_inscripcion"
+    t.string   "id_de_alumno"
+    t.string   "comentarios"
   end
 
   create_table "interes_academicos", :force => true do |t|
@@ -685,6 +699,7 @@ ActiveRecord::Schema.define(:version => 20140103054706) do
     t.datetime "updated_at"
     t.integer  "prospecto_id"
     t.string   "blank"
+    t.integer  "Referido"
   end
 
   create_table "memos", :force => true do |t|
@@ -1395,6 +1410,9 @@ ActiveRecord::Schema.define(:version => 20140103054706) do
     t.integer  "status_de_pago_de_examen_de_admision_id"
     t.integer  "tipo_de_admision_id"
     t.boolean  "archivado"
+    t.boolean  "asistio_a_entrevista"
+    t.date     "nueva_fecha_para_entrevista"
+    t.time     "nueva_hora_para_entrevista"
   end
 
   create_table "statics", :force => true do |t|

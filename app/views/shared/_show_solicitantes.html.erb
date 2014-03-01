@@ -75,6 +75,18 @@
         <%=printIfAvailable("Archivado",f.archivado ? "Archivado" : "")%>
       </p>
 
+            <p>
+        <%=printIfAvailable("Asistio a la entrevista",f.asistio_a_entrevista )%>
+      </p>
+
+            <p>
+        <%=printIfAvailable("Nueva fecha para entrevista",f.nueva_fecha_para_entrevista )%>
+      </p>
+
+            <p>
+        <%=printIfAvailable("Nueva hora para entrevista",f.nueva_hora_para_entrevista )%>
+      </p>
+
    </fieldset>
   </div>
 <div class="tab-pane fade" id="becacredito<%=prospectoid%>">
@@ -143,6 +155,18 @@
   <p>
     <%=printIfAvailable("Comentarios",f.becacreditos.first.comentarios_dictamen_beca)%>
   </p>
+
+              <p>
+        <%=printIfAvailable("Asistio a la entrevista",f.asistio_a_entrevista )%>
+      </p>
+
+            <p>
+        <%=printIfAvailable("Nueva fecha para entrevista",f.nueva_fecha_para_entrevista )%>
+      </p>
+
+            <p>
+        <%=printIfAvailable("Nueva hora para entrevista",f.nueva_hora_para_entrevista )%>
+      </p>
 </fieldset>
   </div> 
 

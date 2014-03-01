@@ -106,6 +106,8 @@ if reporte.medio_de_contactos_id.flatten.size > 1
 	end
 end
 
+
+
 %>
 	<%firstitem=true%>
 	<div class="tabbable tabs-left">
@@ -150,7 +152,7 @@ end
 			  		<%reporte.usuarios.each do |usuario|%>
 				  		<%usuario = User.where(:id=>usuario).first%>
 				  		<%if usuario != nil %>
-					  		<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
+					  		<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 					  		<%if firstitem%>
 					  			<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>usuario.id,:kind=>"usuario",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
 					  			<%firstitem = false%>
@@ -162,7 +164,7 @@ end
 				<%else%>
 			  		<%User.all.each do |usuario|%>
 			  			<%if usuario != nil %>
-					  		<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
+					  		<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 							<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>usuario.id,:kind=>"usuario",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
 				  			<%firstitem = false%>
 				  		<%else%>
@@ -209,7 +211,7 @@ end
 				  	<%reporte.sedes.each do |sede|%>
 				  		<%sede = Sede.where(:id=>sede).first%>
 				  		<%if sede != nil %>
-					  		<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
+					  		<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 					  		<%if firstitem%>
 								<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>sede.id,:kind=>"sede",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
 					  			<%firstitem = false%>
@@ -220,7 +222,7 @@ end
 					<%end%>
 				<%else%>
 					<%Sede.all.each do |sede|%>
-					  		<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
+					  		<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 				  		<%if firstitem%>
 						    	<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>sede.id,:kind=>"sede",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
 				  			<%firstitem = false%>
@@ -267,7 +269,7 @@ end
 				  	<%reporte.subsedes.each do |subsede|%>
 				  		<%subsede = Subsede.where(:id=>subsede).first%>
 				  		<%if subsede != nil%>
-					  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
+					  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede.id}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 					  		<%if firstitem%>
 								<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>subsede.id,:kind=>"subsede",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
 					  			<%firstitem = false%>
@@ -278,7 +280,7 @@ end
 					<%end%>
 				<%else%>
 				  	<%Subsede.all.each do |subsede|%>
-					  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
+					  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede.id}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 				  		<%if firstitem%>
 						    	<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>subsede.id,:kind=>"subsede",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
 				  			<%firstitem = false%>

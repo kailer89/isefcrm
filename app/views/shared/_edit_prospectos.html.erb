@@ -105,7 +105,7 @@
               <%= builder.input :twitter, :label=>"Twitter"%><br/>
               <%= builder.input :email_de_promocion_mailing, :label=>"E-mail de promoción/mailing"%><br/>
               <%= builder.input :impreso_flyer_folleto, :label=>"Impreso; flyer/folleto"%><br/>
-              <%= builder.input :anuncio_publicacion_periodico_revista, :label=>"Anuncio/Publicación/Periódico/Revista"%><br/>
+              <%= builder.input :anuncio_publicacion_periodico_revista, :label=>"Anuncio/Publicación/<br/>Periódico/Revista"%><br/>
               <%= builder.input :llamada_telefonica_de_un_asesor, :label=>"Llamada teléfonica de un Asesor"%><br/>
               <%= builder.input :conferencia_platica_charla, :label=>"Conferencia/Plática/Charla"%><br/>
               <%= builder.input :sesion_informativa, :label=>"Sesión Informativa"%><br/>
@@ -113,7 +113,9 @@
               <%= builder.input :convenio_con_su_institucion, :label=>"Convenio con su Institución"%><br/>
               <%= builder.input :otro_texto,:label=>"Otro ¿Cuál?"%><br/>
               <%= builder.hidden_field :blank, :value=>"default"%>
-              <%= builder.input :comentarios,:input_html => { :cols => 50, :rows => 3 }, :label=>"Comentarios:"%></p></div>
+              <%= builder.input :comentarios,:input_html => { :cols => 50, :rows => 3 }, :label=>"Comentarios:"%>
+<%= builder.input :Referido,:label=>"Referido",:collection=>Prospecto.all.map{|c| [c.nombre + ' ' + ((c.apellido_paterno == nil) ? '' : c.apellido_paterno ) + ' ' + ((c.apellido_materno == nil) ? '' : c.apellido_materno),c.id] }.sort,:include_blank=>true%>
+            </p></div>
           <% end %>          
         </div>
        <div class="tab-pane fade form-horizontal" id="plandescuentos">
