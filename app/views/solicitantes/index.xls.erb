@@ -7,6 +7,21 @@
   <Worksheet ss:Name="Sheet1">
     <Table>
       <Row>
+          <Cell><Data ss:Type="String">Nombre(s)</Data></Cell>
+          <Cell><Data ss:Type="String">Apellido paterno</Data></Cell>
+          <Cell><Data ss:Type="String">Apellido materno</Data></Cell>
+          <Cell><Data ss:Type="String">Sexo</Data></Cell>
+          <Cell><Data ss:Type="String">Fecha de nacimiento</Data></Cell>
+          <Cell><Data ss:Type="String">Programa</Data></Cell>
+          <Cell><Data ss:Type="String">Nacionalidad</Data></Cell>
+          <Cell><Data ss:Type="String">Teléfono particular</Data></Cell>
+          <Cell><Data ss:Type="String">Teléfono movil</Data></Cell>
+          <Cell><Data ss:Type="String">Otro teléfono</Data></Cell>
+          <Cell><Data ss:Type="String">E-mail</Data></Cell>
+          <Cell><Data ss:Type="String">Facebook</Data></Cell>
+          <Cell><Data ss:Type="String">Twitter</Data></Cell>
+          <Cell><Data ss:Type="String">Validado</Data></Cell>
+          <Cell><Data ss:Type="String">Revisada Importacion</Data></Cell>
           <Cell><Data ss:Type="String">Solicita PAA (Prueba de Aptitud Academica)</Data></Cell>
           <Cell><Data ss:Type="String">Fecha programada para PAA</Data></Cell>
           <Cell><Data ss:Type="String">Hora programada PAA</Data></Cell>
@@ -34,21 +49,6 @@
           <Cell><Data ss:Type="String">Comentarios</Data></Cell>
           <Cell><Data ss:Type="String">Status del Trámite</Data></Cell>
           <Cell><Data ss:Type="String">Porcentaje de Beca Concedido</Data></Cell>
-          <Cell><Data ss:Type="String">Nombre(s)</Data></Cell>
-          <Cell><Data ss:Type="String">Apellido paterno</Data></Cell>
-          <Cell><Data ss:Type="String">Apellido materno</Data></Cell>
-          <Cell><Data ss:Type="String">Sexo</Data></Cell>
-          <Cell><Data ss:Type="String">Fecha de nacimiento</Data></Cell>
-          <Cell><Data ss:Type="String">Programa</Data></Cell>
-          <Cell><Data ss:Type="String">Nacionalidad</Data></Cell>
-          <Cell><Data ss:Type="String">Teléfono particular</Data></Cell>
-          <Cell><Data ss:Type="String">Teléfono movil</Data></Cell>
-          <Cell><Data ss:Type="String">Otro teléfono</Data></Cell>
-          <Cell><Data ss:Type="String">E-mail</Data></Cell>
-          <Cell><Data ss:Type="String">Facebook</Data></Cell>
-          <Cell><Data ss:Type="String">Twitter</Data></Cell>
-          <Cell><Data ss:Type="String">Validado</Data></Cell>
-          <Cell><Data ss:Type="String">Revisada Importacion</Data></Cell>
           <Cell><Data ss:Type="String">Calle</Data></Cell>
           <Cell><Data ss:Type="String">No interior</Data></Cell>
           <Cell><Data ss:Type="String">No exterior</Data></Cell>
@@ -99,6 +99,21 @@
 
   <% @solicitantes.each do |solicitante| %>
     <Row>
+      <Cell><Data ss:Type="String"><%=printValue("Nombre(s)",solicitante.prospectos.first.nombre)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Apellido paterno",solicitante.prospectos.first.apellido_paterno)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Apellido materno",solicitante.prospectos.first.apellido_materno)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Sexo",solicitante.prospectos.first.sexo == true ? "Masculino" : "Femenino")%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Fecha de nacimiento",solicitante.prospectos.first.fecha_de_nacimiento)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%valor = solicitante.prospectos.first.programa.nivel rescue nilvalor = valor + " - " + solicitante.prospectos.first.programa.programa rescue nil%><%=printValue("Programa",valor)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%valor = solicitante.prospectos.first.nacionalidad.nacionalidad rescue nil%><%=printValue("Nacionalidad",valor)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Teléfono particular",solicitante.prospectos.first.telefono_particular)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Teléfono movil",solicitante.prospectos.first.telefono_movil)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Otro teléfono",solicitante.prospectos.first.otro_telefono)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("E-mail",solicitante.prospectos.first.email)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Facebook",solicitante.prospectos.first.facebook)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue("Twitter",solicitante.prospectos.first.twitter)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue(" ",solicitante.prospectos.first.validado == true ? "Validado" : "No Validado")%></Data></Cell>
+      <Cell><Data ss:Type="String"><%=printValue(" ",solicitante.prospectos.first.importado_revisado == true ? "Revisada Importacion" : "Importacion No Revisada")%></Data></Cell>      
       <Cell><Data ss:Type="String"><%=printValue("Solicita PAA (Prueba de Aptitud Academica)",solicitante.socilicita_PAA)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Fecha programada para PAA",solicitante.fecha_programacion_para_PAA)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Hora programada PAA",solicitante.hora_programada_PAA.strftime('%H:%M %p'))  rescue nil%></Data></Cell>
@@ -126,21 +141,6 @@
       <Cell><Data ss:Type="String"><%=printValue("Comentarios",solicitante.becacreditos.first.comentarios)%></Data></Cell>
       <Cell><Data ss:Type="String"><%valor=solicitante.becacreditos.first.status_del_tramite.valor rescue nil%><%=printValue("Status del Trámite",valor)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Porcentaje de Beca Concedido",solicitante.becacreditos.first.porcentaje_de_beca_concedido)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Nombre(s)",solicitante.prospectos.first.nombre)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Apellido paterno",solicitante.prospectos.first.apellido_paterno)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Apellido materno",solicitante.prospectos.first.apellido_materno)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Sexo",solicitante.prospectos.first.sexo == true ? "Masculino" : "Femenino")%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Fecha de nacimiento",solicitante.prospectos.first.fecha_de_nacimiento)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%valor = solicitante.prospectos.first.programa.nivel rescue nilvalor = valor + " - " + solicitante.prospectos.first.programa.programa rescue nil%><%=printValue("Programa",valor)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%valor = solicitante.prospectos.first.nacionalidad.nacionalidad rescue nil%><%=printValue("Nacionalidad",valor)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Teléfono particular",solicitante.prospectos.first.telefono_particular)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Teléfono movil",solicitante.prospectos.first.telefono_movil)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Otro teléfono",solicitante.prospectos.first.otro_telefono)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("E-mail",solicitante.prospectos.first.email)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Facebook",solicitante.prospectos.first.facebook)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue("Twitter",solicitante.prospectos.first.twitter)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue(" ",solicitante.prospectos.first.validado == true ? "Validado" : "No Validado")%></Data></Cell>
-      <Cell><Data ss:Type="String"><%=printValue(" ",solicitante.prospectos.first.importado_revisado == true ? "Revisada Importacion" : "Importacion No Revisada")%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Calle",solicitante.prospectos.first.direccions.first.calle)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("No interior",solicitante.prospectos.first.direccions.first.no_interior)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("No exterior",solicitante.prospectos.first.direccions.first.no_exterior)%></Data></Cell>
