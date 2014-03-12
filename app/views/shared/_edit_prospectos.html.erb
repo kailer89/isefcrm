@@ -37,7 +37,6 @@
           <%else%>
             <%=g.hidden_field :user,:label_method=>:username,:include_blank => false,:label=>"Asignado a:",:disabled=>true%>
           <%end%>
-          <%=g.association :sede,:label_method=>:nombre,:include_blank => false%>
           <%=g.association :grupo,:label_method=>:nombre,:include_blank => false%>
           <%=g.hidden_field :issolicitante%>
           <%= g.hidden_field :validado, :value=>false%>
@@ -74,11 +73,11 @@
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
               <%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:"%>
-              <%=builder.association :subsede,:label_method=>:nombre,:include_blank => false, :label=>"Sub sede de interés:"%>
+              <%=builder.association :subsede,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:"%>
 
               <%=builder.association :modalidad,:label_method=>:valor,:include_blank => false, :label=>"Modalidad:"%>
                <%= builder.association :turno,:include_blank => false, :label_method => :valor  , :label=>"Turno:"%>
-               <%= builder.association :periodo_para_ingresar,:include_blank => false, :label_method => :valor, :label=>"Periodo para Ingresar:" %>
+               <%= builder.association :periodo_para_ingresar,:include_blank => false, :label_method => :valor, :label=>"Periodo para ingresar:" %>
                <%= builder.association :status_de_interes_de_prospecto_validado,:include_blank => false, :label_method => :valor, :label=>"Status de Interés del prospecto validado:" %>
               <%= builder.hidden_field :blank, :value=>"default"%>
               <%= builder.input :comentarios, :input_html => { :cols => 50, :rows => 3 }, :label=>"Comentarios:"%><br/></div>

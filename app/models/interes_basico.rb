@@ -12,4 +12,20 @@ class InteresBasico < ActiveRecord::Base
 	belongs_to :subsede
 	belongs_to :programa
 	belongs_to :modalidad
+
+
+
+  validate :subsede_is_in_selected_sede
+
+private
+def subsede_is_in_selected_sede
+  logger.debug "--------------------------------11111111111111111111111111111111111111111"
+  #sede = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
+  subsede = Subsede.where(:id=>self.subsede.id).where(:id=>self.subsede.sede_id).first
+  if subsede != nil
+  	sedeCorrecta = Sede.where(:id=>self.subsede.sede_id).first
+    errors.add :subsede_id, "La Extension de la sede no es valida por favor seleccione la correcta:" + sedeCorrecta.nombre
+  end
+end
+
 end

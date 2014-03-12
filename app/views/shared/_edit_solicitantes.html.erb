@@ -112,7 +112,7 @@
 </div>             
         
         <%=builder.input :comentarios, :input_html=>{:cols=>50,:rows=>5}, :label=>"Comentarios:"%>
-         <%= builder.association :status_del_tramite_de_beca,:include_blank => false, :label_method => :valor , :label=>"Status del Trámite:"%>
+         <%= builder.association :status_del_tramite_de_beca,:include_blank => false, :label_method => :valor , :label=>"Status de trámite de beca:"%>
          <%
   @rolepermisions  = RolePermision.where(:role_id=>current_user.role,:objeto=>"becacreditos").first
   if @rolepermisions.permiso == "Escritura"
@@ -250,7 +250,7 @@
   </div>
 </div> 
           <%=builder.input :comentarios, :input_html=>{:cols=>50,:rows=>5}, :label=>"Comentarios:"%>
-           <%= builder.association :status_del_tramite_de_beca,:include_blank => false, :label_method => :valor , :label=>"Status del Trámite:"%>
+           <%= builder.association :status_del_tramite_de_beca,:include_blank => false, :label_method => :valor , :label=>"Status de trámite de beca:"%>
            <%
             @rolepermisions  = RolePermision.where(:role_id=>current_user.role,:objeto=>"becacreditos").first
             if @rolepermisions.permiso == "Escritura"

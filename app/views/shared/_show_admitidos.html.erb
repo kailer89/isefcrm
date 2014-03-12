@@ -20,7 +20,7 @@
 </p>
 
 <p>
-  <%=printIfAvailable("Comentarios de notificación",f.cometnarios_de_notificacion)%>
+  <%=printIfAvailable("Comentarios",f.comentarios_documentacion)%>
 </p>
 
 <p>
@@ -91,7 +91,7 @@
 
 <p>
   <%valor=f.periodo_para_ingresar.valor rescue nil%>
-  <%=printIfAvailable("Periodo para Ingresar",valor)%>
+  <%=printIfAvailable("Periodo para ingresar",valor)%>
 </p>
       <p>
         <%=printIfAvailable("Archivado",f.archivado ? "Archivado": "")%>

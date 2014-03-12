@@ -29,6 +29,18 @@ class Prospecto < ActiveRecord::Base
     end
   end
 
+
+
+
+private
+def subsede_is_in_selected_sede
+  logger.debug "--------------------------------11111111111111111111111111111111111111111"
+  #sede = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
+  subsede = Subsede.where(:id=>self.interes_basicos.first.subsede.id).where(:id=>self.interes_basicos.first.subsede.sede_id).first
+  if subsede != nil
+    errors.add :sede_id, "La Extension de la sede no es valida por favor seleccione una correcta"
+  end
+end
   #validates :telefono_particular, :presence => true, :unless => lambda { self.otro_telefono.blank? or self.telefono_movil.blank? }
   #validates :telefono_movil, :presence => true, :unless => lambda { self.otro_telefono.blank? or self.telefono_particular.blank? }
   #validates :otro_telefono, :presence => true , :unless => lambda { self.telefono_movil.blank? or self.telefono_particular.blank? }

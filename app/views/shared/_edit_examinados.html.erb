@@ -10,7 +10,7 @@
               <%= f.association :status_del_examinado_psico,:include_blank => false, :label_method => :valor , :label=>"Dictamen Psicométria"%>
           <%=f.input :puntuacion_MMPI, :label=>"Puntuación MMPI:"%>
               <%=f.input :comentarios_psico, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios de la Psicóloga:"%>
-          <%= f.association :status_del_examinado_entrevistum,:include_blank => false, :label_method => :valor , :label=>"Dictamen Academico"%>
+          <%= f.association :status_del_examinado_entrevistum,:include_blank => false, :label_method => :valor , :label=>"Dictamen Académico"%>
               <%=f.input :comentarios_coord, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios del Coordinador Académico:"%>
               <%=f.input :comentarios_asesor, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios del Asesor de Promoción:"%>    
      <%=f.input :archivado%>
@@ -29,7 +29,7 @@
               <%= f.association :status_del_examinado_psico,:include_blank => false, :label_method => :valor , :label=>"Dictamen Psicométria"%>
               <%=f.input :puntuacion_MMPI, :label=>"Puntuación MMPI:"%>
               <%=f.input :comentarios_psico, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios de la Psicóloga:"%>
-              <%= f.association :status_del_examinado_entrevistum,:include_blank => false, :label_method => :valor , :label=>"Dictamen Academico"%>              
+              <%= f.association :status_del_examinado_entrevistum,:include_blank => false, :label_method => :valor , :label=>"Dictamen Académico"%>              
               <%=f.input :comentarios_coord, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios del Coordinador Académico:"%>
               <%=f.input :comentarios_asesor, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios del Asesor de Promoción:"%>    
               <%=f.input :archivado%>
