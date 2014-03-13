@@ -5,15 +5,15 @@
   <dt><strong><%= model_class.human_attribute_name(:periodo_anual) %>:</strong></dt>
   <dd><%= @achievment.periodo_anual %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id) %>:</strong></dt>
-  <dd><%= @achievment.sede_id %></dd>
+  <dd><%= @achievment.sede.nombre %></dd>
   <dt><strong><%= model_class.human_attribute_name(:clave_del_programa) %>:</strong></dt>
   <dd><%= @achievment.clave_del_programa %></dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_inicio) %>:</strong></dt>
   <dd><%= @achievment.fecha_de_inicio %></dd>
   <dt><strong><%= model_class.human_attribute_name(:nivel_id) %>:</strong></dt>
-  <dd><%= @achievment.nivel_id %></dd>
+  <dd><%= @achievment.nivel.valor %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id) %>:</strong></dt>
-  <dd><%= @achievment.programa_id %></dd>
+  <dd><%= @achievment.programa.nivel %> - <%= @achievment.programa.programa %></dd>
   <dt><strong><%= model_class.human_attribute_name(:ciudad_de_apertura) %>:</strong></dt>
   <dd><%= @achievment.ciudad_de_apertura %></dd>
   <dt><strong><%= model_class.human_attribute_name(:estado_de_apertura) %>:</strong></dt>
@@ -21,7 +21,7 @@
   <dt><strong><%= model_class.human_attribute_name(:modalidad) %>:</strong></dt>
   <dd><%= @achievment.modalidad %></dd>
   <dt><strong><%= model_class.human_attribute_name(:turno_id) %>:</strong></dt>
-  <dd><%= @achievment.turno_id %></dd>
+  <dd><%= @achievment.turno.valor %></dd>
   <dt><strong><%= model_class.human_attribute_name(:horarios) %>:</strong></dt>
   <dd><%= @achievment.horarios %></dd>
   <dt><strong><%= model_class.human_attribute_name(:horarios_text) %>:</strong></dt>

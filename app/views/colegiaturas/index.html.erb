@@ -16,9 +16,9 @@
       <tr>
         <td><%= link_to colegiatura.id, colegiatura_path(colegiatura) %></td>
         <td><%= colegiatura.periodo_anual %></td>
-        <td><%= colegiatura.sede_id %></td>
-        <td><%= colegiatura.nivel_id %></td>
-        <td><%= colegiatura.programa_id %></td>
+        <td><%= colegiatura.sede.nombre %></td>
+        <td><%= colegiatura.nivel.valor %></td>
+        <td><%= colegiatura.programa.nivel %> - <%= colegiatura.programa.programa %></td>
         <td><%=l colegiatura.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

@@ -17,9 +17,9 @@
       <tr>
         <td><%= link_to oferta_educativa.id, oferta_educativa_path(oferta_educativa) %></td>
         <td><%= oferta_educativa.periodo_anual %></td>
-        <td><%= oferta_educativa.sede_id %></td>
-        <td><%= oferta_educativa.nivel_id %></td>
-        <td><%= oferta_educativa.programa_id %></td>
+        <td><%= oferta_educativa.sede.nombre %></td>
+        <td><%= oferta_educativa.nivel.valor %></td>
+        <td><%= oferta_educativa.programa.nivel %> - <%= oferta_educativa.programa.programa %></td>
         <td><%=l oferta_educativa.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

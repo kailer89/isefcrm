@@ -5,7 +5,12 @@
   <dt><strong><%= model_class.human_attribute_name(:periodo_anual) %>:</strong></dt>
   <dd><%= @metas_globale.periodo_anual %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:meta_anual_de_alumnos_de_licenciatura) %>:</strong></dt>
   <dd><%= @metas_globale.meta_anual_de_alumnos_de_licenciatura %></dd>
   <dt><strong><%= model_class.human_attribute_name(:meta_anual_de_enteros_de_licenciatura) %>:</strong></dt>
@@ -27,7 +32,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_1) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_1 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_1).first
+    %>
+    <%=elPrograma.nombre%>
+    </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_1) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_1 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_1) %>:</strong></dt>
@@ -41,7 +51,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_1) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_1 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_2) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_2 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_2).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_2) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_2 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_2) %>:</strong></dt>
@@ -55,7 +70,13 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_2) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_2 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_3) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_3 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_3).first
+    %>
+    <%=elPrograma.nombre%>
+
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_3) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_3 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_3) %>:</strong></dt>
@@ -69,7 +90,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_3) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_3 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_4) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_4 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_4).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_4) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_4 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_4) %>:</strong></dt>
@@ -83,7 +109,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_4) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_4 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_5) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_5 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_5).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_5) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_5 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_5) %>:</strong></dt>
@@ -97,7 +128,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_5) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_5 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_6) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_6 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_6).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_6) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_6 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_6) %>:</strong></dt>
@@ -111,7 +147,13 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_6) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_6 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_7) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_7 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_7).first
+    %>
+    <%=elPrograma.nombre%>
+
+</dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_7) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_7 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_7) %>:</strong></dt>
@@ -125,7 +167,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_7) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_7 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_8) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_8 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_8).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_8) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_8 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_8) %>:</strong></dt>
@@ -139,7 +186,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_8) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_8 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_9) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_9 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_9).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_9) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_9 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_9) %>:</strong></dt>
@@ -153,7 +205,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_9) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_9 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_10) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_10 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_10).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_10) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_10 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_10) %>:</strong></dt>
@@ -167,7 +224,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_10) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_10 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_11) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_11 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_11).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_11) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_11 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_11) %>:</strong></dt>
@@ -181,7 +243,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_11) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_11 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_12) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_12 %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_12).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:mes_ano_12) %>:</strong></dt>
   <dd><%= @metas_globale.mes_ano_12 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_mensual_de_alumnos_inscritos_de_licenciatura_12) %>:</strong></dt>
@@ -195,7 +262,12 @@
   <dt><strong><%= model_class.human_attribute_name(:observaciones_12) %>:</strong></dt>
   <dd><%= @metas_globale.observaciones_12 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id_anual) %>:</strong></dt>
-  <dd><%= @metas_globale.sede_id_anual %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@metas_globale.sede_id_anual).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_anual_de_alumnos_de_licenciatura) %>:</strong></dt>
   <dd><%= @metas_globale.logro_anual_de_alumnos_de_licenciatura %></dd>
   <dt><strong><%= model_class.human_attribute_name(:logro_anual_de_enteros_de_licenciatura) %>:</strong></dt>

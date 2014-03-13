@@ -1,5 +1,7 @@
 class DivisionTerritorialsController < ApplicationController
   before_filter :authenticate_user!
+
+
   # GET /division_territorials
   # GET /division_territorials.json
   def index

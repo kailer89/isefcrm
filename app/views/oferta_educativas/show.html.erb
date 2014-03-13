@@ -5,11 +5,11 @@
   <dt><strong><%= model_class.human_attribute_name(:periodo_anual) %>:</strong></dt>
   <dd><%= @oferta_educativa.periodo_anual %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id) %>:</strong></dt>
-  <dd><%= @oferta_educativa.sede_id %></dd>
+  <dd><%= @oferta_educativa.sede.nombre %></dd>
   <dt><strong><%= model_class.human_attribute_name(:nivel_id) %>:</strong></dt>
-  <dd><%= @oferta_educativa.nivel_id %></dd>
+  <dd><%= @oferta_educativa.nivel.valor %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id) %>:</strong></dt>
-  <dd><%= @oferta_educativa.programa_id %></dd>
+  <dd><%= @oferta_educativa.programa.nivel %> - <%= @oferta_educativa.programa.programa %></dd>
   <dt><strong><%= model_class.human_attribute_name(:tipo_de_validez) %>:</strong></dt>
   <dd><%= @oferta_educativa.tipo_de_validez %></dd>
   <dt><strong><%= model_class.human_attribute_name(:tipo_de_reconocimiento) %>:</strong></dt>

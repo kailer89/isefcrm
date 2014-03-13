@@ -18,10 +18,21 @@
       <tr>
         <td><%= link_to nacional_de_apertura.id, nacional_de_apertura_path(nacional_de_apertura) %></td>
         <td><%= nacional_de_apertura.periodo_actual %></td>
-        <td><%= nacional_de_apertura.sede_id %></td>
+        <td>
+<%
+         elPrograma = Sede.where(:id=>nacional_de_apertura.sede_id).first
+    %>
+    <%=elPrograma.nombre%>
+        </td>
         <td><%= nacional_de_apertura.clave_del_programa %></td>
         <td><%= nacional_de_apertura.fecha_de_inicio %></td>
-        <td><%= nacional_de_apertura.programa_id %></td>
+        <td>
+<%
+         elPrograma = Programa.where(:id=>nacional_de_apertura.programa_id).first
+    %>
+    <%=elPrograma.nivel%>  - <%=elPrograma.programa%>
+
+        </td>
         <td><%=l nacional_de_apertura.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

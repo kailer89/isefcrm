@@ -144,7 +144,7 @@
       <div class="tab-pane" id="tab3">
         <p>
                 <%= f.input :sede_id_anual do %>
-    <%= f.select :sede_id_1, Sede.all.map{|c| [c.nombre, c.id]}%>
+    <%= f.select :sede_id_anual, Sede.all.map{|c| [c.nombre, c.id]}%>
   <%end%>
   <%= f.input :logro_anual_de_alumnos_de_licenciatura %>
   <%= f.input :logro_anual_de_enteros_de_licenciatura %>

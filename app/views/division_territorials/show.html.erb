@@ -5,13 +5,18 @@
   <dt><strong><%= model_class.human_attribute_name(:periodo_anual) %>:</strong></dt>
   <dd><%= @division_territorial.periodo_anual %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id) %>:</strong></dt>
-  <dd><%= @division_territorial.sede_id %></dd>
+  <dd><%= @division_territorial.sede.nombre %></dd>
   <dt><strong><%= model_class.human_attribute_name(:estados_correspondientes) %>:</strong></dt>
   <dd><%= @division_territorial.estados_correspondientes %></dd>
   <dt><strong><%= model_class.human_attribute_name(:estado_ciudad_con_grupo_abierto) %>:</strong></dt>
   <dd><%= @division_territorial.estado_ciudad_con_grupo_abierto %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id) %>:</strong></dt>
-  <dd><%= @division_territorial.programa_id %></dd>
+  <dd>
+<%
+         elPrograma = Programa.where(:id=>@division_territorial.programa_id).first
+    %>
+    <%=elPrograma.nivel%>  - <%=elPrograma.programa%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_inicio) %>:</strong></dt>
   <dd><%= @division_territorial.fecha_de_inicio %></dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_termino) %>:</strong></dt>
@@ -19,7 +24,13 @@
   <dt><strong><%= model_class.human_attribute_name(:estado_ciudad_con_grupo_abierto_1) %>:</strong></dt>
   <dd><%= @division_territorial.estado_ciudad_con_grupo_abierto_1 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id_1) %>:</strong></dt>
-  <dd><%= @division_territorial.programa_id_1 %></dd>
+  <dd>
+<%
+         elPrograma = Programa.where(:id=>@division_territorial.programa_id_1).first
+    %>
+    <%=elPrograma.nivel%>  - <%=elPrograma.programa%>
+
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_inicio_1) %>:</strong></dt>
   <dd><%= @division_territorial.fecha_de_inicio_1 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_termino_1) %>:</strong></dt>
@@ -27,7 +38,13 @@
   <dt><strong><%= model_class.human_attribute_name(:estado_ciudad_con_grupo_abierto_2) %>:</strong></dt>
   <dd><%= @division_territorial.estado_ciudad_con_grupo_abierto_2 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id_2) %>:</strong></dt>
-  <dd><%= @division_territorial.programa_id_2 %></dd>
+  <dd>
+<%
+         elPrograma = Programa.where(:id=>@division_territorial.programa_id_2).first
+    %>
+    <%=elPrograma.nivel%>  - <%=elPrograma.programa%>
+
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_inicio_2) %>:</strong></dt>
   <dd><%= @division_territorial.fecha_de_inicio_2 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_termino_2) %>:</strong></dt>
@@ -35,7 +52,12 @@
   <dt><strong><%= model_class.human_attribute_name(:estado_ciudad_con_grupo_abierto_3) %>:</strong></dt>
   <dd><%= @division_territorial.estado_ciudad_con_grupo_abierto_3 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id_3) %>:</strong></dt>
-  <dd><%= @division_territorial.programa_id_3 %></dd>
+  <dd>
+<%
+         elPrograma = Programa.where(:id=>@division_territorial.programa_id_3).first
+    %>
+    <%=elPrograma.nivel%>  - <%=elPrograma.programa%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_inicio_3) %>:</strong></dt>
   <dd><%= @division_territorial.fecha_de_inicio_3 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_termino_3) %>:</strong></dt>
@@ -43,7 +65,12 @@
   <dt><strong><%= model_class.human_attribute_name(:estado_ciudad_con_grupo_abierto_4) %>:</strong></dt>
   <dd><%= @division_territorial.estado_ciudad_con_grupo_abierto_4 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id_4) %>:</strong></dt>
-  <dd><%= @division_territorial.programa_id_4 %></dd>
+  <dd>
+<%
+         elPrograma = Programa.where(:id=>@division_territorial.programa_id_4).first
+    %>
+    <%=elPrograma.nivel%>  - <%=elPrograma.programa%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_inicio_4) %>:</strong></dt>
   <dd><%= @division_territorial.fecha_de_inicio_4 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_termino_4) %>:</strong></dt>
@@ -51,13 +78,23 @@
   <dt><strong><%= model_class.human_attribute_name(:estado_ciudad_con_grupo_abierto_5) %>:</strong></dt>
   <dd><%= @division_territorial.estado_ciudad_con_grupo_abierto_5 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id_5) %>:</strong></dt>
-  <dd><%= @division_territorial.programa_id_5 %></dd>
+  <dd>
+<%
+         elPrograma = Programa.where(:id=>@division_territorial.programa_id_5).first
+    %>
+    <%=elPrograma.nivel%>  - <%=elPrograma.programa%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_inicio_5) %>:</strong></dt>
   <dd><%= @division_territorial.fecha_de_inicio_5 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:fecha_de_termino_5) %>:</strong></dt>
   <dd><%= @division_territorial.fecha_de_termino_5 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:info_sim_sede_id) %>:</strong></dt>
-  <dd><%= @division_territorial.info_sim_sede_id %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@division_territorial.info_sim_sede_id).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:estado_ciudad_con_mas_de_100_mil_habitantes) %>:</strong></dt>
   <dd><%= @division_territorial.estado_ciudad_con_mas_de_100_mil_habitantes %></dd>
   <dt><strong><%= model_class.human_attribute_name(:acceso_directo_al_sim) %>:</strong></dt>

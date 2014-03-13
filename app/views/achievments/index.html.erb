@@ -19,11 +19,11 @@
       <tr>
         <td><%= link_to achievment.id, achievment_path(achievment) %></td>
         <td><%= achievment.periodo_anual %></td>
-        <td><%= achievment.sede_id %></td>
+        <td><%= achievment.sede.nombre %></td>
         <td><%= achievment.clave_del_programa %></td>
         <td><%= achievment.fecha_de_inicio %></td>
-        <td><%= achievment.nivel_id %></td>
-        <td><%= achievment.programa_id %></td>
+        <td><%= achievment.nivel.valor %></td>
+        <td><%= achievment.programa.nivel %> - <%= achievment.programa.programa %></td>
         <td><%=l achievment.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

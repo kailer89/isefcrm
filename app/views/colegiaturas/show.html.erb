@@ -5,11 +5,11 @@
   <dt><strong><%= model_class.human_attribute_name(:periodo_anual) %>:</strong></dt>
   <dd><%= @colegiatura.periodo_anual %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id) %>:</strong></dt>
-  <dd><%= @colegiatura.sede_id %></dd>
+  <dd><%= @colegiatura.sede.nombre %></dd>
   <dt><strong><%= model_class.human_attribute_name(:nivel_id) %>:</strong></dt>
-  <dd><%= @colegiatura.nivel_id %></dd>
+  <dd><%= @colegiatura.nivel.valor %></dd>
   <dt><strong><%= model_class.human_attribute_name(:programa_id) %>:</strong></dt>
-  <dd><%= @colegiatura.programa_id %></dd>
+  <dd><%= @colegiatura.programa.nivel %> - <%= @colegiatura.programa.programa %></dd>
   <dt><strong><%= model_class.human_attribute_name(:cuota_de_inscripcion_para_esta_sede) %>:</strong></dt>
   <dd><%= @colegiatura.cuota_de_inscripcion_para_esta_sede %></dd>
   <dt><strong><%= model_class.human_attribute_name(:cuota_mensual_para_esta_sede) %>:</strong></dt>

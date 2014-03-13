@@ -17,7 +17,10 @@
       <tr>
         <td><%= link_to equipo_de_alto_rendimiento.id, equipo_de_alto_rendimiento_path(equipo_de_alto_rendimiento) %></td>
         <td><%= equipo_de_alto_rendimiento.periodo_anual %></td>
-        <td><%= equipo_de_alto_rendimiento.sede_id %></td>
+        <td><%
+         elPrograma = Sede.where(:id=>equipo_de_alto_rendimiento.sede_id).first
+    %>
+    <%=elPrograma.nombre%></td>
         <td><%= equipo_de_alto_rendimiento.nombre_completo %></td>
         <td><%= equipo_de_alto_rendimiento.cargo %></td>
         <td><%=l equipo_de_alto_rendimiento.created_at %></td>

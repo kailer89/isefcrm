@@ -15,7 +15,10 @@
       <tr>
         <td><%= link_to metas_globale.id, metas_globale_path(metas_globale) %></td>
         <td><%= metas_globale.periodo_anual %></td>
-        <td><%= metas_globale.sede_id %></td>
+        <td><%
+         elPrograma = Sede.where(:id=>metas_globale.sede_id).first
+    %>
+    <%=elPrograma.nombre%></td>
         <td><%=l metas_globale.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

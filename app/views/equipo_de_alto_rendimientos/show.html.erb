@@ -5,7 +5,12 @@
   <dt><strong><%= model_class.human_attribute_name(:periodo_anual) %>:</strong></dt>
   <dd><%= @equipo_de_alto_rendimiento.periodo_anual %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sede_id) %>:</strong></dt>
-  <dd><%= @equipo_de_alto_rendimiento.sede_id %></dd>
+  <dd>
+<%
+         elPrograma = Sede.where(:id=>@equipo_de_alto_rendimiento.sede_id).first
+    %>
+    <%=elPrograma.nombre%>
+  </dd>
   <dt><strong><%= model_class.human_attribute_name(:nombre_completo) %>:</strong></dt>
   <dd><%= @equipo_de_alto_rendimiento.nombre_completo %></dd>
   <dt><strong><%= model_class.human_attribute_name(:cargo) %>:</strong></dt>
