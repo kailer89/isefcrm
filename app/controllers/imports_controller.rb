@@ -12,17 +12,15 @@ class ImportsController < ApplicationController
         begin
         csv_text = File.read("public/" + @import.filename_url.to_s)
         utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
-        csv = CSV.parse(utf8_string.gsub('"', '').gsub(/[^\n\r;]+/, '"\0"'), :headers => true) 
-
+        csv = CSV.parse(utf8_string, :headers => true) 
         csv.each do |row| 
           begin
             logger.debug "INFO************************************************"
             logger.debug row
-
+            logger.debug "INFO************************************************"
             row = row.to_hash.with_indifferent_access 
             prospecto=row
-            direccion= row.to_hash            
-            logger.debug "INFO************************************************" 
+            direccion= row.to_hash 
             #remove extra fields
             if prospecto["nombre"] == "*Nombre(s):" 
               
@@ -170,7 +168,8 @@ class ImportsController < ApplicationController
                     historial.user_id = current_user.id
                     historial.role = current_user.role
                     historial.action = "Importado"
-                    historial.save                                        
+                    historial.save 
+                    @errordetails.push(["Creado el prospecto: #{@objecto.inspect}" ,"#{view_context.link_to(@objecto.id, prospecto_path(@objecto.id))}".html_safe])                                  
                   else
                      logger.debug "444#######################################################################"
                     flash[:error] << "Failed to create: #{object.title}. Errors: #{@objecto.errors.full_messages.join(', ')}."
@@ -194,6 +193,7 @@ class ImportsController < ApplicationController
             @errores.push(error)
             logger.debug "ERROR#######################################################################ERROR"
           end
+
     #rescue => error
     #  flash[:error] =error
     #  render :uploadcsv

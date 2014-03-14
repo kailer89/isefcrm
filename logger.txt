@@ -5563,3 +5563,1000 @@ Served asset /sorttable.js - 304 Not Modified (0ms)
 Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
 Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
 Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (954ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (235ms)
+Served asset /application.js - 304 Not Modified (4655ms)
+Served asset /bootstrap.css - 304 Not Modified (76ms)
+Served asset /dragtable.js - 304 Not Modified (41ms)
+Served asset /sorttable.js - 304 Not Modified (37ms)
+Served asset /admin.css - 200 OK (51ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (37ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /normal.css - 304 Not Modified (46ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (61ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (45ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+Served asset /application.css - 304 Not Modified (28ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (24ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /application.css - 304 Not Modified (11ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (26ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 200 OK (206ms)
+Compiled rails_admin/rails_admin.js  (477ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 200 OK (54ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (14ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (23ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (33ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 200 OK (0ms)
+Served asset /glyphicons-halflings.png - 200 OK (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (26ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (15ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (20ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /application.js - 304 Not Modified (25ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (81ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+Served asset /application.js - 304 Not Modified (27ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (23ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (26ms)
+Served asset /application.css - 304 Not Modified (11ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (7ms)
+Served asset /application.js - 304 Not Modified (77ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (80ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (12ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (23ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /application.js - 304 Not Modified (26ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (15ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (20ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /application.js - 304 Not Modified (24ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (9ms)
+Served asset /application.js - 304 Not Modified (29ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (592ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (56ms)
+Compiled rails_admin/rails_admin.js  (595ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (25ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (4ms)
+Served asset /application.css - 304 Not Modified (24ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (103ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (23ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /application.js - 304 Not Modified (29ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /bootstrap.css - 304 Not Modified (16ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (323ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (313ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (333ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (18ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (27ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (328ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (334ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (310ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (20ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (329ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (325ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (354ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (356ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (354ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (352ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (4ms)
+Served asset /application.css - 304 Not Modified (32ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (356ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (355ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (350ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /application.css - 304 Not Modified (12ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (25ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (359ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (369ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (350ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (2ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /application.js - 304 Not Modified (28ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (229ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (378ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (351ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (367ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (12ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (24ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (370ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (383ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (352ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /application.css - 304 Not Modified (15ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (363ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (368ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (362ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (4ms)
+Served asset /application.css - 304 Not Modified (13ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (25ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /application.css - 304 Not Modified (22ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (371ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (370ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (355ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /application.css - 304 Not Modified (11ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (147ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (359ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Compiled rails_admin/rails_admin.js  (395ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (355ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+Served asset /application.css - 304 Not Modified (15ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (26ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (370ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (383ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (358ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /application.css - 304 Not Modified (11ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (157ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (364ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (237ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (2ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (236ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (2ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (25ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (24ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (25ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 200 OK (0ms)
+Served asset /glyphicons-halflings-white.png - 200 OK (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (370ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (399ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (371ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /application.js - 304 Not Modified (29ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (381ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (382ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (549ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (13ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (25ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (34ms)
+Served asset /application.css - 304 Not Modified (11ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (32ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (384ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (276ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (311ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /application.css - 304 Not Modified (19ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (25ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+Served asset /application.css - 304 Not Modified (14ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (24ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (12ms)
+Served asset /application.js - 304 Not Modified (27ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (363ms)  (pid 3572)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (28ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
