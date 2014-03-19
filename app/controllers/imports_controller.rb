@@ -63,6 +63,23 @@ class ImportsController < ApplicationController
               prospecto.delete("status_de_interes_de_prospecto_validado")
               prospecto["email"] = prospecto["email"].gsub(" ","") if prospecto["email"] != nil
 
+
+                  if prospecto["email"] == nil
+                    prospecto["email"] = 'vacio@vacio.com'
+                  end
+
+                  if %w(telefono_particular telefono_movil otro_telefono).all?{|attr| prospecto[attr].blank?}
+                    if  prospecto["telefono_particular"].blank?
+                      prospecto["telefono_particular"] = 0
+                    end
+                    if  prospecto["telefono_movil"].blank?
+                      prospecto["telefono_movil"] = 0
+                    end
+                    if  prospecto["otro_telefono"].blank?
+                      prospecto["otro_telefono"] = 0
+                    end
+                  end
+
               @objecto = eval(@import.module.singularize.camelize).create!(prospecto.to_hash.symbolize_keys)
 
               logger.debug "1#######################################################################"
@@ -160,9 +177,6 @@ class ImportsController < ApplicationController
                   @objecto.plan_de_descuentos.first.fecha_de_caducidad = direccion["fecha_de_caducidad"]
                   @objecto.plan_de_descuentos.first.otro_cual = direccion["otro_cual"]
                   @theobject = @objecto
-                  if @theobject.email == nil
-                    @theobject.email = ''
-                  end
                   if @objecto.save!( :validate => false )
                     all_ok = true
                     historial = History.new
