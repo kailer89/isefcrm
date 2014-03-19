@@ -61,7 +61,7 @@ class ImportsController < ApplicationController
               prospecto.delete("fecha_de_caducidad")
               prospecto.delete("otro_cual")
               prospecto.delete("status_de_interes_de_prospecto_validado")
-              prospecto["email"] = prospecto["email"].gsub(" ","")
+              prospecto["email"] = prospecto["email"].gsub(" ","") if prospecto["email"] != nil
 
               @objecto = eval(@import.module.singularize.camelize).create!(prospecto.to_hash.symbolize_keys)
 
@@ -160,6 +160,9 @@ class ImportsController < ApplicationController
                   @objecto.plan_de_descuentos.first.fecha_de_caducidad = direccion["fecha_de_caducidad"]
                   @objecto.plan_de_descuentos.first.otro_cual = direccion["otro_cual"]
                   @theobject = @objecto
+                  if @theobject.email == nil
+                    @theobject.email = ''
+                  end
                   if @objecto.save!( :validate => false )
                     all_ok = true
                     historial = History.new

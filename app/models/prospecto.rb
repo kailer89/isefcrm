@@ -20,12 +20,21 @@ class Prospecto < ActiveRecord::Base
 	validates :nombre, :presence => true	
 	validates :apellido_paterno, :presence => true
   validates_uniqueness_of :nombre, :scope => [:apellido_paterno, :apellido_materno, :fecha_de_nacimiento, :sexo, :email]
+  validates_presence_of :email
   validate :any_present?
 
-  validates_format_of :email, :with => /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i
+  validates_format_of :email, :with => /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i , :if => lambda {self.email != nil}
   def any_present?
     if %w(telefono_particular telefono_movil otro_telefono).all?{|attr| self[attr].blank?}
-      errors.add :base, "Al menos un telefono es requerido"
+      if self.telefono_particular.blank?
+        errors.add :telefono_particular, "Al menos un telefono es requerido"
+      end
+      if self.telefono_movil.blank?
+        errors.add :telefono_movil, "Al menos un telefono es requerido"
+      end
+      if self.otro_telefono.blank?
+        errors.add :otro_telefono, "Al menos un telefono es requerido"
+      end
     end
   end
 

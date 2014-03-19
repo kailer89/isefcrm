@@ -6560,3 +6560,1221 @@ Served asset /normal.css - 304 Not Modified (0ms)
 Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
 Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
 Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (188ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (105ms)
+Served asset /application.css - 304 Not Modified (1189ms)
+Served asset /admin.css - 200 OK (195ms)
+Served asset /application.js - 304 Not Modified (3639ms)
+Served asset /dragtable.js - 304 Not Modified (40ms)
+Served asset /sorttable.js - 304 Not Modified (7ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (39ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /normal.css - 304 Not Modified (49ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /application.js - 304 Not Modified (27ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 200 OK (81ms)
+Served asset /glyphicons-halflings.png - 200 OK (6ms)
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+Served asset /application.js - 304 Not Modified (28ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (27ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (167ms)
+Compiled rails_admin/rails_admin.js  (476ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (109ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (428ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (530ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (473ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (442ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (512ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (468ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (462ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (80ms)
+Compiled rails_admin/rails_admin.js  (453ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (523ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (496ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (470ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (9ms)
+Compiled rails_admin/rails_admin.js  (528ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (481ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (515ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (521ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (528ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (541ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Compiled rails_admin/rails_admin.js  (562ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (512ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (501ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (522ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (504ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (523ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (509ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (520ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (535ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Compiled rails_admin/rails_admin.js  (531ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+Served asset /application.js - 304 Not Modified (23ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (499ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (559ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (514ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Compiled rails_admin/rails_admin.js  (555ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (485ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (559ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (499ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (483ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (567ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (502ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (577ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (487ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (95ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (544ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (547ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (522ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (530ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (527ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (526ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (523ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (606ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (605ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Compiled rails_admin/rails_admin.js  (552ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Compiled rails_admin/rails_admin.js  (538ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (547ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (546ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (8ms)
+Compiled rails_admin/rails_admin.js  (565ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (580ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (564ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (566ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (568ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (568ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (576ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (570ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (579ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (8ms)
+Compiled rails_admin/rails_admin.js  (575ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (565ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (479ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (719ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (627ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (626ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (568ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (580ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (572ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (575ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (577ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (575ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (582ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (577ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (493ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (575ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (572ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (586ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (600ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (12ms)
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (21ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (9ms)
+Compiled rails_admin/rails_admin.js  (605ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (606ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Compiled rails_admin/rails_admin.js  (588ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (595ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (600ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (520ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (587ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (593ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (585ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (584ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (509ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (604ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (586ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (11ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (528ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (547ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (499ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (8ms)
+Compiled rails_admin/rails_admin.js  (608ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (518ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (601ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (513ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (85ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (604ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Compiled rails_admin/rails_admin.js  (626ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (515ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (519ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (600ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (6ms)
+Compiled rails_admin/rails_admin.js  (606ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (8ms)
+Served asset /application.js - 304 Not Modified (23ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Compiled rails_admin/rails_admin.js  (667ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (7ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Compiled rails_admin/rails_admin.js  (552ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (3ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (531ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (527ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (529ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (632ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (533ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (528ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (531ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (534ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (8ms)
+Compiled rails_admin/rails_admin.js  (543ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (4ms)
+Compiled rails_admin/rails_admin.js  (537ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (5ms)
+Compiled rails_admin/rails_admin.js  (536ms)  (pid 7136)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.js - 304 Not Modified (24ms)
+Served asset /application.css - 304 Not Modified (9ms)
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /application.js - 304 Not Modified (22ms)
+Served asset /dragtable.js - 304 Not Modified (0ms)
+Served asset /sorttable.js - 304 Not Modified (0ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)

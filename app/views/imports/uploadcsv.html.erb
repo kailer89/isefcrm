@@ -11,7 +11,7 @@
   </thead>
   <tbody>
     <% @errordetails.each do |error| %>
-    <%if error[0].to_s.starts_with? 'Creado' == false%>
+    <%if (error[0].to_s.starts_with? 'Creado') == false%>
       <%error.inspect%>
       <%nothaserror=false%>
         <tr>
