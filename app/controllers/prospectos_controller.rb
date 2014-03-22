@@ -16,7 +16,7 @@ class ProspectosController < ApplicationController
     logger.debug "--------------------"
     rol = Role.where(:id=>current_user.role).first
 
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
         @q = Prospecto.ransack(params[:q])
         @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
         @q.build_condition if @q.conditions.empty?
@@ -44,7 +44,7 @@ class ProspectosController < ApplicationController
     end  
         
     rol = Role.where(:id=>current_user.role).first
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"     or rol.nombre == "CP"   
       @q = Prospecto.ransack(params[:q])
       @q.build_grouping unless @q.groupings.any?
       @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 

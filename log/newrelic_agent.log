@@ -806,3 +806,23 @@ C:/Sites/isefcrm/app/views/llamadas/_form.html.erb:107: syntax error, unexpected
 [03/18/14 19:13:04 -0600 israel2-PC (7136)] INFO : Finished instrumentation
 [03/18/14 19:13:04 -0600 israel2-PC (7136)] WARN : Failed to determine processor count, assuming 1
 [03/18/14 19:13:07 -0600 israel2-PC (7136)] INFO : Doing deferred dependency-detection before Rack startup
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : Starting the New Relic agent in "development" environment.
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : Reading configuration from config/newrelic.yml
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : New Relic Agent Developer Mode enabled.
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : Enabling the Request Sampler.
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : Enabling the Request Sampler.
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : Environment: development
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : Dispatcher: webrick
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] INFO : Application: My Application
+[03/21/14 18:36:47 -0600 israel2-PC (5628)] WARN : Agent configured not to send data in this environment.
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Installing ActiveRecord instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Installing HTTPClient instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Installing Net instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Installing deferred Rack instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Installing Rails 3 Controller instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Installing Rails3 Error instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Finished instrumentation
+[03/21/14 18:36:48 -0600 israel2-PC (5628)] WARN : Failed to determine processor count, assuming 1
+[03/21/14 18:36:53 -0600 israel2-PC (5628)] INFO : Doing deferred dependency-detection before Rack startup

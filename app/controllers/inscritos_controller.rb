@@ -18,7 +18,7 @@ class InscritosController < ApplicationController
 
         rol = Role.where(:id=>current_user.role).first
 
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"  
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
       logger.debug "admin"
     else
       #@admitidos = @admitidos.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:user_id=>current_user.id))))
