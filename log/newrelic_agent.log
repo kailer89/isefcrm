@@ -826,3 +826,23 @@ C:/Sites/isefcrm/app/views/llamadas/_form.html.erb:107: syntax error, unexpected
 [03/21/14 18:36:48 -0600 israel2-PC (5628)] INFO : Finished instrumentation
 [03/21/14 18:36:48 -0600 israel2-PC (5628)] WARN : Failed to determine processor count, assuming 1
 [03/21/14 18:36:53 -0600 israel2-PC (5628)] INFO : Doing deferred dependency-detection before Rack startup
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Starting the New Relic agent in "development" environment.
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Reading configuration from config/newrelic.yml
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : New Relic Agent Developer Mode enabled.
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Enabling the Request Sampler.
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Enabling the Request Sampler.
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Environment: development
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Dispatcher: webrick
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Application: My Application
+[10/04/14 12:53:20 -0500 alienware (6784)] WARN : Agent configured not to send data in this environment.
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Installing ActiveRecord instrumentation
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Installing HTTPClient instrumentation
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Installing Net instrumentation
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Installing deferred Rack instrumentation
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Installing Rails 3 Controller instrumentation
+[10/04/14 12:53:20 -0500 alienware (6784)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[10/04/14 12:53:21 -0500 alienware (6784)] INFO : Installing Rails3 Error instrumentation
+[10/04/14 12:53:21 -0500 alienware (6784)] INFO : Finished instrumentation
+[10/04/14 12:53:21 -0500 alienware (6784)] WARN : Failed to determine processor count, assuming 1
+[10/04/14 12:53:24 -0500 alienware (6784)] INFO : Doing deferred dependency-detection before Rack startup

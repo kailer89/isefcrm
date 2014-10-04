@@ -8074,3 +8074,73 @@ Served asset /dragtable.js - 304 Not Modified (0ms)
 Served asset /application.js - 304 Not Modified (27ms)
 Served asset /sorttable.js - 304 Not Modified (0ms)
 Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (116ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (118ms)
+Compiled datepicker.css  (0ms)  (pid 6784)
+Compiled application.css  (237ms)  (pid 6784)
+Served asset /application.css - 304 Not Modified (1013ms)
+Served asset /normal.css - 304 Not Modified (10ms)
+Served asset /application.js - 304 Not Modified (1423ms)
+Served asset /dragtable.js - 304 Not Modified (9ms)
+Served asset /sorttable.js - 304 Not Modified (90ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (76ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (5ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (61ms)
+Served asset /bootstrap.css - 304 Not Modified (20ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (13ms)
+Served asset /normal.css - 304 Not Modified (91ms)
+Served asset /application.js - 304 Not Modified (282ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /application.css - 304 Not Modified (96ms)
+Served asset /sorttable.js - 304 Not Modified (3ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (3ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (2ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (178ms)
+Compiled rails_admin/rails_admin.js  (557ms)  (pid 6784)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (84ms)
+Compiled rails_admin/rails_admin.js  (505ms)  (pid 6784)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (88ms)
+Served asset /fontawesome-webfont.woff - 304 Not Modified (1ms)
+Served asset /rails_admin/rails_admin.css - 304 Not Modified (94ms)
+Compiled rails_admin/rails_admin.js  (636ms)  (pid 6784)
+Error compiling asset rails_admin/rails_admin.js:
+ExecJS::RuntimeError: 
+  (in C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)
+Served asset /rails_admin/rails_admin.js - 500 Internal Server Error
+
+
+Served asset /fontawesome-webfont.woff - 304 Not Modified (2ms)
+Served asset /bootstrap.css - 304 Not Modified (120ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (13ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (259ms)
+Served asset /application.css - 304 Not Modified (144ms)
+Served asset /dragtable.js - 304 Not Modified (93ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /normal.css - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Served asset /bootstrap.css - 304 Not Modified (138ms)
+Served asset /bootstrap-responsive.css - 304 Not Modified (15ms)
+Served asset /application.css - 304 Not Modified (138ms)
+Served asset /normal.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (278ms)
+Served asset /dragtable.js - 304 Not Modified (1ms)
+Served asset /sorttable.js - 304 Not Modified (1ms)
+Served asset /bootstrap-datepicker.js - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)

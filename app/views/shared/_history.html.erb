@@ -17,7 +17,7 @@
 			        <% historiales.each do |historial| %>
 			          <tr>
 			            <td><%= historial.action %></td>
-			            <td><%= User.where(:id=>historial.user_id).first.username %></td>
+			            <td><%= User.where(:id=>historial.user_id).first.username if User.where(:id=>historial.user_id) %></td>
 			            <td><%= historial.role %></td>
 			            <td><%= historial.created_at %></td>
 			          </tr>
