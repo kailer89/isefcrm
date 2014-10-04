@@ -9,7 +9,6 @@
 			        <tr>
 			          <th>Accion</th>
 			          <th>Usuario</th>
-			          <th>Rol</th>
 			          <th>Creado en </th>
 			        </tr>
 			      </thead>
@@ -17,8 +16,14 @@
 			        <% historiales.each do |historial| %>
 			          <tr>
 			            <td><%= historial.action %></td>
-			            <td><%= User.where(:id=>historial.user_id).first.username if User.where(:id=>historial.user_id) %></td>
-			            <td><%= historial.role %></td>
+			            <%
+			            if User.where(:id=>historial.user_id) !=nil
+			            %>
+			            	<td><%= User.where(:id=>historial.user_id).first.username %></td>
+			            <%else%>
+			            <td></td>
+			            <%end%>
+			            
 			            <td><%= historial.created_at %></td>
 			          </tr>
 			        <% end %>
