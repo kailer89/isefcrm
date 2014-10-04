@@ -117,7 +117,7 @@
           <%=printIfAvailable("Estado",f.direccions.first.estado)%>
         </p>        
         <p>
-          <%=printIfAvailable("Pais",f.direccions.first.pais)%>
+          <%=printIfAvailable("País",f.direccions.first.pais)%>
         </p>		
 		 <p>
       <%=printIfAvailable("Código Postal",f.direccions.first.codigo_postal)%>
@@ -214,7 +214,7 @@
         </p>
 
         <p>
-          <b><%=printMedio( f.medio_de_contactos.first.visita_a_su_salon,"Platica en su salón")%></b>
+          <b><%=printMedio( f.medio_de_contactos.first.visita_a_su_salon,"Plática en su salón")%></b>
         </p>
 
         <p>
@@ -226,7 +226,7 @@
         </p>
 
         <p>
-          <b><%=printMedio( f.medio_de_contactos.first.sitio_oficial_web_ISEF,"Sitio oficial web ISEF")%></b>
+          <b><%=printMedio( f.medio_de_contactos.first.sitio_oficial_web_ISEF,"Web del Instituto")%></b>
         </p>
 
         <p>
@@ -246,7 +246,7 @@
         </p>
 
         <p>
-          <b><%=printMedio( f.medio_de_contactos.first.anuncio_publicacion_periodico_revista,"Anuncio/Publicación/Periódico/Revista")%></b>
+          <b><%=printMedio( f.medio_de_contactos.first.anuncio_publicacion_periodico_revista,raw("Anuncio/Publicación/<br/>Periódico/Revista"))%></b>
         </p>
 
         <p>
@@ -281,9 +281,11 @@
           <%=printIfAvailable("Comentarios",f.medio_de_contactos.first.comentarios)%>
         </p>
         <p>
-          <%=printIfAvailable("Referido",f.medio_de_contactos.first.Referido)%>
+          <%=printIfAvailable("Referido interno",f.medio_de_contactos.first.Referido)%>
         </p>
-
+        <p>
+          <%=printIfAvailable("Referido externo",f.medio_de_contactos.first.referido_externo)%>
+        </p>
         <%end%>
       </fieldset>
       </div>
@@ -307,7 +309,7 @@
         </p>
 
         <p>
-          <%=printIfAvailable("Otro",f.plan_de_descuentos.first.otro_cual)%>
+          <%=printIfAvailable("Otro ¿Cuál?",f.plan_de_descuentos.first.otro_cual)%>
         </p>
 
         <p>

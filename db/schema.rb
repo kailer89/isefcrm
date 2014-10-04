@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140301153004) do
+ActiveRecord::Schema.define(:version => 20141004155915) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -700,6 +700,7 @@ ActiveRecord::Schema.define(:version => 20140301153004) do
     t.integer  "prospecto_id"
     t.string   "blank"
     t.integer  "Referido"
+    t.string   "referido_externo"
   end
 
   create_table "memos", :force => true do |t|
