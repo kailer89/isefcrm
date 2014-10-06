@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141004155915) do
+ActiveRecord::Schema.define(:version => 20141006210344) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(:version => 20141004155915) do
     t.text     "spv_nombre_del_responsable_de_los_datos"
     t.string   "spv_observaciones_1"
     t.integer  "user_id"
+    t.integer  "modalidad_id"
   end
 
   create_table "admitidos", :force => true do |t|

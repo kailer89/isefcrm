@@ -846,3 +846,61 @@ C:/Sites/isefcrm/app/views/llamadas/_form.html.erb:107: syntax error, unexpected
 [10/04/14 12:53:21 -0500 alienware (6784)] INFO : Finished instrumentation
 [10/04/14 12:53:21 -0500 alienware (6784)] WARN : Failed to determine processor count, assuming 1
 [10/04/14 12:53:24 -0500 alienware (6784)] INFO : Doing deferred dependency-detection before Rack startup
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Starting the New Relic agent in "development" environment.
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Reading configuration from config/newrelic.yml
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : New Relic Agent Developer Mode enabled.
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Enabling the Request Sampler.
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Enabling the Request Sampler.
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Environment: development
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Dispatcher: webrick
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Application: My Application
+[10/06/14 15:51:40 -0500 alienware (6376)] WARN : Agent configured not to send data in this environment.
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Installing ActiveRecord instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Installing HTTPClient instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Installing Net instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Installing deferred Rack instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Installing Rails 3 Controller instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Installing Rails3 Error instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] INFO : Finished instrumentation
+[10/06/14 15:51:40 -0500 alienware (6376)] WARN : Failed to determine processor count, assuming 1
+[10/06/14 15:51:43 -0500 alienware (6376)] INFO : Doing deferred dependency-detection before Rack startup
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Starting the New Relic agent in "development" environment.
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Reading configuration from config/newrelic.yml
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : New Relic Agent Developer Mode enabled.
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Enabling the Request Sampler.
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Enabling the Request Sampler.
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Environment: development
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : No known dispatcher detected.
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Application: My Application
+[10/06/14 16:03:15 -0500 alienware (8512)] WARN : Agent configured not to send data in this environment.
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Installing ActiveRecord instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Installing HTTPClient instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Installing Net instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Installing deferred Rack instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Installing Rails 3 Controller instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Installing Rails3 Error instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] INFO : Finished instrumentation
+[10/06/14 16:03:15 -0500 alienware (8512)] WARN : Failed to determine processor count, assuming 1
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Starting the New Relic agent in "development" environment.
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Reading configuration from config/newrelic.yml
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : New Relic Agent Developer Mode enabled.
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Enabling the Request Sampler.
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Enabling the Request Sampler.
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Environment: development
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : No known dispatcher detected.
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Application: My Application
+[10/06/14 16:03:40 -0500 alienware (3516)] WARN : Agent configured not to send data in this environment.
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Installing ActiveRecord instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Installing HTTPClient instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Installing Net instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Installing deferred Rack instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Installing Rails 3 Controller instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Installing Rails3 Error instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] INFO : Finished instrumentation
+[10/06/14 16:03:40 -0500 alienware (3516)] WARN : Failed to determine processor count, assuming 1
