@@ -20,35 +20,6 @@ border-bottom: 0px solid #e5e5e5!important;
 <%= search_form_for @q, url: advanced_search_prospectos_path, html: {method: :post} do |f| %>
     <% setup_search_form f %>
     <input type="button" value="Mostrar Busqueda Avanzada" id="avanzada"/>
-    <fieldset>
-      <legend>Busqueda Basica</legend>
-      <table CELLPADDING=10>
-        <thead></thead>
-        <tbody>
-          <tr>
-            <td>
-              <%= f.label :validado_eq %>
-              <%= f.check_box :validado_eq %>
-            </td>
-            <td>
-              <%= f.label :programa_nivel_cont %>
-              <%= f.collection_select :programa_nivel_cont, Programa.order(:nivel), :nivel, :nivel,:include_blank =>true %>
-
-              <%= f.label :programa_programa_cont_any %>
-              <%= f.collection_select :programa_programa_cont, Programa.order(:programa), :programa, :programa,:include_blank =>true%>
-            </td>
-            <td>
-              <%= f.label :archivado_eq %>
-              <%= f.check_box :archivado_eq %>
-            </td>      
-            <td>
-              <%= f.label :importado_revisado_eq %>
-              <%= f.check_box :importado_revisado_eq %>
-            </td>                               
-          </tr>
-        </tbody>
-      </table>
-    </fieldset>
     <div id="busquedaAvanzada">
 
     <fieldset>
