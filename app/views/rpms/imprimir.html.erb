@@ -363,31 +363,47 @@ end
 				<li><a href="#inscritos" data-toggle="tab">Inscritos</a></li>		
 			  </ul>
 			  <div class="tab-content">
+<%logger.debug "---------------------------aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-----0"%>
 					<%inicio = DateTime.parse('2010-09-6')%>
 					<%fin = DateTime.parse('2020-09-6')%>
-			  		<%historial = History.where("created_at >= ?",reporte.validado_inicio).where("created_at <= ?",reporte.validado_fin).where("action like '%alidado%'")
+			  		<%historial = History.where("created_at >= ?",reporte.validado_inicio).where("created_at <= ?",reporte.validado_fin).where("action like '%alidado%'").all.map{|p|p.model_id}
 			  		@prospectos = @AllProspectos.where("prospectos.id in (:historyids)",:historyids=>historial)%>
 			  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"validados",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
+
 			  		<%if reporte.show_solicitantes%>
-				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%icitante%'")
+				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%icitante%'").all.map{|p|p.model_id}
 				  		@prospectos = @AllProspectos.where("prospectos.id in (:historyids)",:historyids=>historial)%>
+
 				  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"solicitantes",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>
+				  	<%else%>
+				  	<div class="tab-pane active" id="solicitantes">
+				  	</div>
 			  		<%end%>
 			  		<%if reporte.show_examinados%>
-				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%xaminado%'")
+				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%xaminado%'").all.map{|p|p.model_id}
 				  		@prospectos = @AllProspectos.where("prospectos.id in (:historyids)",:historyids=>historial)%>
 				  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"examinados",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>
+				  	<%else%>
+				  	<div class="tab-pane active" id="examinados">
+				  	</div>				  		
 			  		<%end%>
 			  		<%if reporte.show_admitidos%>
-				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%dmitido%'")
+				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%dmitido%'").all.map{|p|p.model_id}
 				  		@prospectos = @AllProspectos.where("prospectos.id in (:historyids)",:historyids=>historial)%>
 				  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"admitidos",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>
+				  	<%else%>
+				  	<div class="tab-pane active" id="admitidos">
+				  	</div>					  		
 			  		<%end%>
 			  		<%if reporte.show_inscritos%>
-				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%nscrito%'")
+				  		<%historial = History.where("created_at >= ?",inicio).where("created_at <= ?",fin).where("action like '%nscrito%'").all.map{|p|p.model_id}
 				  		@prospectos = @AllProspectos.where("prospectos.id in (:historyids)",:historyids=>historial)%>
 				  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"inscritos",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>
+				  	<%else%>
+				  	<div class="tab-pane active" id="inscritos">
+				  	</div>						  		
 			  		<%end%>
+<%logger.debug "---------------------------aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-----0"%>			  		
 			  </div>
 			</div>
 			<!-- Ordenar por programa -->	    
