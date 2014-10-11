@@ -1,4 +1,6 @@
 class Prospecto < ActiveRecord::Base
+  include PublicActivity::Model
+  tracked
 	has_many :direccions, :dependent => :destroy
 	has_many :interes_basicos, :dependent => :destroy
 	has_many :medio_de_contactos, :dependent => :destroy
@@ -26,13 +28,13 @@ class Prospecto < ActiveRecord::Base
   validates_format_of :email, :with => /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i , :if => lambda {self.email != nil}
   def any_present?
     if %w(telefono_particular telefono_movil otro_telefono).all?{|attr| self[attr].blank?}
-      if self.telefono_particular.blank?
+      if (self.telefono_particular.blank?) or (!self.telefono_movil.blank? or !self.otro_telefono.blank?)
         errors.add :telefono_particular, "Al menos un telefono es requerido"
       end
-      if self.telefono_movil.blank?
+      if (self.telefono_movil.blank?) or (!self.telefono_particular.blank? or !self.otro_telefono.blank?)
         errors.add :telefono_movil, "Al menos un telefono es requerido"
       end
-      if self.otro_telefono.blank?
+      if (self.otro_telefono.blank?) or (!self.telefono_movil.blank? or !self.telefono_particular.blank?)
         errors.add :otro_telefono, "Al menos un telefono es requerido"
       end
     end
@@ -46,7 +48,8 @@ def subsede_is_in_selected_sede
   logger.debug "--------------------------------11111111111111111111111111111111111111111"
   #sede = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
   subsede = Subsede.where(:id=>self.interes_basicos.first.subsede.id).where(:id=>self.interes_basicos.first.subsede.sede_id).first
-  if subsede != nil
+  logger.debug "--------------------------------11111111111111111111111111111111111111111"
+  if subsede?
     errors.add :sede_id, "La Extension de la sede no es valida por favor seleccione una correcta"
   end
 end

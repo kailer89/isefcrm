@@ -76,3 +76,4 @@ gem 'newrelic_rpm'
 gem 'rack-webconsole'
 
 gem 'seed_dump'
+gem 'public_activity'

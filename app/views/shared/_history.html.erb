@@ -17,11 +17,11 @@
 			          <tr>
 			            <td><%= historial.action %></td>
 			            <%
-			            if User.where(:id=>historial.user_id) !=nil
+			            if User.where(:id=>historial.user_id).exists?
 			            %>
 			            	<td><%= User.where(:id=>historial.user_id).first.username %></td>
 			            <%else%>
-			            <td></td>
+			            <td>Usuario no existe (<%=historial.user_id%>)</td>
 			            <%end%>
 			            
 			            <td><%= historial.created_at %></td>
@@ -31,4 +31,5 @@
 			    </table>
         </div>
       </fieldset>
+
     </div>

@@ -70,6 +70,7 @@ class ProspectosController < ApplicationController
   # GET /prospectos/1.json
   def show
     @prospecto = Prospecto.find(params[:id])
+    @activities = PublicActivity::Activity.all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @prospecto }
