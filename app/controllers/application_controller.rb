@@ -2,6 +2,18 @@ class ApplicationController < ActionController::Base
 	before_filter :iswriteteable
   protect_from_forgery
 
+  layout :layout_by_resource
+
+  protected
+
+  def layout_by_resource
+    if devise_controller?
+      
+    else
+      "application"
+    end
+  end
+
   def iswriteteable
     logger.debug "--------------------------------0"
     #if true == false #temporary till uploads of roles are done

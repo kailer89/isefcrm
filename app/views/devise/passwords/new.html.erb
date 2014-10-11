@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ISEF CRM</title>
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <!--Raphael stuff for live graphs-->  
+  <%= stylesheet_link_tag    "bootstrap" %>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+  <%= stylesheet_link_tag    "bootstrap-responsive" %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application","dragtable", "sorttable","bootstrap-datepicker"%>
+  <%if current_user !=nil%>
+  <% if current_user.role == 'admin'%>
+    <%= stylesheet_link_tag "admin" %>
+  <%elsif current_user.role=="director"%>
+    <%= stylesheet_link_tag "director" %>
+  <%elsif current_user.role=="directorsede"%>
+    <%= stylesheet_link_tag "directorsede" %>
+  <%elsif current_user.role=="coordinadorapromocion"%>
+    <%= stylesheet_link_tag "coordinadorapromocion" %>
+  <%elsif current_user.role=="asesorpreuniversitario"%>
+    <%= stylesheet_link_tag "asesorpreuniversitario" %>
+  <%elsif current_user.role=="otrosdep"%>
+    <%= stylesheet_link_tag "otrosdep" %>
+  <%else%>
+    <%= stylesheet_link_tag "normal" %> 
+  <%end%>
+  <%else%>
+  <%= stylesheet_link_tag "admin" %>  
+  <%end%>
+  <%= csrf_meta_tags %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <div class="centeredSignUp">
 <h2>Forgot your password?</h2>
 
@@ -30,3 +75,4 @@
   <%= link_to "Didn't receive unlock instructions?", new_user_unlock_path %><br />
 <% end -%>
 </div>
+</body>
