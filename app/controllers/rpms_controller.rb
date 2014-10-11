@@ -52,7 +52,7 @@ before_filter :authenticate_user!
 
     respond_to do |format|
       if @rpm.save
-        format.html { redirect_to edit_rpm_path(@rpm), notice: 'Rpm was successfully created.' }
+        format.html { redirect_to imprimir_rpm_path(@rpm), notice: 'Rpm was successfully created.' }
         format.json { render json: @rpm, status: :created, location: @rpm }
       else
         format.html { render action: "new" }
