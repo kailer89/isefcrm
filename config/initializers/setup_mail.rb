@@ -17,6 +17,6 @@ ActionMailer::Base.delivery_method ||= :smtp
 #  :enable_starttls_auto => false  }
 
   
-ActionMailer::Base.default_url_options[:host] = "http://tranquil-tundra-3192.herokuapp.com"
+ActionMailer::Base.default_url_options[:host] = "http://isefcrm.herokuapp.com"
 #ActionMailer::Base.default_url_options[:host] = "localhost:3006"
 #ActionMailer::Base..register_interceptor(DevelopmentMailInterceptor) if Rails.env.development?
