@@ -1,14 +1,15 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1343002046.2460139:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1439247029.942518:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%4080cf1e1db89c37a2f44b2e13daae03I"logical_path;
-F"bootstrap.jsI"pathname;
+F"%7df57a689dd808c8b6bd9f11612c2f5aI"logical_path;
+FI"bootstrap.js;
+TI"pathname;
 FI".$root/app/assets/javascripts/bootstrap.js;
-FI"content_type;
+TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2012-06-01T13:06:06-05:00;
+FI"2014-03-21T18:59:58-06:00;
 FI"	body;
 FI"¾Ã/* ===================================================
  * bootstrap-transition.js v2.0.4
@@ -1839,12 +1840,12 @@ FI"¾Ã/* ===================================================
 ;
 FI"asset_paths;
 F[I".$root/app/assets/javascripts/bootstrap.js;
-FI"dependency_paths;
+TI"dependency_paths;
 F[{I"	path;
 FI".$root/app/assets/javascripts/bootstrap.js;
-FI"
+TI"
 mtime;
-FIu:	Time2€  `:@_zoneI"%Hora de verano central (MÎ˜xico);
-T:offsetiþ°¹I"hexdigest;
-F"%96d5ac506b42f04d82490187ed38cc62I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c
+FIu:	TimeÀŠ€   ï:@_zoneI"#Central Standard Time (Mexico);
+T:offsetiþ «I"hexdigest;
+F"%234bdbb876ebd9b032392db32a777cb2I"_version;
+F"%d3399da1890ef54eecbcf24324b9c72a

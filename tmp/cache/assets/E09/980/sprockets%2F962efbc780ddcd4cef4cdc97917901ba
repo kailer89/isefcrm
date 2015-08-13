@@ -1,14 +1,15 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1358975367.2835798:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1439248166.150944:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%3f1b8319a03b7b9d58e827eebd22b70cI"logical_path;
-F"bootstrap-transfer.jsI"pathname;
+F"%998ad023a62be53b3b4f5451f12564dcI"logical_path;
+FI"bootstrap-transfer.js;
+TI"pathname;
 FI"7$root/app/assets/javascripts/bootstrap-transfer.js;
-FI"content_type;
+TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2012-06-24T04:52:30-05:00;
+FI"2014-03-21T18:59:58-06:00;
 FI"	body;
 FI"Ž%(function($){
     $.fn.bootstrapTransfer = function(options) {
@@ -205,12 +206,12 @@ FI"Ž%(function($){
 ;
 FI"asset_paths;
 F[I"7$root/app/assets/javascripts/bootstrap-transfer.js;
-FI"dependency_paths;
+TI"dependency_paths;
 F[{I"	path;
 FI"7$root/app/assets/javascripts/bootstrap-transfer.js;
-FI"
+TI"
 mtime;
-FIu:	Time	€  àÑ:@_zoneI"%Hora de verano central (MÎ˜xico);
-T:offsetiþ°¹I"hexdigest;
-F"%db0da20d9447b0da2367623dcaab7154I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c
+FIu:	TimeÀŠ€   ï:@_zoneI"#Central Standard Time (Mexico);
+T:offsetiþ «I"hexdigest;
+F"%c984cde675aa2cddab88c5e1e7487115I"_version;
+F"%d3399da1890ef54eecbcf24324b9c72a

@@ -16,16 +16,30 @@ class ProspectosController < ApplicationController
     logger.debug "--------------------"
     rol = Role.where(:id=>current_user.role).first
 
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
-        @q = Prospecto.ransack(params[:q])
-        @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
-        @q.build_condition if @q.conditions.empty?
-        @q.build_sort if @q.sorts.empty?        
+    if request.path_parameters[:format] != 'xls'
+      if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+          @q = Prospecto.ransack(params[:q])
+          @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?        
+      else
+          @q = Prospecto.ransack(params[:q])
+          @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page]) 
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?            
+      end
     else
-        @q = Prospecto.ransack(params[:q])
-        @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page]) 
-        @q.build_condition if @q.conditions.empty?
-        @q.build_sort if @q.sorts.empty?            
+      if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+          @q = Prospecto.ransack(params[:q])
+          @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false)
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?        
+      else
+          @q = Prospecto.ransack(params[:q])
+          @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id)
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?            
+      end
     end
 
 
@@ -44,14 +58,26 @@ class ProspectosController < ApplicationController
     end  
         
     rol = Role.where(:id=>current_user.role).first
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"     or rol.nombre == "CP"   
-      @q = Prospecto.ransack(params[:q])
-      @q.build_grouping unless @q.groupings.any?
-      @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
+    if request.path_parameters[:format] != 'xls'
+      if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"     or rol.nombre == "CP"   
+        @q = Prospecto.ransack(params[:q])
+        @q.build_grouping unless @q.groupings.any?
+        @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
+      else
+        @q = Prospecto.ransack(params[:q])
+        @q.build_grouping unless @q.groupings.any?
+        @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page]) 
+      end
     else
-      @q = Prospecto.ransack(params[:q])
-      @q.build_grouping unless @q.groupings.any?
-      @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page]) 
+      if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"     or rol.nombre == "CP"   
+        @q = Prospecto.ransack(params[:q])
+        @q.build_grouping unless @q.groupings.any?
+        @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false) : @q.result(distinct: true).where(:archivado=>archivado).where(:issolicitante=> false)
+      else
+        @q = Prospecto.ransack(params[:q])
+        @q.build_grouping unless @q.groupings.any?
+        @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id)  : @q.result(distinct: true).where(:issolicitante=> false).where(:user_id=>current_user.id)
+      end      
     end
 
     respond_to do |format|

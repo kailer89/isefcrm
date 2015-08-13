@@ -1043,3 +1043,154 @@ C:/Sites/isefcrm/app/views/llamadas/_form.html.erb:107: syntax error, unexpected
 [10/11/14 14:00:15 -0500 alienware (4724)] INFO : Finished instrumentation
 [10/11/14 14:00:15 -0500 alienware (4724)] WARN : Failed to determine processor count, assuming 1
 [10/11/14 14:00:18 -0500 alienware (4724)] INFO : Doing deferred dependency-detection before Rack startup
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Starting the New Relic agent in "development" environment.
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Reading configuration from config/newrelic.yml
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : New Relic Agent Developer Mode enabled.
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Enabling the Request Sampler.
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Enabling the Request Sampler.
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Environment: development
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Dispatcher: webrick
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Application: My Application
+[08/10/15 17:44:06 -0500 alienware (5412)] WARN : Agent configured not to send data in this environment.
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Installing ActiveRecord instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Installing HTTPClient instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Installing Net instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Installing deferred Rack instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Installing Rails 3 Controller instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Installing Rails3 Error instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] INFO : Finished instrumentation
+[08/10/15 17:44:06 -0500 alienware (5412)] WARN : Failed to determine processor count, assuming 1
+[08/10/15 17:44:09 -0500 alienware (5412)] INFO : Doing deferred dependency-detection before Rack startup
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Starting the New Relic agent in "development" environment.
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : New Relic Agent Developer Mode enabled.
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Environment: development
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Dispatcher: webrick
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Application: My Application
+[08/10/15 17:49:58 -0500 alienware (9048)] WARN : Agent configured not to send data in this environment.
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing ActiveRecord instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing HTTPClient instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing Net instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing deferred Rack instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing Rack::Builder middleware instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing Rails 3+ middleware instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing Rails 3 Controller instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Installing Rails 3 Error instrumentation
+[08/10/15 17:49:58 -0500 alienware (9048)] INFO : Finished instrumentation
+[08/10/15 17:50:01 -0500 alienware (9048)] INFO : Doing deferred dependency-detection before Rack startup
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Starting the New Relic agent in "development" environment.
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : New Relic Agent Developer Mode enabled.
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Environment: development
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Dispatcher: webrick
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Application: My Application
+[08/10/15 17:54:09 -0500 alienware (10232)] WARN : Agent configured not to send data in this environment.
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing ActiveRecord instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing HTTPClient instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing Net instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing deferred Rack instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing Rack::Builder middleware instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing Rails 3+ middleware instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing Rails 3 Controller instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Installing Rails 3 Error instrumentation
+[08/10/15 17:54:09 -0500 alienware (10232)] INFO : Finished instrumentation
+[08/10/15 17:54:12 -0500 alienware (10232)] INFO : Doing deferred dependency-detection before Rack startup
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Starting the New Relic agent in "development" environment.
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : New Relic Agent Developer Mode enabled.
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Environment: development
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Dispatcher: webrick
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Application: My Application
+[08/10/15 18:03:29 -0500 alienware (508)] WARN : Agent configured not to send data in this environment.
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing ActiveRecord instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing HTTPClient instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing Net instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing deferred Rack instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing Rack::Builder middleware instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing Rails 3+ middleware instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing Rails 3 Controller instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Installing Rails 3 Error instrumentation
+[08/10/15 18:03:29 -0500 alienware (508)] INFO : Finished instrumentation
+[08/10/15 18:03:32 -0500 alienware (508)] INFO : Doing deferred dependency-detection before Rack startup
+[08/10/15 18:08:54 -0500 alienware (9512)] INFO : Starting the New Relic agent in "development" environment.
+[08/10/15 18:08:54 -0500 alienware (9512)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/10/15 18:08:54 -0500 alienware (9512)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : New Relic Agent Developer Mode enabled.
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Environment: development
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Dispatcher: webrick
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Application: My Application
+[08/10/15 18:08:55 -0500 alienware (9512)] WARN : Agent configured not to send data in this environment.
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing ActiveRecord instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing HTTPClient instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing Net instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing deferred Rack instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing Rack::Builder middleware instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing Rails 3+ middleware instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing Rails 3 Controller instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Installing Rails 3 Error instrumentation
+[08/10/15 18:08:55 -0500 alienware (9512)] INFO : Finished instrumentation
+[08/10/15 18:08:58 -0500 alienware (9512)] INFO : Doing deferred dependency-detection before Rack startup
+[08/12/15 21:07:49 -0500 alienware (7288)] INFO : Starting the New Relic agent in "development" environment.
+[08/12/15 21:07:49 -0500 alienware (7288)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/12/15 21:07:49 -0500 alienware (7288)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[08/12/15 21:07:49 -0500 alienware (7288)] INFO : New Relic Agent Developer Mode enabled.
+[08/12/15 21:07:49 -0500 alienware (7288)] INFO : Environment: development
+[08/12/15 21:07:49 -0500 alienware (7288)] INFO : Dispatcher: webrick
+[08/12/15 21:07:49 -0500 alienware (7288)] INFO : Application: My Application
+[08/12/15 21:07:49 -0500 alienware (7288)] WARN : Agent configured not to send data in this environment.
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing ActiveRecord instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing HTTPClient instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing Net instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing deferred Rack instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing Rack::Builder middleware instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing Rails 3+ middleware instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing Rails 3 Controller instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Installing Rails 3 Error instrumentation
+[08/12/15 21:07:50 -0500 alienware (7288)] INFO : Finished instrumentation
+[08/12/15 21:07:55 -0500 alienware (7288)] INFO : Doing deferred dependency-detection before Rack startup
+[08/12/15 21:50:03 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant Solicitante::Prospectos
+[08/12/15 21:50:22 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant Solicitante::Prospectos
+[08/12/15 21:51:02 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 21:51:52 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Unknown key: dependent
+[08/12/15 21:52:03 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 21:52:21 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such table: examinados_solicitantes: SELECT COUNT(DISTINCT "examinados"."id") FROM "examinados" LEFT OUTER JOIN "examinados_solicitantes" ON "examinados_solicitantes"."examinado_id" = "examinados"."id" LEFT OUTER JOIN "solicitantes" ON "solicitantes"."id" = "examinados_solicitantes"."solicitante_id" LEFT OUTER JOIN "examinados_prospectos" ON "examinados_prospectos"."examinado_id" = "examinados"."id" LEFT OUTER JOIN "prospectos" ON "prospectos"."id" = "examinados_prospectos"."prospecto_id" WHERE "examinados"."archivado" = 'f' AND "examinados"."isadmitido" = 'f' AND "prospectos"."nombre" LIKE '%carolina%'
+[08/12/15 21:52:36 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such table: examinados_solicitantes: SELECT COUNT(DISTINCT "examinados"."id") FROM "examinados" LEFT OUTER JOIN "examinados_solicitantes" ON "examinados_solicitantes"."examinado_id" = "examinados"."id" LEFT OUTER JOIN "solicitantes" ON "solicitantes"."id" = "examinados_solicitantes"."solicitante_id" LEFT OUTER JOIN "prospectos" ON "prospectos"."examinado_id" = "examinados"."id" WHERE "examinados"."archivado" = 'f' AND "examinados"."isadmitido" = 'f' AND "prospectos"."nombre" LIKE '%carolina%'
+[08/12/15 21:52:45 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 21:54:00 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 21:54:36 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 21:55:33 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 21:56:49 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant Solicitante::Prospectos
+[08/12/15 21:57:20 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such table: prospectos_solicitantes: SELECT COUNT(DISTINCT "solicitantes"."id") FROM "solicitantes" LEFT OUTER JOIN "prospectos_solicitantes" ON "prospectos_solicitantes"."solicitante_id" = "solicitantes"."id" LEFT OUTER JOIN "prospectos" ON "prospectos"."id" = "prospectos_solicitantes"."prospecto_id" WHERE "solicitantes"."archivado" = 'f' AND "solicitantes"."isexaminado" = 'f' AND "prospectos"."nombre" LIKE '%alina%'
+[08/12/15 21:57:53 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 21:59:40 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 22:06:52 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'prospectos' was not found; perhaps you misspelled it?
+[08/12/15 22:08:31 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'nacionalidad' was not found; perhaps you misspelled it?
+[08/12/15 22:09:10 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'nacionalidad' was not found; perhaps you misspelled it?
+[08/12/15 22:11:54 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'interes_basicos' was not found; perhaps you misspelled it?
+[08/12/15 22:30:42 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: C:/Sites/isefcrm/app/views/examinados/index.html.erb:51: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...er.append= ( f.submit, :label=>"Export" );@output_buffer.saf...
+...                               ^
+[08/12/15 22:50:33 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: In order to use respond_with, first you need to declare the formats your controller responds to in the class level
+[08/12/15 22:54:32 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: C:/Sites/isefcrm/app/views/examinados/index.html.erb:51: syntax error, unexpected ')', expecting tASSOC
+...xaminados_path(format: "xls") );@output_buffer.safe_concat('...
+...                               ^
+C:/Sites/isefcrm/app/views/examinados/index.html.erb:52: syntax error, unexpected keyword_end, expecting ')'
+');   end 
+         ^
+C:/Sites/isefcrm/app/views/examinados/index.html.erb:153: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Sites/isefcrm/app/views/examinados/index.html.erb:155: syntax error, unexpected keyword_end, expecting ')'
+[08/12/15 23:06:41 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"advanced_search", :controller=>"prospectos", :utf8=>"✓", :authenticity_token=>"IjUh80YjLpiZMV0mX8WOidd8wpIsefvGMyiObiOC5PA=", :q=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"nombre"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>"luis"}}}}, "s"=>{"0"=>{"name"=>"", "dir"=>""}}}, :commit=>"Buscar", :format=>"xls"}
+[08/12/15 23:06:57 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"advanced_search", :controller=>"prospectos", :utf8=>"✓", :authenticity_token=>"IjUh80YjLpiZMV0mX8WOidd8wpIsefvGMyiObiOC5PA=", :q=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"nombre"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>"luis"}}}}, "s"=>{"0"=>{"name"=>"", "dir"=>""}}}, :commit=>"Buscar", :format=>"xls"}
+[08/12/15 23:07:48 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"advanced_search", :controller=>"prospectos", :utf8=>"✓", :authenticity_token=>"IjUh80YjLpiZMV0mX8WOidd8wpIsefvGMyiObiOC5PA=", :q=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"nombre"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>"luis"}}}}, "s"=>{"0"=>{"name"=>"", "dir"=>""}}}, :commit=>"Buscar", :format=>"xls"}
+[08/12/15 23:10:19 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"advanced_search", :controller=>"prospectos", :utf8=>"✓", :authenticity_token=>"IjUh80YjLpiZMV0mX8WOidd8wpIsefvGMyiObiOC5PA=", :q=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"nombre"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>"luis"}}}}, "s"=>{"0"=>{"name"=>"", "dir"=>"asc"}}}, :commit=>"Buscar", :format=>"xls"}
+[08/12/15 23:11:39 -0500 alienware (7288)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"advanced_search", :controller=>"prospectos", :utf8=>"✓", :authenticity_token=>"IjUh80YjLpiZMV0mX8WOidd8wpIsefvGMyiObiOC5PA=", :q=>{"c"=>{"0"=>{"a"=>{"0"=>{"name"=>"nombre"}}, "p"=>"cont", "v"=>{"0"=>{"value"=>"luis"}}}}, "s"=>{"0"=>{"name"=>"", "dir"=>"asc"}}}, :commit=>"Buscar", :format=>"xls"}

@@ -10,14 +10,15 @@ gem 'will_paginate'
 gem 'thin', "1.3.1" ,:group => :production
 gem 'sqlite3', :group => :development  
 #gem 'execjs'
+gem 'coffee-script-source', '1.8.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails', "3.1.4"
   gem 'compass-rails'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'coffee-rails', "3.1.1"
+  gem 'uglifier', "1.0.3"
   gem 'bootstrap-sass'
   gem 'jquery-ui-rails'
 end
@@ -46,7 +47,8 @@ gem 'bootstrap-will_paginate'
 gem 'carrierwave'
 gem "cancan"
 gem 'geocoder'
-gem "ransack"#, :git => "git://github.com/ernie/ransack.git" # Track git repo
+#gem "ransack"#, :git => "git://github.com/ernie/ransack.git" # Track git repo
+gem 'ransack', github: 'activerecord-hackery/ransack'
 gem "watu_table_builder", :require => "table_builder"
 gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails'#,
                               #:git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git' 

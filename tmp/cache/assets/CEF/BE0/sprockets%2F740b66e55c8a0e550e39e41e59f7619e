@@ -1,14 +1,15 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1360421531.223454:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1439248189.6255622:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%caf0b9ad4f548bdd95e3af849faa8a6dI"logical_path;
-F"turbo.jsI"pathname;
+F"%1c1cb8136df4e717e6416f3d967ca011I"logical_path;
+FI"turbo.js;
+TI"pathname;
 FI"*$root/app/assets/javascripts/turbo.js;
-FI"content_type;
+TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2013-02-09T08:51:39-06:00;
+FI"2014-03-21T18:59:58-06:00;
 FI"	body;
 FI"
 (/*
@@ -369,12 +370,12 @@ this.Turbolinks = {
 ;
 FI"asset_paths;
 F[I"*$root/app/assets/javascripts/turbo.js;
-FI"dependency_paths;
+TI"dependency_paths;
 F[{I"	path;
 FI"*$root/app/assets/javascripts/turbo.js;
-FI"
+TI"
 mtime;
-FIu:	Time.E€  pÎ:@_zoneI"%Hora estÃŸndar central (MÎ˜xico);
+FIu:	TimeÀŠ€   ï:@_zoneI"#Central Standard Time (Mexico);
 T:offsetiþ «I"hexdigest;
-F"%70e32fe704523b3afa961e894f336f6fI"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c
+F"%fdf9946c4ead01546820157cc197ddb6I"_version;
+F"%d3399da1890ef54eecbcf24324b9c72a

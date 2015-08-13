@@ -3,6 +3,8 @@ class Prospecto < ActiveRecord::Base
   tracked
 	has_many :direccions, :dependent => :destroy
 	has_many :interes_basicos, :dependent => :destroy
+
+
 	has_many :medio_de_contactos, :dependent => :destroy
 	has_many :interes_academicos, :dependent => :destroy
 	has_many :accion_estrategicas, :dependent => :destroy

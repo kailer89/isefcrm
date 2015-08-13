@@ -1,5 +1,5 @@
 <h1>Solicitantes</h1>
-  <a href="/solicitantes.xls" class="btn btn-mini btn-info" target="_blank"><i class="icon-arrow-down"></i>Exportar a Excel<i class="icon-arrow-down"></i></a>
+        <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), solicitantes_path(params.merge(format: 'xls')), :class => 'btn btn-mini btn-info' %>   
 <hr/>
 <style type="text/css">
 fieldset {

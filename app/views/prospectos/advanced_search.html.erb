@@ -17,7 +17,7 @@ border-bottom: 0px solid #e5e5e5!important;
 }
 </style>
 <%=link_to "Borrar parametros de busqueda", prospectos_path%>
-<%= search_form_for @q, url: advanced_search_prospectos_path, html: {method: :post} do |f| %>
+<%= search_form_for @q, url: prospectos_path, html: {method: :post} do |f| %>
     <% setup_search_form f %>
     <input type="button" value="Mostrar Busqueda Avanzada" id="avanzada"/>
     <div id="busquedaAvanzada">
