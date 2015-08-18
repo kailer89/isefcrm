@@ -12,5 +12,7 @@
             <%= link_to 'Convertir en Solicitante', convertir_path,:confirm => "Estas seguro de querer continuar?", :class=>'btn btn-info', :method=>'post', :id=>'convertir' %>
           <%end%>
         <%end%>
+        <%if not prospecto.issolicitante%>
   <%= link_to 'Delete', prospecto_path(@prospecto), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+  <%end%>
 </div>
