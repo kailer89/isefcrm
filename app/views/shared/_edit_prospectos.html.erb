@@ -144,7 +144,7 @@
     <div class="form-actions">
       <%= g.submit nil, :class => 'btn btn-primary' ,:id=>"commit" %>
       <%= link_to 'Cancel', prospectos_path(:validado=>@prospecto.validado),:confirm => "Estas seguro de querer continuar?", :class => 'btn' %>
-      <%if params[:action] != "new"%>
+      <%if params[:action] == "edit"%>
       <% if (@prospecto.validado == false) %>
           <%= link_to 'Validar Prospecto',validar_path,:confirm => "Estas seguro de querer continuar?", :class=>'btn btn-success', :method=>'post', :id=>'validar',:rel=>'popover',:data => {:content => 'Usa este boton para convertir el prospecto en validado.',"origintal-title"=>'Test',:notooltip=>'true'} %>
         <%else%>
