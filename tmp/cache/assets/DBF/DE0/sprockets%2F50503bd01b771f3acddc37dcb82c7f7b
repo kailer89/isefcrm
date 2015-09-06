@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.984998:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%9bda968a4fdbb9a521614fc5f0d18e06I"logical_path;
-FI"google_+1_button.png;
-TI"pathname;
-FI"1$root/app/assets/images/google_+1_button.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	1174;
-FI"digest;
-F"%6eebb78405b0279aa5956094893c7bcbI"_version;
-F"%9e498e2eadf0be42780363370602c500

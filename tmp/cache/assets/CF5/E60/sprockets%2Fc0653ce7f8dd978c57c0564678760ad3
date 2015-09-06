@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.973991:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%90e2f47a93c18287bdb120370bfaa9aeI"logical_path;
-FI"google-wallet-buy-now.gif;
-TI"pathname;
-FI"6$root/app/assets/images/google-wallet-buy-now.gif;
-TI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	2870;
-FI"digest;
-F"%b18274aff1f1aebdafe8051b5f77986bI"_version;
-F"%9e498e2eadf0be42780363370602c500

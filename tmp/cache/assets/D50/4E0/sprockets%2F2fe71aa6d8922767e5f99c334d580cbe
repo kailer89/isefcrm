@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575836.0633779:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%8b79effa68b37a524ab28eba8c5774ebI"logical_path;
-FI"barb32.gif;
-TI"pathname;
-FI"'$root/app/assets/images/barb32.gif;
-TI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"165;
-FI"digest;
-F"%00bd9d4bc54b4f0e2bcb8e2a19b414deI"_version;
-F"%9e498e2eadf0be42780363370602c500

@@ -23,6 +23,17 @@ group :assets do
   gem 'jquery-ui-rails'
 end
 
+platforms :ruby do # linux
+
+  gem 'unicorn'
+
+end
+
+platforms :mswin do
+
+  # gems specific to windows
+
+end
 
 gem 'jquery-rails'
 # To use ActiveModel has_secure_password

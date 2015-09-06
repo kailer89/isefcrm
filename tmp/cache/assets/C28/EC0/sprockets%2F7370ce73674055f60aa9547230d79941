@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.620029:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%70e5467852b060fda9483d5b6dd4fe2cI"logical_path;
-FI"buzz.png;
-TI"pathname;
-FI"%$root/app/assets/images/buzz.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	1180;
-FI"digest;
-F"%d1e73bb08d4b88b52c04cf56df9a4c8bI"_version;
-F"%9e498e2eadf0be42780363370602c500

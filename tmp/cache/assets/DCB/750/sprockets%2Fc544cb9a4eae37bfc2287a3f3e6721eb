@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.941972:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%763e7f1ff2914bbb33c8c8d98f82340aI"logical_path;
-FI"fuel-pump.png;
-TI"pathname;
-FI"*$root/app/assets/images/fuel-pump.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	1031;
-FI"digest;
-F"%63d1e4a5ec00d3c3ff604f8b45320ce1I"_version;
-F"%9e498e2eadf0be42780363370602c500

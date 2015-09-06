@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.3829298:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%6f684eb009e4f016f63095c46d96e55cI"logical_path;
-FI"reddit.png;
-TI"pathname;
-FI"'$root/app/assets/images/reddit.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"619;
-FI"digest;
-F"%fc5d3ab16980ac76e963356c909c6ff9I"_version;
-F"%9e498e2eadf0be42780363370602c500

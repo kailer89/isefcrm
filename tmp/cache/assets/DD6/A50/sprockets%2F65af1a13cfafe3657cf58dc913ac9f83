@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.0930712:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%e581f8cfb82e72ef5945163c699b4f57I"logical_path;
-FI"html5-logo-tiny.png;
-TI"pathname;
-FI"0$root/app/assets/images/html5-logo-tiny.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	1698;
-FI"digest;
-F"%7cd8ced996f91cbe1e2b75b6ef567e74I"_version;
-F"%9e498e2eadf0be42780363370602c500

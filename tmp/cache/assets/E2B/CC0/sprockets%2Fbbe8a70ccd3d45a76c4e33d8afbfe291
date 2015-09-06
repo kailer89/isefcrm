@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575887.961285:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%0f45f5c5a07d71ef5a15a6ab2fc01d26I"logical_path;
-FI"rails_admin/calendar.png;
-TI"pathname;
-FI"vC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/calendar.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2015-09-05T18:18:44-05:00;
-FI"length;
-FI"626;
-FI"digest;
-F"%5ee0a3e5016626219611cd31d05e2ebfI"_version;
-F"%9e498e2eadf0be42780363370602c500

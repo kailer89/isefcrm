@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575835.959085:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%43ddf4186b2fffc494f0aa0598f88b4cI"logical_path;
-FI"bara4.png;
-TI"pathname;
-FI"&$root/app/assets/images/bara4.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"117;
-FI"digest;
-F"%fc03cd46d1c5b00dc3f74dac550c5152I"_version;
-F"%9e498e2eadf0be42780363370602c500

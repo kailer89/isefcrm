@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.147106:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%2567ddf4baf1f192a5df0fdf93d0b314I"logical_path;
-FI"link-to-me.png;
-TI"pathname;
-FI"+$root/app/assets/images/link-to-me.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	1174;
-FI"digest;
-F"%f7743ed8febf27b45e03db267146fcfaI"_version;
-F"%9e498e2eadf0be42780363370602c500

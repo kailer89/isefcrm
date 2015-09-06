@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575900.819326:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%0978404f6cf06ed518a97d04d7da8896I"logical_path;
-FI"*jquery-ui/ui-icons_888888_256x240.png;
-TI"pathname;
-FI"…C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/images/jquery-ui/ui-icons_888888_256x240.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2015-09-05T18:18:23-05:00;
-FI"length;
-FI"	4369;
-FI"digest;
-F"%c8de6763de3364815b753c24f2b8ae0bI"_version;
-F"%9e498e2eadf0be42780363370602c500

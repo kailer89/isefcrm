@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.180128:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%150e3adc61bc1ff64b2fd53508b019c7I"logical_path;
-FI"loading-placeholder.png;
-TI"pathname;
-FI"4$root/app/assets/images/loading-placeholder.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"372;
-FI"digest;
-F"%1464a65f43ab92365594f085c7722293I"_version;
-F"%9e498e2eadf0be42780363370602c500

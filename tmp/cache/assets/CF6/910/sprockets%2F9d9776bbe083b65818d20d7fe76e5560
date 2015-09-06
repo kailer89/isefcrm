@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575835.8739278:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%b1096d0735024b43761aeb870ada7906I"logical_path;
-FI"bara16.gif;
-TI"pathname;
-FI"'$root/app/assets/images/bara16.gif;
-TI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"59;
-FI"digest;
-F"%802ca744d82a42fa10d392fb219a1590I"_version;
-F"%9e498e2eadf0be42780363370602c500

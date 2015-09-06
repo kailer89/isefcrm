@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575836.544789:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%7a24862dffc5f8ef2fe7ce0a565e2287I"logical_path;
-FI"bare32.png;
-TI"pathname;
-FI"'$root/app/assets/images/bare32.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"173;
-FI"digest;
-F"%1ba575defc37db6b82543213d9acfd91I"_version;
-F"%9e498e2eadf0be42780363370602c500

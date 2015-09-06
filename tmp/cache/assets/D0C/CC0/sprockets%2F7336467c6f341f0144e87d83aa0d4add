@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.613083:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%f964f8628e6750545546912e4d9cd411I"logical_path;
-FI"structure.png;
-TI"pathname;
-FI"*$root/app/assets/images/structure.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	4399;
-FI"digest;
-F"%e19ec14370575590cb3b0a4302ec6adcI"_version;
-F"%9e498e2eadf0be42780363370602c500

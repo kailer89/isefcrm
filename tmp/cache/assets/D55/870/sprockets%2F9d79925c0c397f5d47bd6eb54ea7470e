@@ -1,18 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.69985:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%514a1db311f8eb6a14ace64f848607feI"logical_path;
-FI"debugging1.png;
-TI"pathname;
-FI"+$root/app/assets/images/debugging1.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"
-24651;
-FI"digest;
-F"%1673cf01e1802d38cb6314f55abb0209I"_version;
-F"%9e498e2eadf0be42780363370602c500

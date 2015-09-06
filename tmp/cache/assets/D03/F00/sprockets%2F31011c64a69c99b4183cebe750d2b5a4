@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575835.838465:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%77472ca1e6ad062c6dc562cb597d86c1I"logical_path;
-FI"atom.png;
-TI"pathname;
-FI"%$root/app/assets/images/atom.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	1198;
-FI"digest;
-F"%6d0e3431eeb5ffc5ddb0b4f0c94a204fI"_version;
-F"%9e498e2eadf0be42780363370602c500

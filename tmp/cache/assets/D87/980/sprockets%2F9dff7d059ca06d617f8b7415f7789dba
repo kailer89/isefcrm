@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575888.100034:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%4057be113135c6e1d60e556f7be05c42I"logical_path;
-FI"3rails_admin/colorpicker/colorpicker_submit.png;
-TI"pathname;
-FI"‡C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/colorpicker/colorpicker_submit.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2015-09-05T18:18:44-05:00;
-FI"length;
-FI"854;
-FI"digest;
-F"%447359b466f048a4dd1848a0cf6d8c07I"_version;
-F"%9e498e2eadf0be42780363370602c500

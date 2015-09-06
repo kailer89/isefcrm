@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.510955:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%21daf8501251cb8f7d171f9fa59c5f08I"logical_path;
-FI"bn.personal.png;
-TI"pathname;
-FI",$root/app/assets/images/bn.personal.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	4979;
-FI"digest;
-F"%e67eee1ca746cf5279ebe876c8f5f42aI"_version;
-F"%9e498e2eadf0be42780363370602c500

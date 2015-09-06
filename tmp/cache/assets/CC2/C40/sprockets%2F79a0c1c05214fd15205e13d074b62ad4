@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575887.820512:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%52338e4921def5a6cee0e76789230aaaI"logical_path;
-FI"'images/ui-icons_454545_256x240.png;
-TI"pathname;
-FI"D$root/app/assets/stylesheets/images/ui-icons_454545_256x240.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2014-03-21T18:59:58-06:00;
-FI"length;
-FI"	4369;
-FI"digest;
-F"%9cfc924f0c179f3fc5a39e90787183ecI"_version;
-F"%9e498e2eadf0be42780363370602c500
