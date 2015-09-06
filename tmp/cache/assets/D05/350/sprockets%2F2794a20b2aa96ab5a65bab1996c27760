@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.841759:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.960237:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%bd342d63f2d5b6dd71607f29bef93156I"logical_path;
+F"%905c80458b97e3e618db37ce3d75b094I"logical_path;
 FI"jquery.ui.droppable.js;
 TI"pathname;
 FI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.droppable.js;

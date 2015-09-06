@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.685081:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.170048:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%539ff7da0acaa9fc063a5784ddcc1bf1I"logical_path;
+F"%c8ff1fe547c87fc1ed7dfda69638fcd6I"logical_path;
 FI"google_64.png;
 TI"pathname;
 FI"*$root/app/assets/images/google_64.png;

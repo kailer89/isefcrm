@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506755.314872:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.0789602:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%3a30940032c90c175a92c34c254c4cfeI"logical_path;
+F"%d03ec3ebae2314dc5577bacdd28de53fI"logical_path;
 FI"*images/ui-bg_flat_0_aaaaaa_40x100.png;
 TI"pathname;
 FI"G$root/app/assets/stylesheets/images/ui-bg_flat_0_aaaaaa_40x100.png;

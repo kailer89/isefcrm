@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.3179252:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.0836558:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%2e594652f0a94bc41c6f18b817f800c5I"logical_path;
+F"%64b1708aed3e531a1aebf142798ce7b0I"logical_path;
 FI"tooltip_pointer.png;
 TI"pathname;
 FI"0$root/app/assets/images/tooltip_pointer.png;

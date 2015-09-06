@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.616035:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.074986:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%7494c1d4ab19e2bb0e3a9b58ac4ae38eI"logical_path;
+F"%07466067ec9318a1cdc66610cc845f75I"logical_path;
 FI"fuel-pump.png;
 TI"pathname;
 FI"*$root/app/assets/images/fuel-pump.png;

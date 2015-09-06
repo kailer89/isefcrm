@@ -10,7 +10,7 @@
         <li>Asignar datos del correo</li>
         <li>Establecer tipo de Campana</li>
         <li>Establecer contenido del correo</li>
-        <%if params[:model_id] != nil  and params[:model_name] != "campana_socials"  and params[:model_name] != "correos" and params[:model_name] != "grupos"  %>
+        <%if params[:model_id] != nil  and params[:model_name] != "campana_socials"  and params[:model_name] != "correos" and params[:model_name] != "grupos" or @correo.es_uno_a_uno = true %>
   <%else%>
         <li>A quien enviar</li>
         <li>Datos Adicionales</li>
@@ -40,7 +40,7 @@
     <p class="help-block">Por favor utilize la funcion de agregar adjuntos y copie la direccion del adjunto para agregar imagenes NO use copy&paste.</p>
     <%= f.input :maildata , :input_html=>{:class=>"correobox"}, :label=>"Contenido del correo"%>
   </div>
-  <%if params[:model_id] != nil  and params[:model_name] != "campana_socials"  and params[:model_name] != "correos" and params[:model_name] != "grupos"  %>
+  <%if params[:model_id] != nil  and params[:model_name] != "campana_socials"  and params[:model_name] != "correos" and params[:model_name] != "grupos"  or @correo.es_uno_a_uno = true%>
   <%else%>
   <div>
     <legend>Seleccionar a quien enviar el correo</legend>
@@ -101,7 +101,9 @@
      
 <% end %>
 
-<%=render :partial=>"shared/attachments", :locals=>{:model_id=>@correo.id}%> 
+<%if params[:action] == "edit"%>
+  <%=render :partial=>"shared/attachments", :locals=>{:model_id=>@correo.id}%> 
+<%end%>
 <script type="text/javascript">
 (function($) {
 $(document).ready(function(){

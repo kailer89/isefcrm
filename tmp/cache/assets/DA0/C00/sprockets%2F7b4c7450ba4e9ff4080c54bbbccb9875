@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.288817:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.556639:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c67b8e9ed3a715d08662821aba35dfebI"logical_path;
+F"%fb91b93549536c1d139ebfb8adf7f8eaI"logical_path;
 FI"bullet.png;
 TI"pathname;
 FI"'$root/app/assets/images/bullet.png;

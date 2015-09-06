@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.4969542:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.936895:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d501ee511229a5da8a650bbdbbc5b359I"logical_path;
+F"%f51e5f1f5feca8cfd9833f066a8a6685I"logical_path;
 FI"facebook.png;
 TI"pathname;
 FI")$root/app/assets/images/facebook.png;

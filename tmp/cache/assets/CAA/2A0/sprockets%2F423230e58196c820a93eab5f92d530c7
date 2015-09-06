@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506702.25932:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564518.5816479:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%50f92c9731ec440949e8118f0bb95c2aI"logical_path;
+F"%e623a4c493280f9b26e1d2955f23d4d3I"logical_path;
 FI"%bootstrap-wysihtml5/templates.js;
 TI"pathname;
 FI"‘C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/templates.js;
@@ -9,7 +9,7 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2015-09-05T18:17:32-05:00;
+FI"2015-09-06T12:41:35-05:00;
 FI"	body;
 FI"?mthis["wysihtml5"] = this["wysihtml5"] || {};
 this["wysihtml5"]["tpl"] = this["wysihtml5"]["tpl"] || {};
@@ -281,7 +281,7 @@ F[{I"	path;
 FI"‘C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/templates.js;
 TI"
 mtime;
-FIu:	Time·à€   F:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	TimeÑà€  0¦:@_zoneI"#Central Daylight Time (Mexico);
 T:offsetiþ°¹I"hexdigest;
 F"%3be09a6612abfa5a339a4959c8ffe396I"_version;
 F"%9e498e2eadf0be42780363370602c500

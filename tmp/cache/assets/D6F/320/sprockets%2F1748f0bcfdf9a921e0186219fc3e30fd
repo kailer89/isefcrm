@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506755.719668:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.521255:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c9c308c9e5ff01af3518d9d6c72b3dc7I"logical_path;
+F"%af4c747cc47d780d53fdb5ef61e37386I"logical_path;
 FI"3rails_admin/colorpicker/colorpicker_select.gif;
 TI"pathname;
 FI"‡C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/colorpicker/colorpicker_select.gif;

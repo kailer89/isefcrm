@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.262578:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.528623:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%2eeea9a6778eed0176d814c7d0c359a2I"logical_path;
+F"%cdce33761f27376248047c2bb9dd957dI"logical_path;
 FI".bootstrap-transfer-selector-removeall.gif;
 TI"pathname;
 FI"F$root/app/assets/images/bootstrap-transfer-selector-removeall.gif;

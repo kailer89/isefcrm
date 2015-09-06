@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.285904:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.03262:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%5e2f2af7c60ebf88379dfaf75d16eb6cI"logical_path;
+F"%28722a06737ad4b2fbcaccc09b92bac9I"logical_path;
 FI"stumble.png;
 TI"pathname;
 FI"($root/app/assets/images/stumble.png;

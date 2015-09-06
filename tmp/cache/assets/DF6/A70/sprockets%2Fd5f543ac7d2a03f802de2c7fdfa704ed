@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506702.649285:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564519.182047:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%b6581696c835ca8dc2987c5b38ae1435I"logical_path;
+F"%729198856989a2cad7125d970cc4806fI"logical_path;
 FI"RGraph.meter.js;
 TI"pathname;
 FI"1$root/app/assets/javascripts/RGraph.meter.js;

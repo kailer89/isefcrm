@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506702.272725:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564518.604668:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%faa19ba6415e95522872a5d51e7b6426I"logical_path;
+F"%e20d5065a2047dff88a1a08a1ebb3528I"logical_path;
 FI"0bootstrap-wysihtml5/bootstrap3-wysihtml5.js;
 TI"pathname;
 FI"œC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.js;
@@ -9,7 +9,7 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2015-09-05T18:17:32-05:00;
+FI"2015-09-06T12:41:34-05:00;
 FI"	body;
 FI"<#/* jshint expr: true */
 
@@ -307,7 +307,7 @@ F[{I"	path;
 FI"œC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.js;
 TI"
 mtime;
-FIu:	Time·à€   F:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	TimeÑà€   ¦:@_zoneI"#Central Daylight Time (Mexico);
 T:offsetiþ°¹I"hexdigest;
 F"%66e6ed78211fe7234e70e0b50dff4830I"_version;
 F"%9e498e2eadf0be42780363370602c500

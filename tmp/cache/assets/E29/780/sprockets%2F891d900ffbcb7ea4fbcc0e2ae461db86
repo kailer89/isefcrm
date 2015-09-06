@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506702.524364:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564518.985916:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%b72373198af7ee432021824f71ac060cI"logical_path;
+F"%55a36da7a28397a102307ab4773540e9I"logical_path;
 FI"RGraph.fuel.js;
 TI"pathname;
 FI"0$root/app/assets/javascripts/RGraph.fuel.js;

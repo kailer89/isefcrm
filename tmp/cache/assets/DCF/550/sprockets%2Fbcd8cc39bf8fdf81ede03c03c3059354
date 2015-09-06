@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.082592:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.7534359:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%82223e3b5fe013b985c8ab71137c808dI"logical_path;
+F"%e121dafcbf9f6b0282a00a02e1233348I"logical_path;
 FI"rss_big.png;
 TI"pathname;
 FI"($root/app/assets/images/rss_big.png;

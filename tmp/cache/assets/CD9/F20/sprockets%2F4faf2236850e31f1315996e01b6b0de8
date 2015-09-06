@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.207542:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.4545732:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%82481047b2c85067047f3de95f2f6343I"logical_path;
+F"%3befa31948eed469a342d3d94f489345I"logical_path;
 FI"&bootstrap-transfer-default-bg.gif;
 TI"pathname;
 FI">$root/app/assets/images/bootstrap-transfer-default-bg.gif;

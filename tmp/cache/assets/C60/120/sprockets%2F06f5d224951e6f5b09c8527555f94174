@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.30792:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.064641:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%188cf2e67c20ca803c9681b2fd1fa4d2I"logical_path;
+F"%b514891690664be5251d5fc7616e620fI"logical_path;
 FI"tickmark.png;
 TI"pathname;
 FI")$root/app/assets/images/tickmark.png;

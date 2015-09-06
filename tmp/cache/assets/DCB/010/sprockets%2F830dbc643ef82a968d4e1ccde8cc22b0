@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.662416:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.641025:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%0ba46c7001f795aaa27ffa59256ff52bI"logical_path;
+F"%36bfe642179ac2b0ae6398e68e1ba3f1I"logical_path;
 FI"jquery.ui.widget.js;
 TI"pathname;
 FI"}C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.widget.js;

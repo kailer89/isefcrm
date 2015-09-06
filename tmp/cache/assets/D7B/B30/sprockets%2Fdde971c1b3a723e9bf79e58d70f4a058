@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.988032:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.615343:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%1d80475ab97bc998512f8dc0374ade64I"logical_path;
+F"%39367657323964f4a7a77f60a806dd60I"logical_path;
 FI"paypal.gif;
 TI"pathname;
 FI"'$root/app/assets/images/paypal.gif;

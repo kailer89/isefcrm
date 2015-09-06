@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506702.708302:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564519.278111:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%8b2405b822f3a519751bdfe3cc62720eI"logical_path;
+F"%1fd98d21dde21a2eb4f365b31b488b4aI"logical_path;
 FI"RGraph.rose.js;
 TI"pathname;
 FI"0$root/app/assets/javascripts/RGraph.rose.js;

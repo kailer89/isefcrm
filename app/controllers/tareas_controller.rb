@@ -59,15 +59,23 @@ class TareasController < ApplicationController
   def create
     @tarea = Tarea.new(params[:tarea])
 
-    respond_to do |format|
-      if @tarea.save
-        format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/", notice: 'Tarea was successfully created.' }
-        format.json { render json: @tarea, status: :created, location: @tarea }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @tarea.errors, status: :unprocessable_entity }
+    if @tarea.model_id == nil
+      respond_to do |format|
+        if @tarea.save
+          format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/", notice: 'Tarea was successfully created.' }
+          format.json { render json: @tarea, status: :created, location: @tarea }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @tarea.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.json { head :no_content }
+      end         
     end
+
   end
 
   # PUT /tareas/1
@@ -75,15 +83,23 @@ class TareasController < ApplicationController
   def update
     @tarea = Tarea.find(params[:id])
 
-    respond_to do |format|
-      if @tarea.update_attributes(params[:tarea])
-        format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/", notice: 'Tarea was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @tarea.errors, status: :unprocessable_entity }
+    if @tarea.model_id == nil
+      respond_to do |format|
+        if @tarea.update_attributes(params[:tarea])
+          format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/", notice: 'Tarea was successfully updated.' }
+          format.json { head :ok }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @tarea.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.json { head :no_content }
+      end         
     end
+
   end
 
   # DELETE /tareas/1
@@ -92,10 +108,18 @@ class TareasController < ApplicationController
     @tarea = Tarea.find(params[:id])
     @tarea.destroy
 
-    respond_to do |format|
-      format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/"}
-      format.json { head :ok }
+    if @tarea.model_id == nil
+      respond_to do |format|
+        format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/"}
+        format.json { head :ok }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.json { head :no_content }
+      end        
     end
+
   end
   def convertir_tarea
     @llamada = Tarea.find(params[:id])

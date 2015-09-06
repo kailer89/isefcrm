@@ -21,6 +21,7 @@ group :assets do
   gem 'uglifier', "1.0.3"
   gem 'bootstrap-sass'
   gem 'jquery-ui-rails'
+  gem 'bootstrap-wysihtml5-rails'#,
 end
 
 
@@ -50,7 +51,7 @@ gem 'geocoder'
 #gem "ransack"#, :git => "git://github.com/ernie/ransack.git" # Track git repo
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem "watu_table_builder", :require => "table_builder"
-gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails'#,
+
                               #:git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git' 
 gem 'omniauth'
 #gem 'twitter'

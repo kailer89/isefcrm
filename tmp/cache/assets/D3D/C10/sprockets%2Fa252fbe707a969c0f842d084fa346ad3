@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506702.766885:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564519.3611672:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%a77bd54e71db51ebd96463d2a3e041c6I"logical_path;
+F"%ebd7b652b42b90f34c527808286f341dI"logical_path;
 FI"RGraph.vprogress.js;
 TI"pathname;
 FI"5$root/app/assets/javascripts/RGraph.vprogress.js;

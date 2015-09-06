@@ -1973,3 +1973,136 @@ C:/Sites/isefcrm/app/views/examinados/index.html.erb:155: syntax error, unexpect
 [09/05/15 22:36:44 -0500 alienware (7504)] INFO : Doing deferred dependency-detection before Rack startup
 [09/06/15 08:59:20 -0500 alienware (7504)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `flash' for #<Prospecto:0xf97eea0>
 [09/06/15 08:59:59 -0500 alienware (7504)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `flash' for #<InteresBasico:0x11b56270>
+[09/06/15 12:03:03 -0500 alienware (6700)] INFO : Starting the New Relic agent in "development" environment.
+[09/06/15 12:03:03 -0500 alienware (6700)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/06/15 12:03:03 -0500 alienware (6700)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[09/06/15 12:03:03 -0500 alienware (6700)] INFO : New Relic Agent Developer Mode enabled.
+[09/06/15 12:03:03 -0500 alienware (6700)] INFO : Environment: development
+[09/06/15 12:03:03 -0500 alienware (6700)] INFO : Dispatcher: webrick
+[09/06/15 12:03:03 -0500 alienware (6700)] INFO : Application: My Application
+[09/06/15 12:03:03 -0500 alienware (6700)] WARN : Agent configured not to send data in this environment.
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing ActiveRecord instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing HTTPClient instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing Net instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing deferred Rack instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing Rack::Builder middleware instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing Rails 3+ middleware instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing Rails 3 Controller instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Installing Rails 3 Error instrumentation
+[09/06/15 12:03:04 -0500 alienware (6700)] INFO : Finished instrumentation
+[09/06/15 12:03:08 -0500 alienware (6700)] INFO : Doing deferred dependency-detection before Rack startup
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Starting the New Relic agent in "development" environment.
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : New Relic Agent Developer Mode enabled.
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Environment: development
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Dispatcher: webrick
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Application: My Application
+[09/06/15 12:11:17 -0500 alienware (9044)] WARN : Agent configured not to send data in this environment.
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing ActiveRecord instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing HTTPClient instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing Net instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing deferred Rack instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing Rack::Builder middleware instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing Rails 3+ middleware instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing Rails 3 Controller instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Installing Rails 3 Error instrumentation
+[09/06/15 12:11:17 -0500 alienware (9044)] INFO : Finished instrumentation
+[09/06/15 12:11:21 -0500 alienware (9044)] INFO : Doing deferred dependency-detection before Rack startup
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Starting the New Relic agent in "development" environment.
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : New Relic Agent Developer Mode enabled.
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Environment: development
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Dispatcher: webrick
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Application: My Application
+[09/06/15 12:20:39 -0500 alienware (9640)] WARN : Agent configured not to send data in this environment.
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing ActiveRecord instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing HTTPClient instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing Net instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing deferred Rack instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing Rack::Builder middleware instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing Rails 3+ middleware instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing Rails 3 Controller instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Installing Rails 3 Error instrumentation
+[09/06/15 12:20:39 -0500 alienware (9640)] INFO : Finished instrumentation
+[09/06/15 12:20:42 -0500 alienware (9640)] INFO : Doing deferred dependency-detection before Rack startup
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Starting the New Relic agent in "development" environment.
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : New Relic Agent Developer Mode enabled.
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Environment: development
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Dispatcher: webrick
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Application: My Application
+[09/06/15 12:31:51 -0500 alienware (12692)] WARN : Agent configured not to send data in this environment.
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing ActiveRecord instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing HTTPClient instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing Net instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing deferred Rack instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing Rack::Builder middleware instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing Rails 3+ middleware instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing Rails 3 Controller instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Installing Rails 3 Error instrumentation
+[09/06/15 12:31:51 -0500 alienware (12692)] INFO : Finished instrumentation
+[09/06/15 12:31:56 -0500 alienware (12692)] INFO : Doing deferred dependency-detection before Rack startup
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Starting the New Relic agent in "development" environment.
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : New Relic Agent Developer Mode enabled.
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Environment: development
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Dispatcher: webrick
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Application: My Application
+[09/06/15 12:46:46 -0500 alienware (9720)] WARN : Agent configured not to send data in this environment.
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing ActiveRecord instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing HTTPClient instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing Net instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing deferred Rack instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing Rack::Builder middleware instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing Rails 3+ middleware instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing Rails 3 Controller instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Installing Rails 3 Error instrumentation
+[09/06/15 12:46:46 -0500 alienware (9720)] INFO : Finished instrumentation
+[09/06/15 12:46:50 -0500 alienware (9720)] INFO : Doing deferred dependency-detection before Rack startup
+[09/06/15 13:21:40 -0500 alienware (7568)] INFO : Starting the New Relic agent in "development" environment.
+[09/06/15 13:21:40 -0500 alienware (7568)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/06/15 13:21:40 -0500 alienware (7568)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : New Relic Agent Developer Mode enabled.
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Environment: development
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Dispatcher: webrick
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Application: My Application
+[09/06/15 13:21:41 -0500 alienware (7568)] WARN : Agent configured not to send data in this environment.
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing ActiveRecord instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing HTTPClient instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing Net instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing deferred Rack instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing Rack::Builder middleware instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing Rails 3+ middleware instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing Rails 3 Controller instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Installing Rails 3 Error instrumentation
+[09/06/15 13:21:41 -0500 alienware (7568)] INFO : Finished instrumentation
+[09/06/15 13:21:45 -0500 alienware (7568)] INFO : Doing deferred dependency-detection before Rack startup
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Starting the New Relic agent in "development" environment.
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : New Relic Agent Developer Mode enabled.
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Environment: development
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Dispatcher: webrick
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Application: My Application
+[09/06/15 13:37:05 -0500 alienware (9408)] WARN : Agent configured not to send data in this environment.
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing ActiveRecord instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing HTTPClient instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing Net instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing deferred Rack instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing Rack::Builder middleware instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing Rails 3+ middleware instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing Rails 3 Controller instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Installing Rails 3 Error instrumentation
+[09/06/15 13:37:05 -0500 alienware (9408)] INFO : Finished instrumentation
+[09/06/15 13:37:09 -0500 alienware (9408)] INFO : Doing deferred dependency-detection before Rack startup

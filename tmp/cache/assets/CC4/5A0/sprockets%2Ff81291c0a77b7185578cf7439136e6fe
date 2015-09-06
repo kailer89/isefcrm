@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.993471:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564518.156366:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%7dde85b9e8eff07e6d31d476c506ef1fI"logical_path;
+F"%f05f83c44a2943a50e21680433292c4bI"logical_path;
 FI"jquery.ui.effect-scale.js;
 TI"pathname;
 FI"~C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.effect-scale.js;

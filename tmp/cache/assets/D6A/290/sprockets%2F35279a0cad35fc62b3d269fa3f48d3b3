@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506702.353523:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564518.725744:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%7a5a6da902db37df92424d919147406bI"logical_path;
+F"%6598d80a2cfe1c1760c569ac6e8ff077I"logical_path;
 FI"RGraph.bar.js;
 TI"pathname;
 FI"/$root/app/assets/javascripts/RGraph.bar.js;

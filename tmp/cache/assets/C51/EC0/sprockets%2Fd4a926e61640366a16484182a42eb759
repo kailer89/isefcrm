@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506763.467495:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564601.4603362:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%4c48384b4dc1de2e144a686a2e33073eI"logical_path;
+F"%785ffc6fb9f45d6a66144b47df6e2ef4I"logical_path;
 FI" rails_admin/base/README.txt;
 TI"pathname;
 FI"~C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/stylesheets/rails_admin/base/README.txt;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506755.881835:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.776246:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%6bf6c0b955d02437d1d9120a51cb1f80I"logical_path;
+F"%cfdb576e9899e5196da1688414a3b251I"logical_path;
 FI"rails_admin/logo.png;
 TI"pathname;
 FI"rC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/logo.png;

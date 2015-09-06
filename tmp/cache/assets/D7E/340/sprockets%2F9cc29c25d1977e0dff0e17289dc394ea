@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506755.603613:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.383163:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%7dbfc5fe577a17f5c27373d7733426a7I"logical_path;
+F"%0d855aa63ab7f562eff505fda0c0450cI"logical_path;
 FI"rails_admin/clock.png;
 TI"pathname;
 FI"sC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/clock.png;

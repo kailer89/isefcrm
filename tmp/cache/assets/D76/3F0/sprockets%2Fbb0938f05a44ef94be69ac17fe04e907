@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506709.315606:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564529.675013:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%133d17dfa6313b6f2b511d886b0d982bI"logical_path;
+F"%9c6f69ee1ee9cbd29e8170c5638419b3I"logical_path;
 FI"financial-data.js;
 TI"pathname;
 FI"3$root/app/assets/javascripts/financial-data.js;

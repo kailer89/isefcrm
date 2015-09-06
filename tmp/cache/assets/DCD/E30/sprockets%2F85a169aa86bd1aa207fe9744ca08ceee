@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.8581948:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.430221:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d7ffc65d50a7664e72e4c81bafe99296I"logical_path;
+F"%84e4a875ac088246c316f78e60a3483aI"logical_path;
 FI"loading-placeholder.png;
 TI"pathname;
 FI"4$root/app/assets/images/loading-placeholder.png;

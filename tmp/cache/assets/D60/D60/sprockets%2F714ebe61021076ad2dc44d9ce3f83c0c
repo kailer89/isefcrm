@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.3619552:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.1967301:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d728068dea4c9b153e75d362036cdcadI"logical_path;
+F"%379f57b916c31aa61ecc23e284ac8a32I"logical_path;
 FI"unicef.png;
 TI"pathname;
 FI"'$root/app/assets/images/unicef.png;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506704.394349:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564521.835809:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%195c4f982a770e1fdfcfd2c7cf54bdcaI"logical_path;
+F"%d459ea0ca220916f765065239d4b16beI"logical_path;
 FI"bootstrap-transfer.js;
 TI"pathname;
 FI"7$root/app/assets/javascripts/bootstrap-transfer.js;

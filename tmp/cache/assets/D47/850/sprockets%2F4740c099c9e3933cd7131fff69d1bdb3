@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.4489238:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.790795:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%3bd171cfb7d6f8344e3c8d6bbc221547I"logical_path;
+F"%6d1e86fe59cac9449817573ee0a8f374I"logical_path;
 FI"download-stable-sml.png;
 TI"pathname;
 FI"4$root/app/assets/images/download-stable-sml.png;

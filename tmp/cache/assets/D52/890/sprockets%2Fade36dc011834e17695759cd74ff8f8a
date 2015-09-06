@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.902223:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.5302882:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b0763a44fc6bfb054535b5726d492488I"logical_path;
+F"%907efc20400a7bb51cbb9f01c9c867e3I"logical_path;
 FI" merry-christmas-snowman.png;
 TI"pathname;
 FI"8$root/app/assets/images/merry-christmas-snowman.png;

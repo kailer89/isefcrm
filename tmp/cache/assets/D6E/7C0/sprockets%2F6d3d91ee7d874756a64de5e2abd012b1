@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.628043:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.092999:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%01a53ae5d13df624dad1806a95a7282eI"logical_path;
+F"%ed4bfd20f95d786a10a6bafabeca875dI"logical_path;
 FI"#glyphicons-halflings-white.png;
 TI"pathname;
 FI";$root/app/assets/images/glyphicons-halflings-white.png;

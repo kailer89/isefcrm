@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506767.802528:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564607.319226:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c23c4c8a7f7173e05be0b6e35df3cbdbI"logical_path;
+F"%d81b1dcffa9d3d52cad953811eb216deI"logical_path;
 FI"FontAwesome.otf;
 TI"pathname;
 FI"xC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/font-awesome-rails-3.1.1.0/vendor/assets/fonts/FontAwesome.otf;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.595021:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.039962:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%877cb62e48656b90a74906b2fc2249faI"logical_path;
+F"%4b69cda196d24b61e4d73745918106afI"logical_path;
 FI"follow.png;
 TI"pathname;
 FI"'$root/app/assets/images/follow.png;

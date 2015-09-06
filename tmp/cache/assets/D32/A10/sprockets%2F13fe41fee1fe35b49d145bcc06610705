@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506753.549867:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564587.66736:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%6e3d8375440257d7c1b400f6f4c035c6I"logical_path;
+F"%c73136a89d47d0906e58eafa3cdbdd01I"logical_path;
 FI"application.css;
 TI"pathname;
 FI"1$root/app/assets/stylesheets/application.css;
@@ -9,12 +9,13 @@ TI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2015-09-05T20:34:50-05:00;
+FI"2015-09-06T12:41:35-05:00;
 FI"	body;
-FI"{M/*
+FI"|M/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
+
 */
 /* Base class */
 
@@ -594,6 +595,8 @@ TI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/
 TI"~C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/stylesheets/jquery.ui.tooltip.css.erb;
 TI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/stylesheets/jquery.ui.base.css.erb;
 TI"C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/stylesheets/jquery.ui.all.css.erb;
+TI"ùC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/bootstrap3-wysihtml5.css;
+TI"éC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/index.css;
 TI"1$root/app/assets/stylesheets/application.css;
 TI"+$root/app/assets/stylesheets/admin.css;
 TI"4$root/app/assets/stylesheets/admitidos.css.scss;
@@ -630,20 +633,18 @@ TI"1$root/app/assets/stylesheets/token-input.css;
 TI"/$root/app/assets/stylesheets/user.css.scss;
 TI"0$root/app/assets/stylesheets/users.css.scss;
 TI"3$root/app/assets/stylesheets/versions.css.scss;
-TI"ùC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/bootstrap3-wysihtml5.css;
-TI"éC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/index.css;
 TI"dependency_paths;
 F[b{I"	path;
 FI"1$root/app/assets/stylesheets/application.css;
 TI"
 mtime;
-FIu:	Time¿‡Ä  ∞Â:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	Time—‡Ä  Pl:@_zoneI"#Central Daylight Time (Mexico);
 T:offseti˛∞πI"hexdigest;
-F"%d28ef8f3b471e41789e0087f44ea52ab{I"	path;
+F"%8647016eb7d5aa7bfa2032f213e530f1{I"	path;
 FI"!$root/app/assets/stylesheets;
 TI"
 mtime;
-FIu;¡‡Ä   ã;I"#Central Daylight Time (Mexico);
+FIu;—‡Ä  pj;I"#Central Daylight Time (Mexico);
 T;i˛∞πI"hexdigest;
 F"%323ca062845bf899b70b6a9dc3bc59cf{I"	path;
 FI"($root/app/assets/stylesheets/images;
@@ -754,6 +755,18 @@ mtime;
 FIu;∑‡Ä  pI;I"#Central Daylight Time (Mexico);
 T;i˛∞πI"hexdigest;
 F"%00f119d51b1285d53a0c3ecc1c96ca68{I"	path;
+FI"ùC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/bootstrap3-wysihtml5.css;
+TI"
+mtime;
+FIu;—‡Ä  0¶;I"#Central Daylight Time (Mexico);
+T;i˛∞πI"hexdigest;
+F"%dfca7a38f7b0875649ed3644d33ad16c{I"	path;
+FI"éC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/index.css;
+TI"
+mtime;
+FIu;—‡Ä  0¶;I"#Central Daylight Time (Mexico);
+T;i˛∞πI"hexdigest;
+F"%f2b6ff5075925f1dc1569e657e80db2d{I"	path;
 FI"+$root/app/assets/stylesheets/admin.css;
 TI"
 mtime;
@@ -1179,17 +1192,5 @@ TI"
 mtime;
 FIu;¿äÄ  †Ô;I"#Central Standard Time (Mexico);
 T;i˛†´I"hexdigest;
-F"%419d115e1462a06a7004093af17ed3ae{I"	path;
-FI"ùC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/bootstrap3-wysihtml5.css;
-TI"
-mtime;
-FIu;∑‡Ä   F;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%dfca7a38f7b0875649ed3644d33ad16c{I"	path;
-FI"éC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/stylesheets/bootstrap-wysihtml5/index.css;
-TI"
-mtime;
-FIu;∑‡Ä   F;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%f2b6ff5075925f1dc1569e657e80db2dI"_version;
+F"%419d115e1462a06a7004093af17ed3aeI"_version;
 F"%9e498e2eadf0be42780363370602c500
