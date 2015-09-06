@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     
     if @user.save
       flash[:notice] = "Successfully created User." 
-      redirect_to edit_user_path(@user)
+      redirect_to dashboards_path
     else
       render :action => 'new'
     end
@@ -37,8 +37,16 @@ class UsersController < ApplicationController
   
   def destroy
     @user = User.find(params[:id])
-    if @user.destroy
-      flash[:notice] = "Successfully deleted User."
+
+    prospectosDelUser = Prospecto.where(:user_id => @user.id)
+
+    if prospectosDelUser.empty?
+            if @user.destroy
+        flash[:notice] = "Successfully deleted User."
+        redirect_to dashboards_path
+      end
+    else
+      flash[:error] = "Imposible borrar puesto que hay prospectos que fueron creados por este usuario"
       redirect_to dashboards_path
     end
   end	

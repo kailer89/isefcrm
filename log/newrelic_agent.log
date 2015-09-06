@@ -1971,3 +1971,5 @@ C:/Sites/isefcrm/app/views/examinados/index.html.erb:155: syntax error, unexpect
 [09/05/15 22:36:41 -0500 alienware (7504)] INFO : Installing Rails 3 Error instrumentation
 [09/05/15 22:36:41 -0500 alienware (7504)] INFO : Finished instrumentation
 [09/05/15 22:36:44 -0500 alienware (7504)] INFO : Doing deferred dependency-detection before Rack startup
+[09/06/15 08:59:20 -0500 alienware (7504)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `flash' for #<Prospecto:0xf97eea0>
+[09/06/15 08:59:59 -0500 alienware (7504)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `flash' for #<InteresBasico:0x11b56270>

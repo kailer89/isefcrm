@@ -228,6 +228,7 @@ class ProspectosController < ApplicationController
         format.html { redirect_to @prospecto, notice: 'Prospecto was successfully created. #{undo_link}' }
         format.json { render json: @prospecto, status: :created, location: @prospecto }
       else
+        flash[:error] = @prospecto.errors.full_messages.to_sentence
         format.html { render action: "new" }
         format.json { render json: @prospecto.errors, status: :unprocessable_entity }
       end
@@ -255,6 +256,9 @@ class ProspectosController < ApplicationController
   # DELETE /prospectos/1.json
   def destroy
     @prospecto = Prospecto.find(params[:id])
+
+
+
     validado=@prospecto.validado
     @prospecto.destroy
 
