@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.999903:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%d71b69b9f8896be3012fac7192007bbfI"logical_path;
+FI"paypal.png;
+TI"pathname;
+FI"'$root/app/assets/images/paypal.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	3493;
+FI"digest;
+F"%9ae532d6babce90155ceb53302d0dcf5I"_version;
+F"%9e498e2eadf0be42780363370602c500

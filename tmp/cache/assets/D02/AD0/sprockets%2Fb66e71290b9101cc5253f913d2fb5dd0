@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.32284:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%f3e0e48c301b3d29abf6991027965c4fI"logical_path;
+FI"chrome_logo.png;
+TI"pathname;
+FI",$root/app/assets/images/chrome_logo.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	3210;
+FI"digest;
+F"%f734643c427ade7895837f710ef4dd1dI"_version;
+F"%9e498e2eadf0be42780363370602c500

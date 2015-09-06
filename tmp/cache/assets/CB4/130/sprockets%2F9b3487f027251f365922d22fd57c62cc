@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.595021:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%877cb62e48656b90a74906b2fc2249faI"logical_path;
+FI"follow.png;
+TI"pathname;
+FI"'$root/app/assets/images/follow.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"297;
+FI"digest;
+F"%6e4dd905576b5a93c7767b4405b5bcb2I"_version;
+F"%9e498e2eadf0be42780363370602c500

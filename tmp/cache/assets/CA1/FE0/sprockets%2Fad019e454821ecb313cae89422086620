@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.815166:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%7b84ffc107402233e319c7520d45e254I"logical_path;
+FI"introspection.png;
+TI"pathname;
+FI".$root/app/assets/images/introspection.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"157292;
+FI"digest;
+F"%d1ec0dc6e84e6eace5f68976c934b470I"_version;
+F"%9e498e2eadf0be42780363370602c500

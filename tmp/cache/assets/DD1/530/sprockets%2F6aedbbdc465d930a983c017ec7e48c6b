@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.685081:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%539ff7da0acaa9fc063a5784ddcc1bf1I"logical_path;
+FI"google_64.png;
+TI"pathname;
+FI"*$root/app/assets/images/google_64.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	3446;
+FI"digest;
+F"%7760fc071c50f229929e62d262bdd956I"_version;
+F"%9e498e2eadf0be42780363370602c500

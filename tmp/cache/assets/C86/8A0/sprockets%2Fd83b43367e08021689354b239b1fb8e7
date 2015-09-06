@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441501133.7371352:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506804.9488351:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%608c43e99c13ceae222a535871c4c75eI"logical_path;
+F"%129ec8098290944ac7239a6ca502c14dI"logical_path;
 FI"bootstrap-responsive.css;
 TI"pathname;
 FI"C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap-responsive.scss;

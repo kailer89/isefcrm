@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.186527:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%8edfbe39a6745d777a67fb6303c3afd1I"logical_path;
+FI"bn.business.png;
+TI"pathname;
+FI",$root/app/assets/images/bn.business.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	4512;
+FI"digest;
+F"%47990b1c09354f958dfbb6713ab71c8eI"_version;
+F"%9e498e2eadf0be42780363370602c500

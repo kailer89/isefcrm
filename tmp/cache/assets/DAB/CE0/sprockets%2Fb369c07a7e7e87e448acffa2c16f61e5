@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506699.528128:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%4eb618ea830949829187c2b066e3aa3eI"logical_path;
+FI"barg1.gif;
+TI"pathname;
+FI"&$root/app/assets/images/barg1.gif;
+TI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"93;
+FI"digest;
+F"%b06464840bd170dfe87f91994b87b684I"_version;
+F"%9e498e2eadf0be42780363370602c500

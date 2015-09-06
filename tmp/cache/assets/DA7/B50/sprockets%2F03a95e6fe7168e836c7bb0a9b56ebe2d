@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.2378728:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%db1c9b6f991a619a21f5c7e71c8eb4e6I"logical_path;
+FI"sq9.png;
+TI"pathname;
+FI"$$root/app/assets/images/sq9.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"93;
+FI"digest;
+F"%dfea7f7c3b001f54bf4bd1c15666899eI"_version;
+F"%9e498e2eadf0be42780363370602c500

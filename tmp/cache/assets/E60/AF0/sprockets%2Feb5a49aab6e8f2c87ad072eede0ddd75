@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506755.476968:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%45c5a4361d0a198e6a9ce91f246ae3dbI"logical_path;
+FI".rails_admin/aristo/images/icon_sprite.png;
+TI"pathname;
+FI"‚C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/aristo/images/icon_sprite.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2015-09-05T18:18:44-05:00;
+FI"length;
+FI"	2682;
+FI"digest;
+F"%bc97593758fc238fdb413f3e58e8ced2I"_version;
+F"%9e498e2eadf0be42780363370602c500

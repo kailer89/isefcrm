@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.585014:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%099549ceb1acb43bc582bedff679f278I"logical_path;
+FI"favicon.png;
+TI"pathname;
+FI"($root/app/assets/images/favicon.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	1245;
+FI"digest;
+F"%dab4f1fcb0b8b68ba49d9cb5c21aefc9I"_version;
+F"%9e498e2eadf0be42780363370602c500

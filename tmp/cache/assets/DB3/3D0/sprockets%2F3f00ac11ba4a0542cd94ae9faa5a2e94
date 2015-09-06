@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506755.6796422:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%f0ad5243166ad21a1c14e1a1f3d06f0dI"logical_path;
+FI"4rails_admin/colorpicker/colorpicker_overlay.png;
+TI"pathname;
+FI"ˆC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/colorpicker/colorpicker_overlay.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2015-09-05T18:18:44-05:00;
+FI"length;
+FI"	7006;
+FI"digest;
+F"%bf600d0a692a3b64059f9b286f926027I"_version;
+F"%9e498e2eadf0be42780363370602c500

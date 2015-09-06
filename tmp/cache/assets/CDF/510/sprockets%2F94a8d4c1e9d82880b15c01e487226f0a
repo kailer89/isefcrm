@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.6950872:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%4b3863640308b9a3d8017dd356465a92I"logical_path;
+FI"googlegroups.png;
+TI"pathname;
+FI"-$root/app/assets/images/googlegroups.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	3191;
+FI"digest;
+F"%dede5a2d85136e6a41d0bf4b25b27ffcI"_version;
+F"%9e498e2eadf0be42780363370602c500

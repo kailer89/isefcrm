@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.838182:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%2a3460bdb03bba7fcaf73a6df34dee8fI"logical_path;
+FI"linkedin_32.png;
+TI"pathname;
+FI",$root/app/assets/images/linkedin_32.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	1383;
+FI"digest;
+F"%e61d51699aa4a97493235f04211d744cI"_version;
+F"%9e498e2eadf0be42780363370602c500

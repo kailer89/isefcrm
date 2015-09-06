@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.372962:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%7598a47cdf26ddb49d7a348fdc03869cI"logical_path;
+FI"water.jpg;
+TI"pathname;
+FI"&$root/app/assets/images/water.jpg;
+TI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	1844;
+FI"digest;
+F"%e215e6b774d0febca91a5a3e3d286062I"_version;
+F"%9e498e2eadf0be42780363370602c500

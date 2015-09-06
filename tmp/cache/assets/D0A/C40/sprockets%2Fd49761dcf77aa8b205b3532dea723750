@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.405895:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%6cb7c3f5023a8531986967a1ae5c0c94I"logical_path;
+FI"delicious.png;
+TI"pathname;
+FI"*$root/app/assets/images/delicious.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	1018;
+FI"digest;
+F"%f01d87fcc6cb3acdf0dc4eb2f660ffb2I"_version;
+F"%9e498e2eadf0be42780363370602c500

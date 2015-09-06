@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506700.4379158:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%86924e7689ec2d2405b7a9e429b162baI"logical_path;
+FI"download-beta.png;
+TI"pathname;
+FI".$root/app/assets/images/download-beta.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	1849;
+FI"digest;
+F"%06cda502fe15ad1f0c27a56e3cfa966cI"_version;
+F"%9e498e2eadf0be42780363370602c500

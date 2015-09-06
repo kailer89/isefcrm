@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506699.124535:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%4104cd27ffb276f18b14cdc29034663dI"logical_path;
+FI"bard16.png;
+TI"pathname;
+FI"'$root/app/assets/images/bard16.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"124;
+FI"digest;
+F"%d6e056893f2a1aa76970f9bfa0791dbcI"_version;
+F"%9e498e2eadf0be42780363370602c500

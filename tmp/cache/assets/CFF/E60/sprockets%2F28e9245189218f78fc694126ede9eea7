@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506767.945545:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%1b187d79094b8b5e5a591d59960d37d1I"logical_path;
+FI".jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png;
+TI"pathname;
+FI"‰C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/images/jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2015-09-05T18:18:23-05:00;
+FI"length;
+FI"120;
+FI"digest;
+F"%c6494c2d881a55de7007b5f5630a1ee7I"_version;
+F"%9e498e2eadf0be42780363370602c500

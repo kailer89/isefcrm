@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506755.573592:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%50fbd2eb2cc166cd5f77d3373bff6c98I"logical_path;
+FI"!rails_admin/bullet_black.png;
+TI"pathname;
+FI"zC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/bullet_black.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2015-09-05T18:18:44-05:00;
+FI"length;
+FI"211;
+FI"digest;
+F"%b154066b54b8d3af26bbd0b4fc5669fdI"_version;
+F"%9e498e2eadf0be42780363370602c500

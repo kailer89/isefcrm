@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441506701.38497:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%d013d69d09fb2157c9c8a857eb672edcI"logical_path;
+FI"yahoo_32.png;
+TI"pathname;
+FI")$root/app/assets/images/yahoo_32.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2014-03-21T18:59:58-06:00;
+FI"length;
+FI"	1514;
+FI"digest;
+F"%ac0b722ee6a19076649795d438956adbI"_version;
+F"%9e498e2eadf0be42780363370602c500

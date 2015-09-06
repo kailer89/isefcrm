@@ -12,7 +12,6 @@
 //= require bootstrap
 //= require jquery.ui.all
 //= require bootstrap
-//= require wysihtml5
 //= require bootstrap-wysihtml5
 //= require formToWizard
 //= require bwizard
