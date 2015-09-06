@@ -39,7 +39,7 @@
   
  <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tareas" data-toggle="tab">Campana uno a uno</a></li>
+    <li class="active"><a href="#tareas" data-toggle="tab">Tareas</a></li>
     <li><a href="#llamadas" data-toggle="tab">Llamadas</a></li>
     <li><a href="#memos" data-toggle="tab">Memos</a></li>
     <li><a href="#correos" data-toggle="tab">Correos</a></li>
@@ -53,7 +53,7 @@
       %>
 
         <div class="well">
-          <h3>Campana uno a uno</h3>
+          <h3>Tareas</h3>
            <table class="table table-striped table-bordered table-condensed">
             <thead>
               <tr>
@@ -79,7 +79,7 @@
               <%end%>
             </tbody>
           </table>
-          <%= link_to 'Nueva Campana uno a uno', new_tarea_path(:model_name=>request.path_parameters[:controller],:model_id=>@prospecto.id), :class => 'btn btn-primary' %>
+          <%= link_to 'Nueva Tarea', new_tarea_path(:model_name=>request.path_parameters[:controller],:model_id=>@prospecto.id), :class => 'btn btn-primary' %>
         </div>
     </div>
     <div class="tab-pane" id="llamadas">

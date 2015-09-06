@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1439247036.803019:@value{	I"length:EFi£DI"digest;
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441501321.248319:@value{	I"length:EFi£DI"digest;
 F"%1810a7c6d8aa9f0f5e7a5c5b6e39d922I"source;
 FI"£D/*
   dragtable v1.0
@@ -540,4 +540,4 @@ var forEach = function(object, block, context) {
 };
 ;
 FI"_version;
-F"%883dfea07a5ad549f5663e1838bd0bb1
+F"%c1164d54124b7a9de87ac4d0fc31621b

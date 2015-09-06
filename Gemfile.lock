@@ -1,21 +1,13 @@
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: c06fb77947b24a412aa60d89a3c1a7b78166f2f3
+  revision: b1494b82c3de9b02e227833265bd8418ee4b169c
   specs:
-    ransack (1.6.6)
+    ransack (1.7.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.2)
-
-GIT
-  remote: git://github.com/smartinez87/exception_notification.git
-  revision: 2fa2b71f7521f7c9d81c85b83039feac6e89fb0f
-  specs:
-    exception_notification (4.1.1)
-      actionmailer (>= 3.0.4)
-      activesupport (>= 3.0.4)
 
 GEM
   remote: http://rubygems.org/
@@ -52,10 +44,7 @@ GEM
     ansi (1.5.0)
     arel (2.2.3)
     attr_required (1.0.0)
-    bcrypt (3.1.10-x86-mingw32)
-    bcrypt-ruby (3.1.5-x86-mingw32)
-      bcrypt (>= 3.1.3)
-    bond (0.4.3)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.10)
@@ -86,9 +75,9 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    compass-rails (2.0.4)
+    compass-rails (2.0.5)
       compass (~> 1.0.0)
-      sass-rails (<= 5.0.1)
+      sass-rails (< 5.1)
       sprockets (< 2.13)
     daemons (1.2.3)
     default_value_for (2.0.3)
@@ -99,10 +88,13 @@ GEM
       warden (~> 1.2.1)
     erubis (2.7.0)
     eventmachine (1.0.8)
-    execjs (2.5.2)
-    fb_graph (2.6.0)
-      httpclient (>= 2.2.0.2)
-      multi_json
+    exception_notification (4.1.1)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
+    execjs (2.6.0)
+    fb_graph (2.7.17)
+      httpclient (>= 2.4)
+      multi_json (>= 1.3)
       rack-oauth2 (>= 0.14.4)
       tzinfo
     ffi (1.9.10-x86-mingw32)
@@ -115,12 +107,12 @@ GEM
     has_permalink (0.1.7)
     hashie (3.4.2)
     hike (1.2.3)
-    honeybadger (2.1.3)
+    honeybadger (2.1.4)
     httpclient (2.6.0.1)
     i18n (0.7.0)
     intercom-rails (0.2.28)
       activesupport (> 3.0)
-    jquery-rails (3.1.3)
+    jquery-rails (3.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (3.0.1)
@@ -141,7 +133,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.6.2)
     minitest (4.7.5)
-    multi_json (1.0.4)
+    multi_json (1.11.2)
     nested_form (0.3.2)
     newrelic_rpm (3.13.0.299)
     nokogiri (1.6.6.2-x86-mingw32)
@@ -153,8 +145,8 @@ GEM
     paper_trail (2.7.2)
       activerecord (~> 3.0)
       railties (~> 3.0)
-    pdfkit (0.8.0)
-    pg (0.18.2-x86-mingw32)
+    pdfkit (0.8.2)
+    pg (0.18.3-x86-mingw32)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -168,12 +160,11 @@ GEM
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
-    rack-oauth2 (0.14.8)
+    rack-oauth2 (1.2.1)
       activesupport (>= 2.3)
       attr_required (>= 0.0.5)
-      httpclient (>= 2.2.0.2)
-      i18n
-      json (>= 1.4.3)
+      httpclient (>= 2.4)
+      multi_json (>= 1.3.6)
       rack (>= 1.1)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -182,11 +173,9 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rack-webconsole (0.1.4)
-      multi_json (~> 1.0.3)
+    rack-webconsole (0.1.2)
+      json
       rack
-      ripl (~> 0.5.1)
-      ripl-multi_line (~> 0.3.0)
     rails (3.1.4)
       actionmailer (= 3.1.4)
       actionpack (= 3.1.4)
@@ -218,18 +207,14 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (10.4.2)
-    rb-fsevent (0.9.5)
+    rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
     remotipart (1.2.1)
-    ripl (0.5.1)
-      bond (~> 0.4.0)
-    ripl-multi_line (0.3.1)
-      ripl (>= 0.3.6)
     safe_yaml (0.9.7)
-    sass (3.4.16)
+    sass (3.4.18)
     sass-rails (3.1.4)
       actionpack (~> 3.1.0)
       railties (~> 3.1.0)
@@ -286,7 +271,7 @@ DEPENDENCIES
   compass-rails
   default_value_for
   devise
-  exception_notification!
+  exception_notification
   fb_graph
   gchartrb
   geocoder
@@ -317,3 +302,6 @@ DEPENDENCIES
   watu_table_builder
   will_paginate
   wkhtmltopdf-heroku
+
+BUNDLED WITH
+   1.10.6

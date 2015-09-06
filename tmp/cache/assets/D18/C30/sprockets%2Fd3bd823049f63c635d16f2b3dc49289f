@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1359688675.638869:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%7a41470a40b06f308ff63bf01b870e6cI"logical_path;
-FI"asc.gif;
-TI"pathname;
-FI"$$root/app/assets/images/asc.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2010-10-15T12:18:20-05:00;
-FI"length;
-FI"54;
-FI"digest;
-F"%e144644b2c7aad80a53872ac3f1e2c0bI"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

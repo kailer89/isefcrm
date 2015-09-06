@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 require 'open-uri'
 class CorreosMailer < ActionMailer::Base
-  default from: "admin@protocrm.com"
+  default from: current_user.email
   
   def enviar_correo(correo,de,adjuntos=nil)
     @correo = correo

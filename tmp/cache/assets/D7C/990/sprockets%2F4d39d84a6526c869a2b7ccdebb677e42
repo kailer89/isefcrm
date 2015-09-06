@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1342998424.46386:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%fce27e8eb55612ce136cca2ddd59ca09I"logical_path;
-FI"yahoo_64.png;
-TI"pathname;
-FI")$root/app/assets/images/yahoo_64.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-07-22T07:09:14-05:00;
-FI"length;
-FI"	3317;
-FI"digest;
-F"%ef5f5cea59d270fb6f2c4a6d3cebc346I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c
