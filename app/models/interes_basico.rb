@@ -21,10 +21,10 @@ private
 def subsede_is_in_selected_sede
   logger.debug "--------------------------------11111111111111111111111111111111111111111"
   #sede = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
-  subsede = Subsede.where(:id=>self.subsede.id).where(:id=>self.subsede.sede_id).first
+  subsede = Subsede.where(:id=>self.subsede.id).where(:sede_id=>self.sede.id).first
   if subsede == nil
   	sedeCorrecta = Sede.where(:id=>self.subsede.sede_id).first
-    errors.add :subsede_id, "La Extension de la sede no es valida por favor seleccione la correcta: " + sedeCorrecta.nombre
+    errors.add :sede_id, "La Extension de la sede no es valida por favor seleccione la correcta: " + sedeCorrecta.nombre
   end
 end
 

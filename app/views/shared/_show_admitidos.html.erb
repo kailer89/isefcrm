@@ -12,7 +12,7 @@
   end
 %>
 
-<div class="tab-pane fade" id="admitido<%=prospectoid%>">
+<div class="tab-pane fade<%=isactive%>" id="admitido<%=prospectoid%>">
   <fieldset>
 <p>
   <%valor=f.status_admision.valor rescue nil %>
