@@ -144,6 +144,7 @@
     <div class="form-actions">
       <%= g.submit nil, :class => 'btn btn-primary' ,:id=>"commit" %>
       <%= link_to 'Cancel', prospectos_path(:validado=>@prospecto.validado),:confirm => "Estas seguro de querer continuar?", :class => 'btn' %>
+      <%if params[:action] != "new"%>
       <% if (@prospecto.validado == false) %>
           <%= link_to 'Validar Prospecto',validar_path,:confirm => "Estas seguro de querer continuar?", :class=>'btn btn-success', :method=>'post', :id=>'validar',:rel=>'popover',:data => {:content => 'Usa este boton para convertir el prospecto en validado.',"origintal-title"=>'Test',:notooltip=>'true'} %>
         <%else%>
@@ -151,6 +152,7 @@
             <%= link_to 'Convertir en Solicitante', convertir_path,:confirm => "Estas seguro de querer continuar?", :class=>'btn btn-info', :method=>'post', :id=>'convertir' %>
           <%end%>
         <%end%>
+         <%end%>
   </div><!--End Form Actions-->
 <%else%>
   <%= f.simple_fields_for :prospectos, :html => { :class => 'form-horizontal' } do |g| %>
