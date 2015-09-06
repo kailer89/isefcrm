@@ -275,7 +275,8 @@ redirect_to "/correos/#{@correo.id}/edit/"
     @correo.model_id=params[:model_id]      
     @correo.created_by = current_user.id
     @correo.user_id =current_user.id
-    @correo.sede_id =current_user.sede_id  
+    @correo.sede_id =current_user.sede_id 
+    @correo.es_uno_a_uno = false 
     
     respond_to do |format|
       format.html # new.html.erb
