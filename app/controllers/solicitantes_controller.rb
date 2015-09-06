@@ -29,7 +29,7 @@ class SolicitantesController < ApplicationController
     if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"   or rol.nombre == "CP"  
       logger.debug "admin"
     else
-      @solicitantes=@solicitantes.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:user_id=>current_user.id))
+      @solicitantes=@solicitantes.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.where(:sede_id=>current_user.sede).joins{solicitante}.where(:user_id=>current_user.id))
     end
 
       @q = @solicitantes.ransack(params[:q])

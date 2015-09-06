@@ -18,24 +18,7 @@
       <%= f.input :archivado%>
     </div>
 </div>
-  <div class="tab-pane fade" id="admitido">
-  <%= f.simple_fields_for :admitidos, :html => { :class => 'form-horizontal' } do |u| %>
-<div  class="well">     
-      <%= u.association :status_de_admision,:include_blank => false, :label_method => :valor, :label=>"Status de Admisión" %>
-      <%= u.input :comentarios_de_la_direccion, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios de la Dirección" %>
-      <%= u.association :status_de_la_notificacion,:include_blank => false, :label_method => :valor, :label=>"Status de Notificación:" %>
-      <%= u.association :status_del_admitido,:include_blank => false, :label_method => :valor, :label=>"Status del Admitido:" %>
-      <%= u.input :cometnarios_de_notificacion, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios:"%>
-      <%= u.input :solicitud_de_admision, :label=>"Solicitud de Admisión"%>
-      <%= u.input :copia_del_acta_de_nacimiento, :label=>"Copia del Acta de Nacimiento"%>
-      <%= u.input :copia_del_certificado_de_preparatoria_licenciatura, :label=>"Copia del Certificado de preparatoria / licenciatura"%>
-      <%= u.input :fotografias_tamano_infantil_blanco_y_negro_papel_mate, :label=>"4 Fotografías; Tamaño infantil, blanco y negro, papel mate" %>
-      <%= u.input :copia_del_comprobante_de_pago_de_inscripcion, :label=>"Copia del comprobante de pago de inscripción" %>
-      <%= u.input :comentarios_documentacion, :input_html=>{:cols=>50, :rows=>3}, :label=>"Comentarios:"%>
-    </div>
-  </div>
 <%=render :partial=>"shared/edit_admitidos", :locals=>{:f=>f}%>
-<%end%>
 <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to 'Cancel', inscritos_path,:confirm => "Estas seguro de querer continuar?", :class => 'btn' %>

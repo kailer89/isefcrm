@@ -3,7 +3,13 @@ class OfertaEducativasController < ApplicationController
   # GET /oferta_educativas
   # GET /oferta_educativas.json
   def index
-    @oferta_educativas = OfertaEducativa.all
+
+    rol = Role.where(:id=>current_user.role).first
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+      @oferta_educativas = OfertaEducativa.all
+    else
+      @oferta_educativas = OfertaEducativa.where(:sede_id=>current_user.sede)
+    end    
 
     respond_to do |format|
       format.html # index.html.erb

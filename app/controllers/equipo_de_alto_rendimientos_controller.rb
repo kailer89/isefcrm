@@ -3,7 +3,13 @@ class EquipoDeAltoRendimientosController < ApplicationController
   # GET /equipo_de_alto_rendimientos
   # GET /equipo_de_alto_rendimientos.json
   def index
-    @equipo_de_alto_rendimientos = EquipoDeAltoRendimiento.all
+    rol = Role.where(:id=>current_user.role).first
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+      @equipo_de_alto_rendimientos = EquipoDeAltoRendimiento.all
+    else
+      @equipo_de_alto_rendimientos = EquipoDeAltoRendimiento.where(:sede_id=>current_user.sede)
+    end       
+            
 
     respond_to do |format|
       format.html # index.html.erb

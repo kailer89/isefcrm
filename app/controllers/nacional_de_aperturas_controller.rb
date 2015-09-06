@@ -3,7 +3,13 @@ class NacionalDeAperturasController < ApplicationController
   # GET /nacional_de_aperturas
   # GET /nacional_de_aperturas.json
   def index
-    @nacional_de_aperturas = NacionalDeApertura.all
+    rol = Role.where(:id=>current_user.role).first
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+      @nacional_de_aperturas = NacionalDeApertura.all
+    else
+      @nacional_de_aperturas = NacionalDeApertura.where(:sede_id=>current_user.sede)
+    end       
+        
 
     respond_to do |format|
       format.html # index.html.erb

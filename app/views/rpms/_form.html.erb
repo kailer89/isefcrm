@@ -23,7 +23,21 @@
 					<p>Solo puedes ver los prospctos que tu hayas creado.</p>
 					<%f.hidden_field :usuarios,:collection=>User.where(:id=>current_user.id).map{|c| [c.username,c.id] }.sort%>
 				<%else%>
+<%
+ rol = Role.where(:id=>current_user.role).first
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+      %>
 				<%= f.input :usuarios,:as => :check_boxes,:label=>"Empleados",:checked => @rpm.usuarios, :collection=>User.all.map{|c| [c.username,c.id] }.sort,:include_blank=>true%>
+      <%
+    else
+      %>
+				<%= f.input :usuarios,:as => :check_boxes,:label=>"Empleados",:checked => @rpm.usuarios, :collection=>User.where(:sede_id=>current_user.sede).all.map{|c| [c.username,c.id] }.sort,:include_blank=>true%>
+      <%
+    end
+
+%>
+
+
 				<%end%>
 			</div>
 			<div>

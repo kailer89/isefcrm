@@ -22,7 +22,7 @@ class InscritosController < ApplicationController
       logger.debug "admin"
     else
       #@admitidos = @admitidos.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:user_id=>current_user.id))))
-      @inscritos = @inscritos.where("admitido_id in (:admitidos)",:admitidos=>Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:user_id=>current_user.id)))))
+      @inscritos = @inscritos.where("admitido_id in (:admitidos)",:admitidos=>Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.where(:sede_id=>current_user.sede).joins{solicitante}.where(:user_id=>current_user.id)))))
     end
     
       @q = @inscritos.ransack(params[:q])

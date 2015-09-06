@@ -3,7 +3,12 @@ class ColegiaturasController < ApplicationController
   # GET /colegiaturas
   # GET /colegiaturas.json
   def index
-    @colegiaturas = Colegiatura.all
+    rol = Role.where(:id=>current_user.role).first
+    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+      @colegiaturas = Colegiatura.all
+    else
+      @colegiaturas = Colegiatura.where(:sede_id=>current_user.sede)
+    end       
 
     respond_to do |format|
       format.html # index.html.erb

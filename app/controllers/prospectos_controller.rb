@@ -24,7 +24,7 @@ class ProspectosController < ApplicationController
           @q.build_sort if @q.sorts.empty?        
       else
           @q = Prospecto.ransack(params[:q])
-          @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page]) 
+          @prospectos = @q.result(:distinct => true).where(:sede_id=>current_user.sede).where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page]) 
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?            
       end
@@ -36,7 +36,7 @@ class ProspectosController < ApplicationController
           @q.build_sort if @q.sorts.empty?        
       else
           @q = Prospecto.ransack(params[:q])
-          @prospectos = @q.result(:distinct => true).where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id)
+          @prospectos = @q.result(:distinct => true).where(:sede_id=>current_user.sede).where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id)
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?            
       end
