@@ -2,9 +2,9 @@ require 'net/http'
 require 'uri'
 require 'open-uri'
 class CorreosMailer < ActionMailer::Base
-  default from: current_user.email
+  default from: "sinCorreo@correo.com"
   
-  def enviar_correo(correo,de,adjuntos=nil)
+  def enviar_correo(deQuien,correo,de,adjuntos=nil)
     @correo = correo
 
     if adjuntos != nil

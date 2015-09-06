@@ -1,5 +1,5 @@
 class ProspectosMailer < ActionMailer::Base
-  default from: current_user.email
+  default from: "current_user.email@test.com"
   
   def nuevo_prospecto(prospecto,usermail,username)
     @prospecto = prospecto

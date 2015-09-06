@@ -24,14 +24,14 @@ class CorreosController < ApplicationController
         @correo.mail_campana.split(",").each do |mail_campana|
           unless not matches?(mail_campana)
             adjuntos = Attachment.where(:model_id=>@correo.id,:model_name=>"correos")
-            CorreosMailer.enviar_correo(@correo,mail_campana,adjuntos).deliver     
+            CorreosMailer.enviar_correo(current_user.email, @correo,mail_campana,adjuntos).deliver     
             aquienSeAEnviado.push(mail_campana)
           end            
         end
       else
         unless not matches?(@correo.mail_campana)
           adjuntos = Attachment.where(:model_id=>@correo.id,:model_name=>"correos")
-          CorreosMailer.enviar_correo(@correo,@correo.mail_campana,adjuntos).deliver     
+          CorreosMailer.enviar_correo(current_user.email, @correo,@correo.mail_campana,adjuntos).deliver     
           aquienSeAEnviado.push(@correo.mail_campana)
         end
       end
@@ -49,13 +49,13 @@ class CorreosController < ApplicationController
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end        
             else
               unless not matches?(mail.email)
                 logger.debug "a aaaa"
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end    
             end             
@@ -65,12 +65,12 @@ class CorreosController < ApplicationController
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end               
             else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end         
             end             
@@ -80,12 +80,12 @@ class CorreosController < ApplicationController
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end              
             else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end    
             end             
@@ -95,12 +95,12 @@ class CorreosController < ApplicationController
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end          
             else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end     
             end             
@@ -110,12 +110,12 @@ class CorreosController < ApplicationController
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end             
             else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end      
             end      
@@ -128,12 +128,12 @@ class CorreosController < ApplicationController
             mails.each do |mail|
               if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end              
               else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end        
               end   
@@ -148,12 +148,12 @@ class CorreosController < ApplicationController
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end         
                 else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end        
                 end                           
@@ -165,12 +165,12 @@ class CorreosController < ApplicationController
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end             
                 else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end          
                 end                           
@@ -182,12 +182,12 @@ class CorreosController < ApplicationController
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end              
                 else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end     
                 end                           
@@ -198,12 +198,12 @@ class CorreosController < ApplicationController
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end             
                 else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end       
                 end                           
@@ -214,12 +214,12 @@ class CorreosController < ApplicationController
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(mail.email)   
               end             
                 else
               unless not matches?(mail.email)
-                CorreosMailer.enviar_correo(@correo,mail.email).deliver   
+                CorreosMailer.enviar_correo(current_user.email, @correo,mail.email).deliver   
                 aquienSeAEnviado.push(current_user.email)   
               end      
                 end                           
