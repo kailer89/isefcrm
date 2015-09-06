@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564607.4353018:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575900.677808:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a62d4ee95d62f15a42af9fd1c4bf59caI"logical_path;
+F"%f510ea4a3968ecc92e28e21546d05ba1I"logical_path;
 FI"jquery.min.map;
 TI"pathname;
 FI"uC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.min.map;

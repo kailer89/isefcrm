@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.4122088:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.1711218:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%3945e9c01a3e8b1e242bb4e1193e7ea7I"logical_path;
+F"%264763e1d19e99dc3762193ad15921bfI"logical_path;
 FI"linkedin_64.png;
 TI"pathname;
 FI",$root/app/assets/images/linkedin_64.png;

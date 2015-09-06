@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564532.631975:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575849.5935628:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%08dbb82c3e40672c22d560578e92b23eI"logical_path;
+F"%bcfbc9b2e35fb22e8b7abf5f5543e709I"logical_path;
 FI"jquery.tokeninput.js;
 TI"pathname;
 FI"6$root/app/assets/javascripts/jquery.tokeninput.js;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.9852512:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575840.2100842:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%24311198721323cad185e62b6fae4d85I"logical_path;
+F"%e5037a3c3901a8506f2266e43e3b3bf4I"logical_path;
 FI"jquery.ui.effect.js;
 TI"pathname;
 FI"}C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.effect.js;

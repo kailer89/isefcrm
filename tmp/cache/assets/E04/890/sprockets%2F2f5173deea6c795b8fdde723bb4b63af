@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564558.599211:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575866.56625:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%83a4b636aef2456cb24e6fad6b14a07cI"logical_path;
+F"%cfcc6afcf5952eceabcba1cbfe883a72I"logical_path;
 FI"application.js;
 TI"pathname;
 FI"0$root/app/assets/javascripts/application.js;
@@ -9,7 +9,7 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2015-09-06T12:41:35-05:00;
+FI"2015-09-06T16:40:41-05:00;
 FI"	body;
 FI"a
 
@@ -69,7 +69,7 @@ $(window).bind("load", function() {
 });
 ;
 FI"asset_paths;
-F[≠I"pC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.js;
+F[ßI"pC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.js;
 TI"tC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery_ujs.js;
 TI".$root/app/assets/javascripts/bootstrap.js;
 TI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.core.js;
@@ -107,13 +107,6 @@ TI"~C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/v
 TI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.tabs.js;
 TI"~C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.tooltip.js;
 TI"zC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.all.js;
-TI"öC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/wysihtml5x-toolbar.js;
-TI"ûC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/handlebars.runtime.min.js;
-TI"ëC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/templates.js;
-TI"úC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.js;
-TI"êC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/commands.js;
-TI"ïC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/locales/en-US.js;
-TI"çC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/index.js;
 TI"1$root/app/assets/javascripts/formToWizard.js;
 TI",$root/app/assets/javascripts/bwizard.js;
 TI"4$root/app/assets/javascripts/jquery.metadata.js;
@@ -156,6 +149,7 @@ TI";$root/app/assets/javascripts/authentications.js.coffee;
 TI";$root/app/assets/javascripts/barra_favoritos.js.coffee;
 TI"9$root/app/assets/javascripts/bootstrap-datepicker.js;
 TI"7$root/app/assets/javascripts/bootstrap-transfer.js;
+TI":$root/app/assets/javascripts/bootstrap-wsiwyghtml5.js;
 TI";$root/app/assets/javascripts/campana_socials.js.coffee;
 TI"1$root/app/assets/javascripts/casos.js.coffee;
 TI"8$root/app/assets/javascripts/colegiaturas.js.coffee;
@@ -243,19 +237,20 @@ TI"0$root/app/assets/javascripts/user.js.coffee;
 TI"1$root/app/assets/javascripts/users.js.coffee;
 TI"0$root/app/assets/javascripts/application.js;
 TI"dependency_paths;
-F[Æ{I"	path;
+F[®{I"	path;
 FI"0$root/app/assets/javascripts/application.js;
 TI"
 mtime;
-FIu:	Time—‡Ä  k:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	Time”‡Ä   
+:@_zoneI"#Central Daylight Time (Mexico);
 T:offseti˛∞πI"hexdigest;
-F"%d976d3b822f729267b3e18fa00221898{I"	path;
+F"%958913a92a635985d54d4c9470c7eb90{I"	path;
 FI"!$root/app/assets/javascripts;
 TI"
 mtime;
-FIu;—‡Ä  ‡i;I"#Central Daylight Time (Mexico);
+FIu;”‡Ä   ;I"#Central Daylight Time (Mexico);
 T;i˛∞πI"hexdigest;
-F"%691091257868ec5487683d2fa19e0b8e{I"	path;
+F"%93c0d04a8228ede2cc196c647eb212f8{I"	path;
 FI"pC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.js;
 TI"
 mtime;
@@ -484,48 +479,6 @@ mtime;
 FIu;∑‡Ä  pI;I"#Central Daylight Time (Mexico);
 T;i˛∞πI"hexdigest;
 F"%091544a28c1a11b148ca3db769943929{I"	path;
-FI"öC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/wysihtml5x-toolbar.js;
-TI"
-mtime;
-FIu;—‡Ä  0¶;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%6a313a28766dc5e0cdc0506dd16959aa{I"	path;
-FI"ûC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/handlebars.runtime.min.js;
-TI"
-mtime;
-FIu;—‡Ä  0¶;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%dda21690375e9580583e3b1d1d4adb7b{I"	path;
-FI"ëC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/templates.js;
-TI"
-mtime;
-FIu;—‡Ä  0¶;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%3be09a6612abfa5a339a4959c8ffe396{I"	path;
-FI"úC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.js;
-TI"
-mtime;
-FIu;—‡Ä   ¶;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%66e6ed78211fe7234e70e0b50dff4830{I"	path;
-FI"êC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/commands.js;
-TI"
-mtime;
-FIu;—‡Ä   ¶;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%4a3df00c3ce610121900bc09aac4fd55{I"	path;
-FI"ïC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/locales/en-US.js;
-TI"
-mtime;
-FIu;—‡Ä  0¶;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%fef15c92a3f56fea57406905df849a9c{I"	path;
-FI"çC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bootstrap-wysihtml5-rails-0.3.3.7/vendor/assets/javascripts/bootstrap-wysihtml5/index.js;
-TI"
-mtime;
-FIu;—‡Ä  0¶;I"#Central Daylight Time (Mexico);
-T;i˛∞πI"hexdigest;
-F"%d357265a650da1ec11c8bdc1eaba5314{I"	path;
 FI"1$root/app/assets/javascripts/formToWizard.js;
 TI"
 mtime;
@@ -778,6 +731,12 @@ mtime;
 FIu;¿äÄ  †Ô;I"#Central Standard Time (Mexico);
 T;i˛†´I"hexdigest;
 F"%132cefd3bc2837cd96f0f6ed3d5eb077{I"	path;
+FI":$root/app/assets/javascripts/bootstrap-wsiwyghtml5.js;
+TI"
+mtime;
+FIu;’‡Ä  ê¢;I"#Central Daylight Time (Mexico);
+T;i˛∞πI"hexdigest;
+F"%ddf987455c8017a5c5443ae5712f2aba{I"	path;
 FI";$root/app/assets/javascripts/campana_socials.js.coffee;
 TI"
 mtime;

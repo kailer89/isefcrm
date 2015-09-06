@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.917207:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575840.1690571:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%a32adf46f9d2fd6d238044e19eac8fa5I"logical_path;
+F"%bc0de66b005b58276638adf6b5729f16I"logical_path;
 FI"jquery.ui.resizable.js;
 TI"pathname;
 FI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.resizable.js;

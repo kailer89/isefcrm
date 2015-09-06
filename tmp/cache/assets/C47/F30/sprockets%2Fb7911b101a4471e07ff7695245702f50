@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.286098:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575887.896255:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a72c58d638c8108527fa95982228f303I"logical_path;
+F"%ba4087461c105f0ad3ff76c71ccc23b3I"logical_path;
 FI"/rails_admin/aristo/images/progress_bar.gif;
 TI"pathname;
 FI"ÉC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/aristo/images/progress_bar.gif;

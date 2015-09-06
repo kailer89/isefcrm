@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.683391:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.3829298:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%8fff7ed1a1ca993ef6d07cba370359ecI"logical_path;
+F"%6f684eb009e4f016f63095c46d96e55cI"logical_path;
 FI"reddit.png;
 TI"pathname;
 FI"'$root/app/assets/images/reddit.png;

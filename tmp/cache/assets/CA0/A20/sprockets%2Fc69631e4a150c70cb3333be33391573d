@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564519.347157:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575841.011261:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%d57645490a91f584b22aefb97d8cef56I"logical_path;
+F"%68a65fd888c6c7e52046fb02b979aa7fI"logical_path;
 FI"RGraph.thermometer.js;
 TI"pathname;
 FI"7$root/app/assets/javascripts/RGraph.thermometer.js;

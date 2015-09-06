@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.3515048:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.4489129:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%378c96d74c78102e3c454e06fcd277e1I"logical_path;
+F"%e3a07dd45343d71035dcf1f645e460afI"logical_path;
 FI"beta-logo.png;
 TI"pathname;
 FI"*$root/app/assets/images/beta-logo.png;

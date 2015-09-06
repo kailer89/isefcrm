@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.71741:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.408947:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a1d25458c454a0851f64cde42fc6c114I"logical_path;
+F"%a643442c13cfca4578d1ae20f1519e8dI"logical_path;
 FI"rss-html-combined.png;
 TI"pathname;
 FI"2$root/app/assets/images/rss-html-combined.png;

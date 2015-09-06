@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.920882:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.833214:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%2b0617489cb34d1c1904ea1a910c5fc0I"logical_path;
+F"%bb78b9dc7ad24f5c72b78234afecb2f9I"logical_path;
 FI"email.png;
 TI"pathname;
 FI"&$root/app/assets/images/email.png;

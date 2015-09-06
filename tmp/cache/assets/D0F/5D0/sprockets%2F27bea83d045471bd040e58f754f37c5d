@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564519.042955:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575840.804534:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%16ebe465a725b713f11816568c511e70I"logical_path;
+F"%01dfa072ef0809155339dc6135ccd7d3I"logical_path;
 FI"RGraph.gauge.js;
 TI"pathname;
 FI"1$root/app/assets/javascripts/RGraph.gauge.js;

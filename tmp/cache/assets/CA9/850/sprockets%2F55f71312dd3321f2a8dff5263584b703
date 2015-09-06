@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564592.71253:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575889.767935:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%cfb25b71d78d4d8f075949ee39681a4bI"logical_path;
+F"%432eea2d0ed439b62fcb6a2405b68178I"logical_path;
 FI"rails_admin/ra.widgets.js;
 TI"pathname;
 FI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/ra.widgets.coffee;

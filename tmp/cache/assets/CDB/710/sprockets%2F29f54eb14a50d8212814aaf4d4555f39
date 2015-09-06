@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564514.828157:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575837.9846048:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%952664e2376e0540e1e2a9dc2bbd176aI"logical_path;
+F"%fb76fab3f464f7e60678402a2b3b19e6I"logical_path;
 FI"barh32.png;
 TI"pathname;
 FI"'$root/app/assets/images/barh32.png;

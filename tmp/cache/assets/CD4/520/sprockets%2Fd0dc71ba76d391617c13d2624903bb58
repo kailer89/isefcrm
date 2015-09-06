@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.16771:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.7101471:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%8cd0e0ae1f7070c27c27257eefd76f02I"logical_path;
+F"%f20fe32053223470fabf9a7469ecc514I"logical_path;
 FI"twitter_32.png;
 TI"pathname;
 FI"+$root/app/assets/images/twitter_32.png;

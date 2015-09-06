@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564602.411969:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575896.8549929:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%d164985d35d84bb89d49ee47df79d675I"logical_path;
+F"%bca1f20f99e26a7499dcad5789ff3c9dI"logical_path;
 FI"font-awesome.css;
 TI"pathname;
 FI"~C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/font-awesome-rails-3.1.1.0/vendor/assets/stylesheets/font-awesome.css.erb;

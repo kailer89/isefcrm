@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.579322:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.284866:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%f8566704a59cb2bb161833e299dad5b6I"logical_path;
+F"%8ae98d6dd095b7db921ce4e89198ca2fI"logical_path;
 FI"openid_32.png;
 TI"pathname;
 FI"*$root/app/assets/images/openid_32.png;

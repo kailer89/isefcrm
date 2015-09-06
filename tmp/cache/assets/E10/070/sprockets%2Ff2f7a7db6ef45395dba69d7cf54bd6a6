@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.221056:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575887.84246:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%89c07a7e3270c49247b4d8e1c7c4b8a2I"logical_path;
+F"%eae88369e8553d8cd0561bb15221cd5bI"logical_path;
 FI"'images/ui-icons_ff0084_256x240.png;
 TI"pathname;
 FI"D$root/app/assets/stylesheets/images/ui-icons_ff0084_256x240.png;

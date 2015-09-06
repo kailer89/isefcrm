@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.794462:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.455977:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c8570047379bc1720d38c730accfca06I"logical_path;
+F"%be5b1fe2c7a381628e1fa4de1d6bad36I"logical_path;
 FI"search_party.jpg;
 TI"pathname;
 FI"-$root/app/assets/images/search_party.jpg;

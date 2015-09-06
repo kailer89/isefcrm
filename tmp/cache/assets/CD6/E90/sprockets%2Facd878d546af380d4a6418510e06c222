@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.054971:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.932964:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a60efc7ac6ff6689cc8d076634b8ac5fI"logical_path;
+F"%8bf5ee78c2c6dd97eb0a7be9759a316fI"logical_path;
 FI"friendfeed.png;
 TI"pathname;
 FI"+$root/app/assets/images/friendfeed.png;

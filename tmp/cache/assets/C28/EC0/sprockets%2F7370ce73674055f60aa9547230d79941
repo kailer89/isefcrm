@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.5926652:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.620029:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a3b011543cd784320f9b94d4495e029aI"logical_path;
+F"%70e5467852b060fda9483d5b6dd4fe2cI"logical_path;
 FI"buzz.png;
 TI"pathname;
 FI"%$root/app/assets/images/buzz.png;

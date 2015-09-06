@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.7014:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.3929348:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%50ba17126101645aa6c9301ca7c42046I"logical_path;
+F"%c6568b980d2712ee79b2d2264e9969d5I"logical_path;
 FI"rgraph.logo.png;
 TI"pathname;
 FI",$root/app/assets/images/rgraph.logo.png;

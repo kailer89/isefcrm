@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564662.2623382:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575967.7289522:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%fab42d191cfd419180f44183ab0424abI"logical_path;
+F"%c46220f3f0a073bf3a345023aa2c58cbI"logical_path;
 FI"dragtable.js;
 TI"pathname;
 FI".$root/app/assets/javascripts/dragtable.js;

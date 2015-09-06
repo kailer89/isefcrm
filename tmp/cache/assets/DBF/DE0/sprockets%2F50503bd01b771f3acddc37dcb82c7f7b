@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.14003:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.984998:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c956b9a16fab0b306d62de4ff561aba6I"logical_path;
+F"%9bda968a4fdbb9a521614fc5f0d18e06I"logical_path;
 FI"google_+1_button.png;
 TI"pathname;
 FI"1$root/app/assets/images/google_+1_button.png;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564515.543631:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575838.583002:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%4dee30fe512545fdfbb32c8f45946a52I"logical_path;
+F"%6627f0246a6731914fa00c8f0fdbb45cI"logical_path;
 FI"border-radius.png;
 TI"pathname;
 FI".$root/app/assets/images/border-radius.png;

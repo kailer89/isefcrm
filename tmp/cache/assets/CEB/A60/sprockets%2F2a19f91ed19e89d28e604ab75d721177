@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.8803132:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575888.336191:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%eeb91f683223adaa54b8273a9f3cf3dbI"logical_path;
+F"%95f5561ce19f6fc5ba8ee241e895cafcI"logical_path;
 FI"&rails_admin/jquery.colorpicker.js;
 TI"pathname;
 FI"C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/javascripts/rails_admin/jquery.colorpicker.js;

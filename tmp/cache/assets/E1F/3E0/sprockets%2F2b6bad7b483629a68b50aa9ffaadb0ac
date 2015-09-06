@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564529.195694:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575847.402585:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%b66942bccfea1048bd0b4ed4c485f07dI"logical_path;
+F"%6f8b934bfca171c0fac374fcc7041827I"logical_path;
 FI"fileuploader.js;
 TI"pathname;
 FI"1$root/app/assets/javascripts/fileuploader.js;

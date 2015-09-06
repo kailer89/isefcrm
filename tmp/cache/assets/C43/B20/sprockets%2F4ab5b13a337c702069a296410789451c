@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564517.708069:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575840.06383:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%e175479ff66912561aa332d396e9c802I"logical_path;
+F"%54c581c5f08e292375f2bffacb7fca97I"logical_path;
 FI"jquery.ui.menu.js;
 TI"pathname;
 FI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.menu.js;

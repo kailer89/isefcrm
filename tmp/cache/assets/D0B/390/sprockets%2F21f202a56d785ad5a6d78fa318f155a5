@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564607.3622541:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575900.625898:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%0291c3dc58f545e7e9f2c61be1375eacI"logical_path;
+F"%9cc35d419068fdd4a392ab7cc6efce7dI"logical_path;
 FI"fontawesome-webfont.svg;
 TI"pathname;
 FI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/font-awesome-rails-3.1.1.0/vendor/assets/fonts/fontawesome-webfont.svg;

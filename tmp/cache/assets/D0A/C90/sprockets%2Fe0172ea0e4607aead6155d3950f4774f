@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564516.335157:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575839.114084:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%1d7f4fb76781e7fb72383ce2de7905f6I"logical_path;
+F"%f1b667a5d7221013276a501dc2afc6f5I"logical_path;
 FI"icons_combined.png;
 TI"pathname;
 FI"/$root/app/assets/images/icons_combined.png;

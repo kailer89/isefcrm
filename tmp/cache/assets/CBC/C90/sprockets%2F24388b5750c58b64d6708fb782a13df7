@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564590.790254:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575888.2631419:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%4f6961209a715d516236bb4a9b7a1d1fI"logical_path;
+F"%603db79b47fc200f48eb5f4b491da21eI"logical_path;
 FI"rails_admin/magnifier.png;
 TI"pathname;
 FI"wC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/assets/images/rails_admin/magnifier.png;

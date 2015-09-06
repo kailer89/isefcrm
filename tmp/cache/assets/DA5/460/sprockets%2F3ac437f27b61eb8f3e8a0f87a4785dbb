@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441564518.2414231:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1441575840.4235368:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%3ccc1b247193f612eeae0f917f369775I"logical_path;
+F"%3862aff89ed3afb552ad0919cb4e883fI"logical_path;
 FI"jquery.ui.selectable.js;
 TI"pathname;
 FI"|C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.selectable.js;
