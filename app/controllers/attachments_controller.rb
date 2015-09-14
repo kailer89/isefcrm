@@ -48,7 +48,7 @@ class AttachmentsController < ApplicationController
   def create
     @attachment = Attachment.new(params[:attachment])
 
-    if @attachment.model_id == nil
+    if @attachment.model_id != nil
       respond_to do |format|
         if @attachment.save
           format.html { redirect_to "/#{@attachment.model_name}/#{@attachment.model_id}/edit/", notice: 'Attachment was successfully created.' }
@@ -72,7 +72,7 @@ class AttachmentsController < ApplicationController
   def update
     @attachment = Attachment.find(params[:id])
 
-    if @attachment.model_id == nil
+    if @attachment.model_id != nil
       respond_to do |format|
         if @attachment.update_attributes(params[:attachment])
           format.html { redirect_to "/#{@attachment.model_name}/#{@attachment.model_id}/edit/", notice: 'Attachment was successfully updated.' }
@@ -95,7 +95,7 @@ class AttachmentsController < ApplicationController
   def destroy
     @attachment = Attachment.find(params[:id])
     @attachment.destroy
-    if @attachment.model_id == nil
+    if @attachment.model_id != nil
       respond_to do |format|
         format.html { redirect_to "/#{@attachment.model_name}/#{@attachment.model_id}/edit/" }
         format.json { head :ok }

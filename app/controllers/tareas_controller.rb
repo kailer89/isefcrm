@@ -59,7 +59,12 @@ class TareasController < ApplicationController
   def create
     @tarea = Tarea.new(params[:tarea])
 
-    if @tarea.model_id == nil
+logger.debug "///////////////////////////////////"
+    logger.debug @tarea.model_id
+    logger.debug "///////////////////////////////////"
+
+
+    if @tarea.model_id != nil
       respond_to do |format|
         if @tarea.save
           format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/", notice: 'Tarea was successfully created.' }
@@ -83,7 +88,7 @@ class TareasController < ApplicationController
   def update
     @tarea = Tarea.find(params[:id])
 
-    if @tarea.model_id == nil
+    if @tarea.model_id != nil
       respond_to do |format|
         if @tarea.update_attributes(params[:tarea])
           format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/", notice: 'Tarea was successfully updated.' }
@@ -108,7 +113,7 @@ class TareasController < ApplicationController
     @tarea = Tarea.find(params[:id])
     @tarea.destroy
 
-    if @tarea.model_id == nil
+    if @tarea.model_id != nil
       respond_to do |format|
         format.html { redirect_to "/#{@tarea.model_name}/#{@tarea.model_id}/edit/"}
         format.json { head :ok }
