@@ -1,5 +1,5 @@
   <%= simple_form_for @correo, :html => { :class => 'form-horizontal', :id=>"Correos"} do |f| %>
-      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= f.button :submit, :class => 'btn-primary' %>
       <%= link_to 'Cancel', correos_path, :class => 'btn' %>
       <% if request.path_parameters[:action] =="edit" %>
         <%= link_to 'Enviar Correo', send_correo_path(@correo),:class=>"btn btn-success"%>
@@ -10,7 +10,7 @@
         <li>Asignar datos del correo</li>
         <li>Establecer tipo de Campana</li>
         <li>Establecer contenido del correo</li>
-        <%if params[:model_id] != nil  and params[:model_name] != "campana_socials"  and params[:model_name] != "correos" and params[:model_name] != "grupos" or @correo.es_uno_a_uno == true %>
+        <%if  @correo.es_uno_a_uno == true %>
   <%else%>
         <li>A quien enviar</li>
         <li>Datos Adicionales</li>
@@ -18,16 +18,32 @@
         <li>Guardar/Enviar</li>
       </ol>
   <div>
-    <legend>Asignar datos del correo</legend>
+    <legend>Asignar datos del correo </legend>
+    <%=f.hidden_field :model_name%>
+    <%=f.hidden_field :model_id%>
+    <%=f.hidden_field :created_by%>
+    <%=f.hidden_field :user_id%>
+    <%=f.hidden_field :sede_id%>
+    <%
 
+logger.debug "action111"
+logger.debug @correo.model_id
+logger.debug "action1111"
+%>
     <%= f.input :nombredelmail, :label=>"Nombre del Correo",:hint=>"Es indispensable salvar el template de correo antes de enviarlo."%>
-<%    if params[:model_id] != nil and params[:model_name] != "campana_socials" and params[:model_name] != "correos" and params[:model_name] != "grupos" or @correo.es_uno_a_uno == true   
-      @prospecto=Prospecto.find(params[:model_id])
+<%    if @correo.es_uno_a_uno == true  
+
+      if params[:model_id] == nil
+        @prospecto=Prospecto.find_by_id(@correo.model_id)
+      else
+        @prospecto=Prospecto.find_by_id(params[:model_id])
+      end
+
     end%>
     </div>
     <div>
       <legend>Establecer tipo de Campana</legend>
-    <%if params[:model_id] != nil  and params[:model_name] != "campana_socials"  and params[:model_name] != "correos" and params[:model_name] != "grupos"   or @correo.es_uno_a_uno == true %>
+    <%if @correo.es_uno_a_uno == true %>
       <%= f.input :es_uno_a_uno,:label=>"Es uno a uno",:hint=>"Seleccione esta casilla para enviar el mail solo a el prospecto seleccionado.",:input_html => { :checked=>"checked" } %>    
       <%= f.input :mail_campana,:label=>"Mail uno a uno",:hint=>"Escriba un email aqui para enviar si se selecciona Uno a Uno, puedes escribir multiples separando los correos por comas",:input_html => { :value=> @prospecto.email} %>      
     <%else%>
@@ -40,7 +56,7 @@
     <p class="help-block">Por favor utilize la funcion de agregar adjuntos y copie la direccion del adjunto para agregar imagenes NO use copy&paste.</p>
     <%= f.input :maildata , :input_html=>{:class=>"correobox"}, :label=>"Contenido del correo"%>
   </div>
-  <%if params[:model_id] != nil  and params[:model_name] != "campana_socials"  and params[:model_name] != "correos" and params[:model_name] != "grupos"  or @correo.es_uno_a_uno == true%>
+  <%if  @correo.es_uno_a_uno == true%>
   <%else%>
   <div>
     <legend>Seleccionar a quien enviar el correo</legend>
@@ -89,7 +105,7 @@
   <div>
 <legend>Guardar/Enviar</legend>
     <div class="form-actions">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= f.button :submit, :class => 'btn-primary' %>
       <%= link_to 'Cancel', correos_path, :class => 'btn' %>
       <% if request.path_parameters[:action] =="edit" %>
         <%= link_to 'Enviar Correo', send_correo_path(@correo),:class=>"btn btn-success"%>

@@ -276,7 +276,12 @@ redirect_to "/correos/#{@correo.id}/edit/"
     @correo.created_by = current_user.id
     @correo.user_id =current_user.id
     @correo.sede_id =current_user.sede_id 
-    @correo.es_uno_a_uno = false 
+    
+    if params[:model_name] == "prospectos"
+      @correo.es_uno_a_uno = true 
+    else
+      @correo.es_uno_a_uno = false 
+    end
     
     respond_to do |format|
       format.html # new.html.erb
