@@ -215,8 +215,8 @@
               <%end%>
             </tbody>
           </table>
-          <%if request.path_parameters[:controller] == "grupos"%>
-            <%= link_to 'Nuevo Correo', new_correo_path(:model_name=>"grupos",:model_id=>prospecto_id), :class => 'btn btn-primary' %>
+          <%if request.path_parameters[:controller] != "prospectos"%>
+            <%= link_to 'Nuevo Correo', new_correo_path(:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-primary' %>
           <%else%>
             <%= link_to 'Nuevo Correo', new_correo_path(:model_name=>"prospectos",:model_id=>real_id), :class => 'btn btn-primary' %>
           <%end%>
