@@ -43,7 +43,7 @@ logger.debug "action1111"
     </div>
     <div>
       <legend>Establecer tipo de Campana</legend>
-    <%if @correo.es_uno_a_uno == true %>
+    <%if @correo.es_uno_a_uno == true and @prospecto != nil%>
       <%= f.input :es_uno_a_uno,:label=>"Es uno a uno",:hint=>"Seleccione esta casilla para enviar el mail solo a el prospecto seleccionado.",:input_html => { :checked=>"checked" } %>    
       <%= f.input :mail_campana,:label=>"Mail uno a uno",:hint=>"Escriba un email aqui para enviar si se selecciona Uno a Uno, puedes escribir multiples separando los correos por comas",:input_html => { :value=> @prospecto.email} %>      
     <%else%>
