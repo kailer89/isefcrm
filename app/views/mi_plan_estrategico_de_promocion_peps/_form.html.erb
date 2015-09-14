@@ -72,10 +72,7 @@
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 mi_plan_estrategico_de_promocion_peps_path, :class => 'btn' %>
   </div>
-<%=render :partial=>"shared/tareas", :locals=>{:model_id=>@mi_plan_estrategico_de_promocion_pep.id}%>
-<%=render :partial=>"shared/llamadas", :locals=>{:model_id=>@mi_plan_estrategico_de_promocion_pep.id}%>
-<%=render :partial=>"shared/correos", :locals=>{:model_id=>@mi_plan_estrategico_de_promocion_pep.id}%>
-<%=render :partial=>"shared/memos", :locals=>{:model_id=>@mi_plan_estrategico_de_promocion_pep.id}%>
-<%=render :partial=>"shared/attachments", :locals=>{:model_id=>@mi_plan_estrategico_de_promocion_pep.id}%>
+
+<%=render :partial=>"shared/tabed_actions", :locals=>{:prospecto_id=>@mi_plan_estrategico_de_promocion_pep.id,:real_id=>@mi_plan_estrategico_de_promocion_pep.id,:tareas=>@tareas,:memos=>@memos,:llamadas=>@llamadas,:correos=>@correos,:attachments=>@attachments}%>
 
 <% end %>

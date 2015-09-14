@@ -36,6 +36,11 @@ class MiPlanEstrategicoDePromocionPepsController < ApplicationController
   # GET /mi_plan_estrategico_de_promocion_peps/1/edit
   def edit
     @mi_plan_estrategico_de_promocion_pep = MiPlanEstrategicoDePromocionPep.find(params[:id])
+        @tareas = Tarea.where(:model_name=>"mi_plan_estrategico_de_promocion_peps",:model_id=>@mi_plan_estrategico_de_promocion_pep.id)
+    @memos = Memo.where(:model_name=>"mi_plan_estrategico_de_promocion_peps",:model_id=>@mi_plan_estrategico_de_promocion_pep.id)
+    @attachments = Attachment.where(:model_name=>"mi_plan_estrategico_de_promocion_peps",:model_id=>@mi_plan_estrategico_de_promocion_pep.id)
+    @llamadas = Llamada.where(:model_name=>"mi_plan_estrategico_de_promocion_peps",:model_id=>@mi_plan_estrategico_de_promocion_pep.id)
+    @correos = Correo.where(:model_name=>"mi_plan_estrategico_de_promocion_peps",:model_id=>@mi_plan_estrategico_de_promocion_pep.id)
   end
 
   # POST /mi_plan_estrategico_de_promocion_peps
