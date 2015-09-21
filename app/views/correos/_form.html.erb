@@ -30,7 +30,7 @@ logger.debug "action111"
 logger.debug @correo.model_id
 logger.debug "action1111"
 %>
-    <%= f.input :nombredelmail, :label=>"Nombre del Correo",:hint=>"Es indispensable salvar el template de correo antes de enviarlo."%>
+    <%= f.input :nombredelmail, :label=>"Titulo del correo",:hint=>"Es indispensable salvar el template de correo antes de enviarlo (subject del correo)."%>
 <%    if @correo.es_uno_a_uno == true  
 
       if params[:model_id] == nil

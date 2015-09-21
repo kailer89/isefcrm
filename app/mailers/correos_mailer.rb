@@ -14,6 +14,6 @@ class CorreosMailer < ActionMailer::Base
       end
     end
 	
-    mail(:to => "<#{de}>", :subject => "#{correo.nombredelmail}",:from=>"admin@protocrm.com")
+    mail(:to => "<#{de}>", :subject => "#{correo.nombredelmail}",:from=>deQuien)
   end  
 end

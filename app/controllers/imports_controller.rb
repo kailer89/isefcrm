@@ -90,6 +90,7 @@ class ImportsController < ApplicationController
                   @objecto.created_by = current_user.id
                   @objecto.user_id =current_user.id
                   @objecto.sede_id =current_user.sede_id
+
                   @objecto.accion_estrategicas.build
                 
                   if direccion["nacionalidad"] != nil
@@ -130,7 +131,13 @@ class ImportsController < ApplicationController
                   if direccion["nivel"] != nil
                       @nivel = Nivel.find_or_create_by_valor(direccion["nivel"])
                        @objecto.interes_basicos.first.nivel_id = @nivel.id
-                  end                
+
+                  end       
+
+                  @sub_sede = Subsede.where(:sede_id=>current_user.sede_id).first
+                  @objecto.interes_basicos.first.sede_id = current_user.sede_id
+                  @objecto.interes_basicos.first.subsede_id = @sub_sede.id
+
                   if direccion["ultimo_grado_de_estudio"] != nil
                       @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_or_create_by_grado_de_estudio(direccion["ultimo_grado_de_estudio"])
                        @objecto.interes_basicos.first.ultimo_grado_de_estudio_id = @ultimo_grado_de_estudio.id

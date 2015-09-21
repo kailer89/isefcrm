@@ -47,13 +47,15 @@ class Prospecto < ActiveRecord::Base
 
 private
 def subsede_is_in_selected_sede
-  logger.debug "--------------------------------11111111111111111111111111111111111111111"
-  #sede = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
-  subsedess = Subsede.where(:id=>self.interes_basicos.first.subsede.id).where(:sede_id=>self.interes_basicos.first.sede.id).first
-  logger.debug "--------------------------------11111111111111111111111111111111111111111"
-  if subsedess == nil
-    sedeCorrecta = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
-    errors.add :sede_id, "La Extension de la sede no es valida por favor seleccione la correcta: " + sedeCorrecta.nombre
+  logger.debug "-------------xxxxxxxxxxxx-------------------11111111111111111111111111111111111111111"
+  if self.interes_basicos.first != nil 
+    #sede = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
+    subsedess = Subsede.where(:id=>self.interes_basicos.first.subsede.id).where(:sede_id=>self.interes_basicos.first.sede.id).first
+    logger.debug "--------------------------------11111111111111111111111111111111111111111"
+    if subsedess == nil
+      sedeCorrecta = Sede.where(:id=>self.interes_basicos.first.subsede.sede_id).first
+      errors.add :sede_id, "La Extension de la sede no es valida por favor seleccione la correcta: " + sedeCorrecta.nombre
+    end
   end
 end
   #validates :telefono_particular, :presence => true, :unless => lambda { self.otro_telefono.blank? or self.telefono_movil.blank? }
