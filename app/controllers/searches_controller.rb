@@ -2,7 +2,7 @@ class SearchesController < ApplicationController
   # GET /searches
   # GET /searches.json
   def index
-    @searches = Search.all
+    @searches = Search.where(:user_id=>current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
