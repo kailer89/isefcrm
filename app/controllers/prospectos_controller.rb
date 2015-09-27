@@ -41,7 +41,7 @@ class ProspectosController < ApplicationController
           @q.build_sort if @q.sorts.empty?            
       end
     end
-
+    
 
     respond_to do |format|
       format.html # index.html.erb

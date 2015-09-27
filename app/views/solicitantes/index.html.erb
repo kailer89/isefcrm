@@ -18,24 +18,7 @@ margin-bottom: 0!important;
 border-bottom: 0px solid #e5e5e5!important;
 }
 </style>
-<%=link_to "Borrar parametros de busqueda",solicitantes_path%>
-<%= search_form_for @q do |f| %>
-    <% setup_search_form f %>
-    <input type="button" value="Mostrar Busqueda Avanzada" id="avanzada"/>
-    <div id="busquedaAvanzada">
-
-    <fieldset>
-      <legend>Filtros</legend>
-      <%= f.condition_fields do |c| %>
-        <%= render "condition_fields", f: c%>
-      <% end %>
-      <%= button_to_add_fields "Agregar Filtro", f, :condition %>
-    </fieldset>
-
-    </div>
-
-    <%= f.submit %>        
-  <% end %>
+<%=render :partial=>"shared/save_search", :locals=>{:path_to_look_for=>solicitantes_path}%>
   <%=@solicitantes.size%> registros de un total de <%=@solicitantes.total_entries%>
 <table class="table table-striped table-bordered table-condensed" id="MyTable">
   <thead>
@@ -118,21 +101,3 @@ border-bottom: 0px solid #e5e5e5!important;
 <br/>
 <%=@solicitantes.size%> registros de un total de <%=@solicitantes.total_entries%>
 <!--<%= link_to 'New', new_solicitante_path, :class => 'btn btn-primary' %>-->
-
-<script type="text/javascript">
-(function($) {
-$(document).ready(function(){
-  $('#avanzada').click(function()
-  {
-    $('#busquedaAvanzada').toggle();
-  });
-
-<%if params[:q] == nil%>
-$('#busquedaAvanzada').hide();
-<%end%>
-
-
-});
-})(jQuery);
-
-</script>

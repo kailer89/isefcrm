@@ -110,6 +110,9 @@ class ImportsController < ApplicationController
                       if direccion["nivel"] != nil
                         @programa.nivel = direccion["nivel"]
                         @programa.save
+                      else
+                        @programa.nivel = "Sin Nivel"
+                        @programa.save                        
                       end
                       @objecto.programa_id = @programa.id
                   end

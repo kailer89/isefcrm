@@ -1,5 +1,7 @@
 ProtoCRM3::Application.routes.draw do
 
+  resources :searches
+
   resources :efectividads
 
   resources :duracion_en_textos
@@ -197,6 +199,11 @@ resources :prospectos, only: :index do
   match "/prospectos/:id/convertir" => "prospectos#convertir", as: :convertir, :validado=>true
 
 
+
+  match 'saved_search_add' => "searches#saved_search", as: :saved_search
+  match 'redir_to_saved' => "searches#redir_to_saved", as: :redir_to_saved
+  
+  
 
   
   match "/purge_admitidos"=>"purges#purge_admitidos",as: :purge_admitidos

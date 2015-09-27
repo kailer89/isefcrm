@@ -21,7 +21,7 @@
               :label_method => lambda { |owner| "#{owner.name} | #{owner.subtype_name}" }
           -->
               <%=g.input :programa_id,:label=>"Programa" do%>
-                <%= g.select :programa_id , Programa.all.map{ |c| ["" + c.nivel + "-" + c.programa, c.id] }%>
+                <%= g.select :programa_id , Programa.all.map{ |c| ["" + c.nivel + "-" + c.programa , c.id] }%>
               <%end%>  
           <%= g.association :nacionalidad, :include_blank => false, :label_method => :nacionalidad %>
           <%= g.input :telefono_particular, :label=>"Teléfono Particular:"%>

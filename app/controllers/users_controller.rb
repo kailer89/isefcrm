@@ -50,4 +50,18 @@ class UsersController < ApplicationController
       redirect_to dashboards_path
     end
   end	
+
+  def saved_search_add
+    @saved_search = Search.create(:name=> params[:name],:description=>params[:description],:query => params[:q], :model_name=> params[:model_name], :user_id => current_user.id)
+
+    respond_to do |format|
+      if @saved_search.save
+        format.html { redirect_to(:back) }
+      else
+        format.html { redirect_to(:back) }
+      end
+    end
+  end
+
+
 end

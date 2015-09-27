@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141011172847) do
+ActiveRecord::Schema.define(:version => 20150927141448) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -1384,6 +1384,16 @@ ActiveRecord::Schema.define(:version => 20141011172847) do
   end
 
   add_index "rpms", ["permalink"], :name => "index_rpms_on_permalink"
+
+  create_table "searches", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "model_name"
+    t.integer  "user_id"
+  end
 
   create_table "sedes", :force => true do |t|
     t.string   "nombre"
