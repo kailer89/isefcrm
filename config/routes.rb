@@ -198,6 +198,10 @@ resources :prospectos, only: :index do
   match "/prospectos/:id/validar" => "prospectos#validar", as: :validar,:validado=>false
   match "/prospectos/:id/convertir" => "prospectos#convertir", as: :convertir, :validado=>true
 
+  match "/inscritos/:id/convertir_en_admitido" => "inscritos#convertir_en_admitido", as: :convertir_en_admitido
+
+
+
 
 
   match 'saved_search_add' => "searches#saved_search", as: :saved_search

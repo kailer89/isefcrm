@@ -1,5 +1,5 @@
 class Inscrito < ActiveRecord::Base
-	has_many :admitidos, :dependent => :destroy
+	has_many :admitidos
 
 	has_many :examinados, through: :admitidos
 

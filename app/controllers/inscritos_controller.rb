@@ -177,6 +177,10 @@ class InscritosController < ApplicationController
   # DELETE /inscritos/1.json
   def destroy
     @inscrito = Inscrito.find(params[:id])
+         @admitido = Admitido.find(@inscrito.admitido_id)
+     @admitido.isinscrito=false
+     @admitido.inscrito_id = nil
+     @admitido.save
     @inscrito.destroy
 
     respond_to do |format|
@@ -184,6 +188,21 @@ class InscritosController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def convertir_en_admitido
+     @inscrito = Inscrito.find(params[:id])
+     @admitido = Admitido.find(@inscrito.admitido_id)
+     @admitido.isinscrito=false
+     @admitido.inscrito_id = nil
+     @admitido.save
+     @inscrito.destroy
+
+     respond_to do |format|
+      format.html { redirect_to edit_admitido_path(@admitido) }
+      format.json { head :ok }
+    end
+  end
+
 
   def sort_column
     if params[:sort] !=nil
