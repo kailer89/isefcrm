@@ -26,7 +26,7 @@ class SolicitantesController < ApplicationController
     end  
 
     rol = Role.where(:id=>current_user.role).first
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"   or rol.nombre == "CP"  
+    if rol.nombre == "DN" or rol.nombre == "ACRM"  
       logger.debug "admin"
     else
       @solicitantes=@solicitantes.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.where(:sede_id=>current_user.sede).joins{solicitante}.where(:user_id=>current_user.id))
