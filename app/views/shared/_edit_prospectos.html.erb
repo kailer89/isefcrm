@@ -1,4 +1,13 @@
 
+<%
+rol = Role.where(:id=>current_user.role).first
+if rol.nombre == "DN" or rol.nombre == "ACRM" 
+  sedesParaElCombo = Sede.order(:nombre)
+else
+  sedesParaElCombo = Sede.where(:id=>current_user.sede)
+end
+%>
+
 <%if request.path_parameters[:controller] == "prospectos"%>
 
       <div class="tab-pane fade in active" id="informacion">
@@ -73,11 +82,25 @@
               <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Municipio de la Preparatoria / Universidad de procedencia:" %>
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
-              <%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:"%>
+<%
+if rol.nombre == "DN" or rol.nombre == "ACRM" 
+  %>
+<%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:"%>
+  <%
+else
+  sedesParaElCombo = Sede.where(:id=>current_user.sede)
+  %>
+<%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:",collection: sedesParaElCombo, :selected=> sedesParaElCombo%>
+  <%
+end
+%>
+
+
+              
 
 
 
-  <%=builder.input :subsede_id, collection: Sede.order(:nombre), as: :grouped_select, group_method: :subsedes, group_label_method: :nombre,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:" %>
+  <%=builder.input :subsede_id, collection: sedesParaElCombo, as: :grouped_select, group_method: :subsedes, group_label_method: :nombre,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:" %>
 
               <%=builder.association :modalidad,:label_method=>:valor,:include_blank => false, :label=>"Modalidad:"%>
                <%= builder.association :turno,:include_blank => false, :label_method => :valor  , :label=>"Turno:"%>
@@ -226,8 +249,20 @@
               <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Municipio de la Preparatoria / Universidad de procedencia:" %>
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
-              <%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:"%>
-                <%=builder.input :subsede_id, collection: Sede.order(:nombre), as: :grouped_select, group_method: :subsedes, group_label_method: :nombre,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:" %>
+              
+<%
+if rol.nombre == "DN" or rol.nombre == "ACRM" 
+  %>
+<%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:"%>
+  <%
+else
+  sedesParaElCombo = Sede.where(:id=>current_user.sede)
+  %>
+<%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:",collection: sedesParaElCombo, :selected=> sedesParaElCombo%>
+  <%
+end
+%>
+                <%=builder.input :subsede_id, collection: sedesParaElCombo, as: :grouped_select, group_method: :subsedes, group_label_method: :nombre,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:" %>
               <%=builder.association :nivel,:label_method=>:valor,:include_blank => false, :label=>"Nivel:"%>
 
               <%=builder.association :modalidad,:label_method=>:valor,:include_blank => false, :label=>"Modalidad:"%>
