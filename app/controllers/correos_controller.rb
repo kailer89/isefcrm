@@ -277,7 +277,7 @@ redirect_to "/correos/#{@correo.id}/edit/"
     @correo.user_id =current_user.id
     @correo.sede_id =current_user.sede_id 
     
-    if params[:model_name] == "prospectos"
+    if params[:model_name] == "prospectos" or params[:model_name] == "solicitantes" or params[:model_name] == "examinados" or params[:model_name] == "adminitidos" or params[:model_name] == "inscritos"   
       @correo.es_uno_a_uno = true 
     else
       @correo.es_uno_a_uno = false 

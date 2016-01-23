@@ -33,11 +33,37 @@ logger.debug "action1111"
     <%= f.input :nombredelmail, :label=>"Titulo del correo",:hint=>"Es indispensable salvar el template de correo antes de enviarlo (subject del correo)."%>
 <%    if @correo.es_uno_a_uno == true  
 
-      if params[:model_id] == nil
-        @prospecto=Prospecto.find_by_id(@correo.model_id)
-      else
-        @prospecto=Prospecto.find_by_id(params[:model_id])
-      end
+        if params[:model_id] == nil
+          @prospecto=Prospecto.find_by_id(@correo.model_id)
+            if params[:model_name] == "solicitantes"
+              @prospecto = Prospecto.find_by_id(Solicitante.find_by_id(@correo.model_id).prospectos.first)
+            end
+            if params[:model_name] == "examinados"
+              @prospecto = Prospecto.find_by_id(Examinado.find_by_id(@correo.model_id).solicitantes.first.prospectos.first)
+            end
+            if params[:model_name] == "admitidos"
+              @prospecto = Prospecto.find_by_id(Admitido.find_by_id(@correo.model_id).examinados.first.solicitantes.first.prospectos.first)
+            end
+            if params[:model_name] == "inscritos"
+              @prospecto = Prospecto.find_by_id(Inscrito.find_by_id(@correo.model_id).admitidos.first.examinados.first.solicitantes.first.prospectos.first)
+            end          
+        else
+          @prospecto=Prospecto.find_by_id(params[:model_id])
+          if @prospecto == nil
+            if params[:model_name] == "solicitantes"
+              @prospecto = Prospecto.find_by_id(Solicitante.find_by_id(params[:model_id]).prospectos.first)
+            end
+            if params[:model_name] == "examinados"
+              @prospecto = Prospecto.find_by_id(Examinado.find_by_id(params[:model_id]).solicitantes.first.prospectos.first)
+            end
+            if params[:model_name] == "admitidos"
+              @prospecto = Prospecto.find_by_id(Admitido.find_by_id(params[:model_id]).examinados.first.solicitantes.first.prospectos.first)
+            end
+            if params[:model_name] == "inscritos"
+              @prospecto = Prospecto.find_by_id(Inscrito.find_by_id(params[:model_id]).admitidos.first.examinados.first.solicitantes.first.prospectos.first)
+            end
+          end
+        end
 
     end%>
     </div>
