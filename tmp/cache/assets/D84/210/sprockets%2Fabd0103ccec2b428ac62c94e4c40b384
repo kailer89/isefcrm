@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1443359914.646943:@value{	I"length:EFiÌy&I"digest;
-F"%180b07ce81e6bf0ead19630738e09466I"source;
-FI"Ìy&/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1453563614.71754:@value{	I"length:EFik~&I"digest;
+F"%2948f8731f8c954097791c50e19d0f08I"source;
+FI"k~&/*!
  * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
  *
@@ -66162,7 +66162,7 @@ $.timepicker.version = "1.0.1";
 */
 
 (function($) {
-	var pasteEventName = ($.browser.msie ? 'paste' : 'input') + ".mask";
+	var pasteEventName = ((/msie|trident/i).test(navigator.userAgent) ? 'paste' : 'input') + ".mask";
 	var iPhone = (window.orientation != undefined);
 
 	$.mask = {
@@ -68018,6 +68018,51 @@ var forEach = function(object, block, context) {
 // the compiled file.
 //
 
+$( document ).ready(function() {
+
+//para prospectos  
+var subsedes = $("[id*='interes_basicos_attributes_0_subsede_id']").html();
+if(subsedes != null)
+{
+  
+  var sedes = $("[id*='interes_basicos_attributes_0_sede_id']").change(function()
+    {
+      var selectedSede = $("[id*='interes_basicos_attributes_0_sede_id'] :selected").text();
+
+      var options = $(subsedes).filter("optgroup[label='" + selectedSede + "']").html();
+      if(options != null)
+      {
+          $("[id*='interes_basicos_attributes_0_subsede_id']").html(options);
+
+      }
+      else
+      {
+        console.log("sin subsedes");
+
+      }
+    });
+      var selectedSede = $("[id*='interes_basicos_attributes_0_sede_id']").find(":selected").text();
+      console.log($("select[id*='interes_basicos_attributes_0_sede_id']").find(":selected").html());
+      var options = $(subsedes).filter("optgroup[label='" + selectedSede + "']").html();
+      if(options != null)
+      {
+          $("[id*='interes_basicos_attributes_0_subsede_id']").html(options);
+
+      }
+      else
+      {
+        console.log("sin subsedes");
+
+      }
+}
+else
+{
+console.log("no hay subsedes");
+
+}
+
+});
+
 $(function() {
   $(window).scroll(function() {
     if($(this).scrollTop() != 0) {
@@ -68063,7 +68108,13 @@ $(window).bind("load", function() {
 
       }
 
+
+
 });
+
+
+
+
 ;
 TI"_version;
-F"%f1fbfee7aa8a177e8a14e881dab12800
+F"%abcbbee2517978df4120cda484f6c493

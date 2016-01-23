@@ -18,6 +18,51 @@
 //= require jquery.tablesorter
 //= require_tree .
 
+$( document ).ready(function() {
+
+//para prospectos  
+var subsedes = $("[id*='interes_basicos_attributes_0_subsede_id']").html();
+if(subsedes != null)
+{
+  
+  var sedes = $("[id*='interes_basicos_attributes_0_sede_id']").change(function()
+    {
+      var selectedSede = $("[id*='interes_basicos_attributes_0_sede_id'] :selected").text();
+
+      var options = $(subsedes).filter("optgroup[label='" + selectedSede + "']").html();
+      if(options != null)
+      {
+          $("[id*='interes_basicos_attributes_0_subsede_id']").html(options);
+
+      }
+      else
+      {
+        console.log("sin subsedes");
+
+      }
+    });
+      var selectedSede = $("[id*='interes_basicos_attributes_0_sede_id']").find(":selected").text();
+      console.log($("select[id*='interes_basicos_attributes_0_sede_id']").find(":selected").html());
+      var options = $(subsedes).filter("optgroup[label='" + selectedSede + "']").html();
+      if(options != null)
+      {
+          $("[id*='interes_basicos_attributes_0_subsede_id']").html(options);
+
+      }
+      else
+      {
+        console.log("sin subsedes");
+
+      }
+}
+else
+{
+console.log("no hay subsedes");
+
+}
+
+});
+
 $(function() {
   $(window).scroll(function() {
     if($(this).scrollTop() != 0) {
@@ -63,4 +108,10 @@ $(window).bind("load", function() {
 
       }
 
+
+
 });
+
+
+
+

@@ -10,7 +10,6 @@ class Sede < ActiveRecord::Base
 	has_many :prospectos
   has_many :tweets
 	belongs_to :plan_de_venta
-  has_many :subsedes
   has_many :achievments
   has_many :oferta_educativa
   has_many :colegiatura

@@ -74,7 +74,10 @@
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
               <%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:"%>
-              <%=builder.association :subsede,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:"%>
+
+
+
+  <%=builder.input :subsede_id, collection: Sede.order(:nombre), as: :grouped_select, group_method: :subsedes, group_label_method: :nombre,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:" %>
 
               <%=builder.association :modalidad,:label_method=>:valor,:include_blank => false, :label=>"Modalidad:"%>
                <%= builder.association :turno,:include_blank => false, :label_method => :valor  , :label=>"Turno:"%>
@@ -224,7 +227,7 @@
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
               <%=builder.association :sede,:label_method=>:nombre,:include_blank => false, :label=>"Sede de interés:"%>
-              <%=builder.association :subsede,:label_method=>:nombre,:include_blank => false, :label=>"Sub sede de interés:"%>
+                <%=builder.input :subsede_id, collection: Sede.order(:nombre), as: :grouped_select, group_method: :subsedes, group_label_method: :nombre,:label_method=>:nombre,:include_blank => false, :label=>"Extensión de interés:" %>
               <%=builder.association :nivel,:label_method=>:valor,:include_blank => false, :label=>"Nivel:"%>
 
               <%=builder.association :modalidad,:label_method=>:valor,:include_blank => false, :label=>"Modalidad:"%>
