@@ -1,5 +1,6 @@
 class ProgramaDeInteresController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /programa_de_interes
   # GET /programa_de_interes.json
   def index

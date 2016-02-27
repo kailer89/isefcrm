@@ -1,5 +1,6 @@
 class PreparatoriaOUniversidadDeOrigensController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /preparatoria_o_universidad_de_origens
   # GET /preparatoria_o_universidad_de_origens.json
   def index

@@ -1,5 +1,6 @@
 class PreguntaController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /pregunta
   # GET /pregunta.json
   def index

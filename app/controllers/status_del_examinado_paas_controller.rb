@@ -1,5 +1,6 @@
 class StatusDelExaminadoPaasController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_del_examinado_paas
   # GET /status_del_examinado_paas.json
   def index

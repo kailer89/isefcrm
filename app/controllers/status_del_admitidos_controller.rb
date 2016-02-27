@@ -1,5 +1,6 @@
 class StatusDelAdmitidosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_del_admitidos
   # GET /status_del_admitidos.json
   def index

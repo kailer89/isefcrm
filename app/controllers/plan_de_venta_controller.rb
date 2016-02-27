@@ -1,5 +1,6 @@
 class PlanDeVentaController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /plan_de_venta
   # GET /plan_de_venta.json
   def index

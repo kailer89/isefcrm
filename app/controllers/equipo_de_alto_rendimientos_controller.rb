@@ -1,5 +1,6 @@
 class EquipoDeAltoRendimientosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /equipo_de_alto_rendimientos
   # GET /equipo_de_alto_rendimientos.json
   def index

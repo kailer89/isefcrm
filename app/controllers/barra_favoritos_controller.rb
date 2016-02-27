@@ -1,5 +1,6 @@
 class BarraFavoritosController < ApplicationController
     before_filter :authenticate_user!
+    
   # GET /barra_favoritos
   # GET /barra_favoritos.json
   def index

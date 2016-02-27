@@ -1,5 +1,6 @@
 class UltimoGradoDeEstudiosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /ultimo_grado_de_estudios
   # GET /ultimo_grado_de_estudios.json
   def index

@@ -1,6 +1,7 @@
 class FinalidadCultivosController < ApplicationController
   before_filter :authenticate_user!
   helper_method :sort_column, :sort_direction  
+  
   # GET /finalidad_cultivos
   # GET /finalidad_cultivos.json
   def index

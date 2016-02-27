@@ -1,5 +1,6 @@
 class MetasGlobalesController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /metas_globales
   # GET /metas_globales.json
   def index

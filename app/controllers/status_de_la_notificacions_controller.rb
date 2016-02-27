@@ -1,5 +1,6 @@
 class StatusDeLaNotificacionsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_de_la_notificacions
   # GET /status_de_la_notificacions.json
   def index

@@ -1,5 +1,6 @@
 class OfertaEducativasController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /oferta_educativas
   # GET /oferta_educativas.json
   def index

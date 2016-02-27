@@ -1,5 +1,6 @@
 class ProgramasController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /programas
   # GET /programas.json
   def index

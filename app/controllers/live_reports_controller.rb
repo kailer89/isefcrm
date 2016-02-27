@@ -1,4 +1,5 @@
 class LiveReportsController < ApplicationController
+  
   # GET /live_reports
   # GET /live_reports.json
   def index

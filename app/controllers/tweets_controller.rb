@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   before_filter :authenticate_user!
+  
   def send_tweet
     @tweet = Tweet.find(params[:id])
       atoken = session['twitterinfo']['extra']['access_token'].token

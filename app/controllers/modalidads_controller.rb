@@ -1,5 +1,6 @@
 class ModalidadsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /modalidads
   # GET /modalidads.json
   def index

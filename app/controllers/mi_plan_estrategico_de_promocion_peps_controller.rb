@@ -1,5 +1,6 @@
 class MiPlanEstrategicoDePromocionPepsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /mi_plan_estrategico_de_promocion_peps
   # GET /mi_plan_estrategico_de_promocion_peps.json
   def index

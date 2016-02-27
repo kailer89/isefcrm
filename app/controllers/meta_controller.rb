@@ -1,5 +1,6 @@
 class MetaController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /meta
   # GET /meta.json
   def index

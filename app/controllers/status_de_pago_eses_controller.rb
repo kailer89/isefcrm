@@ -1,5 +1,6 @@
 class StatusDePagoEsesController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_de_pago_eses
   # GET /status_de_pago_eses.json
   def index

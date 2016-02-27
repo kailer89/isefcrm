@@ -1,5 +1,6 @@
 class PeriodoParaIngresarsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /periodo_para_ingresars
   # GET /periodo_para_ingresars.json
   def index

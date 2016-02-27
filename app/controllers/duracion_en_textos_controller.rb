@@ -1,4 +1,5 @@
 class DuracionEnTextosController < ApplicationController
+  
   # GET /duracion_en_textos
   # GET /duracion_en_textos.json
   def index

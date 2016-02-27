@@ -1,5 +1,6 @@
 class AchievmentsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /achievments
   # GET /achievments.json
   def index

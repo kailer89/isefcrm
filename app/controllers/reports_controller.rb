@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  
   before_filter :authenticate_user!
 require 'will_paginate/array'
    def update_column_names

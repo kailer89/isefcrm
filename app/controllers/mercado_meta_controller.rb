@@ -1,6 +1,7 @@
 class MercadoMetaController < ApplicationController
   before_filter :authenticate_user!
-  helper_method :sort_column, :sort_direction  
+  helper_method :sort_column, :sort_direction 
+   
   # GET /mercado_meta
   # GET /mercado_meta.json
   def index

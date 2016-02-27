@@ -1,6 +1,7 @@
 
 class ProspectosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /prospectos
   # GET /prospectos.json
   def index

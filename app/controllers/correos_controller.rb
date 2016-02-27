@@ -1,5 +1,6 @@
 class CorreosController < ApplicationController
   before_filter :authenticate_user!
+  
 
   def matches?(value)
     return false unless value

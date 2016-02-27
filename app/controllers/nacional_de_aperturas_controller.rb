@@ -1,5 +1,6 @@
 class NacionalDeAperturasController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /nacional_de_aperturas
   # GET /nacional_de_aperturas.json
   def index

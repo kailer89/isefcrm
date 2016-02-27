@@ -1,5 +1,6 @@
 class StatusDePagoDeExamenDeAdmisionsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_de_pago_de_examen_de_admisions
   # GET /status_de_pago_de_examen_de_admisions.json
   def index

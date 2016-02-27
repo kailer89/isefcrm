@@ -1,5 +1,6 @@
 class TareasController < ApplicationController
   before_filter :authenticate_user!
+  
 
   # GET /tareas
   # GET /tareas.json

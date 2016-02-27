@@ -1,5 +1,6 @@
 class TipoDeAdmisionsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /tipo_de_admisions
   # GET /tipo_de_admisions.json
   def index

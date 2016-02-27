@@ -1,5 +1,6 @@
 class StatusRefPagoInscsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_ref_pago_inscs
   # GET /status_ref_pago_inscs.json
   def index

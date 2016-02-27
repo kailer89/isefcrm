@@ -1,4 +1,5 @@
 class EfectividadsController < ApplicationController
+  
   # GET /efectividads
   # GET /efectividads.json
   def index

@@ -1,5 +1,6 @@
 class HistoriesController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /histories
   # GET /histories.json
   def index

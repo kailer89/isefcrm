@@ -1,5 +1,6 @@
 class StatusDeInteresDeProspectoValidadosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_de_interes_de_prospecto_validados
   # GET /status_de_interes_de_prospecto_validados.json
   def index

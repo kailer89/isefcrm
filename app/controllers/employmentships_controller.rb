@@ -1,5 +1,6 @@
 class EmploymentshipsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /employmentships
   # GET /employmentships.json
   def index

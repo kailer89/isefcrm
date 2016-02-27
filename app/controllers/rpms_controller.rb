@@ -1,5 +1,6 @@
 class RpmsController < ApplicationController
 before_filter :authenticate_user!
+
   # GET /rpms
   # GET /rpms.json
   def index

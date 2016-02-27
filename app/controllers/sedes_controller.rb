@@ -1,5 +1,6 @@
 class SedesController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /sedes
   # GET /sedes.json
   def index

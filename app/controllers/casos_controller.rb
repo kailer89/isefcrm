@@ -1,5 +1,6 @@
 class CasosController < ApplicationController
   before_filter :authenticate_user!  
+  
   # GET /casos
   # GET /casos.json
   def index

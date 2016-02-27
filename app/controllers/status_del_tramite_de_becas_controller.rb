@@ -1,5 +1,6 @@
 class StatusDelTramiteDeBecasController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_del_tramite_de_becas
   # GET /status_del_tramite_de_becas.json
   def index

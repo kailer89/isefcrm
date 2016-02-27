@@ -1,5 +1,6 @@
 class NivelsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /nivels
   # GET /nivels.json
   def index

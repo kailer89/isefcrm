@@ -1,5 +1,6 @@
 class ContactosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /contactos
   # GET /contactos.json
   def index

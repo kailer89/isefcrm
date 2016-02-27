@@ -1,5 +1,6 @@
 class ColegiaturasController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /colegiaturas
   # GET /colegiaturas.json
   def index

@@ -1,4 +1,5 @@
 class RolePermisionsController < ApplicationController
+  
   # GET /role_permisions
   # GET /role_permisions.json
   def index

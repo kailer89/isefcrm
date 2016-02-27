@@ -1,5 +1,6 @@
 class StatusDeLaInscripcionsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /status_de_la_inscripcions
   # GET /status_de_la_inscripcions.json
   def index

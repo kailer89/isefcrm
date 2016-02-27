@@ -1,5 +1,6 @@
 class MemosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /memos
   # GET /memos.json
   def index

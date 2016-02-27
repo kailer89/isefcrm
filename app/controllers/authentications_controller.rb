@@ -1,5 +1,6 @@
 class AuthenticationsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /authentications
   # GET /authentications.json
   def index

@@ -1,6 +1,7 @@
 class ComentariosEstrategiaController < ApplicationController
   before_filter :authenticate_user!
-  helper_method :sort_column, :sort_direction  
+  helper_method :sort_column, :sort_direction
+    
   # GET /comentarios_estrategia
   # GET /comentarios_estrategia.json
   def index

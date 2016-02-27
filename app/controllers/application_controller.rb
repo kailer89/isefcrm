@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 	before_filter :iswriteteable
   protect_from_forgery
 
+
   layout :layout_by_resource
 
   protected

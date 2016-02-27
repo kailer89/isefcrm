@@ -2,6 +2,7 @@ class SolicitantesController < ApplicationController
   before_filter :authenticate_user!
   
   helper_method :sort_column, :sort_direction
+  
   # GET /solicitantes
   # GET /solicitantes.json
   def index

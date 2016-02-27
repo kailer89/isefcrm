@@ -1,5 +1,6 @@
 class SubsedesController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /subsedes
   # GET /subsedes.json
   def index

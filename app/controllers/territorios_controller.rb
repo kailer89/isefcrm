@@ -1,5 +1,6 @@
 class TerritoriosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /territorios
   # GET /territorios.json
   def index

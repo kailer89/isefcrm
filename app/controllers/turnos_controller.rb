@@ -1,5 +1,6 @@
 class TurnosController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /turnos
   # GET /turnos.json
   def index

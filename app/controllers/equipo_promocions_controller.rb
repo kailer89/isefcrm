@@ -1,5 +1,6 @@
 class EquipoPromocionsController < ApplicationController
   before_filter :authenticate_user!
+  
   # GET /equipo_promocions
   # GET /equipo_promocions.json
   def index

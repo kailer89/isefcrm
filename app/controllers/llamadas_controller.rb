@@ -1,5 +1,6 @@
 class LlamadasController < ApplicationController
   before_filter :authenticate_user!  
+  
   # GET /llamadas
   # GET /llamadas.json
   def index
