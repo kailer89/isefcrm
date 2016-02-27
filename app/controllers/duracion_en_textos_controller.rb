@@ -72,8 +72,21 @@ class DuracionEnTextosController < ApplicationController
   # DELETE /duracion_en_textos/1
   # DELETE /duracion_en_textos/1.json
   def destroy
+
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+
+  
     @duracion_en_texto = DuracionEnTexto.find(params[:id])
     @duracion_en_texto.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
 
     respond_to do |format|
       format.html { redirect_to duracion_en_textos_url }

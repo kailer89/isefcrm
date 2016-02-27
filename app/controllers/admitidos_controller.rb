@@ -173,8 +173,21 @@ class AdmitidosController < ApplicationController
   # DELETE /admitidos/1
   # DELETE /admitidos/1.json
   def destroy
+
+      rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"
+
+
     @admitido = Admitido.find(params[:id])
     @admitido.destroy
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+    
 
     respond_to do |format|
       format.html { redirect_to admitidos_url }

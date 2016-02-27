@@ -81,9 +81,22 @@ class DivisionTerritorialsController < ApplicationController
   # DELETE /division_territorials/1
   # DELETE /division_territorials/1.json
   def destroy
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+
+  
     @division_territorial = DivisionTerritorial.find(params[:id])
     @division_territorial.destroy
 
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+    
     respond_to do |format|
       format.html { redirect_to division_territorials_url }
       format.json { head :ok }

@@ -331,8 +331,20 @@ redirect_to "/correos/#{@correo.id}/edit/"
   # DELETE /correos/1
   # DELETE /correos/1.json
   def destroy
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+
     @correo = Correo.find(params[:id])
     @correo.destroy
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+
 
     respond_to do |format|
       format.html { redirect_to "/correos/#{@correo.id}/edit/", notice: 'correo was successfully created.' }

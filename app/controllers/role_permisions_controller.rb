@@ -72,8 +72,19 @@ class RolePermisionsController < ApplicationController
   # DELETE /role_permisions/1
   # DELETE /role_permisions/1.json
   def destroy
-    @role_permision = RolePermision.find(params[:id])
+
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+ @role_permision = RolePermision.find(params[:id])
     @role_permision.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+   
 
     respond_to do |format|
       format.html { redirect_to role_permisions_url }

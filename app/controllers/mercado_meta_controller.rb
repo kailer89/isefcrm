@@ -76,8 +76,19 @@ class MercadoMetaController < ApplicationController
   # DELETE /mercado_meta/1
   # DELETE /mercado_meta/1.json
   def destroy
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+    
     @mercado_metum = MercadoMetum.find(params[:id])
     @mercado_metum.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
 
     respond_to do |format|
       format.html { redirect_to mercado_meta_url }

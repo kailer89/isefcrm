@@ -179,8 +179,21 @@ class SolicitantesController < ApplicationController
   # DELETE /solicitantes/1
   # DELETE /solicitantes/1.json
   def destroy
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+  
+  
+  
     @solicitante = Solicitante.find(params[:id])
     @solicitante.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+  
 
     respond_to do |format|
       format.html { redirect_to solicitantes_url }

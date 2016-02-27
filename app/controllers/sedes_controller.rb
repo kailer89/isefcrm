@@ -73,9 +73,22 @@ class SedesController < ApplicationController
   # DELETE /sedes/1
   # DELETE /sedes/1.json
   def destroy
-    @sede = Sede.find(params[:id])
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+  
+  
+     @sede = Sede.find(params[:id])
     @sede.destroy
 
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+ 
     respond_to do |format|
       format.html { redirect_to sedes_url }
       format.json { head :ok }

@@ -72,9 +72,21 @@ class LiveReportsController < ApplicationController
   # DELETE /live_reports/1
   # DELETE /live_reports/1.json
   def destroy
-    @live_report = LiveReport.find(params[:id])
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+@live_report = LiveReport.find(params[:id])
     @live_report.destroy
 
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+    
+    
     respond_to do |format|
       format.html { redirect_to live_reports_url }
       format.json { head :ok }

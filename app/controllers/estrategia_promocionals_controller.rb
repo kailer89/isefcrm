@@ -74,8 +74,19 @@ class EstrategiaPromocionalsController < ApplicationController
   # DELETE /estrategia_promocionals/1
   # DELETE /estrategia_promocionals/1.json
   def destroy
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+    
     @estrategia_promocional = EstrategiaPromocional.find(params[:id])
     @estrategia_promocional.destroy
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
 
     respond_to do |format|
       format.html { redirect_to estrategia_promocionals_url }

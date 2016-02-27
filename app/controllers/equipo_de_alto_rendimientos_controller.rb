@@ -79,9 +79,22 @@ class EquipoDeAltoRendimientosController < ApplicationController
   # DELETE /equipo_de_alto_rendimientos/1
   # DELETE /equipo_de_alto_rendimientos/1.json
   def destroy
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
     @equipo_de_alto_rendimiento = EquipoDeAltoRendimiento.find(params[:id])
     @equipo_de_alto_rendimiento.destroy
 
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+   
+    
     respond_to do |format|
       format.html { redirect_to equipo_de_alto_rendimientos_url }
       format.json { head :ok }

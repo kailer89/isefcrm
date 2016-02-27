@@ -304,8 +304,19 @@ class ImportsController < ApplicationController
   # DELETE /imports/1
   # DELETE /imports/1.json
   def destroy
-    @import = Import.find(params[:id])
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+@import = Import.find(params[:id])
     @import.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+    
+    
 
     respond_to do |format|
       format.html { redirect_to imports_url }

@@ -89,8 +89,19 @@ class MemosController < ApplicationController
   # DELETE /memos/1
   # DELETE /memos/1.json
   def destroy
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
     @memo = Memo.find(params[:id])
     @memo.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+   
 
     respond_to do |format|
       format.html { redirect_to "/#{@memo.model_name}/#{@memo.model_id}/edit/" }

@@ -24,12 +24,13 @@ class HomesController < ApplicationController
     archivado = false
             rol = Role.where(:id=>current_user.role).first
     modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    
     if modelo != nil
       archivado = modelo.mostrar_archivados
     end   
     if modelo == nil 
 
-      if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"      
+      if rol.nombre == "ACRM"      
         @prospectosnovalidados=Prospecto.where(:validado=>false).where(:issolicitante=> false).limit(5)
         @prospectosvalidados=Prospecto.where(:validado=>true).where(:issolicitante=> false).limit(5)
         @solicitantes=Solicitante.where(:isexaminado=> false).all(:limit=>5)
@@ -54,7 +55,7 @@ class HomesController < ApplicationController
         @llamadas=Llamada.where(:user_id =>current_user.id).limit(5)      
     end
   else
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"  
+    if rol.nombre == "ACRM"  
       @prospectosnovalidados=Prospecto.where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
       @prospectosvalidados=Prospecto.where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
       @solicitantes=Solicitante.where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)

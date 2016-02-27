@@ -73,8 +73,21 @@ class PreparatoriaOUniversidadDeOrigensController < ApplicationController
   # DELETE /preparatoria_o_universidad_de_origens/1
   # DELETE /preparatoria_o_universidad_de_origens/1.json
   def destroy
-    @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find(params[:id])
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+  
+ @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find(params[:id])
     @preparatoria_o_universidad_de_origen.destroy
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+    
+   
 
     respond_to do |format|
       format.html { redirect_to preparatoria_o_universidad_de_origens_url }

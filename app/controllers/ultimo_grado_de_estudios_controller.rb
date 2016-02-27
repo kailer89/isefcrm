@@ -73,8 +73,18 @@ class UltimoGradoDeEstudiosController < ApplicationController
   # DELETE /ultimo_grado_de_estudios/1
   # DELETE /ultimo_grado_de_estudios/1.json
   def destroy
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+    
     @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find(params[:id])
     @ultimo_grado_de_estudio.destroy
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
 
     respond_to do |format|
       format.html { redirect_to ultimo_grado_de_estudios_url }

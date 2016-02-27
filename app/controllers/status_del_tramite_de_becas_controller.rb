@@ -73,8 +73,20 @@ class StatusDelTramiteDeBecasController < ApplicationController
   # DELETE /status_del_tramite_de_becas/1
   # DELETE /status_del_tramite_de_becas/1.json
   def destroy
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+    
     @status_del_tramite_de_beca = StatusDelTramiteDeBeca.find(params[:id])
     @status_del_tramite_de_beca.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+
 
     respond_to do |format|
       format.html { redirect_to status_del_tramite_de_becas_url }

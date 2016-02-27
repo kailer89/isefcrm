@@ -37,6 +37,9 @@ class UsersController < ApplicationController
   end
   
   def destroy
+
+
+    
     @user = User.find(params[:id])
 
     prospectosDelUser = Prospecto.where(:user_id => @user.id)

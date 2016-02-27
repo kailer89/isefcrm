@@ -73,8 +73,21 @@ class TurnosController < ApplicationController
   # DELETE /turnos/1
   # DELETE /turnos/1.json
   def destroy
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+
+
     @turno = Turno.find(params[:id])
     @turno.destroy
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
+    
 
     respond_to do |format|
       format.html { redirect_to turnos_url }

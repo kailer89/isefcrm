@@ -73,8 +73,22 @@ class TipoDeAdmisionsController < ApplicationController
   # DELETE /tipo_de_admisions/1
   # DELETE /tipo_de_admisions/1.json
   def destroy
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+
+
+
+    
     @tipo_de_admision = TipoDeAdmision.find(params[:id])
     @tipo_de_admision.destroy
+
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+
 
     respond_to do |format|
       format.html { redirect_to tipo_de_admisions_url }

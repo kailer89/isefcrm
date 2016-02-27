@@ -72,8 +72,21 @@ class ExaminadosController < ApplicationController
   # DELETE /prospectos/1
   # DELETE /prospectos/1.json
   def destroy
-    @examinado = Examinado.find(params[:id])
+
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+   @examinado = Examinado.find(params[:id])
     @examinado.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+    
+    
 
     respond_to do |format|
       format.html { redirect_to examinados_path}

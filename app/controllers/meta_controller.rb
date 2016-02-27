@@ -73,8 +73,20 @@ class MetaController < ApplicationController
   # DELETE /meta/1
   # DELETE /meta/1.json
   def destroy
-    @meta = Meta.find(params[:id])
+
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+
+ @meta = Meta.find(params[:id])
     @meta.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+    
+    
 
     respond_to do |format|
       format.html { redirect_to meta_index_url }

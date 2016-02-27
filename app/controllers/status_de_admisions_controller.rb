@@ -73,8 +73,19 @@ class StatusDeAdmisionsController < ApplicationController
   # DELETE /status_de_admisions/1
   # DELETE /status_de_admisions/1.json
   def destroy
+
+rol = Role.where(:id=>current_user.role).first
+        if rol.nombre == "ACRM"
+  
+  
     @status_de_admision = StatusDeAdmision.find(params[:id])
     @status_de_admision.destroy
+else
+  flash[:error] ='No tienes permiso para realizar esta accion'
+
+end
+    
+  
 
     respond_to do |format|
       format.html { redirect_to status_de_admisions_url }

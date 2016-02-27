@@ -332,3 +332,41 @@ C:/Sites/isefcrm/app/views/shared/_edit_prospectos.html.erb:299: syntax error, u
 [01/23/16 08:35:47 -0600 alienware (6776)] INFO : Installing Rails 3 Error instrumentation
 [01/23/16 08:35:47 -0600 alienware (6776)] INFO : Finished instrumentation
 [01/23/16 08:35:51 -0600 alienware (6776)] INFO : Doing deferred dependency-detection before Rack startup
+[02/04/16 14:01:29 -0600 alienware (8944)] INFO : Starting the New Relic agent in "development" environment.
+[02/04/16 14:01:29 -0600 alienware (8944)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/04/16 14:01:29 -0600 alienware (8944)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : New Relic Agent Developer Mode enabled.
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Environment: development
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Dispatcher: webrick
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Application: My Application
+[02/04/16 14:01:30 -0600 alienware (8944)] WARN : Agent configured not to send data in this environment.
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing ActiveRecord instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing HTTPClient instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing Net instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing deferred Rack instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing Rack::Builder middleware instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing Rails 3+ middleware instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing Rails 3 Controller instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Installing Rails 3 Error instrumentation
+[02/04/16 14:01:30 -0600 alienware (8944)] INFO : Finished instrumentation
+[02/04/16 14:01:35 -0600 alienware (8944)] INFO : Doing deferred dependency-detection before Rack startup
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Starting the New Relic agent in "development" environment.
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : New Relic Agent Developer Mode enabled.
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Environment: development
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Dispatcher: webrick
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Application: My Application
+[02/26/16 19:07:59 -0600 alienware (9760)] WARN : Agent configured not to send data in this environment.
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing ActiveRecord instrumentation
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing HTTPClient instrumentation
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing Net instrumentation
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing deferred Rack instrumentation
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing Rack::Builder middleware instrumentation
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing Rails 3+ middleware instrumentation
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing Rails 3 Controller instrumentation
+[02/26/16 19:07:59 -0600 alienware (9760)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[02/26/16 19:08:00 -0600 alienware (9760)] INFO : Installing Rails 3 Error instrumentation
+[02/26/16 19:08:00 -0600 alienware (9760)] INFO : Finished instrumentation
+[02/26/16 19:08:03 -0600 alienware (9760)] INFO : Doing deferred dependency-detection before Rack startup
