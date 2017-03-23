@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1442204837.6111062:@value{	I"length:EFiÅI"digest;
-F"%7548677d27757ef4b7dd4defec796496I"source;
-FI"Åbody{
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1489799233.386295:@value{	I"length:EFiWI"digest;
+F"%0870dd14ac4306da42ed43487517154aI"source;
+FI"Wbody{
  padding-left: 0px;
  padding-right: 0px;
 }
@@ -24,6 +24,14 @@ FI"Åbody{
     position:absolute;
     left:35%;
     width:350px;
+  }
+  .centeredSignUp2{
+    display:block;
+
+    /*set the div in the center of the screen*/
+    position:absolute;
+    left:35%;
+    width:520px;
   }
   .favoritesBar
   {
@@ -85,4 +93,4 @@ FI"Åbody{
 }
 ;
 FI"_version;
-F"%29bd7316c8b5e88128624bc6fd61dd86
+F"%5667bc2fb2ed21fe45bc5afc6d5e8f00

@@ -370,3 +370,86 @@ C:/Sites/isefcrm/app/views/shared/_edit_prospectos.html.erb:299: syntax error, u
 [02/26/16 19:08:00 -0600 alienware (9760)] INFO : Installing Rails 3 Error instrumentation
 [02/26/16 19:08:00 -0600 alienware (9760)] INFO : Finished instrumentation
 [02/26/16 19:08:03 -0600 alienware (9760)] INFO : Doing deferred dependency-detection before Rack startup
+[03/01/16 05:11:24 -0600 alienware (1828)] INFO : Starting the New Relic agent in "development" environment.
+[03/01/16 05:11:24 -0600 alienware (1828)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/01/16 05:11:24 -0600 alienware (1828)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : New Relic Agent Developer Mode enabled.
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Environment: development
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Dispatcher: webrick
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Application: My Application
+[03/01/16 05:11:25 -0600 alienware (1828)] WARN : Agent configured not to send data in this environment.
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing ActiveRecord instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing HTTPClient instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing Net instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing deferred Rack instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing Rack::Builder middleware instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing Rails 3+ middleware instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing Rails 3 Controller instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Installing Rails 3 Error instrumentation
+[03/01/16 05:11:25 -0600 alienware (1828)] INFO : Finished instrumentation
+[03/01/16 05:11:29 -0600 alienware (1828)] INFO : Doing deferred dependency-detection before Rack startup
+[03/17/17 17:43:40 -0600 alienware (12084)] INFO : Starting the New Relic agent in "development" environment.
+[03/17/17 17:43:40 -0600 alienware (12084)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/17/17 17:43:40 -0600 alienware (12084)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[03/17/17 17:43:40 -0600 alienware (12084)] INFO : New Relic Agent Developer Mode enabled.
+[03/17/17 17:43:40 -0600 alienware (12084)] INFO : Environment: development
+[03/17/17 17:43:40 -0600 alienware (12084)] INFO : Dispatcher: webrick
+[03/17/17 17:43:40 -0600 alienware (12084)] INFO : Application: My Application
+[03/17/17 17:43:40 -0600 alienware (12084)] WARN : Agent configured not to send data in this environment.
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing ActiveRecord instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing HTTPClient instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing Net instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing deferred Rack instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing Rack::Builder middleware instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing Rails 3+ middleware instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing Rails 3 Controller instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Installing Rails 3 Error instrumentation
+[03/17/17 17:43:41 -0600 alienware (12084)] INFO : Finished instrumentation
+[03/17/17 17:43:46 -0600 alienware (12084)] INFO : Doing deferred dependency-detection before Rack startup
+[03/17/17 18:08:27 -0600 alienware (12476)] INFO : Starting the New Relic agent in "development" environment.
+[03/17/17 18:08:27 -0600 alienware (12476)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/17/17 18:08:27 -0600 alienware (12476)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[03/17/17 18:08:27 -0600 alienware (12476)] INFO : New Relic Agent Developer Mode enabled.
+[03/17/17 18:08:27 -0600 alienware (12476)] INFO : Environment: development
+[03/17/17 18:08:27 -0600 alienware (12476)] INFO : Dispatcher: webrick
+[03/17/17 18:08:27 -0600 alienware (12476)] INFO : Application: My Application
+[03/17/17 18:08:27 -0600 alienware (12476)] WARN : Agent configured not to send data in this environment.
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing ActiveRecord instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing HTTPClient instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing Net instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing deferred Rack instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing Rack::Builder middleware instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing Rails 3+ middleware instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing Rails 3 Controller instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Installing Rails 3 Error instrumentation
+[03/17/17 18:08:28 -0600 alienware (12476)] INFO : Finished instrumentation
+[03/17/17 18:08:35 -0600 alienware (12476)] INFO : Doing deferred dependency-detection before Rack startup
+[03/17/17 18:56:16 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 18:56:43 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 18:57:19 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 18:59:25 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 18:59:57 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 19:00:16 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 19:00:28 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 19:01:15 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `nil' for nil:NilClass
+[03/17/17 19:01:24 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 19:02:16 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 19:03:49 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 19:04:21 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template prospectos/create, application/create with {:handlers=>[:erb, :builder, :coffee, :haml], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "C:/Sites/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/kaminari-0.16.3/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-2.2.8/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+
+[03/17/17 19:04:59 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[03/17/17 19:06:18 -0600 alienware (12476)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template prospectos/create, application/create with {:handlers=>[:erb, :builder, :coffee, :haml], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "C:/Sites/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/kaminari-0.16.3/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-2.2.8/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+
