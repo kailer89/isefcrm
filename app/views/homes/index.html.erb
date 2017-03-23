@@ -1139,8 +1139,8 @@
     */
 
 <%
-@prospectosnovalidados = Prospecto.where(:validado=>false)
-@prospectosvalidados=Prospecto.where(:validado=>true)
+@prospectosnovalidados = Prospecto.where(:archivado=>archivado).where(:validado=>false)
+@prospectosvalidados=Prospecto.where(:archivado=>archivado).where(:validado=>true)
 %>
 
 <%
