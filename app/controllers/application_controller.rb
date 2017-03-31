@@ -28,7 +28,6 @@ class ApplicationController < ActionController::Base
 if request.path_parameters[:action].include? "web" 
   return true
 end
-
       if not request.path_parameters[:controller].include? "efectividad" 
       if not request.path_parameters[:controller].include? "console" 
       if not request.path_parameters[:controller].include? "configuraciones" 

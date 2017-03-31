@@ -7,7 +7,7 @@
 
 <%        rol = Role.where(:id=>current_user.role).first
 
-        if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"  %>
+        if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
 
 	<%@AllProspectos =Prospecto.where{prospectos.created_at != nil} %>
 <%else%>

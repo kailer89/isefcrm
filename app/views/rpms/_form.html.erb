@@ -25,7 +25,7 @@
 				<%else%>
 <%
  rol = Role.where(:id=>current_user.role).first
-    if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"    or rol.nombre == "CP"  
+    if rol.nombre == "DN" or rol.nombre == "ACRM"
       %>
 				<%= f.input :usuarios,:as => :check_boxes,:label=>"Empleados",:checked => @rpm.usuarios, :collection=>User.all.map{|c| [c.username,c.id] }.sort,:include_blank=>true%>
       <%
@@ -43,7 +43,7 @@
 			<div>
 				<legend>Seleccionar la Sede y SubSede del Prospecto</legend>
 				<%rol = Role.where(:id=>current_user.role).first%>
-				<%if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"%>				
+				<%if rol.nombre == "DN" or rol.nombre == "ACRM" %>				
 					<%= f.input :sedes,:as => :check_boxes,:checked => @rpm.sedes, :collection=>Sede.all.map{|c| [c.nombre,c.id] }.sort,:include_blank=>true  %>
 					<%= f.input :subsedes,:as => :check_boxes,:checked => @rpm.subsedes, :collection=>Subsede.all.map{|c| [c.nombre,c.id] }.sort,:include_blank=>true %>
 

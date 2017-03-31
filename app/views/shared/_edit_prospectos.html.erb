@@ -41,7 +41,7 @@ end
           <%= g.input :twitter  , :label=>"Twitter:"%>
           <%=g.hidden_field :created_by%>
           <%rol = Role.where(:id=>current_user.role).first%>
-          <%if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"%>           
+          <%if rol.nombre == "DN" or rol.nombre == "ACRM" %>           
             <%=g.association :user,:label_method=>:username,:include_blank => false,:label=>"Asignado a:"%>
           <%else%>
             <%=g.hidden_field :user,:label_method=>:username,:include_blank => false,:label=>"Asignado a:",:disabled=>true%>

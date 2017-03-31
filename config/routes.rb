@@ -188,13 +188,13 @@ resources :prospectos, only: :index do
   end
 
   resources :sedes
- devise_for :prospectos, :skip => [:webtest] 
-  root :to => "homes#force_redirect"
- 
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks",:sessions => "sessions" }
   resources :users
   
-
+ devise_for :prospectos, :skip => [:webtest] 
+  root :to => "homes#force_redirect"
+ 
   
   match "/solicitantes/:id/convertir_solicitante" => "solicitantes#convertir_solicitante", as: :convertir_solicitante
   match "/examinados/:id/convertir_examinado" => "examinados#convertir_examinado", as: :convertir_examinado

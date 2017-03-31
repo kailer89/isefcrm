@@ -244,7 +244,7 @@ redirect_to "/correos/#{@correo.id}/edit/"
   def index
   rol = Role.where(:id=>current_user.role).first
 
-   if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"      
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
       @search = Correo.ransack(params[:search])
       @correos = @search.result.paginate(:per_page => 15, :page => params[:page])
     else

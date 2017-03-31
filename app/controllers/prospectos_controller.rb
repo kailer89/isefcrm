@@ -61,7 +61,7 @@ class ProspectosController < ApplicationController
         
     rol = Role.where(:id=>current_user.role).first
     if request.path_parameters[:format] != 'xls'
-      if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"     or rol.nombre == "CP"   
+      if rol.nombre == "DN" or rol.nombre == "ACRM"  
         @q = Prospecto.ransack(params[:q])
         @q.build_grouping unless @q.groupings.any?
         @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:archivado=>archivado).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
@@ -71,7 +71,7 @@ class ProspectosController < ApplicationController
         @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:issolicitante=> false).where(:user_id=>current_user.id).paginate(:per_page => 50, :page => params[:page]) 
       end
     else
-      if rol.nombre == "D" or rol.nombre == "ACRM" or rol.nombre == "AL" or rol.nombre == "A"     or rol.nombre == "CP"   
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
         @q = Prospecto.ransack(params[:q])
         @q.build_grouping unless @q.groupings.any?
         @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:archivado=>archivado).where(:issolicitante=> false) : @q.result(distinct: true).where(:archivado=>archivado).where(:issolicitante=> false)
