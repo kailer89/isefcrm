@@ -197,7 +197,7 @@ var bsWysihtml5 = function($, wysihtml5) {
   var defaultOptions = $.fn.wysihtml5.defaultOptions = {
     toolbar: {
       'font-styles': true,
-      'color': true,
+      'color': false,
       'emphasis': {
         'small': true
       },
