@@ -65,6 +65,7 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 gem "watu_table_builder", :require => "table_builder"
 
                               #:git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git' 
+#gem 'bootstrap-wysihtml5-rails'
 gem 'omniauth'
 #gem 'twitter'
 #gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'

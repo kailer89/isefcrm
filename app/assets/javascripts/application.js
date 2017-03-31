@@ -16,6 +16,13 @@
 //= require bwizard
 //= require jquery.metadata
 //= require jquery.tablesorter
+
+//= require ./wysihtml5x-toolbar.js
+//= require ./handlebars.runtime.min.js
+//= require ./templates.js
+//= require ./bootstrap3-wysihtml5.js
+//= require ./commands.js
+//= require ./es-AR.js
 //= require_tree .
 
 $( document ).ready(function() {
