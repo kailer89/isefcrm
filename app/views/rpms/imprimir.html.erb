@@ -383,13 +383,13 @@ end
 
 
 <%
-				  		@prospectos = @AllProspectos.where(:validado=>false).where(:importado_revisado=>true)%>
+				  		@prospectos = @AllProspectos.where(:validado=>false).where(:importado_revisado=>true).where(:issolicitante=>false)%>
 
 
 
 			  	<li class="active"><a href="#novalidados" data-toggle="tab">No Validados (<%=@prospectos.size%>)</a></li>
 <%
-				  		@prospectos = @AllProspectos.where(:validado=>true).where(:importado_revisado=>true)%>
+				  		@prospectos = @AllProspectos.where(:validado=>true).where(:importado_revisado=>true).where(:issolicitante=>false)%>
 
 
 			  	<li><a href="#validados" data-toggle="tab">Validados (<%=@prospectos.size%>)</a></li>
@@ -461,10 +461,10 @@ end
 <%logger.debug "---------------------------aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-----0"%>
 					
 					<%
-				  		@prospectos = @AllProspectos.where(:validado=>false).where(:importado_revisado=>true)%>
+				  		@prospectos = @AllProspectos.where(:validado=>false).where(:importado_revisado=>true).where(:issolicitante=>false)%>
 				  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"novalidados",:active=>true,:columnas=>reporte.columnas_seleccionadas}%>
 			<%
-				  		@prospectos = @AllProspectos.where(:validado=>true).where(:importado_revisado=>true)%>
+				  		@prospectos = @AllProspectos.where(:validado=>true).where(:importado_revisado=>true).where(:issolicitante=>false)%>
 				  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"validados",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>
 				  		<%
 				  		@prospectos = @AllProspectos.where(:importado_revisado=>false)%>
