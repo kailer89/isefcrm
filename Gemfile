@@ -61,7 +61,7 @@ gem 'carrierwave'
 gem "cancan"
 gem 'geocoder'
 #gem "ransack"#, :git => "git://github.com/ernie/ransack.git" # Track git repo
-gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'ransack', '1.7.0'
 gem "watu_table_builder", :require => "table_builder"
 
                               #:git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git' 
