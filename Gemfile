@@ -93,3 +93,4 @@ gem 'rack-webconsole'
 
 gem 'seed_dump'
 gem 'public_activity'
+gem 'nokogiri','1.6.6.2'
