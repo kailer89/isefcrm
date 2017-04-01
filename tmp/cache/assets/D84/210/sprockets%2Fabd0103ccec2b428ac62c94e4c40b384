@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1490934010.693228:@value{	I"length:EFiÅ+I"digest;
-F"%2a5b5f43908aabfb62b73140fb7d71f3I"source;
-FI"Å+/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491010517.730934:@value{	I"length:EFiÅ+I"digest;
+F"%89c2263111cb056d22e343a5eb530045I"source;
+FI"Å+/*!
  * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
  *
@@ -44415,7 +44415,7 @@ var bsWysihtml5 = function($, wysihtml5) {
   var defaultOptions = $.fn.wysihtml5.defaultOptions = {
     toolbar: {
       'font-styles': true,
-      'color': true,
+      'color': false,
       'emphasis': {
         'small': true
       },
@@ -82625,4 +82625,4 @@ $(window).bind("load", function() {
 
 ;
 TI"_version;
-F"%31d978f342b5d8afe2c37d6d45c52b58
+F"%cebc919d490628a1bc5b61021a95df55

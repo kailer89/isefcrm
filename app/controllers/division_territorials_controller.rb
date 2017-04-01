@@ -7,7 +7,7 @@ class DivisionTerritorialsController < ApplicationController
   # GET /division_territorials.json
   def index
     rol = Role.where(:id=>current_user.role).first
-    if rol.nombre == "DN" or rol.nombre == "ACRM" 
+    if rol.nombre == "X" 
       @division_territorials = DivisionTerritorial.all
     else
       @division_territorials = DivisionTerritorial.where(:sede_id=>current_user.sede)

@@ -21,7 +21,16 @@
   <%= f.input :forma_parte_de_mi_mdo_meta %>
   <%= f.input :tamano_de_mdo_que_aspira_abarcar %>
   <%= f.input :mercado_meta_observaciones %>
-  <%= f.association :user,:label_method=>:username,:include_blank => false, :label=>"Asesor a cargo"%>
+
+
+<%rol = Role.where(:id=>current_user.role).first%>
+          <%if rol.nombre == "DN" or rol.nombre == "ACRM" %>           
+            <%=f.association :user,:label_method=>:username,:include_blank => false,:label=>"Asesor a cargo:"%>
+          <%else%>
+            <%=f.hidden_field :user,:label_method=>:username,:include_blank => false,:label=>"Asesor a cargo:",:disabled=>true%>
+          <%end%>
+
+
         </p>
       </div>
       <div class="tab-pane" id="tab2">

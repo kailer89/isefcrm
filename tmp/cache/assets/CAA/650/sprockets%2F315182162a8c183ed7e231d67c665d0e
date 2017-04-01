@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1490934010.192537:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491010514.617366:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%1bd642f9818c09cab849f92f33dec67eI"logical_path;
+F"%41e641dff98d7c810a0eeb5ea70b7c38I"logical_path;
 FI"bootstrap3-wysihtml5.js;
 TI"pathname;
 FI"9$root/app/assets/javascripts/bootstrap3-wysihtml5.js;
@@ -9,9 +9,9 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2017-03-30T22:19:40-06:00;
+FI"2017-03-30T22:37:14-06:00;
 FI"	body;
-FI"#/* jshint expr: true */
+FI"#/* jshint expr: true */
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -211,7 +211,7 @@ var bsWysihtml5 = function($, wysihtml5) {
   var defaultOptions = $.fn.wysihtml5.defaultOptions = {
     toolbar: {
       'font-styles': true,
-      'color': true,
+      'color': false,
       'emphasis': {
         'small': true
       },
@@ -307,7 +307,7 @@ F[{I"	path;
 FI"9$root/app/assets/javascripts/bootstrap3-wysihtml5.js;
 TI"
 mtime;
-FIu:	TimeäK€  €N:@_zoneI"#Central Standard Time (Mexico);
+FIu:	TimeäK€  à”:@_zoneI"#Central Standard Time (Mexico);
 T:offsetiþ «I"hexdigest;
-F"%f483ac6f5e50f6b10733c5e5a0d9cd91I"_version;
+F"%8f427612f2a9241484f40954ff636ac2I"_version;
 F"%d3399da1890ef54eecbcf24324b9c72a

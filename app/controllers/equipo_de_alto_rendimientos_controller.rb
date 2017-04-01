@@ -5,7 +5,7 @@ class EquipoDeAltoRendimientosController < ApplicationController
   # GET /equipo_de_alto_rendimientos.json
   def index
     rol = Role.where(:id=>current_user.role).first
-    if rol.nombre == "DN" or rol.nombre == "ACRM" 
+    if rol.nombre == "X" 
       @equipo_de_alto_rendimientos = EquipoDeAltoRendimiento.all
     else
       @equipo_de_alto_rendimientos = EquipoDeAltoRendimiento.where(:sede_id=>current_user.sede)
