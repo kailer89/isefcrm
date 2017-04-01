@@ -88,7 +88,7 @@ gem "wkhtmltopdf-heroku"#, :git => 'git://github.com/camdez/wkhtmltopdf-heroku.g
 gem 'honeybadger', '2.6.0'
 gem 'intercom-rails'
 gem "default_value_for"
-gem 'newrelic_rpm'
+gem 'newrelic_rpm', '3.13.0.299'
 gem 'rack-webconsole'
 
 gem 'seed_dump'
