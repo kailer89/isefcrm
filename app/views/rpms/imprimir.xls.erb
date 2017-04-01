@@ -4,7 +4,7 @@
 <%
 #campos editables
 if reporte.nacionalidad_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{nacionalidad_id.like_any reporte.nacionalidad_id}
+  @AllProspectos = @AllProspectos.where{nacionalidad_id.eq_any reporte.nacionalidad_id}
 end
 
 @AllProspectos = @AllProspectos.joins{interes_basicos}
@@ -13,43 +13,43 @@ end
 @AllProspectos = @AllProspectos.joins{medio_de_contactos}
 @AllProspectos = @AllProspectos.joins{plan_de_descuentos}
 if reporte.ultimo_grado_de_estudio_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.ultimo_grado_de_estudio_id.like_any reporte.ultimo_grado_de_estudio_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.ultimo_grado_de_estudio_id.eq_any reporte.ultimo_grado_de_estudio_id}
 end
 
 if reporte.preparatoria_o_universidad_de_origen_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.preparatoria_o_universidad_de_origen_id.like_any reporte.preparatoria_o_universidad_de_origen_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.preparatoria_o_universidad_de_origen_id.eq_any reporte.preparatoria_o_universidad_de_origen_id}
 end
 
 if reporte.municipio_de_la_preparatoria_o_universidad_de_origen_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.municipio_de_la_preparatoria_o_universidad_de_origen_id.like_any reporte.municipio_de_la_preparatoria_o_universidad_de_origen_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.municipio_de_la_preparatoria_o_universidad_de_origen_id.eq_any reporte.municipio_de_la_preparatoria_o_universidad_de_origen_id}
 end
 
 if reporte.sede_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.sede_id.like_any reporte.sede_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.sede_id.eq_any reporte.sede_id}
 end
 
 if reporte.subsede_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.subsede_id.like_any reporte.subsede_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.subsede_id.eq_any reporte.subsede_id}
 end
 
 if reporte.modalidad_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.modalidad_id.like_any reporte.modalidad_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.modalidad_id.eq_any reporte.modalidad_id}
 end
 
 if reporte.turno_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.turno_id.like_any reporte.turno_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.turno_id.eq_any reporte.turno_id}
 end
 
 if reporte.periodo_para_ingresar_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.periodo_para_ingresar_id.like_any reporte.periodo_para_ingresar_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.periodo_para_ingresar_id.eq_any reporte.periodo_para_ingresar_id}
 end
 
 if reporte.status_de_interes_de_prospecto_validado_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{interes_basicos.status_de_interes_de_prospecto_validado_id.like_any reporte.status_de_interes_de_prospecto_validado_id}
+  @AllProspectos = @AllProspectos.where{interes_basicos.status_de_interes_de_prospecto_validado_id.eq_any reporte.status_de_interes_de_prospecto_validado_id}
 end
 
 if reporte.grupo_id.flatten.size > 1
-  @AllProspectos = @AllProspectos.where{prospectos.grupo_id.like_any reporte.grupo_id}
+  @AllProspectos = @AllProspectos.where{prospectos.grupo_id.eq_any reporte.grupo_id}
 end
 
 

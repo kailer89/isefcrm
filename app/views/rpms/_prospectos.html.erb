@@ -10,7 +10,8 @@
 		          <% columnas.each do |column| %>
 		              <th><a href="#"><%= column.humanize %></a></th>
 		          <% end %>
-		        <% end %>		      
+		        <% end %>	
+		        <th>Acciones</th>	      
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -106,14 +107,84 @@
 			        <%end%>
 		        <%end%>
 		        <td>
-		          <%= link_to 'Edit', edit_prospecto_path(prospecto), :class => 'btn btn-mini' %>
+		        <%
+
+
+
+
+		        	if kind.start_with?("solicitante")
+solicitantes=Solicitante.where(:isexaminado=> false).where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:id=>prospecto.id)).first
+
+%>
+		          <%= link_to 'Edit', edit_solicitante_path(solicitantes), :class => 'btn btn-mini' %>
 		          <%= link_to 'Resumen', resumen_path(prospecto),:class=>'btn btn-success btn-mini'%>
 		        <a href="#" class='btn btn-info btn-mini'  onclick="javascript:openPrint('prospectos','<%=prospecto.id%>')">
 		          <i class="icon-print"></i> Imprimir
 		        </a>
-		          <%if not prospecto.issolicitante%>
-		              <%= link_to 'Destroy', prospecto_path(prospecto), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
-		          <%end%>
+		        		<%
+
+		        	elsif kind.start_with?("examinado")
+
+examinados=Examinado.where(:isadmitido=>false).where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:id=>prospecto.id))).first
+        
+
+
+		        	%>
+		          <%= link_to 'Edit', edit_examinado_path(examinados), :class => 'btn btn-mini' %>
+		          <%= link_to 'Resumen', resumen_path(prospecto),:class=>'btn btn-success btn-mini'%>
+		        <a href="#" class='btn btn-info btn-mini'  onclick="javascript:openPrint('prospectos','<%=prospecto.id%>')">
+		          <i class="icon-print"></i> Imprimir
+		        </a>
+
+
+		        	<%
+
+		        elsif kind.start_with?("admitido")
+		        		
+
+		        		admitidos=Admitido.where(:isinscrito=>false).where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:id=>prospecto.id)))).first
+        
+		        	%>
+		          <%= link_to 'Edit', edit_admitido_path(admitidos), :class => 'btn btn-mini' %>
+		          <%= link_to 'Resumen', resumen_path(prospecto),:class=>'btn btn-success btn-mini'%>
+		        <a href="#" class='btn btn-info btn-mini'  onclick="javascript:openPrint('prospectos','<%=prospecto.id%>')">
+		          <i class="icon-print"></i> Imprimir
+		        </a>
+
+
+		        	<%
+
+		        	elsif kind.start_with?("inscrito")
+
+		        	inscritos=Inscrito.where("admitido_id in (:admitidos)",:admitidos=>Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:id=>prospecto.id))))).first
+
+
+
+		        	%>
+		          <%= link_to 'Edit', edit_inscrito_path(inscritos), :class => 'btn btn-mini' %>
+		          <%= link_to 'Resumen', resumen_path(prospecto),:class=>'btn btn-success btn-mini'%>
+		        <a href="#" class='btn btn-info btn-mini'  onclick="javascript:openPrint('prospectos','<%=prospecto.id%>')">
+		          <i class="icon-print"></i> Imprimir
+		        </a>
+
+
+		        	<%	
+		        		
+		        	else
+		        		%>
+				          <%= link_to 'Edit', edit_prospecto_path(prospecto), :class => 'btn btn-mini' %>
+				          <%= link_to 'Resumen', resumen_path(prospecto),:class=>'btn btn-success btn-mini'%>
+				        <a href="#" class='btn btn-info btn-mini'  onclick="javascript:openPrint('prospectos','<%=prospecto.id%>')">
+				          <i class="icon-print"></i> Imprimir
+				        </a>
+				          <%if not prospecto.issolicitante%>
+				              <%= link_to 'Destroy', prospecto_path(prospecto), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+				          <%end%>
+
+
+		        		<%
+		        	end
+		        %>
 		        </td>
 		      </tr>
 		    <% end %>
