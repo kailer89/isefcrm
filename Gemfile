@@ -85,7 +85,7 @@ gem 'rails_admin'#, :git=>"git://github.com/sferik/rails_admin.git",:branch => "
 gem "pdfkit"
 gem "wkhtmltopdf-heroku"#, :git => 'git://github.com/camdez/wkhtmltopdf-heroku.git'
 
-gem 'honeybadger'
+gem 'honeybadger', '2.6.0'
 gem 'intercom-rails'
 gem "default_value_for"
 gem 'newrelic_rpm'
