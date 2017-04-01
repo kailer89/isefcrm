@@ -5,7 +5,7 @@ gem 'rails', '3.1.4'
 # Bundle edge Rails instead:
 #gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'pg', '0.18.3'
 gem 'will_paginate'
 gem 'thin', "1.3.1" ,:group => :production
 gem 'sqlite3', :group => :development  

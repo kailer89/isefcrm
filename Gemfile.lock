@@ -280,7 +280,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   letter_opener
-  newrelic_rpm
+  newrelic_rpm (= 3.13.0.299)
   omniauth
   paper_trail (~> 2)
   pdfkit
