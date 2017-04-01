@@ -474,9 +474,15 @@ end
 			  		
 
 			  		<%if reporte.show_solicitantes%>
-				  		<%historial =Solicitante.where(:isexaminado=> false).where("created_at >= ?",inicio).where("created_at <= ?",fin).all.map{|p|p.prospecto_id}
-				  		historial = historial - availprosp
-				  		@prospectos = @AllProspectos.where("prospectos.id in (:historyids)",:historyids=>historial)%>
+				  		<%historial =Solicitante.where(:isexaminado=> false).where("created_at >= ?",inicio).where("created_at <= ?",fin).all.map do |u|
+	if availprosp.include?(u.prospecto_id)
+		u.prospecto_id
+	end
+end
+
+
+
+				  		@prospectos = @AllProspectos.where("prospectos.id in (:historyids)",:historyids=>historial.compact)%>
 
 				  		<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>nil,:kind=>"solicitantes",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>
 				  	<%else%>
