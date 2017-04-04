@@ -4,7 +4,8 @@ class MiPlanEstrategicoDePromocionPepsController < ApplicationController
   # GET /mi_plan_estrategico_de_promocion_peps
   # GET /mi_plan_estrategico_de_promocion_peps.json
   def index
-    @mi_plan_estrategico_de_promocion_peps = MiPlanEstrategicoDePromocionPep.all
+
+ @mi_plan_estrategico_de_promocion_peps = MiPlanEstrategicoDePromocionPep.all
 
     respond_to do |format|
       format.html # index.html.erb
