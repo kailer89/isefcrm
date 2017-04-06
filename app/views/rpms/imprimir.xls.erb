@@ -1,5 +1,15 @@
 <%reporte = Rpm.find(params[:id])%>
-<%@AllProspectos =Prospecto.where{prospectos.created_at != nil} %>
+
+
+<%        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
+
+  <%@AllProspectos =Prospecto.where{prospectos.created_at != nil} %>
+<%else%>
+  <%@AllProspectos =Prospecto.where{prospectos.created_at != nil}.where(:user_id=>current_user).where(:sede_id=>current_user.sede) %>
+<%end%>
+
 
 <%
 #campos editables
@@ -99,6 +109,60 @@ if reporte.medio_de_contactos_id.flatten.size > 1
 end
 @prospectos = @AllProspectos
 %>
+
+
+    <%
+    if rol.nombre == "DN" or rol.nombre == "ACRM"  
+      if reporte.usuarios !=nil
+          if reporte.usuarios == ""
+            reporte.usuarios = User.all
+          end
+        end
+
+        if reporte.sedes !=nil
+          if reporte.sedes == ""
+            reporte.sedes = Sede.all
+          end
+        end
+
+        if reporte.subsedes !=nil
+          if reporte.subsedes == ""
+            reporte.subsedes = Subsede.all
+          end
+        end       
+
+
+
+      else
+        if reporte.usuarios !=nil
+          if reporte.usuarios == ""
+            reporte.usuarios = [current_user]
+          end
+        end
+
+        if reporte.sedes !=nil
+          if reporte.sedes == ""
+            reporte.sedes = [current_user.sede]
+          end
+        end
+
+        if reporte.subsedes !=nil
+          if reporte.subsedes == ""
+            reporte.subsedes = Subsede.where(:sede_id=>current_user.sede.id)
+          end
+        end       
+
+
+
+
+      end
+        if reporte.programas !=nil
+            reporte.programas = Programa.all
+        end     
+    %>
+
+
+
 <?xml version="1.0"?>
 <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
   xmlns:o="urn:schemas-microsoft-com:office:office"

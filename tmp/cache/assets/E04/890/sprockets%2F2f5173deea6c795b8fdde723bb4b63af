@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491010517.107019:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491447224.104365:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%cebc919d490628a1bc5b61021a95df55I"logical_path;
+F"%37f5df1019ed3285e5feded192b0c508I"logical_path;
 FI"application.js;
 TI"pathname;
 FI"0$root/app/assets/javascripts/application.js;
@@ -9,7 +9,7 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2017-03-30T22:37:14-06:00;
+FI"2017-04-05T21:53:40-05:00;
 FI"	body;
 FI"ä	
 
@@ -121,7 +121,7 @@ $(window).bind("load", function() {
 
 ;
 FI"asset_paths;
-F[®I"pC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.js;
+F[¯I"pC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.js;
 TI"tC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery_ujs.js;
 TI".$root/app/assets/javascripts/bootstrap.js;
 TI"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/javascripts/jquery.ui.core.js;
@@ -209,6 +209,7 @@ TI"9$root/app/assets/javascripts/bootstrap-datepicker.js;
 TI"7$root/app/assets/javascripts/bootstrap-transfer.js;
 TI";$root/app/assets/javascripts/campana_socials.js.coffee;
 TI"1$root/app/assets/javascripts/casos.js.coffee;
+TI"+$root/app/assets/javascripts/change.js;
 TI"8$root/app/assets/javascripts/colegiaturas.js.coffee;
 TI"B$root/app/assets/javascripts/comentarios_estrategia.js.coffee;
 TI"5$root/app/assets/javascripts/contactos.js.coffee;
@@ -296,7 +297,7 @@ TI"0$root/app/assets/javascripts/user.js.coffee;
 TI"1$root/app/assets/javascripts/users.js.coffee;
 TI"0$root/app/assets/javascripts/application.js;
 TI"dependency_paths;
-F[¯{I"	path;
+F[°{I"	path;
 FI"0$root/app/assets/javascripts/application.js;
 TI"
 mtime;
@@ -306,9 +307,9 @@ F"%eedaf63908e60f0b77d664d1db14d215{I"	path;
 FI"!$root/app/assets/javascripts;
 TI"
 mtime;
-FIu;äK€  €;I"#Central Standard Time (Mexico);
-T;iş «I"hexdigest;
-F"%e16a7614b2a31010f4c5f0c5298d4132{I"	path;
+FIu;ÂL€  0@;I"#Central Daylight Time (Mexico);
+T;iş°¹I"hexdigest;
+F"%efd273ee6de5759b10b0a2e99a409ece{I"	path;
 FI"pC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.js;
 TI"
 mtime;
@@ -564,9 +565,9 @@ F"%3a67b718c3bdc16db8a3201345bb3822{I"	path;
 FI"7$root/app/assets/javascripts/wysihtml5x-toolbar.js;
 TI"
 mtime;
-FIu;Ñà€  0¦;I"#Central Daylight Time (Mexico);
+FIu;ÂL€  €Ö;I"#Central Daylight Time (Mexico);
 T;iş°¹I"hexdigest;
-F"%c46d387ebc8b93966177060ddfa099c4{I"	path;
+F"%7326a80290e9bc9a60539ab4f26d27b1{I"	path;
 FI";$root/app/assets/javascripts/handlebars.runtime.min.js;
 TI"
 mtime;
@@ -582,9 +583,9 @@ F"%d16d4f76a4fb0e3c675890b9439192a4{I"	path;
 FI"9$root/app/assets/javascripts/bootstrap3-wysihtml5.js;
 TI"
 mtime;
-FIu;äK€  à”;I"#Central Standard Time (Mexico);
-T;iş «I"hexdigest;
-F"%8f427612f2a9241484f40954ff636ac2{I"	path;
+FIu;ÂL€  ;I"#Central Daylight Time (Mexico);
+T;iş°¹I"hexdigest;
+F"%dc2a0f230471ff1b649e1e0687d4c696{I"	path;
 FI"-$root/app/assets/javascripts/commands.js;
 TI"
 mtime;
@@ -837,6 +838,12 @@ mtime;
 FIu;ÀŠ€   ï;I"#Central Standard Time (Mexico);
 T;iş «I"hexdigest;
 F"%188ac374da7e51b6da9b69a466f52402{I"	path;
+FI"+$root/app/assets/javascripts/change.js;
+TI"
+mtime;
+FIu;ÂL€  0@;I"#Central Daylight Time (Mexico);
+T;iş°¹I"hexdigest;
+F"%9191b5ae0d518d51fbbb52598d5116cd{I"	path;
 FI"8$root/app/assets/javascripts/colegiaturas.js.coffee;
 TI"
 mtime;

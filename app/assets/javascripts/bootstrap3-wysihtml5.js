@@ -247,10 +247,8 @@ var bsWysihtml5 = function($, wysihtml5) {
         'u': 1,
         'img': {
           'check_attributes': {
-            'width': 'numbers',
             'alt': 'alt',
-            'src': 'url',
-            'height': 'numbers'
+            'src': 'url'
           }
         },
         'a':  {

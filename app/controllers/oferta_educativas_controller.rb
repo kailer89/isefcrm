@@ -7,9 +7,9 @@ class OfertaEducativasController < ApplicationController
 
     rol = Role.where(:id=>current_user.role).first
     if rol.nombre == "X" 
-      @oferta_educativas = OfertaEducativa.all
+      
     else
-      @oferta_educativas = OfertaEducativa.where(:sede_id=>current_user.sede)
+      @oferta_educativas = OfertaEducativa.all
     end    
 
     respond_to do |format|

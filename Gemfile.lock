@@ -162,9 +162,6 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rack-webconsole (0.1.2)
-      json
-      rack
     rails (3.1.4)
       actionmailer (= 3.1.4)
       actionpack (= 3.1.4)
@@ -287,7 +284,6 @@ DEPENDENCIES
   pdfkit
   pg (= 0.18.3)
   public_activity
-  rack-webconsole
   rails (= 3.1.4)
   rails_admin
   ransack (= 1.7.0)

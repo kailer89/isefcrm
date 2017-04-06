@@ -11,7 +11,7 @@
 
 	<%@AllProspectos =Prospecto.where{prospectos.created_at != nil} %>
 <%else%>
-	<%@AllProspectos =Prospecto.where{prospectos.created_at != nil}.where{:user_id==current_user.id}.where{:sede_id==current_user.sede_id} %>
+	<%@AllProspectos =Prospecto.where{prospectos.created_at != nil}.where(:user_id=>current_user).where(:sede_id=>current_user.sede) %>
 <%end%>
 <%
 #campos editables
@@ -112,11 +112,64 @@ end
 	<%firstitem=true%>
 	<div class="tabbable tabs-left">
 	  <ul class="nav nav-tabs">
+
+
+	  <%
+	  	if rol.nombre == "DN" or rol.nombre == "ACRM"  
+			if reporte.usuarios !=nil
+	  			if reporte.usuarios == ""
+	  				reporte.usuarios = User.all
+	  			end
+	  		end
+
+	  		if reporte.sedes !=nil
+	  			if reporte.sedes == ""
+	  				reporte.sedes = Sede.all
+	  			end
+	  		end
+
+	  		if reporte.subsedes !=nil
+	  			if reporte.subsedes == ""
+	  				reporte.subsedes = Subsede.all
+	  			end
+	  		end	  		
+
+
+
+	  	else
+	  		if reporte.usuarios !=nil
+	  			if reporte.usuarios == ""
+	  				reporte.usuarios = [current_user]
+	  			end
+	  		end
+
+	  		if reporte.sedes !=nil
+	  			if reporte.sedes == ""
+	  				reporte.sedes = [current_user.sede]
+	  			end
+	  		end
+
+	  		if reporte.subsedes !=nil
+	  			if reporte.subsedes == ""
+	  				reporte.subsedes = Subsede.where(:sede_id=>current_user.sede.id)
+	  			end
+	  		end	  		
+
+
+
+
+	  	end
+	  		if reporte.programas !=nil
+	  				reporte.programas = Programa.all
+	  		end	  
+	  %>
+
+
 	  	<%
-	  	totalUsuarios = reporte.usuarios.size-1
-	  	totalSedes = reporte.sedes.size-1
-	  	totalSubsedes = reporte.subsedes.size-1
-	  	totalProgramas = reporte.programas.size-1
+	  	totalUsuarios = reporte.usuarios.size  rescue nil
+	  	totalSedes = reporte.sedes.size  rescue nil
+	  	totalSubsedes = reporte.subsedes.size  rescue nil
+	  	totalProgramas = reporte.programas.size  rescue nil
 	  	totalEstados = 4
 	  	%>
 
@@ -127,13 +180,17 @@ end
 	    <li><a href="#programa" data-toggle="tab">Programa (<%=totalProgramas%>)</a></li>
 	    <li><a href="#porEstado" data-toggle="tab">Por Estado (4)</a></li>
 	  </ul>
+
+
+
 	  <div class="tab-content">
 	    <div class="tab-pane fade in active" id="usuario">
 			<!-- Ordenar por programa -->
 			<div class="tabbable"> 
 			  <ul class="nav nav-tabs">
+
 			  	<%if reporte.usuarios != nil   and reporte.usuarios != ""%>
-				  	<%reporte.usuarios.each do |usuario|%>
+				  	<%reporte.usuarios.compact.each do |usuario|%>
 				  		<%usuario = User.where(:id=>usuario).first%>
 				  		<%if usuario != nil%>
 				  		<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -146,6 +203,7 @@ end
 				  		<%end%>
 				  	<%end%>
 				<%else%>
+					<%if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
 				  	<%User.all.each do |usuario|%>
 				  	<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 				  		<%if firstitem%>
@@ -155,12 +213,13 @@ end
 				  			<li><a href="#usuario<%=usuario.id%>" data-toggle="tab"><%=usuario.username%> (<%=@prospectos.size%>)</a></li>		
 				  		<%end%>
 				  	<%end%>				
+				  	<%end%>	
 			  	<%end%>
 			  	<%firstitem = true%>
 			  </ul>
 			  <div class="tab-content">
 			  	<%if reporte.usuarios != nil  and reporte.usuarios != ""%>
-			  		<%reporte.usuarios.each do |usuario|%>
+			  		<%reporte.usuarios.compact.each do |usuario|%>
 				  		<%usuario = User.where(:id=>usuario).first%>
 				  		<%if usuario != nil %>
 					  		<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -173,6 +232,7 @@ end
 				  		<%end%>		
 					<%end%>
 				<%else%>
+				<%if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
 			  		<%User.all.each do |usuario|%>
 			  			<%if usuario != nil %>
 					  		<%@prospectos = @AllProspectos.where{prospectos.user_id==usuario.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -182,6 +242,7 @@ end
 						    	<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>usuario.id,:kind=>"usuario",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>		
 				  		<%end%>			
 					<%end%>				
+					<%end%>		
 				<%end%>
 
 				<%firstitem = true%>
@@ -194,7 +255,7 @@ end
 			<div class="tabbable"> 
 			  <ul class="nav nav-tabs">
 			  	<%if reporte.sedes != nil   and reporte.sedes != ""%>
-				  	<%reporte.sedes.each do |sede|%>
+				  	<%reporte.sedes.compact.each do |sede|%>
 				  		<%sede = Sede.where(:id=>sede).first%>
 				  		<%if sede != nil %>
 				  		<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -207,6 +268,7 @@ end
 				  		<%end%>
 				  	<%end%>
 				<%else%>
+				<%if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
 				  	<%Sede.all.each do |sede|%>
 				  	<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 				  		<%if firstitem%>
@@ -216,12 +278,13 @@ end
 				  			<li><a href="#sede<%=sede.id%>" data-toggle="tab"><%=sede.nombre%> (<%=@prospectos.size%>)</a></li>		
 				  		<%end%>
 				  	<%end%>				
+				  	<%end%>	
 				<%end%>
 			  	<%firstitem = true%>
 			  </ul>
 			  <div class="tab-content">
 			  	<%if reporte.sedes != nil  and reporte.sedes != ""%>
-				  	<%reporte.sedes.each do |sede|%>
+				  	<%reporte.sedes.compact.each do |sede|%>
 				  		<%sede = Sede.where(:id=>sede).first%>
 				  		<%if sede != nil %>
 					  		<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -234,6 +297,7 @@ end
 				  		<%end%>	
 					<%end%>
 				<%else%>
+				<%if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
 					<%Sede.all.each do |sede|%>
 					  		<%@prospectos = @AllProspectos.where{prospectos.sede_id==sede.id}.where{prospectos.created_at >= reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 				  		<%if firstitem%>
@@ -243,6 +307,7 @@ end
 								<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>sede.id,:kind=>"sede",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>	
 				  		<%end%>			
 					<%end%>				
+					<%end%>		
 				<%end%>
 				<%firstitem = true%>
 			  </div>
@@ -254,7 +319,7 @@ end
 			<div class="tabbable"> 
 			  <ul class="nav nav-tabs">
 			  	<%if reporte.subsedes != nil and reporte.subsedes != ""%>
-				  	<%reporte.subsedes.each do |subsede|%>
+				  	<%reporte.subsedes.compact.each do |subsede|%>
 				  		<%subsede = Subsede.where(:id=>subsede).first%>
 				  		<%if subsede != nil%>
 				  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede.id}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -267,6 +332,7 @@ end
 				  		<%end%>
 				  	<%end%>
 			  	<%else%>
+			  	<%if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
 			  		<%Subsede.all.each do |subsede|%>
 			  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede.id}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 				  		<%if firstitem%>
@@ -276,12 +342,13 @@ end
 				  			<li><a href="#subsede<%=subsede.id%>" data-toggle="tab"><%=subsede.nombre%> (<%=@prospectos.size%>)</a></li>		
 				  		<%end%>
 				  	<%end%>			  	
+				  	<%end%>	
 			  	<%end%>
 			  	<%firstitem = true%>
 			  </ul>
 			  <div class="tab-content">
 			  	<%if reporte.subsedes != nil  and reporte.subsedes != ""%>
-				  	<%reporte.subsedes.each do |subsede|%>
+				  	<%reporte.subsedes.compact.each do |subsede|%>
 				  		<%subsede = Subsede.where(:id=>subsede).first%>
 				  		<%if subsede != nil%>
 					  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede.id}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -294,6 +361,7 @@ end
 				  		<%end%>	
 					<%end%>
 				<%else%>
+				<%if rol.nombre == "DN" or rol.nombre == "ACRM"  %>
 				  	<%Subsede.all.each do |subsede|%>
 					  		<%@prospectos = @AllProspectos.joins{interes_basicos}.where{interes_basicos.subsede_id==subsede.id}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
 				  		<%if firstitem%>
@@ -303,18 +371,20 @@ end
 						    	<%=render :partial=>"prospectos", :locals=>{:prospectos=>@prospectos,:identifier=>subsede.id,:kind=>"subsede",:active=>false,:columnas=>reporte.columnas_seleccionadas}%>	
 				  		<%end%>			
 					<%end%>				
+					<%end%>
 				<%end%>
 				<%firstitem = true%>
 			  </div>
 			</div>
 			<!-- Ordenar por programa -->
 	    </div>
+
 	    <div class="tab-pane" id="programa">
 			<!-- Ordenar por programa -->
 			<div class="tabbable"> 
 			  <ul class="nav nav-tabs">
 			  	<%if reporte.programas != nil%>
-				  	<%reporte.programas.each do |programaid|%>
+				  	<%reporte.programas.compact.each do |programaid|%>
 				  		<%programa = Programa.where(:id=>programaid).first%>
 				  		<%if programa != nil%>
 				  		<%@prospectos = @AllProspectos.where{prospectos.programa_id==programaid}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>
@@ -341,7 +411,7 @@ end
 			  </ul>
 			  <div class="tab-content">
 			  	<%if reporte.programas != nil%>
-					<%reporte.programas.each do |programaid|%>
+					<%reporte.programas.compact.each do |programaid|%>
 						<%programa = Programa.where(:id=>programaid).first%>
 						<%if programa != nil%>
 							<%@prospectos = @AllProspectos.where{prospectos.programa_id==programaid}.where{prospectos.created_at >=  reporte.rango_inicio}.where{prospectos.created_at <= reporte.rango_fin}%>

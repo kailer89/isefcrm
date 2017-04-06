@@ -11,7 +11,6 @@ gem 'thin', "1.3.1" ,:group => :production
 gem 'sqlite3', :group => :development  
 #gem 'execjs'
 gem 'coffee-script-source', '1.8.0'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -89,7 +88,7 @@ gem 'honeybadger', '2.6.0'
 gem 'intercom-rails'
 gem "default_value_for"
 gem 'newrelic_rpm', '3.13.0.299'
-gem 'rack-webconsole'
+#gem 'rack-webconsole'
 
 gem 'seed_dump'
 gem 'public_activity'

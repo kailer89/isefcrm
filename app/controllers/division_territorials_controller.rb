@@ -10,7 +10,7 @@ class DivisionTerritorialsController < ApplicationController
     if rol.nombre == "X" 
       @division_territorials = DivisionTerritorial.all
     else
-      @division_territorials = DivisionTerritorial.where(:sede_id=>current_user.sede)
+      @division_territorials = DivisionTerritorial.all
     end       
     
 

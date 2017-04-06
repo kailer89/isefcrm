@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1490932837.68882:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491447223.5807202:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%941f8d00f36842357fa5a64c0c8c3a27I"logical_path;
+F"%13bec41dc578126c1598151398cd8581I"logical_path;
 FI"wysihtml5x-toolbar.js;
 TI"pathname;
 FI"7$root/app/assets/javascripts/wysihtml5x-toolbar.js;
@@ -9,9 +9,9 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2015-09-06T12:41:35-05:00;
+FI"2017-04-05T21:53:40-05:00;
 FI"	body;
-FI"ª// TODO: in future try to replace most inline compability checks with polyfills for code readability 
+FI"gª// TODO: in future try to replace most inline compability checks with polyfills for code readability 
 
 // element.textContent polyfill.
 // Unsupporting browsers: IE8
@@ -10906,6 +10906,9 @@ wysihtml5.commands.formatCode = {
         image.setAttribute(i === "className" ? "class" : i, value[i]);
       }
 
+      image.setAttribute("width","100%");
+      image.setAttribute("height","100%");
+
       composer.selection.insertNode(image);
       if (wysihtml5.browser.hasProblemsSettingCaretAfterImg()) {
         textNode = doc.createTextNode(wysihtml5.INVISIBLE_SPACE);
@@ -13885,7 +13888,7 @@ F[{I"	path;
 FI"7$root/app/assets/javascripts/wysihtml5x-toolbar.js;
 TI"
 mtime;
-FIu:	TimeÑà€  0¦:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	TimeÂL€  €Ö:@_zoneI"#Central Daylight Time (Mexico);
 T:offsetiþ°¹I"hexdigest;
-F"%c46d387ebc8b93966177060ddfa099c4I"_version;
+F"%7326a80290e9bc9a60539ab4f26d27b1I"_version;
 F"%d3399da1890ef54eecbcf24324b9c72a
