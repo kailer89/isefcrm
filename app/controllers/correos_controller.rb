@@ -41,12 +41,21 @@ class CorreosController < ApplicationController
     else
 #[["A todos","a_todos"],["Por Usuarios","por_usuarios"],["Por Sedes","por_sedes"],["Por Grupos","por_grupos"],["Por Programa","por_programa"],["Por periodo","por_periodo"],["Por Estado","por_estado"]]
 
+
+rol = Role.where(:id=>current_user.role).first
+
       @correo.a_quien_enviarle_correo.each do |aquien|
         logger.debug aquien
         case aquien
         when "a_todos"
 
+
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
           mails=Prospecto.all
+    else
+          mails=Prospecto.where(:sede_id=>current_user.sede)
+    end
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
@@ -62,7 +71,13 @@ class CorreosController < ApplicationController
             end             
           end                  
         when "por_usuarios"
-          mails=Prospecto.where(:user_id=>@correo.user_id)
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.all
+    else
+          mails=Prospecto.where(:user_id=>@correo.user_id).where(:sede_id=>current_user.sede)
+    end
+
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
@@ -77,7 +92,13 @@ class CorreosController < ApplicationController
             end             
           end
         when "por_sedes"
-          mails=Prospecto.where(:sede_id=>@correo.sede_id)
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.all
+    else
+          mails=Prospecto.where(:sede_id=>@correo.sede_id).where(:sede_id=>current_user.sede)
+    end
+
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
@@ -92,7 +113,15 @@ class CorreosController < ApplicationController
             end             
           end
         when "por_grupos"
-          mails=Prospecto.where(:grupo_id=>@correo.grupo_id)
+
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.all
+    else
+          mails=Prospecto.where(:grupo_id=>@correo.grupo_id).where(:sede_id=>current_user.sede)
+    end
+
+
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
@@ -107,7 +136,13 @@ class CorreosController < ApplicationController
             end             
           end
         when "por_programa"
-          mails=Prospecto.where(:programa_id=>@correo.programa_id)
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.all
+    else
+          mails=Prospecto.where(:programa_id=>@correo.programa_id).where(:sede_id=>current_user.sede)
+    end
+
           mails.each do |mail|
             if mail.email != ""
               unless not matches?(mail.email)
@@ -122,10 +157,21 @@ class CorreosController < ApplicationController
             end      
           end  
         when "por_periodo"
+
+
+
           periodos=InteresBasico.where(:periodo_para_ingresar_id=>@correo.por_periodo)
 
           periodos.each do |periodo|
-            mails=Prospecto.where(:id=>periodo.prospecto_id)
+
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.where(:id=>periodo.prospecto_id)
+    else
+          mails=Prospecto.where(:id=>periodo.prospecto_id).where(:sede_id=>current_user.sede)
+    end
+
+
             mails.each do |mail|
               if mail.email != ""
               unless not matches?(mail.email)
@@ -144,7 +190,14 @@ class CorreosController < ApplicationController
           @correo.por_estado.each do |estado|
             case estado
             when "prospectos"
-              @prospectos = Prospecto.where(:is_solicitante=>false) 
+
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.where(:id=>periodo.prospecto_id)
+    else
+          mails=Prospecto.where(:is_solicitante=>false).where(:sede_id=>current_user.sede)
+    end
+
 
               @prospectos.each do |prospecto|
                 if mail.email != ""
@@ -160,8 +213,16 @@ class CorreosController < ApplicationController
                 end                           
               end                  
             when "solicitantes"
+
               historial = History.where("action like '%icitante%'")
-              @prospectos = Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial) 
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial)
+    else
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial).where(:sede_id=>current_user.sede)
+    end
+
+              
 
               @prospectos.each do |prospecto|
                 if mail.email != ""
@@ -179,7 +240,13 @@ class CorreosController < ApplicationController
 
             when "examinados"
             historial = History.where("action like '%xaminado%'")
-            @prospectos = Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial)  
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial)
+    else
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial).where(:sede_id=>current_user.sede)
+    end
+ 
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
@@ -195,7 +262,14 @@ class CorreosController < ApplicationController
               end                           
             when "adminitidos"
             historial = History.where("action like '%dmitido%'")
-            @prospectos = Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial)              
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial)
+    else
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial).where(:sede_id=>current_user.sede)
+    end
+
+            
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
@@ -211,7 +285,13 @@ class CorreosController < ApplicationController
               end               
             when "inscritos"
             historial = History.where("action like '%nscrito%'")
-            @prospectos = Prospectowhere("prospectos.id in (:historyids)",:historyids=>historial)
+
+   if rol.nombre == "DN" or rol.nombre == "ACRM"    
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial)
+    else
+          mails=Prospecto.where("prospectos.id in (:historyids)",:historyids=>historial).where(:sede_id=>current_user.sede)
+    end
+
               @prospectos.each do |prospecto|
                 if mail.email != ""
               unless not matches?(mail.email)
