@@ -10892,9 +10892,8 @@ wysihtml5.commands.formatCode = {
       for (var i in value) {
         image.setAttribute(i === "className" ? "class" : i, value[i]);
       }
-
-      image.setAttribute("width","100%");
-      image.setAttribute("height","100%");
+image.setAttribute("width","100%");
+image.setAttribute("height","100%"); 
 
       composer.selection.insertNode(image);
       if (wysihtml5.browser.hasProblemsSettingCaretAfterImg()) {

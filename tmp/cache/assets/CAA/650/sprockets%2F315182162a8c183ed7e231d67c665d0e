@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491444515.657742:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491450812.042065:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%95d455843eca7f86ff6ad78c45153a1bI"logical_path;
+F"%bd9507ea3a35360dd856c7b7d4ded85fI"logical_path;
 FI"bootstrap3-wysihtml5.js;
 TI"pathname;
 FI"9$root/app/assets/javascripts/bootstrap3-wysihtml5.js;
@@ -9,9 +9,9 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2017-04-05T21:07:57-05:00;
+FI"2017-04-05T22:53:21-05:00;
 FI"	body;
-FI"—"/* jshint expr: true */
+FI"6#/* jshint expr: true */
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -263,6 +263,10 @@ var bsWysihtml5 = function($, wysihtml5) {
           'check_attributes': {
             'alt': 'alt',
             'src': 'url'
+          },
+          'set_attributes': {
+            'width': '100%',
+            'height': '100%'
           }
         },
         'a':  {
@@ -305,7 +309,7 @@ F[{I"	path;
 FI"9$root/app/assets/javascripts/bootstrap3-wysihtml5.js;
 TI"
 mtime;
-FIu:	Time¬LÄ  ê:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	Time√LÄ  P’:@_zoneI"#Central Daylight Time (Mexico);
 T:offseti˛∞πI"hexdigest;
-F"%dc2a0f230471ff1b649e1e0687d4c696I"_version;
+F"%a57f7e9c50a26046dfd3ceef0bc2b8d9I"_version;
 F"%d3399da1890ef54eecbcf24324b9c72a

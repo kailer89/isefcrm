@@ -315,6 +315,14 @@ redirect_to "/correos/#{@correo.id}/edit/"
   # PUT /correos/1.json
   def update
     @correo = Correo.find(params[:id])
+
+    logger.debug "/////////////////////////////////////////////////////////////////////"
+    logger.debug  params[:correo][:maildata]
+    logger.debug "/////////////////////////////////////////////////////////////////////"
+#<img src="https://www.willows-consulting.com/images/stories/Epicor-osCommerce.JPG" width="100%" height="100%" title="Image: https://www.willows-consulting.com/images/stories/Epicor-osCommerce.JPG">
+
+
+
     if params[:enviar] != nil
         
     end

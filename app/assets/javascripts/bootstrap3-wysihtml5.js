@@ -249,6 +249,10 @@ var bsWysihtml5 = function($, wysihtml5) {
           'check_attributes': {
             'alt': 'alt',
             'src': 'url'
+          },
+          'set_attributes': {
+            'width': '100%',
+            'height': '100%'
           }
         },
         'a':  {

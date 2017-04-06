@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491447224.262642:@value{	I"length:EFi`Ž,I"digest;
-F"%235f9333148cd244050bb7b02db4a3abI"source;
-FI"`Ž,/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491450812.545176:@value{	I"length:EFi¹Ž,I"digest;
+F"%65b459232635e12133a7d8f656ed643bI"source;
+FI"¹Ž,/*!
  * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
  *
@@ -40953,9 +40953,8 @@ wysihtml5.commands.formatCode = {
       for (var i in value) {
         image.setAttribute(i === "className" ? "class" : i, value[i]);
       }
-
-      image.setAttribute("width","100%");
-      image.setAttribute("height","100%");
+image.setAttribute("width","100%");
+image.setAttribute("height","100%"); 
 
       composer.selection.insertNode(image);
       if (wysihtml5.browser.hasProblemsSettingCaretAfterImg()) {
@@ -44470,6 +44469,10 @@ var bsWysihtml5 = function($, wysihtml5) {
           'check_attributes': {
             'alt': 'alt',
             'src': 'url'
+          },
+          'set_attributes': {
+            'width': '100%',
+            'height': '100%'
           }
         },
         'a':  {
@@ -83666,4 +83669,4 @@ $(window).bind("load", function() {
 
 ;
 TI"_version;
-F"%37f5df1019ed3285e5feded192b0c508
+F"%1a3ce8c3a03c886fe79735bd4a57b6ba
