@@ -1,4 +1,4 @@
-class Compartido < ApplicationController
+class Compartido
 	#require_relative 'Shared' 
 
 
