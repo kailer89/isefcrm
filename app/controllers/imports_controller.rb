@@ -23,8 +23,17 @@ class ImportsController < ApplicationController
             row = row.to_hash.with_indifferent_access 
             prospecto=row
             direccion= row.to_hash 
+
+            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase.match(/^NOMBRE/)
+              next
+            end
+
+            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase.match(/^AL MO/)
+              next
+            end
+
             #remove extra fields
-            if prospecto["nombre"].upcase.match(/^NOMBRE/) or prospecto["nombre"].upcase.match(/^AL MOMENTO/)
+            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase.match(/^NOMBRE/)
               
             elsif prospecto["sexo"] != nil
 
