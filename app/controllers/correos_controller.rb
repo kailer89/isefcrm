@@ -1,5 +1,5 @@
 class CorreosController < ApplicationController
-  require_relative 'Shared' 
+  require_relative 'Compartido' 
   before_filter :authenticate_user!
   
 

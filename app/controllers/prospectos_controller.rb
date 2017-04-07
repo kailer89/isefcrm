@@ -1,6 +1,6 @@
 
 class ProspectosController < ApplicationController
-  require_relative 'Shared' 
+  require_relative 'Compartido' 
   before_filter :authenticate_user!
   
   
@@ -21,24 +21,24 @@ class ProspectosController < ApplicationController
 
     if request.path_parameters[:format] != 'xls'
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
-          @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+          @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
           @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?        
       else
-          @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+          @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
           @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?            
       end
     else
       if rol.nombre == "DN" or rol.nombre == "ACRM"  
-          @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+          @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
           @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?        
       else
-          @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+          @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
           @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?            
@@ -63,21 +63,21 @@ class ProspectosController < ApplicationController
     rol = Role.where(:id=>current_user.role).first
     if request.path_parameters[:format] != 'xls'
       if rol.nombre == "DN" or rol.nombre == "ACRM"  
-        @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+        @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
         @q.build_grouping unless @q.groupings.any?
         @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
       else
-        @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+        @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
         @q.build_grouping unless @q.groupings.any?
         @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
       end
     else
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
-        @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+        @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
         @q.build_grouping unless @q.groupings.any?
         @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:issolicitante=> false) : @q.result(distinct: true).where(:archivado=>archivado).where(:issolicitante=> false)
       else
-        @q = Shared.getProspectosForUser(current_user).ransack(params[:q])
+        @q = Compartido.getProspectosForUser(current_user).ransack(params[:q])
         @q.build_grouping unless @q.groupings.any?
         @prospectos  = params[:distinct].to_i.zero? ? @q.result.where(:issolicitante=> false) : @q.result(distinct: true).where(:issolicitante=> false)
       end      

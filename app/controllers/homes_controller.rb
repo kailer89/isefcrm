@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'google_chart'
-require_relative 'Shared' 
+require_relative 'Compartido' 
 class HomesController < ApplicationController
   before_filter :authenticate_user!
   
@@ -23,24 +23,24 @@ class HomesController < ApplicationController
     if modelo == nil 
 
       if rol.nombre == "ACRM"  or rol.nombre == "DN" 
-        @prospectosnovalidados=Shared.getProspectosForUser(current_user).where(:validado=>false).where(:issolicitante=> false).limit(5)
-        @prospectosvalidados=Shared.getProspectosForUser(current_user).where(:validado=>true).where(:issolicitante=> false).limit(5)
-        @solicitantes=Shared.getSolicitantesForUser(current_user).where(:isexaminado=> false).all(:limit=>5)
-        @examinados=Shared.getExaminadosForUser(current_user).where(:isadmitido=>false).all(:limit=>5)
-        @admitidos=Shared.getAdmitidosForUser(current_user).where(:isinscrito=>false).all(:limit=>5)
-        @inscritos=Shared.getInscritosForUser(current_user).all(:limit=>5)
+        @prospectosnovalidados=Compartido.getProspectosForUser(current_user).where(:validado=>false).where(:issolicitante=> false).limit(5)
+        @prospectosvalidados=Compartido.getProspectosForUser(current_user).where(:validado=>true).where(:issolicitante=> false).limit(5)
+        @solicitantes=Compartido.getSolicitantesForUser(current_user).where(:isexaminado=> false).all(:limit=>5)
+        @examinados=Compartido.getExaminadosForUser(current_user).where(:isadmitido=>false).all(:limit=>5)
+        @admitidos=Compartido.getAdmitidosForUser(current_user).where(:isinscrito=>false).all(:limit=>5)
+        @inscritos=Compartido.getInscritosForUser(current_user).all(:limit=>5)
 
         @tareas =Tarea.where(:user_id =>current_user.id).limit(5).order(:fecha_de_inicio_de_la_tarea)
         @memos=Memo.where(:user_id =>current_user.id).limit(5)
         @llamadas=Llamada.where(:user_id =>current_user.id).limit(5)
     else
-        @prospectosnovalidados=Shared.getProspectosForUser(current_user).where(:issolicitante=> false).where(:validado=>false).where(:issolicitante=> false).limit(5)
+        @prospectosnovalidados=Compartido.getProspectosForUser(current_user).where(:issolicitante=> false).where(:validado=>false).where(:issolicitante=> false).limit(5)
 
-        @prospectosvalidados=Shared.getProspectosForUser(current_user).where(:issolicitante=> false).where(:validado=>true).where(:issolicitante=> false).limit(5)
-        @solicitantes=Shared.getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:isexaminado=> false).all(:limit=>5)
-        @examinados=Shared.getExaminadosForUser(current_user).where(:isadmitido=>false).all(:limit=>5)
-        @admitidos=Shared.getAdmitidosForUser(current_user).all(:limit=>5)
-        @inscritos=Shared.getInscritosForUser(current_user).all(:limit=>5)
+        @prospectosvalidados=Compartido.getProspectosForUser(current_user).where(:issolicitante=> false).where(:validado=>true).where(:issolicitante=> false).limit(5)
+        @solicitantes=Compartido.getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:isexaminado=> false).all(:limit=>5)
+        @examinados=Compartido.getExaminadosForUser(current_user).where(:isadmitido=>false).all(:limit=>5)
+        @admitidos=Compartido.getAdmitidosForUser(current_user).all(:limit=>5)
+        @inscritos=Compartido.getInscritosForUser(current_user).all(:limit=>5)
 
 
         @tareas =Tarea.where(:user_id =>current_user.id).limit(5).order(:fecha_de_inicio_de_la_tarea)
@@ -49,23 +49,23 @@ class HomesController < ApplicationController
     end
   else
     if rol.nombre == "ACRM"   or rol.nombre == "DN" 
-      @prospectosnovalidados=Shared.getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
-      @prospectosvalidados=Shared.getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
-      @solicitantes=Shared.getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)
-      @examinados=Shared.getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).all(:limit=>5)
-      @admitidos=Shared.getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).all(:limit=>5)
-      @inscritos=Shared.getInscritosForUser(current_user).where(:archivado=>archivado).all(:limit=>5)
+      @prospectosnovalidados=Compartido.getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
+      @prospectosvalidados=Compartido.getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
+      @solicitantes=Compartido.getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)
+      @examinados=Compartido.getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).all(:limit=>5)
+      @admitidos=Compartido.getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).all(:limit=>5)
+      @inscritos=Compartido.getInscritosForUser(current_user).where(:archivado=>archivado).all(:limit=>5)
 
       @tareas =Tarea.where(:user_id =>current_user.id).limit(5).order(:fecha_de_inicio_de_la_tarea)
       @memos=Memo.where(:user_id =>current_user.id).limit(5)
       @llamadas=Llamada.where(:user_id =>current_user.id).limit(5)
     else
-      @prospectosnovalidados=Shared.getProspectosForUser(current_user).where(:issolicitante=> false).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
-      @prospectosvalidados=Shared.getProspectosForUser(current_user).where(:issolicitante=> false).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
-      @solicitantes=Shared.getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)
-      @examinados=Shared.getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).all(:limit=>5)
-      @admitidos=Shared.getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).all(:limit=>5)
-      @inscritos=Shared.getInscritosForUser(current_user).all(:limit=>5)
+      @prospectosnovalidados=Compartido.getProspectosForUser(current_user).where(:issolicitante=> false).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
+      @prospectosvalidados=Compartido.getProspectosForUser(current_user).where(:issolicitante=> false).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
+      @solicitantes=Compartido.getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)
+      @examinados=Compartido.getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).all(:limit=>5)
+      @admitidos=Compartido.getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).all(:limit=>5)
+      @inscritos=Compartido.getInscritosForUser(current_user).all(:limit=>5)
 
       @tareas =Tarea.where(:user_id =>current_user.id).limit(5).order(:fecha_de_inicio_de_la_tarea)
       @memos=Memo.where(:user_id =>current_user.id).limit(5)
