@@ -24,11 +24,13 @@ class ImportsController < ApplicationController
             prospecto=row
             direccion= row.to_hash 
 
-            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase.match(/^NOMBRE/)
+            #*Nombre(s):
+
+            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase == "*NOMBRE(S):"
               next
             end
 
-            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase.match(/^AL MO/)
+            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase =="AL MOMENTO DE GUARDAR"
               next
             end
 

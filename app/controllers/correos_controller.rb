@@ -437,7 +437,7 @@ end
 
 
     respond_to do |format|
-      format.html { redirect_to "/correos/#{@correo.id}/edit/", notice: 'correo was successfully created.' }
+      format.html { redirect_to "/correos", notice: 'correo was successfully deleted.' }
       format.json { head :ok }
     end
   end
