@@ -1,5 +1,5 @@
 class CorreosController < ApplicationController
-  require_relative 'CompartidoLibreria.rb' 
+   
   before_filter :authenticate_user!
   
 

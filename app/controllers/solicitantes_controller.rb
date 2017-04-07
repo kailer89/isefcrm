@@ -1,5 +1,5 @@
 class SolicitantesController < ApplicationController
-  require_relative 'CompartidoLibreria.rb' 
+   
   before_filter :authenticate_user!
   
   helper_method :sort_column, :sort_direction
@@ -15,9 +15,9 @@ class SolicitantesController < ApplicationController
 
 
     if modelo == nil
-    @solicitantes = CompartidoLibreria.getSolicitantesForUser(current_user).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+    @solicitantes = getSolicitantesForUser(current_user).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     else
-      @solicitantes = CompartidoLibreria.getSolicitantesForUser(current_user).where(:archivado=>archivado).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @solicitantes = getSolicitantesForUser(current_user).where(:archivado=>archivado).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     end
 
 
@@ -31,7 +31,7 @@ class SolicitantesController < ApplicationController
     if rol.nombre == "DN" or rol.nombre == "ACRM"  
       logger.debug "admin"
     else
-      @solicitantes=CompartidoLibreria.getSolicitantesForUser(current_user).where(:isexaminado=>false)
+      @solicitantes=getSolicitantesForUser(current_user).where(:isexaminado=>false)
     end
 
       @q = @solicitantes.ransack(params[:q])
