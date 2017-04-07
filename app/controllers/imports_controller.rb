@@ -24,7 +24,7 @@ class ImportsController < ApplicationController
             prospecto=row
             direccion= row.to_hash 
             #remove extra fields
-            if prospecto["nombre"] == "*Nombre(s):" 
+            if prospecto["nombre"].upcase.match(/^NOMBRE/) or prospecto["nombre"].upcase.match(/^AL MOMENTO/)
               
             elsif prospecto["sexo"] != nil
 

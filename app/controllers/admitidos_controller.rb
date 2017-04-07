@@ -1,4 +1,5 @@
 class AdmitidosController < ApplicationController
+  require_relative 'Shared' 
   before_filter :authenticate_user!
   
   
@@ -12,16 +13,16 @@ class AdmitidosController < ApplicationController
       archivado = modelo.mostrar_archivados
     end        
     if modelo == nil
-      @admitidos = Admitido.where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @admitidos = Shared.getAdmitidosForUser(current_user).where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     else    
-      @admitidos = Admitido.where(:archivado=>archivado).where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @admitidos = Shared.getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     end
         rol = Role.where(:id=>current_user.role).first
 
     if rol.nombre == "DN" or rol.nombre == "ACRM"
       logger.debug "admin"
     else
-      @admitidos = @admitidos.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.where(:sede_id=>current_user.sede).joins{solicitante}.where(:user_id=>current_user.id))))
+      @admitidos = Shared.getAdmitidosForUser(current_user).where(:isinscrito=>false)
     end    
     
       @q = @admitidos.ransack(params[:q])

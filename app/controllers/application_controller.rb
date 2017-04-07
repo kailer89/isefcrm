@@ -4,6 +4,15 @@ class ApplicationController < ActionController::Base
   
 
 
+  before_filter :prepare_exception_notifier
+  private
+  def prepare_exception_notifier
+    request.env["exception_notifier.exception_data"] = {
+      :current_user => current_user
+    }
+  end
+
+
   layout :layout_by_resource
 
   protected
@@ -27,16 +36,15 @@ class ApplicationController < ActionController::Base
       
       logger.debug "--------------------------------1"
 if request.path_parameters[:action].include? "web" 
+  logger.debug "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii1"
   return true
 end
-      if not request.path_parameters[:controller].include? "efectividad" 
       if not request.path_parameters[:controller].include? "console" 
       if not request.path_parameters[:controller].include? "configuraciones" 
       if not request.path_parameters[:controller].include? "imports" 
       if not request.path_parameters[:controller].include? "admin" 
       
         logger.debug "--------------------------------2"
-        if not request.path_parameters[:controller].include? "metas_globales"
           logger.debug "--------------------------------3"
           if not request.path_parameters[:controller].include? "devise" 
             logger.debug "--------------------------------4"
@@ -54,15 +62,15 @@ end
                   logger.debug "--------------------------------9"
                   if @rolepermisions.first.permiso == nil
                     logger.debug "--------------------------------10"
-                      @rolepermisions.permiso ="Lectura"
+                      @rolepermisions.permiso.first.upcase ="Lectura".upcase
                   end
                   if @rolepermisions != nil
                     logger.debug "--------------------------------11"
-                        if @rolepermisions.first.permiso == "Escritura"
+                        if @rolepermisions.first.permiso.upcase == "Escritura".upcase
                           logger.debug "--------------------------------12"
                             return true
                         end
-                        if @rolepermisions.first.permiso == "Lectura"
+                        if @rolepermisions.first.permiso.upcase == "Lectura".upcase
                           logger.debug "--------------------------------13"
                           if (request.path_parameters[:action] == "edit") or (request.path_parameters[:action] == "new")
                             logger.debug "--------------------------------14"
@@ -91,9 +99,10 @@ end
                             return false
                         	end
                         end
+
                         logger.debug "--------------------------------21"
                         
-                        if @rolepermisions.first.permiso == "No disponible"
+                        if @rolepermisions.first.permiso.upcase == "No disponible".upcase
                           logger.debug "--------------------------------22"
                           if (request.path_parameters[:action] == "index") or (request.path_parameters[:action] == "show") or (request.path_parameters[:action] == "force_redirect")
                             logger.debug "--------------------------------23"
@@ -104,12 +113,11 @@ end
                             redirect_to "/" +  request.path_parameters[:controller] + "/", :flash => { :warning => "No tienes permisos para acceder a esta opcion/elemento." }
                             return false
                           end
-                        end        
+                        end   
+                        return false     
                   end
                 end
               end
-            end
-          end
         end
       end
     end

@@ -1,4 +1,5 @@
 class SolicitantesController < ApplicationController
+  require_relative 'Shared' 
   before_filter :authenticate_user!
   
   helper_method :sort_column, :sort_direction
@@ -14,9 +15,9 @@ class SolicitantesController < ApplicationController
 
 
     if modelo == nil
-    @solicitantes = Solicitante.where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+    @solicitantes = Shared.getSolicitantesForUser(current_user).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     else
-      @solicitantes = Solicitante.where(:archivado=>archivado).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @solicitantes = Shared.getSolicitantesForUser(current_user).where(:archivado=>archivado).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     end
 
 
@@ -30,7 +31,7 @@ class SolicitantesController < ApplicationController
     if rol.nombre == "DN" or rol.nombre == "ACRM"  
       logger.debug "admin"
     else
-      @solicitantes=@solicitantes.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.where(:sede_id=>current_user.sede).joins{solicitante}.where(:user_id=>current_user.id))
+      @solicitantes=Shared.getSolicitantesForUser(current_user).where(:isexaminado=>false)
     end
 
       @q = @solicitantes.ransack(params[:q])

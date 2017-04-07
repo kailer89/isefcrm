@@ -7,6 +7,7 @@
   <Worksheet ss:Name="Sheet1">
     <Table>
       <Row>
+          <Cell><Data ss:Type="String">ID</Data></Cell>
           <Cell><Data ss:Type="String">Nombre(s)</Data></Cell>
           <Cell><Data ss:Type="String">Apellido paterno</Data></Cell>
           <Cell><Data ss:Type="String">Apellido materno</Data></Cell>
@@ -135,6 +136,7 @@
       </Row>
   <% @prospectos.each do |prospecto| %>
     <Row>
+      <Cell><Data ss:Type="String"><%=printValue("ID",prospecto.id)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Nombre(s)",prospecto.nombre)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Apellido paterno",prospecto.apellido_paterno)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Apellido materno",prospecto.apellido_materno)%></Data></Cell>

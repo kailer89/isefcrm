@@ -1,4 +1,5 @@
 class InscritosController < ApplicationController
+  require_relative 'Shared' 
   before_filter :authenticate_user!
   
   helper_method :sort_column, :sort_direction  
@@ -12,9 +13,9 @@ class InscritosController < ApplicationController
       archivado = modelo.mostrar_archivados
     end  
     if modelo == nil           
-    @inscritos = Inscrito.order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+    @inscritos = Shared.getInscritosForUser(current_user).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     else
-      @inscritos = Inscrito.where(:archivado=>archivado).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @inscritos = Shared.getInscritosForUser(current_user).where(:archivado=>archivado).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     end
 
         rol = Role.where(:id=>current_user.role).first
@@ -23,7 +24,7 @@ class InscritosController < ApplicationController
       logger.debug "admin"
     else
       #@admitidos = @admitidos.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:user_id=>current_user.id))))
-      @inscritos = @inscritos.where("admitido_id in (:admitidos)",:admitidos=>Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.where(:sede_id=>current_user.sede).joins{solicitante}.where(:user_id=>current_user.id)))))
+      @inscritos = Shared.getInscritosForUser(current_user)
     end
     
       @q = @inscritos.ransack(params[:q])
