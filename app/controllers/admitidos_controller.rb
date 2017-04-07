@@ -1,5 +1,5 @@
 class AdmitidosController < ApplicationController
-  require_relative 'Compartido' 
+  require_relative 'CompartidoLibreria' 
   before_filter :authenticate_user!
   
   
@@ -13,16 +13,16 @@ class AdmitidosController < ApplicationController
       archivado = modelo.mostrar_archivados
     end        
     if modelo == nil
-      @admitidos = Compartido.getAdmitidosForUser(current_user).where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @admitidos = CompartidoLibreria.getAdmitidosForUser(current_user).where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     else    
-      @admitidos = Compartido.getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @admitidos = CompartidoLibreria.getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     end
         rol = Role.where(:id=>current_user.role).first
 
     if rol.nombre == "DN" or rol.nombre == "ACRM"
       logger.debug "admin"
     else
-      @admitidos = Compartido.getAdmitidosForUser(current_user).where(:isinscrito=>false)
+      @admitidos = CompartidoLibreria.getAdmitidosForUser(current_user).where(:isinscrito=>false)
     end    
     
       @q = @admitidos.ransack(params[:q])
