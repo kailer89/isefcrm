@@ -1,5 +1,5 @@
 class AdmitidosController < ApplicationController
-  require_relative 'CompartidoLibreria' 
+  require_relative 'CompartidoLibreria.rb' 
   before_filter :authenticate_user!
   
   

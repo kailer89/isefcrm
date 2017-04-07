@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'google_chart'
-require_relative 'CompartidoLibreria' 
+require_relative 'CompartidoLibreria.rb' 
 class HomesController < ApplicationController
   before_filter :authenticate_user!
   

@@ -1,5 +1,5 @@
 class InscritosController < ApplicationController
-  require_relative 'CompartidoLibreria' 
+  require_relative 'CompartidoLibreria.rb' 
   before_filter :authenticate_user!
   
   helper_method :sort_column, :sort_direction  
