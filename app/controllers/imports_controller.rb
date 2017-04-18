@@ -24,6 +24,7 @@ class ImportsController < ApplicationController
             prospecto=row
             direccion= row.to_hash 
 
+
             #*Nombre(s):
 
             if prospecto["nombre"]!=nil and prospecto["nombre"].upcase == "*NOMBRE(S):"
@@ -74,6 +75,7 @@ class ImportsController < ApplicationController
               prospecto.delete("fecha_de_caducidad")
               prospecto.delete("otro_cual")
               prospecto.delete("status_de_interes_de_prospecto_validado")
+              prospecto.delete("subsede")
               prospecto["email"] = prospecto["email"].gsub(" ","") if prospecto["email"] != nil
 
 
@@ -92,7 +94,6 @@ class ImportsController < ApplicationController
                       prospecto["otro_telefono"] = 0
                     end
                   end
-
               @objecto = eval(@import.module.singularize.camelize).create!(prospecto.to_hash.symbolize_keys)
 
               logger.debug "1#######################################################################"
@@ -105,7 +106,7 @@ class ImportsController < ApplicationController
                   @objecto.sede_id =current_user.sede_id
 
                   @objecto.accion_estrategicas.build
-                
+
                   if direccion["nacionalidad"] != nil
                       @nacionalidad = Nacionalidad.where(:nacionalidad=>direccion["nacionalidad"],:pais=>direccion["pais"]).first
                       if @nacionalidad == nil
@@ -150,9 +151,22 @@ class ImportsController < ApplicationController
 
                   end       
 
-                  @sub_sede = Subsede.where(:sede_id=>current_user.sede_id).first
+                  @sub_sede = Subsede.where(:sede_id=>current_user.sede_id)
+
+                  #checking for subsede
+                  if direccion["subsede"]!=nil
+                      subs = @sub_sede.where("nombre like '%" + direccion["subsede"] + "%'")
+                      if subs !=nil and subs.first !=nil
+                          @objecto.interes_basicos.first.subsede_id = subs.first.id
+                      else
+                          @objecto.interes_basicos.first.subsede_id = @sub_sede.first.id
+                      end
+                  else
+                      @objecto.interes_basicos.first.subsede_id = @sub_sede.first.id
+                  end
+
                   @objecto.interes_basicos.first.sede_id = current_user.sede_id
-                  @objecto.interes_basicos.first.subsede_id = @sub_sede.id
+                  
 
                   if direccion["ultimo_grado_de_estudio"] != nil
                       @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_or_create_by_grado_de_estudio(direccion["ultimo_grado_de_estudio"])
