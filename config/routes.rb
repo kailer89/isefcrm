@@ -222,6 +222,7 @@ resources :prospectos, only: :index do
   match "/purge_solicitantes"=>"purges#purge_solicitantes",as: :purge_solicitantes
   match "/purge_users"=>"purges#purge_users",as: :purge_users
   match "/purge_all"=>"purges#purge_all",as: :purge_all
+  match "/purge_test"=>"purges#purge_test",as: :purge_test
 
   match "/home"=>"homes#index",as: :home
 
