@@ -14,7 +14,12 @@
 
   <dt><strong>Sede:</strong></dt>
   <dd>
-    <%name = Sede.where(:id=>@contacto.sede_id).first.nombre%>
+    <%name = "Sin Sede"
+
+    if @contacto.sede_id != nil
+        Sede.where(:id=>@contacto.sede_id).first.nombre
+    end
+    %>
 
     <%= name rescue nil %></dd>
 
