@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170402012000) do
+ActiveRecord::Schema.define(:version => 20170420014842) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -291,6 +291,7 @@ ActiveRecord::Schema.define(:version => 20170402012000) do
     t.text     "notas"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sede_id"
   end
 
   create_table "correos", :force => true do |t|
@@ -942,6 +943,7 @@ ActiveRecord::Schema.define(:version => 20170402012000) do
     t.text     "nombre_de_los_inscritos"
     t.text     "observaciones"
     t.integer  "user_id"
+    t.integer  "sede_id"
   end
 
   create_table "modalidads", :force => true do |t|

@@ -13,9 +13,6 @@
 %>
 <%= form_tag  do |f| %>
 <%sedes = Sede.all%>
-
- <%= collection_select "sede", :sede_id, sedes, :id, :nombre, :include_blank=>false%>
-    
 <table class="table table-striped table-bordered table-condensed">
   <thead>
     <tr>
