@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Prospecto.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
 
           return Prospecto.where(:archivado=>archivado).where(:sede_id=>user.sede)
         else
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
         else
 
@@ -78,7 +78,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Examinado.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Examinado.where(:archivado=>archivado).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
         else
 
@@ -107,7 +107,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Admitido.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Admitido.where(:archivado=>archivado).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
         else
 
@@ -134,7 +134,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Inscrito.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Inscrito.where(:archivado=>archivado).where("admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
         else
 
@@ -165,7 +165,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Prospecto.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
 
           return Prospecto.where(:archivado=>archivado).where(:sede_id=>user.sede)
         else
@@ -194,7 +194,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
         else
 
@@ -223,7 +223,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Examinado.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Examinado.where(:archivado=>archivado).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
         else
 
@@ -252,7 +252,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Admitido.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Admitido.where(:archivado=>archivado).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
         else
 
@@ -279,7 +279,7 @@ class ApplicationController < ActionController::Base
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Inscrito.where(:archivado=>archivado)
       else
-        if rol.nombre == "D"
+        if rol.nombre == "D" or rol.nombre = "CP"
           return Inscrito.where(:archivado=>archivado).where("admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
         else
 
