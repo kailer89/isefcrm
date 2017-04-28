@@ -130,7 +130,7 @@ class ImportsController < ApplicationController
                       end
                       @objecto.programa_id = @programa.id
                   end
-                  
+
 
                   #direccions
                   @objecto.direccions.build
@@ -151,19 +151,59 @@ class ImportsController < ApplicationController
 
                   end       
 
-                  @sub_sede = Subsede.where(:sede_id=>current_user.sede_id)
 
+
+                  @sub_sede = Subsede.where(:sede_id=>current_user.sede_id)
+                 logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
+                  logger.debug "INFO************************************************"
                   #checking for subsede
                   if direccion["subsede"]!=nil
+
+                    logger.debug "a************************************************"
+                    logger.debug "a************************************************"
+                    logger.debug "a************************************************"
                       subs = @sub_sede.where("nombre like '%" + direccion["subsede"] + "%'")
+
+
+                    logger.debug "b************************************************"
+                    logger.debug "b************************************************"
+                    logger.debug "b************************************************"
                       if subs !=nil and subs.first !=nil
                           @objecto.interes_basicos.first.subsede_id = subs.first.id
+                              logger.debug "c************************************************"
+                    logger.debug "c************************************************"
+                    logger.debug "c************************************************"
                       else
                           @objecto.interes_basicos.first.subsede_id = @sub_sede.first.id
+                              logger.debug "d************************************************"
+                    logger.debug "d************************************************"
+                    logger.debug "d************************************************"
                       end
                   else
-                      @objecto.interes_basicos.first.subsede_id = @sub_sede.first.id
+                        logger.debug "e************************************************"
+                    logger.debug current_user.sede_id
+                    logger.debug "e************************************************"
+                      @objecto.interes_basicos.first.subsede_id = @sub_sede.first.id rescue nil
                   end
+
+                 logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
+                  logger.debug "asd************************************************"
 
                   @objecto.interes_basicos.first.sede_id = current_user.sede_id
                   
