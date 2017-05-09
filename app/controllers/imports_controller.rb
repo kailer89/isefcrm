@@ -108,9 +108,9 @@ class ImportsController < ApplicationController
                   @objecto.accion_estrategicas.build
 
                   if direccion["nacionalidad"] != nil
-                      @nacionalidad = Nacionalidad.where(:nacionalidad=>direccion["nacionalidad"],:pais=>direccion["pais"]).first
+                      @nacionalidad = Nacionalidad.where(:nacionalidad=>direccion["nacionalidad"].gsub(/\s+/, ""),:pais=>direccion["pais"].gsub(/\s+/, "")).first
                       if @nacionalidad == nil
-                        @nacionalidad = Nacionalidad.create(:nacionalidad=>direccion["nacionalidad"],:pais=>direccion["pais"])
+                        @nacionalidad = Nacionalidad.create(:nacionalidad=>direccion["nacionalidad"].gsub(/\s+/, ""),:pais=>direccion["pais"].gsub(/\s+/, ""))
                         @nacionalidad.save
                       end
                       logger.debug "==========================="
@@ -120,9 +120,9 @@ class ImportsController < ApplicationController
                   end
                   
                   if  direccion["programa"] != nil
-                      @programa = Programa.find_or_create_by_programa_and_nivel(direccion["programa"],direccion["nivel"])
+                      @programa = Programa.find_or_create_by_programa_and_nivel(direccion["programa"].gsub(/\s+/, ""),direccion["nivel"].gsub(/\s+/, ""))
                       if direccion["nivel"] != nil
-                        @programa.nivel = direccion["nivel"]
+                        @programa.nivel = direccion["nivel"].gsub(/\s+/, "")
                         @programa.save
                       else
                         @programa.nivel = "Sin Nivel"
@@ -146,7 +146,7 @@ class ImportsController < ApplicationController
                   @objecto.interes_basicos.build
                   @objecto.interes_basicos.first.comentarios = direccion["commentarios"]
                   if direccion["nivel"] != nil
-                      @nivel = Nivel.find_or_create_by_valor(direccion["nivel"])
+                      @nivel = Nivel.find_or_create_by_valor(direccion["nivel"].gsub(/\s+/, ""))
                        @objecto.interes_basicos.first.nivel_id = @nivel.id
 
                   end       
@@ -170,7 +170,7 @@ class ImportsController < ApplicationController
                     logger.debug "a************************************************"
                     logger.debug "a************************************************"
                     logger.debug "a************************************************"
-                      subs = @sub_sede.where("nombre like '%" + direccion["subsede"] + "%'")
+                      subs = @sub_sede.where("nombre like '%" + direccion["subsede"].gsub(/\s+/, "") + "%'")
 
 
                     logger.debug "b************************************************"
@@ -209,32 +209,32 @@ class ImportsController < ApplicationController
                   
 
                   if direccion["ultimo_grado_de_estudio"] != nil
-                      @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_or_create_by_grado_de_estudio(direccion["ultimo_grado_de_estudio"])
+                      @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_or_create_by_grado_de_estudio(direccion["ultimo_grado_de_estudio"].gsub(/\s+/, ""))
                        @objecto.interes_basicos.first.ultimo_grado_de_estudio_id = @ultimo_grado_de_estudio.id
                   end
                   
                   if direccion["preparatoria_o_universidad_de_origen"] != nil or direccion["preparatoria_o_universidad_de_origen"] != nil
-                      @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(direccion["preparatoria_o_universidad_de_origen"])
+                      @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(direccion["preparatoria_o_universidad_de_origen"].gsub(/\s+/, ""))
                       @objecto.interes_basicos.first.preparatoria_o_universidad_de_origen_id = @preparatoria_o_universidad_de_origen.id
                   end
                 
                   if direccion["municipio_de_la_preparatoria_o_universidad_de_origen"] != nil
-                      @municipio_de_la_preparatoria_o_universidad_de_origen = MunicipioDeLaPreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(direccion["municipio_de_la_preparatoria_o_universidad_de_origen"])
+                      @municipio_de_la_preparatoria_o_universidad_de_origen = MunicipioDeLaPreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(direccion["municipio_de_la_preparatoria_o_universidad_de_origen"].gsub(/\s+/, ""))
                       @objecto.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen_id = @municipio_de_la_preparatoria_o_universidad_de_origen.id
                   end
                   @objecto.interes_basicos.first.ano_de_graduacion=direccion["ano_de_graduacion"]
 
      
                   if direccion["turno"] != nil
-                      @turno = Turno.find_or_create_by_valor(direccion["turno"])
+                      @turno = Turno.find_or_create_by_valor(direccion["turno"].gsub(/\s+/, ""))
                       @objecto.interes_basicos.first.turno_id = @turno.id
                   end
                   if direccion["modalidad"] != nil
-                      @modalidad = Modalidad.find_or_create_by_valor(direccion["modalidad"])
+                      @modalidad = Modalidad.find_or_create_by_valor(direccion["modalidad"].gsub(/\s+/, ""))
                       @objecto.interes_basicos.first.modalidad_id = @modalidad.id
                   end              
                   if direccion["periodo_para_ingresar"] != nil
-                      @periodo_para_ingresar = PeriodoParaIngresar.find_or_create_by_valor(direccion["periodo_para_ingresar"])
+                      @periodo_para_ingresar = PeriodoParaIngresar.find_or_create_by_valor(direccion["periodo_para_ingresar"].gsub(/\s+/, ""))
                       @objecto.interes_basicos.first.periodo_para_ingresar_id = @periodo_para_ingresar.id
                   end              
                   logger.debug "2#######################################################################"
