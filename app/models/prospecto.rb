@@ -23,7 +23,7 @@ class Prospecto < ActiveRecord::Base
 
 	validates :nombre, :presence => true	
 	validates :apellido_paterno, :presence => true
-  validates_uniqueness_of :nombre, :scope => [:apellido_paterno, :fecha_de_nacimiento, :sexo, :email]
+  validates_uniqueness_of :nombre, :scope => [:nombre,:apellido_paterno, :fecha_de_nacimiento, :sexo, :email]
   validates_presence_of :email
   validate :any_present?
 

@@ -292,12 +292,9 @@ class ProspectosController < ApplicationController
   def destroy
 
 rol = Role.where(:id=>current_user.role).first
-        if rol.nombre == "ACRM"
+        if rol.nombre == "ACRM" or rol.nombre =="DN" or rol.nombre =="CP"
   
     @prospecto = Prospecto.find(params[:id])
-
-
-
     validado=@prospecto.validado
     @prospecto.destroy
 else
