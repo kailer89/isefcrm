@@ -34,9 +34,22 @@ class SolicitantesController < ApplicationController
       @solicitantes=getSolicitantesForUser(current_user).where(:isexaminado=>false)
     end
 
+
+      ini = params[:inicio]
+      fin = params[:final]
+
+
       @q = @solicitantes.ransack(params[:q])
       @q.build_grouping unless @q.groupings.any?
-      @solicitantes  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page]) 
+
+
+          if ini != nil
+            @solicitantes  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page]).where{id>=ini.to_s}.where{id<=fin.to_s}
+          else
+            @solicitantes  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page])
+          end
+      
+       
 
 
 

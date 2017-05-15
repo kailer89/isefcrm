@@ -25,9 +25,23 @@ class AdmitidosController < ApplicationController
       @admitidos = getAdmitidosForUser(current_user).where(:isinscrito=>false)
     end    
     
+
+
+      ini = params[:inicio]
+      fin = params[:final]
+
+
       @q = @admitidos.ransack(params[:q])
       @q.build_grouping unless @q.groupings.any?
-      @admitidos  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page]) 
+
+
+          if ini != nil
+            @admitidos  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page]).where{id>=ini.to_s}.where{id<=fin.to_s}
+          else
+            @admitidos  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page]) 
+          end
+
+      
 
 
     respond_to do |format|

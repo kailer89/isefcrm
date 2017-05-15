@@ -1,5 +1,13 @@
 <h1>Solicitantes</h1>
-        <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), solicitantes_path(params.merge(format: 'xls')), :class => 'btn btn-mini btn-info' %>   
+
+
+    <%if @solicitantes.total_entries > 100%>
+        <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), multiexports_path, :class => 'btn btn-mini btn-info' %> 
+      <%else%>  
+         <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), solicitantes_path(params.merge(format: 'xls')), :class => 'btn btn-mini btn-info' %>  
+    <%end%>
+
+         
 <hr/>
 <style type="text/css">
 fieldset {
