@@ -33,15 +33,9 @@ class ProspectosController < ApplicationController
       end
     else
       if rol.nombre == "DN" or rol.nombre == "ACRM"  
-          @q = getProspectosForUser(current_user).ransack(params[:q])
-          @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
-          @q.build_condition if @q.conditions.empty?
-          @q.build_sort if @q.sorts.empty?        
+          @prospectos = getProspectosForUser(current_user).where(:issolicitante=> false)    
       else
-          @q = getProspectosForUser(current_user).ransack(params[:q])
-          @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
-          @q.build_condition if @q.conditions.empty?
-          @q.build_sort if @q.sorts.empty?            
+          @prospectos = getProspectosForUser(current_user).where(:issolicitante=> false)          
       end
     end
     
