@@ -25,7 +25,7 @@
       end #end else rol nombre
     end #end else nil
 
-prsopectos = prsopectos.map{|c| [c.id] }
+prsopectos = prsopectos.map{|c| [c.id] }.sort
 #.each_slice(3).to_a
 finals = []
 arrays = prsopectos.each_slice(100).to_a
