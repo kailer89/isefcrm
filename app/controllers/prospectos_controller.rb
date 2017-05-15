@@ -32,10 +32,31 @@ class ProspectosController < ApplicationController
           @q.build_sort if @q.sorts.empty?            
       end
     else
+
+      ini = params[:inicio]
+      fin = params[:final]
+
+
+
+
       if rol.nombre == "DN" or rol.nombre == "ACRM"  
-          @prospectos = getProspectosForUser(current_user).where(:issolicitante=> false)    
+          @q = getProspectosForUser(current_user).ransack(params[:q])
+          if ini != nil
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).where{id>=ini}.where{id<=fin}
+          else
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
+          end
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?        
       else
-          @prospectos = getProspectosForUser(current_user).where(:issolicitante=> false)          
+          @q = getProspectosForUser(current_user).ransack(params[:q])
+          if ini != nil
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).where{id>=ini.to_s}.where{id<=fin.to_s}
+          else
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
+          end
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?            
       end
     end
     
@@ -398,6 +419,7 @@ end
       end
 
   end
+
 
   private
   def undo_link

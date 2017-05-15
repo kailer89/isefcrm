@@ -201,6 +201,7 @@ resources :prospectos, only: :index do
   match "/admitidos/:id/convertir_admitido" => "admitidos#convertir_admitido", as: :convertir_admitido
   match "/prospectos/:id/validar" => "prospectos#validar", as: :validar,:validado=>false
   match "/prospectos/:id/convertir" => "prospectos#convertir", as: :convertir, :validado=>true
+  match "/multiexport" => "prospectos#multiexport"
 
   match "/inscritos/:id/convertir_en_admitido" => "inscritos#convertir_en_admitido", as: :convertir_en_admitido
 
