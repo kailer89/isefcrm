@@ -23,8 +23,8 @@ class Prospecto < ActiveRecord::Base
 
 	validates :nombre, :presence => true	
 	validates :apellido_paterno, :presence => true
-  validates_uniqueness_of :nombre, :scope => [:nombre,:apellido_paterno, :fecha_de_nacimiento, :sexo, :email]
   validates_presence_of :email
+  validates_uniqueness_of :nombre, :scope => [:apellido_paterno, :fecha_de_nacimiento, :sexo, :email]
   validate :any_present?
 
   validates_format_of :email, :with => /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i , :if => lambda {self.email != nil}
