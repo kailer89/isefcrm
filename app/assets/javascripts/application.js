@@ -117,8 +117,50 @@ $(window).bind("load", function() {
 
 
 
+
+
+});
+/*
+    $(document).ready(function () {
+
+
+          $(".btn").click(function (e) {
+            if(!$(this).hasClass("printbox") && $(this).prop('nodeName') != "INPUT"  && $(this).prop('nodeName') == "A" 
+              && ($(this).text().toLowerCase().indexOf("validar")  != -1 || $(this).text().toLowerCase().indexOf("convertir")!= -1)
+              )
+            {
+              e.preventDefault();
+              //disable the submit button
+              $(this).attr("disabled", true);
+              $(this).attr("data-confirm", null);
+              //$(this).attr("data-method", null);
+            }
+            return true;
+
+        });
+    });
+
+
+*/
+
+
+$(document).ready(function(){
+
+$('.avoid').click(function(){ 
+
+  if($(this).hasClass('clicked'))
+    { 
+      $(this).attr("disabled", true);
+      return false;
+  }
+  else { 
+    $(this).addClass('clicked'); 
+    $(this).attr("disabled", true);
+    return true;
+  }
 });
 
 
 
+});
 

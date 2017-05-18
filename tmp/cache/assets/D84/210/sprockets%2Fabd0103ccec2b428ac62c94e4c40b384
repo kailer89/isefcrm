@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491450812.545176:@value{	I"length:EFi¹Ž,I"digest;
-F"%65b459232635e12133a7d8f656ed643bI"source;
-FI"¹Ž,/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495074138.096792:@value{	I"length:EFi]’,I"digest;
+F"%80a87b124da480738b57ee107609e3f0I"source;
+FI"]’,/*!
  * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
  *
@@ -83662,11 +83662,53 @@ $(window).bind("load", function() {
 
 
 
+
+
+});
+/*
+    $(document).ready(function () {
+
+
+          $(".btn").click(function (e) {
+            if(!$(this).hasClass("printbox") && $(this).prop('nodeName') != "INPUT"  && $(this).prop('nodeName') == "A" 
+              && ($(this).text().toLowerCase().indexOf("validar")  != -1 || $(this).text().toLowerCase().indexOf("convertir")!= -1)
+              )
+            {
+              e.preventDefault();
+              //disable the submit button
+              $(this).attr("disabled", true);
+              $(this).attr("data-confirm", null);
+              //$(this).attr("data-method", null);
+            }
+            return true;
+
+        });
+    });
+
+
+*/
+
+
+$(document).ready(function(){
+
+$('.avoid').click(function(){ 
+
+  if($(this).hasClass('clicked'))
+    { 
+      $(this).attr("disabled", true);
+      return false;
+  }
+  else { 
+    $(this).addClass('clicked'); 
+    $(this).attr("disabled", true);
+    return true;
+  }
 });
 
 
 
+});
 
 ;
 TI"_version;
-F"%1a3ce8c3a03c886fe79735bd4a57b6ba
+F"%b22e31b39c73e6b02b622d562c45f1a7

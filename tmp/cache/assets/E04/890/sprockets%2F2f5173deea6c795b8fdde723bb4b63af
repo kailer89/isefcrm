@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1491450812.38382:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495074138.0537632:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%1a3ce8c3a03c886fe79735bd4a57b6baI"logical_path;
+F"%b22e31b39c73e6b02b622d562c45f1a7I"logical_path;
 FI"application.js;
 TI"pathname;
 FI"0$root/app/assets/javascripts/application.js;
@@ -9,9 +9,9 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2017-04-05T22:53:21-05:00;
+FI"2017-05-17T21:22:06-05:00;
 FI"	body;
-FI"ä	
+FI"ˆ
 
 //
 // This is a manifest file that'll be compiled into including all the files listed below.
@@ -114,10 +114,52 @@ $(window).bind("load", function() {
 
 
 
+
+
+});
+/*
+    $(document).ready(function () {
+
+
+          $(".btn").click(function (e) {
+            if(!$(this).hasClass("printbox") && $(this).prop('nodeName') != "INPUT"  && $(this).prop('nodeName') == "A" 
+              && ($(this).text().toLowerCase().indexOf("validar")  != -1 || $(this).text().toLowerCase().indexOf("convertir")!= -1)
+              )
+            {
+              e.preventDefault();
+              //disable the submit button
+              $(this).attr("disabled", true);
+              $(this).attr("data-confirm", null);
+              //$(this).attr("data-method", null);
+            }
+            return true;
+
+        });
+    });
+
+
+*/
+
+
+$(document).ready(function(){
+
+$('.avoid').click(function(){ 
+
+  if($(this).hasClass('clicked'))
+    { 
+      $(this).attr("disabled", true);
+      return false;
+  }
+  else { 
+    $(this).addClass('clicked'); 
+    $(this).attr("disabled", true);
+    return true;
+  }
 });
 
 
 
+});
 
 ;
 FI"asset_paths;
@@ -301,9 +343,9 @@ F[°{I"	path;
 FI"0$root/app/assets/javascripts/application.js;
 TI"
 mtime;
-FIu:	TimeäK€  @:@_zoneI"#Central Standard Time (Mexico);
-T:offsetiþ «I"hexdigest;
-F"%eedaf63908e60f0b77d664d1db14d215{I"	path;
+FIu:	TimeBR€  `X:@_zoneI"#Central Daylight Time (Mexico);
+T:offsetiþ°¹I"hexdigest;
+F"%b67ab08184588f6873fbffb376c544b1{I"	path;
 FI"!$root/app/assets/javascripts;
 TI"
 mtime;
