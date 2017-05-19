@@ -17,3 +17,22 @@
 [05/18/17 17:56:51 -0500 alienware (3784)] INFO : Installing Rails 3 Error instrumentation
 [05/18/17 17:56:51 -0500 alienware (3784)] INFO : Finished instrumentation
 [05/18/17 17:57:08 -0500 alienware (3784)] INFO : Doing deferred dependency-detection before Rack startup
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Starting the New Relic agent in "development" environment.
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm)
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : New Relic Agent Developer Mode enabled.
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Environment: development
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Dispatcher: webrick
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Application: My Application
+[05/18/17 18:38:57 -0500 alienware (11836)] WARN : Agent configured not to send data in this environment.
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing ActiveRecord instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing HTTPClient instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing Net instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing deferred Rack instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing Rack::Builder middleware instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing Rails 3+ middleware instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing Rails 3 Controller instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Installing Rails 3 Error instrumentation
+[05/18/17 18:38:57 -0500 alienware (11836)] INFO : Finished instrumentation
+[05/18/17 18:39:12 -0500 alienware (11836)] INFO : Doing deferred dependency-detection before Rack startup

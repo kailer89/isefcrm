@@ -1,13 +1,14 @@
 <%
-prospectosWithNilInUser = Prospecto.where(:user_id=>nil)
+prospectosWithNilInUser = Prospecto.where(:user_id=>nil).where(:issolicitante==false)
 %>
 
+<%= link_to 'Borrar prospectos invalidos', borrarprospectosinvalidos_path,:confirm => "Estas seguro de querer continuar?" , :class => 'btn btn-mini btn-danger'%>
 			<table class="table table-striped table-bordered table-hover table-condensed">
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Nombre</th>
-                  <th>User</th>
+                  <th>Borrar</th>
                 </tr>
               </thead>
               <tbody>
@@ -15,7 +16,11 @@ prospectosWithNilInUser = Prospecto.where(:user_id=>nil)
                 <tr>
                   <td><%=prospecto.id%></td>
                   <td><%=prospecto.nombre%> <%=prospecto.apellido_paterno%> <%=prospecto.apellido_materno%></td>
-                  <td><%=prospecto.user.username rescue nil%></td>
+                  <td>
+			          <%if not prospecto.issolicitante%>
+			              <%= link_to 'Destroy', prospecto_path(prospecto), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+			          <%end%>
+                  </td>
                 </tr>
                 <%end%>
               </tbody>

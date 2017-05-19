@@ -420,6 +420,11 @@ end
 
   end
 
+  def borrarprospectosinvalidos
+    prospectosWithNilInUser = Prospecto.where(:user_id=>nil).where(:issolicitante==false)
+    prospectosWithNilInUser.destroy_all
+    redirect_to purgeprospectos_path
+  end
 
   private
   def undo_link

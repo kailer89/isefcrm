@@ -4,6 +4,17 @@ class ImportsController < ApplicationController
   require 'csv' 
   require 'iconv'
 
+  def getEmtpyForNik(val)
+
+    if val !=nil and not val.nil?
+
+      return val.rstrip
+    else 
+      return val
+    end
+
+  end
+
   def uploadcsv
     @import = Import.find(params[:id])
         all_ok = true
@@ -40,7 +51,7 @@ class ImportsController < ApplicationController
               
             elsif prospecto["sexo"] != nil
 
-              if prospecto["sexo"].gsub(/\s+/, "").upcase == "MASCULINO"
+              if getEmtpyForNik(prospecto["sexo"]).upcase == "MASCULINO"
                   prospecto["sexo"] = true
               else
                   prospecto["sexo"] = false
@@ -108,9 +119,9 @@ class ImportsController < ApplicationController
                   @objecto.accion_estrategicas.build
 
                   if direccion["nacionalidad"] != nil
-                      @nacionalidad = Nacionalidad.where(:nacionalidad=>direccion["nacionalidad"].gsub(/\s+/, ""),:pais=>direccion["pais"].gsub(/\s+/, "")).first
+                      @nacionalidad = Nacionalidad.where(:nacionalidad=>getEmtpyForNik(direccion["nacionalidad"]),:pais=>getEmtpyForNik(direccion["pais"])).first
                       if @nacionalidad == nil
-                        @nacionalidad = Nacionalidad.create(:nacionalidad=>direccion["nacionalidad"].gsub(/\s+/, ""),:pais=>direccion["pais"].gsub(/\s+/, ""))
+                        @nacionalidad = Nacionalidad.create(:nacionalidad=>getEmtpyForNik(direccion["nacionalidad"]),:pais=>getEmtpyForNik(direccion["pais"]))
                         @nacionalidad.save
                       end
                       logger.debug "==========================="
@@ -120,9 +131,9 @@ class ImportsController < ApplicationController
                   end
                   
                   if  direccion["programa"] != nil
-                      @programa = Programa.find_or_create_by_programa_and_nivel(direccion["programa"].gsub(/\s+/, ""),direccion["nivel"].gsub(/\s+/, ""))
+                      @programa = Programa.find_or_create_by_programa_and_nivel(getEmtpyForNik(direccion["programa"]),getEmtpyForNik(direccion["nivel"]))
                       if direccion["nivel"] != nil
-                        @programa.nivel = direccion["nivel"].gsub(/\s+/, "")
+                        @programa.nivel = getEmtpyForNik(direccion["nivel"])
                         @programa.save
                       else
                         @programa.nivel = "Sin Nivel"
@@ -146,7 +157,7 @@ class ImportsController < ApplicationController
                   @objecto.interes_basicos.build
                   @objecto.interes_basicos.first.comentarios = direccion["commentarios"]
                   if direccion["nivel"] != nil
-                      @nivel = Nivel.find_or_create_by_valor(direccion["nivel"].gsub(/\s+/, ""))
+                      @nivel = Nivel.find_or_create_by_valor(getEmtpyForNik(direccion["nivel"]))
                        @objecto.interes_basicos.first.nivel_id = @nivel.id
 
                   end       
@@ -154,44 +165,39 @@ class ImportsController < ApplicationController
 
 
                   @sub_sede = Subsede.where(:sede_id=>current_user.sede_id)
-                 logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
-                  logger.debug "INFO************************************************"
                   #checking for subsede
                   if direccion["subsede"]!=nil
 
                     logger.debug "a************************************************"
                     logger.debug "a************************************************"
                     logger.debug "a************************************************"
-                      subs = @sub_sede.where("nombre like '%" + direccion["subsede"].gsub(/\s+/, "") + "%'")
+                      subs = @sub_sede.where("nombre like '%" + getEmtpyForNik(direccion["subsede"]) + "%'")
 
 
                     logger.debug "b************************************************"
                     logger.debug "b************************************************"
                     logger.debug "b************************************************"
                       if subs !=nil and subs.first !=nil
+                        logger.debug "c************************************************"
+                    logger.debug "c************************************************"
+                    logger.debug "c************************************************"
+                          @objecto.interes_basicos.first.sede_id = subs.first.sede_id
                           @objecto.interes_basicos.first.subsede_id = subs.first.id
-                              logger.debug "c************************************************"
-                    logger.debug "c************************************************"
-                    logger.debug "c************************************************"
+                              
                       else
-                          @objecto.interes_basicos.first.subsede_id = @sub_sede.first.id
-                              logger.debug "d************************************************"
+                          logger.debug "d************************************************"
                     logger.debug "d************************************************"
                     logger.debug "d************************************************"
+                          @objecto.interes_basicos.first.sede_id = current_user.sede_id
+                          @objecto.interes_basicos.first.subsede_id = current_user.sede_id
+                            
                       end
                   else
                         logger.debug "e************************************************"
                     logger.debug current_user.sede_id
                     logger.debug "e************************************************"
-                      @objecto.interes_basicos.first.subsede_id = @sub_sede.first.id rescue nil
+                     @objecto.interes_basicos.first.sede_id = current_user.sede_id
+                      @objecto.interes_basicos.first.subsede_id =current_user.sede_id
                   end
 
                  logger.debug "asd************************************************"
@@ -205,36 +211,36 @@ class ImportsController < ApplicationController
                   logger.debug "asd************************************************"
                   logger.debug "asd************************************************"
 
-                  @objecto.interes_basicos.first.sede_id = current_user.sede_id
+                  #@objecto.interes_basicos.first.sede_id = current_user.sede_id
                   
 
                   if direccion["ultimo_grado_de_estudio"] != nil
-                      @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_or_create_by_grado_de_estudio(direccion["ultimo_grado_de_estudio"].gsub(/\s+/, ""))
+                      @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_or_create_by_grado_de_estudio(getEmtpyForNik(direccion["ultimo_grado_de_estudio"]))
                        @objecto.interes_basicos.first.ultimo_grado_de_estudio_id = @ultimo_grado_de_estudio.id
                   end
                   
                   if direccion["preparatoria_o_universidad_de_origen"] != nil or direccion["preparatoria_o_universidad_de_origen"] != nil
-                      @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(direccion["preparatoria_o_universidad_de_origen"].gsub(/\s+/, ""))
+                      @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(getEmtpyForNik(direccion["preparatoria_o_universidad_de_origen"]))
                       @objecto.interes_basicos.first.preparatoria_o_universidad_de_origen_id = @preparatoria_o_universidad_de_origen.id
                   end
                 
                   if direccion["municipio_de_la_preparatoria_o_universidad_de_origen"] != nil
-                      @municipio_de_la_preparatoria_o_universidad_de_origen = MunicipioDeLaPreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(direccion["municipio_de_la_preparatoria_o_universidad_de_origen"].gsub(/\s+/, ""))
+                      @municipio_de_la_preparatoria_o_universidad_de_origen = MunicipioDeLaPreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(getEmtpyForNik(direccion["municipio_de_la_preparatoria_o_universidad_de_origen"]))
                       @objecto.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen_id = @municipio_de_la_preparatoria_o_universidad_de_origen.id
                   end
                   @objecto.interes_basicos.first.ano_de_graduacion=direccion["ano_de_graduacion"]
 
      
                   if direccion["turno"] != nil
-                      @turno = Turno.find_or_create_by_valor(direccion["turno"].gsub(/\s+/, ""))
+                      @turno = Turno.find_or_create_by_valor(getEmtpyForNik(direccion["turno"]))
                       @objecto.interes_basicos.first.turno_id = @turno.id
                   end
                   if direccion["modalidad"] != nil
-                      @modalidad = Modalidad.find_or_create_by_valor(direccion["modalidad"].gsub(/\s+/, ""))
+                      @modalidad = Modalidad.find_or_create_by_valor(getEmtpyForNik(direccion["modalidad"]))
                       @objecto.interes_basicos.first.modalidad_id = @modalidad.id
                   end              
                   if direccion["periodo_para_ingresar"] != nil
-                      @periodo_para_ingresar = PeriodoParaIngresar.find_or_create_by_valor(direccion["periodo_para_ingresar"].gsub(/\s+/, ""))
+                      @periodo_para_ingresar = PeriodoParaIngresar.find_or_create_by_valor(getEmtpyForNik(direccion["periodo_para_ingresar"]))
                       @objecto.interes_basicos.first.periodo_para_ingresar_id = @periodo_para_ingresar.id
                   end              
                   logger.debug "2#######################################################################"
