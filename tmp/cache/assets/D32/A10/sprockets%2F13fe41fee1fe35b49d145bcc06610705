@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1490932652.950049:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495499254.2863622:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%759cf1b1512a79303ec2344936a82b22I"logical_path;
+F"%0db025c06c5ed1fed05a56208f5a724aI"logical_path;
 FI"application.css;
 TI"pathname;
 FI"1$root/app/assets/stylesheets/application.css;
@@ -9,9 +9,9 @@ TI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2017-03-30T21:57:19-06:00;
+FI"2017-05-22T19:27:22-05:00;
 FI"	body;
-FI"mW/*
+FI"öX/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -704,6 +704,34 @@ table.tablesorter thead tr .headerSortDown {
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
 background-color: #8dbdd8;
 }
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 700;
+}
+
+
+  .centeredSignUp3{
+    display:block;
+    position:absolute;
+    top:10px;
+    left:20%;
+    width:620px;
+    z-index: 30000;
+  }
+.hie
+{
+height: 200px;
+
+}
 ;
 FI"asset_paths;
 F[=I"{C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-3.0.1/vendor/assets/stylesheets/jquery.ui.core.css.erb;
@@ -767,9 +795,9 @@ F[c{I"	path;
 FI"1$root/app/assets/stylesheets/application.css;
 TI"
 mtime;
-FIu:	TimeãK€  ðä:@_zoneI"#Central Standard Time (Mexico);
-T:offsetiþ «I"hexdigest;
-F"%611308d637c5108b51770044979bd529{I"	path;
+FIu:	TimeàR€  `m:@_zoneI"#Central Daylight Time (Mexico);
+T:offsetiþ°¹I"hexdigest;
+F"%7fb77edbc819d800834f5f023fc934b8{I"	path;
 FI"!$root/app/assets/stylesheets;
 TI"
 mtime;
@@ -1259,9 +1287,9 @@ F"%3de435a5068e23abd024ce839ccf8110{I"	path;
 FI",$root/app/assets/stylesheets/normal.css;
 TI"
 mtime;
-FIu;@J€  `¤;I"#Central Standard Time (Mexico);
-T;iþ «I"hexdigest;
-F"%262a387d66c1483310b672b91be8d0cd{I"	path;
+FIu;×R€  0¹;I"#Central Daylight Time (Mexico);
+T;iþ°¹I"hexdigest;
+F"%4ea972ef8bf512c6d518a323402e062d{I"	path;
 FI".$root/app/assets/stylesheets/otrosdep.css;
 TI"
 mtime;

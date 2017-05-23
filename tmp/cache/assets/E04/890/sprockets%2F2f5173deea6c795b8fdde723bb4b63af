@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495074138.0537632:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495499221.856092:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%b22e31b39c73e6b02b622d562c45f1a7I"logical_path;
+F"%0c2ada5c6c01d7b6c1d5d7da25735ed0I"logical_path;
 FI"application.js;
 TI"pathname;
 FI"0$root/app/assets/javascripts/application.js;
@@ -9,9 +9,9 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2017-05-17T21:22:06-05:00;
+FI"2017-05-22T19:26:51-05:00;
 FI"	body;
-FI"ˆ
+FI"Ô
 
 //
 // This is a manifest file that'll be compiled into including all the files listed below.
@@ -140,8 +140,14 @@ $(window).bind("load", function() {
 
 */
 
-
 $(document).ready(function(){
+
+
+$.wait = function(ms) {
+    var defer = $.Deferred();
+    setTimeout(function() { defer.resolve(); }, ms);
+    return defer;
+};
 
 $('.avoid').click(function(){ 
 
@@ -153,16 +159,24 @@ $('.avoid').click(function(){
   else { 
     $(this).addClass('clicked'); 
     $(this).attr("disabled", true);
+    var overlay = jQuery('<div id="overlay"> </div>');
+    overlay.appendTo(document.body);
+
+    var mess = jQuery('<div class="hero-unit centeredSignUp3"> <p> <h1>Processando ...</h1> <div class="alert alert-error ">  <button type="button" class="close" data-dismiss="alert">Ã—</button> <strong>Por favor espere!<br/></strong> Porfavor no presione el boton de refrescar/actualizar de su explorador.</div>  </p> </div>');
+    mess.appendTo(document.body);
+
+
+
+
     return true;
   }
 });
 
 
-
 });
 
 ;
-FI"asset_paths;
+TI"asset_paths;
 F[¯I"pC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery.js;
 TI"tC:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.4/vendor/assets/javascripts/jquery_ujs.js;
 TI".$root/app/assets/javascripts/bootstrap.js;
@@ -343,9 +357,9 @@ F[°{I"	path;
 FI"0$root/app/assets/javascripts/application.js;
 TI"
 mtime;
-FIu:	TimeBR€  `X:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	TimeàR€  0k:@_zoneI"#Central Daylight Time (Mexico);
 T:offsetiþ°¹I"hexdigest;
-F"%b67ab08184588f6873fbffb376c544b1{I"	path;
+F"%6eea6a7f3d888d2f690f153247058aa3{I"	path;
 FI"!$root/app/assets/javascripts;
 TI"
 mtime;

@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495074138.096792:@value{	I"length:EFi]’,I"digest;
-F"%80a87b124da480738b57ee107609e3f0I"source;
-FI"]’,/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495499222.3306181:@value{	I"length:EFi©”,I"digest;
+F"%47ed57985ce0edd7d7c73f3a8bbfc2fdI"source;
+FI"©”,/*!
  * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
  *
@@ -83688,8 +83688,14 @@ $(window).bind("load", function() {
 
 */
 
-
 $(document).ready(function(){
+
+
+$.wait = function(ms) {
+    var defer = $.Deferred();
+    setTimeout(function() { defer.resolve(); }, ms);
+    return defer;
+};
 
 $('.avoid').click(function(){ 
 
@@ -83701,14 +83707,22 @@ $('.avoid').click(function(){
   else { 
     $(this).addClass('clicked'); 
     $(this).attr("disabled", true);
+    var overlay = jQuery('<div id="overlay"> </div>');
+    overlay.appendTo(document.body);
+
+    var mess = jQuery('<div class="hero-unit centeredSignUp3"> <p> <h1>Processando ...</h1> <div class="alert alert-error ">  <button type="button" class="close" data-dismiss="alert">Ã—</button> <strong>Por favor espere!<br/></strong> Porfavor no presione el boton de refrescar/actualizar de su explorador.</div>  </p> </div>');
+    mess.appendTo(document.body);
+
+
+
+
     return true;
   }
 });
-
 
 
 });
 
 ;
 TI"_version;
-F"%b22e31b39c73e6b02b622d562c45f1a7
+F"%0c2ada5c6c01d7b6c1d5d7da25735ed0

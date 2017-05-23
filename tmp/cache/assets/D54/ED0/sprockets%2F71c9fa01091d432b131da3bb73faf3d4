@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1490932652.966052:@value{	I"length:EFiû®I"digest;
-F"%b87ee382fc8a32c75426248d81dbc9eaI"source;
-FI"û®/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495499254.3073761:@value{	I"length:EFi˜°I"digest;
+F"%0c490f73e9c44502fd9f8114a14f55f4I"source;
+FI"˜°/*!
  * jQuery UI CSS Framework 1.9.2
  * http://jqueryui.com
  *
@@ -1374,6 +1374,34 @@ table.tablesorter thead tr .headerSortDown {
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
 background-color: #8dbdd8;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 700;
+}
+
+
+  .centeredSignUp3{
+    display:block;
+    position:absolute;
+    top:10px;
+    left:20%;
+    width:620px;
+    z-index: 30000;
+  }
+.hie
+{
+height: 200px;
+
 }
 
       body {
@@ -9396,6 +9424,7 @@ body{
     position:absolute;
     left:35%;
     width:520px;
+    z-index: 30000;
   }
   .favoritesBar
   {
@@ -9981,4 +10010,4 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {
 
 ;
 FI"_version;
-F"%759cf1b1512a79303ec2344936a82b22
+F"%0db025c06c5ed1fed05a56208f5a724a

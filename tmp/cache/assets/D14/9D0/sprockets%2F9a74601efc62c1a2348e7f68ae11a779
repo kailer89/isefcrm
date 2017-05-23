@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1489799233.386295:@value{	I"length:EFiWI"digest;
-F"%0870dd14ac4306da42ed43487517154aI"source;
-FI"Wbody{
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495496784.466579:@value{	I"length:EFikI"digest;
+F"%b42d020d59cb425b1d0fd1832a313a2cI"source;
+FI"kbody{
  padding-left: 0px;
  padding-right: 0px;
 }
@@ -32,6 +32,7 @@ FI"Wbody{
     position:absolute;
     left:35%;
     width:520px;
+    z-index: 30000;
   }
   .favoritesBar
   {
@@ -93,4 +94,4 @@ FI"Wbody{
 }
 ;
 FI"_version;
-F"%5667bc2fb2ed21fe45bc5afc6d5e8f00
+F"%d99d982315fc0ac9b46602729ac60527

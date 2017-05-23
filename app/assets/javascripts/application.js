@@ -143,8 +143,14 @@ $(window).bind("load", function() {
 
 */
 
-
 $(document).ready(function(){
+
+
+$.wait = function(ms) {
+    var defer = $.Deferred();
+    setTimeout(function() { defer.resolve(); }, ms);
+    return defer;
+};
 
 $('.avoid').click(function(){ 
 
@@ -156,10 +162,18 @@ $('.avoid').click(function(){
   else { 
     $(this).addClass('clicked'); 
     $(this).attr("disabled", true);
+    var overlay = jQuery('<div id="overlay"> </div>');
+    overlay.appendTo(document.body);
+
+    var mess = jQuery('<div class="hero-unit centeredSignUp3"> <p> <h1>Processando ...</h1> <div class="alert alert-error ">  <button type="button" class="close" data-dismiss="alert">×</button> <strong>Por favor espere!<br/></strong> Porfavor no presione el boton de refrescar/actualizar de su explorador.</div>  </p> </div>');
+    mess.appendTo(document.body);
+
+
+
+
     return true;
   }
 });
-
 
 
 });
