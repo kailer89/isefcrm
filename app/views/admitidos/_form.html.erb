@@ -1,5 +1,5 @@
   <%= simple_form_for @admitido, :html => { :class => 'form-horizontal',:onsubmit=>"return confirm('Estas seguro de querer continuar?');" } do |f| %>
-   <%= f.submit nil, :class => 'btn btn-primary avoid' %>
+   <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to 'Cancel', examinados_path,:confirm => "Estas seguro de querer continuar?", :class => 'btn' %>
     <%if request.path_parameters[:action]== "edit" %>
       <%if not @admitido.isinscrito?%>

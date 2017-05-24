@@ -1,5 +1,5 @@
     <%= simple_form_for @prospecto, :html => { :class => 'form-horizontal',:onsubmit=>"return confirm('Estas seguro de querer continuar?');"} do |f| %>
-      <%= f.submit nil, :class => 'btn btn-primary avoid' ,:id=>"commit" %>
+      <%= f.submit nil, :class => 'btn btn-primary' ,:id=>"commit" %>
       <%= link_to 'Cancel', prospectos_path(:validado=>@prospecto.validado),:confirm => "Estas seguro de querer continuar?", :class => 'btn' %>
       <%if request.path_parameters[:action]== "edit" %>
         <% if (@prospecto.validado == false) %>

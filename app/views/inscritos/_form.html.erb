@@ -1,5 +1,5 @@
 <%= simple_form_for @inscrito, :html => { :class => 'form-horizontal' ,:onsubmit=>"return confirm('Estas seguro de querer continuar?');"} do |f| %>
-    <%= f.submit nil, :class => 'btn btn-primary avoid' %>
+    <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to 'Cancel', inscritos_path,:confirm => "Estas seguro de querer continuar?", :class => 'btn' %>
 <%= link_to 'Convertir en admitido',convertir_en_admitido_path,:confirm => "Estas seguro de querer continuar?", :class=>'btn btn-success avoid', :method=>'post', :id=>'convertir_en_admitido',:rel=>'popover',:data => {:content => 'Usa este boton para revertir el inscrito en admitido.',"origintal-title"=>'Test',:notooltip=>'true'} %>
 
@@ -23,7 +23,7 @@
 </div>
 <%=render :partial=>"shared/edit_admitidos", :locals=>{:f=>f}%>
 <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary avoid' %>
+    <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to 'Cancel', inscritos_path,:confirm => "Estas seguro de querer continuar?", :class => 'btn' %>
         <%= link_to 'Convertir en admitido',convertir_en_admitido_path,:confirm => "Estas seguro de querer continuar?", :class=>'btn btn-success avoid', :method=>'post', :id=>'convertir_en_admitido',:rel=>'popover',:data => {:content => 'Usa este boton para revertir el inscrito en admitido.',"origintal-title"=>'Test',:notooltip=>'true'} %>
 </div>    
