@@ -9,6 +9,7 @@ class Prospecto < ActiveRecord::Base
 	has_many :interes_academicos, :dependent => :destroy
 	has_many :accion_estrategicas, :dependent => :destroy
 	has_many :plan_de_descuentos, :dependent => :destroy
+  has_many :subsedes, :through =>:interes_basicos
 	belongs_to :user
 	belongs_to :sede
   belongs_to :subsede

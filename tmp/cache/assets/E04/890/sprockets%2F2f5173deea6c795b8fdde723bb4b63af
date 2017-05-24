@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495499221.856092:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495665666.407433:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%0c2ada5c6c01d7b6c1d5d7da25735ed0I"logical_path;
+F"%00765f3e9c165f07edcef02b8d7f98a8I"logical_path;
 FI"application.js;
 TI"pathname;
 FI"0$root/app/assets/javascripts/application.js;
@@ -9,9 +9,9 @@ TI"content_type;
 FI"application/javascript;
 FI"
 mtime;
-FI"2017-05-22T19:26:51-05:00;
+FI"2017-05-23T06:06:42-05:00;
 FI"	body;
-FI"Ô
+FI"Ê
 
 //
 // This is a manifest file that'll be compiled into including all the files listed below.
@@ -162,7 +162,7 @@ $('.avoid').click(function(){
     var overlay = jQuery('<div id="overlay"> </div>');
     overlay.appendTo(document.body);
 
-    var mess = jQuery('<div class="hero-unit centeredSignUp3"> <p> <h1>Processando ...</h1> <div class="alert alert-error ">  <button type="button" class="close" data-dismiss="alert">Ã—</button> <strong>Por favor espere!<br/></strong> Porfavor no presione el boton de refrescar/actualizar de su explorador.</div>  </p> </div>');
+    var mess = jQuery('<div class="hero-unit centeredSignUp3"> <p> <h1>Procesando ...</h1> <div class="alert alert-error ">  <button type="button" class="close" data-dismiss="alert">Ã—</button> <strong>Por favor espere!<br/></strong> Por favor no presione el boton de actualizar de su explorador.</div>  </p> </div>');
     mess.appendTo(document.body);
 
 
@@ -357,9 +357,9 @@ F[°{I"	path;
 FI"0$root/app/assets/javascripts/application.js;
 TI"
 mtime;
-FIu:	TimeàR€  0k:@_zoneI"#Central Daylight Time (Mexico);
+FIu:	TimeëR€   :@_zoneI"#Central Daylight Time (Mexico);
 T:offsetiþ°¹I"hexdigest;
-F"%6eea6a7f3d888d2f690f153247058aa3{I"	path;
+F"%f04a3a9f07888d1f6b3192d471d5a0b6{I"	path;
 FI"!$root/app/assets/javascripts;
 TI"
 mtime;

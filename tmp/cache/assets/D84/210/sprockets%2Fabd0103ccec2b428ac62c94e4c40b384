@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495499222.3306181:@value{	I"length:EFi©”,I"digest;
-F"%47ed57985ce0edd7d7c73f3a8bbfc2fdI"source;
-FI"©”,/*!
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1495665667.008359:@value{	I"length:EFiŸ”,I"digest;
+F"%8b1a10a02a13bf3bff2c0a677ea659cdI"source;
+FI"Ÿ”,/*!
  * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
  *
@@ -83710,7 +83710,7 @@ $('.avoid').click(function(){
     var overlay = jQuery('<div id="overlay"> </div>');
     overlay.appendTo(document.body);
 
-    var mess = jQuery('<div class="hero-unit centeredSignUp3"> <p> <h1>Processando ...</h1> <div class="alert alert-error ">  <button type="button" class="close" data-dismiss="alert">Ã—</button> <strong>Por favor espere!<br/></strong> Porfavor no presione el boton de refrescar/actualizar de su explorador.</div>  </p> </div>');
+    var mess = jQuery('<div class="hero-unit centeredSignUp3"> <p> <h1>Procesando ...</h1> <div class="alert alert-error ">  <button type="button" class="close" data-dismiss="alert">Ã—</button> <strong>Por favor espere!<br/></strong> Por favor no presione el boton de actualizar de su explorador.</div>  </p> </div>');
     mess.appendTo(document.body);
 
 
@@ -83725,4 +83725,4 @@ $('.avoid').click(function(){
 
 ;
 TI"_version;
-F"%0c2ada5c6c01d7b6c1d5d7da25735ed0
+F"%00765f3e9c165f07edcef02b8d7f98a8
