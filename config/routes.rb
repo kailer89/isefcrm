@@ -266,6 +266,10 @@ resources :prospectos, only: :index do
   match "/rpms/:id/printview" => "rpms#printview", as: :printview
 
 
+  match "/programas/:id/borrar" => "programas#borrar", as: :borrar
+  match "/programas/:id/masschange" => "programas#masschange", as: :masschange
+
+
 
   match "/prospectos/:id/resumen"=>"prospectos#resumen", as: :resumen
   
