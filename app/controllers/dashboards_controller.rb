@@ -5,7 +5,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards
   # GET /dashboards.json
   def index
-    @search = User.all
+    @users = User.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
