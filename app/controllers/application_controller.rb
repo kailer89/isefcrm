@@ -321,7 +321,7 @@ class ApplicationController < ActionController::Base
   end
 
   def iswriteteable
-
+GC::start
     logger.debug "--------------------------------0"
     #if true == false #temporary till uploads of roles are done
       logger.debug "action"
