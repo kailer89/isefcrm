@@ -340,6 +340,7 @@ end
         historial.action = "Validado"
         historial.save      
         @prospecto.validado=true
+        @prospecto.importado_revisado=true
         @prospecto.save
         redirect_to edit_prospecto_path(@prospecto,:validado=>"false"), :flash => { :info => "Prospecto validado satisfactoriamente. #{undo_link}" }      
   end

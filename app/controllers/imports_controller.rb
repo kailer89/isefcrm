@@ -109,7 +109,7 @@ class ImportsController < ApplicationController
 
               logger.debug "1#######################################################################"
                 if(@import.module.singularize.camelize=="Prospecto")
-                  @objecto.importado_revisado=false
+                  @objecto.importado_revisado=true
                   @objecto.issolicitante=false
                   @objecto.archivado =false
                   @objecto.created_by = current_user.id
