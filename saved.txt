@@ -1,6 +1,0 @@
-  roles1= ["demo","dos"]
-  Role.all.each do |rol|
-    if rol != nil
-      roles1.push(rol.nombre)
-    end
-  end
