@@ -309,6 +309,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def layout_by_resource
+    GC::start
     if devise_controller?
       
     else
@@ -317,6 +318,7 @@ class ApplicationController < ActionController::Base
   end
 
   def iswriteteable
+
     logger.debug "--------------------------------0"
     #if true == false #temporary till uploads of roles are done
       logger.debug "action"

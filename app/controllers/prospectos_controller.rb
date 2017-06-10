@@ -4,6 +4,46 @@ class ProspectosController < ApplicationController
   before_filter :authenticate_user!
   
   
+  def multiexport
+
+      archivado = false
+          modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+          if modelo != nil
+            archivado = modelo.mostrar_archivados
+          end
+
+        rol = Role.where(:id=>current_user.role).first
+
+        if rol == nil
+          prsopectos =  Prospecto.where(:archivado=>archivado).where(:sede_id=>current_user.sede).where(:user_id=>current_user.id)
+        else
+          if rol.nombre == "DN" or rol.nombre == "ACRM" 
+            prsopectos =  Prospecto.where(:archivado=>archivado)
+          else
+            if rol.nombre == "D" or rol.nombre == "CP"
+
+              prsopectos =  Prospecto.where(:archivado=>archivado).where(:sede_id=>current_user.sede)
+            else
+
+              prsopectos =  Prospecto.where(:archivado=>archivado).where(:sede_id=>current_user.sede).where(:user_id=>current_user.id)
+            end #end director
+          end #end else rol nombre
+        end #end else nil
+
+    prsopectos = prsopectos.map{|c| [c.id] }.sort
+    #.each_slice(3).to_a
+    @finals = []
+    arrays = prsopectos.each_slice(100).to_a
+
+    arrays.each do |a|
+      new_state = Itemn.new
+      new_state.maximo = a.max
+      new_state.minimo = a.min
+      @finals.push(new_state)
+    end
+
+  end
+
   # GET /prospectos
   # GET /prospectos.json
   def index

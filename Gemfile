@@ -1,8 +1,6 @@
 source 'http://rubygems.org'
-ruby "1.9.3"
-gem 'rails', '3.1.4'
-
-
+ruby "2.2.6"
+gem 'rails'
 
 # Bundle edge Rails instead:
 #gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -16,9 +14,9 @@ gem 'coffee-script-source', '1.8.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "3.1.4"
+  gem 'sass-rails'
   gem 'compass-rails'
-  gem 'coffee-rails', "3.1.1"
+  gem 'coffee-rails'
   gem 'uglifier', "1.0.3"
   gem 'bootstrap-sass'
   gem 'jquery-ui-rails'
@@ -55,6 +53,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem 'syck'
 gem 'simple_form'
 gem 'devise'
 gem 'bootstrap-will_paginate'
@@ -81,7 +80,8 @@ gem "squeel"#, :git => "git://github.com/ernie/squeel.git" # Track git repo
 gem 'has_permalink'
 gem "exception_notification"
 #gem 'exception_notification'#, :require => 'exception_notifier', :git => "https://github.com/smartinez87/exception_notification.git"
-gem 'paper_trail', '~> 2'
+gem 'paper_trail'
+
 gem 'rails_admin'#, :git=>"git://github.com/sferik/rails_admin.git",:branch => "rails-3.x"
 gem "pdfkit"
 gem "wkhtmltopdf-heroku"#, :git => 'git://github.com/camdez/wkhtmltopdf-heroku.git'
@@ -94,4 +94,5 @@ gem 'newrelic_rpm', '3.13.0.299'
 
 gem 'seed_dump'
 gem 'public_activity'
-gem 'nokogiri','1.6.6.2'
+gem 'nokogiri', '~> 1.6.0'
+gem 'memory_profiler'
