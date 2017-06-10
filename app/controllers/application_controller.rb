@@ -2,6 +2,9 @@ class ApplicationController < ActionController::Base
 	before_filter :iswriteteable
   protect_from_forgery
   
+  def user_for_paper_trail
+    nil # disable whodunnit tracking
+  end
 
 
   def getProspectosForUser (user)
