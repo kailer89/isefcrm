@@ -234,6 +234,13 @@ end
     @admitido.isinscrito=true
     @admitido.save
 
+
+    hasInscritoAlready = Inscrito.where(:admitido_id=>@admitido.id).first
+    if hasInscritoAlready != nil
+      redirect_to edit_inscrito_path(hasInscritoAlready), :flash => { :info => "Admitido ya habia sido convertido." }
+      return
+    end
+
     admitido=@admitido
     newInscrito=Inscrito.create(:admitido_id=>admitido.id,:archivado=>false)
   

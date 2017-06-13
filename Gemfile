@@ -27,7 +27,7 @@ gem "twitter-bootstrap-rails"
 platforms :ruby do # linux
 
   gem 'unicorn'
-
+gem "iconv",:group => :production
 end
 
 platforms :mswin do
@@ -35,7 +35,7 @@ platforms :mswin do
   # gems specific to windows
 
 end
-gem "iconv"
+
 gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

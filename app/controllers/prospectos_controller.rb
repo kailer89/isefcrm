@@ -391,6 +391,13 @@ end
     @prospecto = Prospecto.find(params[:id])
     @prospecto.issolicitante=true
     @prospecto.save
+
+    hasInscritoAlready = Solicitante.where(:prospecto_id=>@prospecto.id).first
+    if hasInscritoAlready != nil
+      redirect_to edit_solicitante_path(hasInscritoAlready), :flash => { :info => "Prospecto ya habia sido convertido." }
+      return
+    end
+
     prospecto=@prospecto
     newsolicitante=Solicitante.create(:prospecto_id=>@prospecto.id)
     newbecacredit=Becacredito.create(:solicitante=>newsolicitante)

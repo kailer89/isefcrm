@@ -236,6 +236,14 @@ end
   def convertir_solicitante
     @solicitante = Solicitante.find(params[:id])
     @solicitante.isexaminado=true
+
+    hasInscritoAlready = Examinado.where(:solicitante_id=>@solicitante.id).first
+    if hasInscritoAlready != nil
+      redirect_to edit_examinado_path(hasInscritoAlready), :flash => { :info => "Solicitante ya habia sido convertido." }
+      return
+    end
+
+
     solicitante=@solicitante
     newexaminado=Examinado.create(:solicitante_id=>solicitante.id)
     newexaminado.isadmitido = false

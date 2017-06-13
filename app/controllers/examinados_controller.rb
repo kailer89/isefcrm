@@ -235,6 +235,12 @@ end
     @examinado.isadmitido=true
     @examinado.save
 
+    hasInscritoAlready = Admitido.where(:examinado_id=>@examinado.id).first
+    if hasInscritoAlready != nil
+      redirect_to edit_admitido_path(hasInscritoAlready), :flash => { :info => "Examinado ya habia sido convertido." }
+      return
+    end
+
     examinado=@examinado
     newAdmitido=Admitido.create(:examinado_id=>examinado.id)
     newAdmitido.isinscrito = false
