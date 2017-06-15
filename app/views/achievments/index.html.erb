@@ -20,8 +20,8 @@
         <td><%= achievment.periodo_anual %></td>
         <td><%= achievment.sede.nombre %></td>
         <td><%= achievment.fecha_de_inicio %></td>
-        <td><%= achievment.nivel.valor %></td>
-        <td><%= achievment.programa.nivel %> - <%= achievment.programa.programa %></td>
+        <td><%= achievment.nivel.valor rescue nil %></td>
+        <td><%= achievment.programa.nivel rescue nil %> - <%= achievment.programa.programa rescue nil %></td>
         <td><%=l achievment.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

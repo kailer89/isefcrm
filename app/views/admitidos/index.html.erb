@@ -29,7 +29,7 @@ margin-bottom: 0!important;
 border-bottom: 0px solid #e5e5e5!important;
 }
 </style>
-<%=render :partial=>"shared/save_search", :locals=>{:path_to_look_for=>admitidos_path}%>
+<%=render :partial=>"shared/save_search", :locals=>{:path_to_look_for=>admitidos_path, :renderForChange=>false}%>
   <%=@admitidos.size%> registros de un total de <%=@admitidos.total_entries%>
 <table class="table table-striped table-bordered table-condensed" id="MyTable">
   <thead>

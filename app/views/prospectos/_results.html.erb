@@ -1,5 +1,5 @@
 
-<%=render :partial=>"shared/save_search", :locals=>{:path_to_look_for=>prospectos_path}%>
+<%=render :partial=>"shared/save_search", :locals=>{:path_to_look_for=>prospectos_path, :renderForChange=>false}%>
 
 <div class="form-inline">
   <%= link_to "Importar Registros", new_import_path(:module=>"prospectos"), :class=>"btn btn-mini btn-primary"%>

@@ -3,6 +3,79 @@ class ProspectosController < ApplicationController
    
   before_filter :authenticate_user!
   
+  def cambiarmultiple
+    @valores = params
+    @psm = params["/cambiarmultiple"]
+    @q = getProspectosForUser(current_user).ransack(params[:q])
+    @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
+
+    if not @psm[:fieldvaluetext].present?
+     redirect_to mostrarmultiple_path(:q=>params[:q]) , :flash => { :error => "Por favor seleccione un valor para el campo seleccionado." }
+     return
+    end
+    @prospectos.update_all("#{@psm[:fieldname]} = #{@psm[:fieldvaluetext]}")
+
+
+  end
+
+
+  def mostrarmultiple
+     archivado = false
+    modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    end    
+    # @prospectos = Prospecto.all
+    # or (current_user.role =="director")
+    logger.debug "-----------------------"
+    logger.debug current_user.inspect
+    logger.debug "--------------------"
+    rol = Role.where(:id=>current_user.role).first
+
+    if request.path_parameters[:format] != 'xls'
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
+          @q = getProspectosForUser(current_user).ransack(params[:q])
+          @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?        
+      else
+          @q = getProspectosForUser(current_user).ransack(params[:q])
+          @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?            
+      end
+    else
+
+      ini = params[:inicio]
+      fin = params[:final]
+
+
+
+
+      if rol.nombre == "DN" or rol.nombre == "ACRM"  
+          @q = getProspectosForUser(current_user).ransack(params[:q])
+          if ini != nil
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).where{id>=ini}.where{id<=fin}
+          else
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
+          end
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?        
+      else
+          @q = getProspectosForUser(current_user).ransack(params[:q])
+          if ini != nil
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).where{id>=ini.to_s}.where{id<=fin.to_s}
+          else
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
+          end
+          @q.build_condition if @q.conditions.empty?
+          @q.build_sort if @q.sorts.empty?            
+      end
+    end
+
+
+
+  end
   
   def multiexport
 

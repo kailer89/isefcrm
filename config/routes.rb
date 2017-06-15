@@ -209,6 +209,8 @@ resources :prospectos, only: :index do
   match "/multiexporta" => "prospectos#multiexporta"
   match "/multiexporte" => "prospectos#multiexporte"
   match "/multiexporti" => "prospectos#multiexporti"
+  match "/mostrarmultiple" => "prospectos#mostrarmultiple"
+  match "/cambiarmultiple" => "prospectos#cambiarmultiple"
 
   match "/inscritos/:id/convertir_en_admitido" => "inscritos#convertir_en_admitido", as: :convertir_en_admitido
 

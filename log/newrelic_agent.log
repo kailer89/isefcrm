@@ -517,3 +517,42 @@ C:/Sites/isefcrm/app/views/programas/borrar.html.erb:24: syntax error, unexpecte
 [06/13/17 18:35:39 -0500 alienware15 (10312)] INFO : Installing Rails 3 Error instrumentation
 [06/13/17 18:35:39 -0500 alienware15 (10312)] INFO : Finished instrumentation
 [06/13/17 18:35:40 -0500 alienware15 (10312)] INFO : Doing deferred dependency-detection before Rack startup
+[06/14/17 17:50:51 -0500 alienware15 (10180)] INFO : Starting the New Relic agent in "development" environment.
+[06/14/17 17:50:51 -0500 alienware15 (10180)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/14/17 17:50:51 -0500 alienware15 (10180)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : New Relic Agent Developer Mode enabled.
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Environment: development
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : No known dispatcher detected.
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Application: My Application
+[06/14/17 17:50:52 -0500 alienware15 (10180)] WARN : Agent configured not to send data in this environment.
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing ActiveRecord instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing HTTPClient instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing Net instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing deferred Rack instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing Rack::Builder middleware instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing Rails 3+ middleware instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing Rails 3 Controller instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Installing Rails 3 Error instrumentation
+[06/14/17 17:50:52 -0500 alienware15 (10180)] INFO : Finished instrumentation
+[06/14/17 17:50:54 -0500 alienware15 (10180)] INFO : Doing deferred dependency-detection before Rack startup
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Starting the New Relic agent in "development" environment.
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : New Relic Agent Developer Mode enabled.
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Environment: development
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : No known dispatcher detected.
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Application: My Application
+[06/14/17 18:01:58 -0500 alienware15 (4604)] WARN : Agent configured not to send data in this environment.
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing ActiveRecord instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing HTTPClient instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing Net instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing deferred Rack instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing Rack::Builder middleware instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing Rails 3+ middleware instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing Rails 3 Controller instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Installing Rails 3 Error instrumentation
+[06/14/17 18:01:58 -0500 alienware15 (4604)] INFO : Finished instrumentation
+[06/14/17 18:02:00 -0500 alienware15 (4604)] INFO : Doing deferred dependency-detection before Rack startup
+[06/14/17 19:21:22 -0500 alienware15 (4604)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No HTTP_REFERER was set in the request to this action, so redirect_to :back could not be called successfully. If this is a test, make sure to specify request.env["HTTP_REFERER"].
