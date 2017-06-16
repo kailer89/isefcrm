@@ -1,6 +1,6 @@
 <%if request.path_parameters[:action] != "list"%>
 
-  <%if renderForChange != nil%>
+  <%if renderForChange ==true%>
   
 
       <%searches = Search.where(:model_name=>request.path_parameters[:controller]).where(:user_id=>current_user.id).all%>

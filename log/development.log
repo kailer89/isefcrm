@@ -11570,3 +11570,6 @@ false
   Rendered shared/_fav_menu.html.erb (1.5ms)
   Rendered shared/_side_menu.html.erb (0.5ms)
 Completed 200 OK in 579.2ms (Views: 479.8ms | ActiveRecord: 5.3ms)
+Connecting to database specified by database.yml
+** [Honeybadger] Unable to start Honeybadger -- api_key is missing or invalid. level=2 pid=13732
+DEPRECATION WARNING: PaperTrail.track_associations has not been set. As of PaperTrail 5, it defaults to false. Tracking associations is an experimental feature so we recommend setting PaperTrail.config.track_associations = false in your config/initializers/paper_trail.rb . (called from <class:Prospecto> at C:/Sites/isefcrm/isefcrm/app/models/prospecto.rb:136)
