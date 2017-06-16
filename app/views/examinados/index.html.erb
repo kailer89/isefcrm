@@ -83,15 +83,24 @@ border-bottom: 0px solid #e5e5e5!important;
                             <%tareas = Memo.where(:model_name=>"examinados").where(:model_id=>examinado.id,:pendiente=>true).size%>                                            
                             <%if tareas > 0
                                 tareastatus="orangerow linkcolor"
-                              end%>          
-        <td><%= examinado.id %></td>
-        <td><%= link_to examinado.solicitantes.first.prospectos.first.nombre, examinado_path(examinado) %></td>
-        <td><%= link_to examinado.solicitantes.first.prospectos.first.apellido_paterno, examinado_path(examinado) %></td>
-        <td><%= link_to examinado.solicitantes.first.prospectos.first.apellido_materno, examinado_path(examinado) %></td>
-        <td><%= link_to examinado_path(examinado) do %>
-            <%=examinado.solicitantes.first.prospectos.first.programa.nivel rescue nil %> - <%=examinado.solicitantes.first.prospectos.first.programa.programa rescue nil%>
-            <%end%>
-        </td>        
+                              end%>        
+        <%if examinado.solicitantes.first == nil or examinado.solicitantes.first.prospectos.first == nil%>
+            <td><%= examinado.id %></td>
+            <td>Invalido</td>
+            <td>Invalido</td>
+            <td>Invalido</td>
+            <td>Invalido</td>
+        <%else%>  
+            <td><%= examinado.id %></td>
+            <td><%= link_to examinado.solicitantes.first.prospectos.first.nombre, examinado_path(examinado) %></td>
+            <td><%= link_to examinado.solicitantes.first.prospectos.first.apellido_paterno, examinado_path(examinado) %></td>
+            <td><%= link_to examinado.solicitantes.first.prospectos.first.apellido_materno, examinado_path(examinado) %></td>
+            <td><%= link_to examinado_path(examinado) do %>
+                <%=examinado.solicitantes.first.prospectos.first.programa.nivel rescue nil %> - <%=examinado.solicitantes.first.prospectos.first.programa.programa rescue nil%>
+                <%end%>
+            </td>                            
+        <%end%>
+ 
         <td><%= examinado.created_at %></td>
         <td>
         <%if tareastatus != ""%>

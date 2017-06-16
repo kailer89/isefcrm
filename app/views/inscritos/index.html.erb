@@ -83,15 +83,26 @@ border-bottom: 0px solid #e5e5e5!important;
                             <%tareas = Memo.where(:model_name=>"examinados").where(:model_id=>inscrito.id,:pendiente=>true).size%>                                            
                             <%if tareas > 0
                                 tareastatus="orangerow linkcolor"
-                              end%>         
-        <td><%= inscrito.id %></td>
-        <td><%= link_to inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.nombre, inscrito_path(inscrito) %></td>
-        <td><%= link_to inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.apellido_paterno, inscrito_path(inscrito) %></td>
-        <td><%= link_to inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.apellido_materno, inscrito_path(inscrito) %></td>
-        <td><%= link_to inscrito_path(inscrito) do %>
-            <%=inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.programa.nivel rescue nil%> - <%=inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.programa.programa rescue nil%>
-            <%end%>
-        </td>
+                              end%>   
+          <%if inscrito.admitidos.first == nil or inscrito.admitidos.first.examinados.first == nil  or inscrito.admitidos.first.examinados.first.solicitantes == nil or inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first == nil%>
+            <td><%=inscrito.id %></td>
+            <td>Invalido</td>
+            <td>Invalido</td>
+            <td>Invalido</td>
+            <td>Invalido</td>          
+          <%else%>
+                  <td><%= inscrito.id %></td>
+                  <td><%= link_to inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.nombre, inscrito_path(inscrito) %></td>
+                  <td><%= link_to inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.apellido_paterno, inscrito_path(inscrito) %></td>
+                  <td><%= link_to inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.apellido_materno, inscrito_path(inscrito) %></td>
+                  <td><%= link_to inscrito_path(inscrito) do %>
+                      <%=inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.programa.nivel rescue nil%> - <%=inscrito.admitidos.first.examinados.first.solicitantes.first.prospectos.first.programa.programa rescue nil%>
+                      <%end%>
+                  </td>
+          <%end%>
+
+
+
         <td><%= inscrito.created_at %></td>
         <td>
         <%if tareastatus != ""%>
