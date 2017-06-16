@@ -83,14 +83,24 @@ border-bottom: 0px solid #e5e5e5!important;
                                 tareastatus="orangerow linkcolor"
                               end%>        
       <tr>
-        <td><%= solicitante.id %></td>
-        <td><%= link_to solicitante.prospectos.first.nombre, solicitante_path(solicitante) %></td>
-        <td><%= link_to solicitante.prospectos.first.apellido_paterno, solicitante_path(solicitante) %></td>
-        <td><%= link_to solicitante.prospectos.first.apellido_materno, solicitante_path(solicitante) %></td>
-        <td><%= link_to solicitante_path(solicitante) do %>
-            <%=solicitante.prospectos.first.programa.nivel rescue nil%> - <%=solicitante.prospectos.first.programa.programa rescue nil%>
-            <%end%>
-          </td>
+        <%if solicitante.prospectos.first == nil%>
+          <td><%= solicitante.id %></td>
+          <td>Invalido</td>
+          <td>Invalido</td>
+          <td>Invalido</td>
+          <td>Invalido</td>
+        <%else%>
+          <td><%= solicitante.id %></td>
+          <td><%= link_to solicitante.prospectos.first.nombre, solicitante_path(solicitante) %></td>
+          <td><%= link_to solicitante.prospectos.first.apellido_paterno, solicitante_path(solicitante) %></td>
+          <td><%= link_to solicitante.prospectos.first.apellido_materno, solicitante_path(solicitante) %></td>
+          <td><%= link_to solicitante_path(solicitante) do %>
+              <%=solicitante.prospectos.first.programa.nivel rescue nil%> - <%=solicitante.prospectos.first.programa.programa rescue nil%>
+              <%end%>
+            </td>        
+        <%end%>
+
+
         <td><%= solicitante.created_at %></td>
         <td>
         <%if tareastatus != ""%>
