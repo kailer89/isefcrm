@@ -16,6 +16,10 @@ class CorreosController < ApplicationController
 
 
   def send_correo
+  flash[:error] = 'Envio de correos temporalmente bloqueado'
+  redirect_to "/correos"
+  return
+
     @correo = Correo.find(params[:id])
     @correo.update_attributes(params[:correo])
     aquienSeAEnviado = []
