@@ -434,8 +434,10 @@ rol = Role.where(:id=>current_user.role).first
     @correo.destroy
 
 else
+  @correo = Correo.find(params[:id])
   flash[:error] ='No tienes permiso para realizar esta accion'
-
+  redirect_to "/correos/#{@correo.id}/edit/"
+  return
 end
 
 
