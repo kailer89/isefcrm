@@ -43,7 +43,7 @@ logger.debug "lllllllllllllllllllllllllllll"
           <%if rol.nombre == "DN" or rol.nombre == "ACRM" %>           
             <%=f.association :user,:label_method=>:username,:include_blank => false,:label=>"Asesor a cargo:"%>
           <%else%>
-            <%=f.hidden_field :user,:label_method=>:username,:include_blank => false,:label=>"Asesor a cargo:",:disabled=>true, :selected=>current_user.id%>
+            <%=f.hidden_field :user,:label_method=>:username,:include_blank => false,:label=>"Asesor a cargo:", :selected=>current_user.id%>
           <%end%>
 
 
