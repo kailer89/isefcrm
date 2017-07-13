@@ -243,6 +243,13 @@ resources :prospectos, only: :index do
 
   match "/miscorreos" => "statics#miscorreos", as: :miscorreos
   match "/correosenviados" => "statics#correosenviados", as: :correosenviados
+
+
+
+  match "/enviandocorreos" => "correos#enviandocorreos", as: :enviandocorreos
+  match "/send_correo_individually" => "correos#send_correo_individually", as: :send_correo_individually
+  
+
   match "/campanasenviadas" => "statics#campanasenviadas", as: :campanasenviadas
 
   match "/prospectos/:id/printview" => "prospectos#printview", as: :printview
@@ -281,6 +288,7 @@ resources :prospectos, only: :index do
 
   
   match "/correos/:id/send_correo" => "correos#send_correo", as: :send_correo
+  match "/correos/:id/send_correo_individually" => "correos#send_correo_individually", as: :send_correo_individually
   match "/tweets/:id/send_tweet" => "tweets#send_tweet", as: :send_tweet
 
   match '/auth/:provider/callback' => 'authentications#create'

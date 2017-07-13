@@ -10,6 +10,17 @@ class Prospecto < ActiveRecord::Base
 	has_many :accion_estrategicas, :dependent => :destroy
 	has_many :plan_de_descuentos, :dependent => :destroy
   has_many :subsedes, :through =>:interes_basicos
+  has_many :programa_de_interes, :through =>:interes_basicos
+  has_many :ultimo_grado_de_estudios , :through =>:interes_basicos
+  has_many :preparatoria_o_universidad_de_origens , :through =>:interes_basicos
+  has_many :municipio_de_la_preparatoria_o_universidad_de_origens , :through =>:interes_basicos
+  has_many :nivels  , :through =>:interes_basicos
+  has_many :turnos , :through =>:interes_basicos
+  has_many :periodo_para_ingresars, :through =>:interes_basicos
+  has_many :status_de_interes_de_prospecto_validados, :through =>:interes_basicos
+  has_many :modalidads, :through =>:interes_basicos
+
+
 	belongs_to :user
 	belongs_to :sede
   belongs_to :subsede

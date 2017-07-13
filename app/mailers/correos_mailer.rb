@@ -14,7 +14,7 @@ class CorreosMailer < ActionMailer::Base
         end
       end
   	
-      mail(:to => "<#{de}>", :subject => "#{correo.nombredelmail}",:from=>deQuien)
+      #mail(:to => "<#{de}>", :subject => "#{correo.nombredelmail}",:from=>deQuien)
       aquienSeAEnviado.push(de)
     end
   end  
