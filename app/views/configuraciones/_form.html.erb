@@ -26,7 +26,5 @@ test = rol.nombre + " - " + rol.descripcion rescue "Sin Rol"
   <%= f.hidden_field :user_id %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                configuraciones_path, :class => 'btn' %>
   </div>
 <% end %>

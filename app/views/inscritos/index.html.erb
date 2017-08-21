@@ -1,12 +1,7 @@
 <h1>Inscritos</h1>
 
 
-
-    <%if @inscritos.total_entries > 100%>
-        <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), multiexporti_path, :class => 'btn btn-mini btn-info' %> 
-      <%else%>  
-         <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), inscritos_path(params.merge(format: 'xls')), :class => 'btn btn-mini btn-info' %>   
-    <%end%>
+<%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), inscritos_path(params.merge(format: 'xls')), :class => 'btn btn-mini btn-info' %> 
 
      
 <hr/>
