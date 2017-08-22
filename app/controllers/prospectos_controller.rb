@@ -155,7 +155,7 @@ class ProspectosController < ApplicationController
       if rol.nombre == "DN" or rol.nombre == "ACRM"  
           @q = getProspectosForUser(current_user).ransack(params[:q])
           if ini != nil
-            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).where{id>=ini}.where{id<=fin}
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           else
             @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           end
@@ -164,7 +164,7 @@ class ProspectosController < ApplicationController
       else
           @q = getProspectosForUser(current_user).ransack(params[:q])
           if ini != nil
-            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).where{id>=ini.to_s}.where{id<=fin.to_s}
+            @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           else
             @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           end
