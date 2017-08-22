@@ -23,28 +23,28 @@
 			        	<%
 			        		case columna
 			        		when "nacionalidad_id"
-			        			tabla = Nacionalidad.where(:id=>prospecto.nacionalidad_id) rescue nil
-				      			%><td><%=tabla.nacionalidad rescue nil%> - <%=tabla.pais rescue nil%></td><%
+			        			#tabla = Nacionalidad.where(:id=>prospecto.nacionalidad_id) rescue nil
+				      			%><td><%=prospecto.nacionalidad.nacionalidad rescue nil%> - <%=prospecto.nacionalidad.pais rescue nil%></td><%
 				      		when "user_id"
-				      			tabla = User.where(:id=>prospecto.user_id) rescue nil
-				      			%><td><%=tabla.username rescue nil%></td><%
+				      			#tabla = User.where(:id=>prospecto.user_id) rescue nil
+				      			%><td><%=prospecto.user.username rescue nil%></td><%
 				      		when "sede_id","territorio_id","grupo_id"
-				      			tabla = eval(columna.chomp('_id').camelize.singularize).where(:id=>eval("prospecto." + columna)) rescue nil
-				      			%><td><%=tabla.nombre rescue nil%></td><%
+				      			#tabla = eval(columna.chomp('_id').camelize.singularize).where(:id=>eval("prospecto." + columna)) rescue nil
+				      			%><td><%=prospecto.sede.nombre rescue nil%></td><%
 				      		when "programa_id"
-				      			tabla = Programa.where(:id=>prospecto.id) rescue nil
-				      			%><td><%=tabla.nivel rescue nil%> - <%=tabla.programa rescue nil%></td><%
+				      			#tabla = Programa.where(:id=>prospecto.id) rescue nil
+				      			%><td><%=prospecto.programa.nivel rescue nil%> - <%=prospecto.programa.programa rescue nil%></td><%
 				      		else
 				      			template = eval(columna.chomp('_id').camelize.singularize) rescue nil
 				      			if template != nil
 					      			if eval(columna.chomp('_id').camelize.singularize).respond_to?(:valor) then
-					      				tabla=eval(columna.chomp('_id').camelize.singularize).where(:id=>eval("prospecto." + columna)) rescue nil
-					      				%><td><%=tabla.valor rescue nil%></td><%
+					      				#tabla=eval(columna.chomp('_id').camelize.singularize).where(:id=>eval("prospecto." + columna)) rescue nil
+					      				%><td><%=prospecto[columna.chomp('_id').camelize.pluralize].valor rescue nil%></td><%
 					      			else
-					      				%><td><%=eval("prospecto." + columna) rescue nil%></td><%
+					      				%><td><%=prospecto[columna] rescue nil%></td><%
 					      			end
 					      		else
-					      			%><td><%=eval("prospecto." + columna) rescue nil%></td><%
+					      			%><td><%=prospecto[columna] rescue nil%></td><%
 					      		end
 			        		end
 			        	%>	        		
@@ -54,8 +54,8 @@
 <%
 							#find direccion of the prospecto
 							if columna  != "blank" and columna != "created_by" and columna != "created_at"
-								direccion = Direccion.where(:prospecto_id=>prospecto.id).first
-								%><%=eval("direccion." + columna)%><%
+								#direccion = Direccion.where(:prospecto_id=>prospecto.id).first
+								%><%=prospecto.direccions.first[columna]%><%
 							end
 %>			        	
 							</td>
@@ -65,8 +65,8 @@
 <%
 							#find direccion of the prospecto
 							if columna  != "blank" and columna != "created_by" and columna != "created_at"
-								direccion = InteresBasico.where(:prospecto_id=>prospecto.id).first
-								%><%=eval("direccion." + columna)%><%
+								#direccion = InteresBasico.where(:prospecto_id=>prospecto.id).first
+								%><%=prospecto.interes_basicos.first[columna]%><%
 							end
 %>			        	
 							</td>
@@ -76,8 +76,8 @@
 <%
 							#find direccion of the prospecto
 							if columna  != "blank" and columna != "created_by" and columna != "created_at"
-								direccion = InteresAcademico.where(:prospecto_id=>prospecto.id).first
-								%><%=eval("direccion." + columna)%><%
+								#direccion = InteresAcademico.where(:prospecto_id=>prospecto.id).first
+								%><%=prospecto.interes_academicos.first[columna]%><%
 							end
 %>			        	
 							</td>
@@ -87,8 +87,8 @@
 <%
 							#find direccion of the prospecto
 							if columna  != "blank" and columna != "created_by" and columna != "created_at"
-								direccion = PlanDeDescuento.where(:prospecto_id=>prospecto.id).first
-								%><%=eval("direccion." + columna)%><%
+								#direccion = PlanDeDescuento.where(:prospecto_id=>prospecto.id).first
+								%><%=prospecto.plan_de_descuentos.first[columna]%><%
 							end
 %>			        	
 							</td>
@@ -98,8 +98,8 @@
 <%
 							#find direccion of the prospecto
 							if columna  != "blank" and columna != "created_by" and columna != "created_at"
-								direccion = MedioDeContacto.where(:prospecto_id=>prospecto.id).first
-								%><%=eval("direccion." + columna)%><%
+								#direccion = MedioDeContacto.where(:prospecto_id=>prospecto.id).first
+								%><%=prospecto.medio_de_contactos.first[columna]%><%
 							end
 %>			        	
 							</td>
