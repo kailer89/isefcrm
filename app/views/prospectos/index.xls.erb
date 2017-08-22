@@ -139,6 +139,7 @@
           <Cell><Data ss:Type="String">comentarios</Data></Cell>                           
       </Row>
   <% @prospectos.each do |prospecto| %>
+  <%GC::start%>
     <Row>
       <Cell><Data ss:Type="String"><%=printValue("ID",prospecto.id)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Usuario",prospecto.user.username)%></Data></Cell>
