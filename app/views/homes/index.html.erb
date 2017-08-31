@@ -1011,7 +1011,7 @@
 <%if @programas != nil%>
 
 <%
-prospectosForUSer2 = ApplicationController.getProspectosForUser2(current_user).where(:archivado=>archivado)
+prospectosForUSer2 = ApplicationController.getProspectosForUser2Includes(current_user).where(:archivado=>archivado)
 
 %>
 
@@ -1092,8 +1092,7 @@ whattodo = "currentuser"
                       <script>
 
                               var funnel<%=user.id%><%=programa.id%> = new RGraph.Funnel('cvs<%=user.id%><%=programa.id%>', [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,<%=solicitantes1.where(:user_id=>user.id).where(:sede_id=>sede.id).where(:programa_id=>programa.id).size + 1 %>,<%=examinados1.where(:user_id=>user.id).where(:sede_id=>sede.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,<%=admitidos1.where(:user_id=>user.id).where(:sede_id=>sede.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,<%=inscritos1.where(:user_id=>user.id).where(:sede_id=>sede.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>]);
-                              
-                              funnel<%=user.id%><%=programa.id%>.Set('chart.gutter.left', 350);
+                                                            funnel<%=user.id%><%=programa.id%>.Set('chart.gutter.left', 350);
                               funnel<%=user.id%><%=programa.id%>.Set('chart.labels.sticks', true);
                               funnel<%=user.id%><%=programa.id%>.Set('chart.strokestyle', 'rgba(0,0,0,0)');
                               funnel<%=user.id%><%=programa.id%>.Set('chart.text.boxed', true);
@@ -1191,7 +1190,24 @@ whattodo = "currentuser"
       <%@programas.each do |programa|%>
           <div class="tab-pane <%if valor %>active<%end%>" id="<%=user.id%><%=programa.id%>">
                  <canvas id="cvs<%=user.id%><%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
-                    
+                      <script>
+
+                              var funnel<%=user.id%><%=programa.id%> = new RGraph.Funnel('cvs<%=user.id%><%=programa.id%>', [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,<%=solicitantes1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,<%=examinados1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,<%=admitidos.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,<%=inscritos1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>]);
+                              
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.gutter.left', 350);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.labels.sticks', true);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.text.boxed', true);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.labels.x', 10);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow', true);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.offsetx', 0);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.offsety', 0);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.blur', 15);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.color', 'gray');
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.<br /><%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %> Prospectos No validados para este programa (<%=programa.programa%>)', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnel<%=user.id%><%=programa.id%>.Draw();
+
+                      </script>
 
               </div>      
           <%if valor%>
@@ -1289,13 +1305,83 @@ whattodo = "currentuser"
               <%valor = false%>
               <div class="tab-pane active" id="<%=programa.id%>">
                  <canvas id="cvs<%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
-                   
+                      <script>
+<%        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"  %>
+                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,<%=solicitantes1.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                              
+                              funnel<%=programa.id%>.Set('chart.gutter.left', 350);
+                              funnel<%=programa.id%>.Set('chart.labels.sticks', true);
+                              funnel<%=programa.id%>.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnel<%=programa.id%>.Set('chart.text.boxed', true);
+                              funnel<%=programa.id%>.Set('chart.labels.x', 10);
+                              funnel<%=programa.id%>.Set('chart.shadow', true);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsetx', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsety', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.blur', 15);
+                              funnel<%=programa.id%>.Set('chart.shadow.color', 'gray');
+                              funnel<%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.<br /><%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %> Prospectos No validados para este programa (<%=programa.programa%>)', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnel<%=programa.id%>.Draw();
+<%else%>
+                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                              
+                              funnel<%=programa.id%>.Set('chart.gutter.left', 350);
+                              funnel<%=programa.id%>.Set('chart.labels.sticks', true);
+                              funnel<%=programa.id%>.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnel<%=programa.id%>.Set('chart.text.boxed', true);
+                              funnel<%=programa.id%>.Set('chart.labels.x', 10);
+                              funnel<%=programa.id%>.Set('chart.shadow', true);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsetx', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsety', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.blur', 15);
+                              funnel<%=programa.id%>.Set('chart.shadow.color', 'gray');
+                              funnel<%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.<br /><%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %> Prospectos No validados para este programa (<%=programa.programa%>)', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnel<%=programa.id%>.Draw();
+<%end%>
+                      </script>
 
               </div>
           <%else%>
               <div class="tab-pane" id="<%=programa.id%>">
                  <canvas id="cvs<%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
-                    
+                      <script>
+<%        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"  %>
+                               var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                             
+                              funnel<%=programa.id%>.Set('chart.gutter.left', 350);
+                              funnel<%=programa.id%>.Set('chart.labels.sticks', true);
+                              funnel<%=programa.id%>.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnel<%=programa.id%>.Set('chart.text.boxed', true);
+                              funnel<%=programa.id%>.Set('chart.labels.x', 10);
+                              funnel<%=programa.id%>.Set('chart.shadow', true);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsetx', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsety', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.blur', 15);
+                              funnel<%=programa.id%>.Set('chart.shadow.color', 'gray');
+                              funnel<%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnel<%=programa.id%>.Draw();                             
+<%else%>
+                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).where{solicitante.isexaminado==false}.size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                             
+                              funnel<%=programa.id%>.Set('chart.gutter.left', 350);
+                              funnel<%=programa.id%>.Set('chart.labels.sticks', true);
+                              funnel<%=programa.id%>.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnel<%=programa.id%>.Set('chart.text.boxed', true);
+                              funnel<%=programa.id%>.Set('chart.labels.x', 10);
+                              funnel<%=programa.id%>.Set('chart.shadow', true);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsetx', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.offsety', 0);
+                              funnel<%=programa.id%>.Set('chart.shadow.blur', 15);
+                              funnel<%=programa.id%>.Set('chart.shadow.color', 'gray');
+                              funnel<%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnel<%=programa.id%>.Draw();                              
+<%end%>
+
+
+                      </script>
               </div>
           <%end%>      
         
@@ -1317,7 +1403,42 @@ whattodo = "currentuser"
     </div>
     <div role="tabpanel" class="tab-pane" id="profile">
 <canvas id="cvs" width="450" height="500">[No canvas support]</canvas>
-  
+    <script>
+    /*
+    pagina de los charts
+    http://www.rgraph.net/examples/index.html
+    */
+
+<%
+@prospectosnovalidados = prospectosForUSer2.where(:validado=>false)
+@prospectosvalidados=prospectosForUSer2.where(:validado=>true)
+%>
+
+<%
+        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"  
+%>           
+                   var funnel = new RGraph.Funnel('cvs', [<%=@prospectosnovalidados.size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).size + 1 %>,<%=prospectosForUSer2.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size + 1 %>]);
+            
+<%else%>     
+                   var funnel = new RGraph.Funnel('cvs', [<%=@prospectosnovalidados.size + 1 %>,<%=@prospectosvalidados.where(:issolicitante=>false).size + 1 %>,<%=prospectosForUSer2.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size + 1 %>,<%=prospectosForUSer2.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size + 1 %>]);
+           
+<%end%>
+            funnel.Set('chart.gutter.left', 350);
+            funnel.Set('chart.labels.sticks', true);
+            funnel.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+            funnel.Set('chart.text.boxed', true);
+            funnel.Set('chart.labels.x', 10);
+            funnel.Set('chart.shadow', true);
+            funnel.Set('chart.shadow.offsetx', 0);
+            funnel.Set('chart.shadow.offsety', 0);
+            funnel.Set('chart.shadow.blur', 15);
+            funnel.Set('chart.shadow.color', 'gray');
+            funnel.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+            funnel.Draw();
+    </script>
+
 
     
 
