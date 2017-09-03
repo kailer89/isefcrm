@@ -1,4 +1,4 @@
-worker_processes 2
+worker_processes 6
 timeout 600000
 preload_app true
 
