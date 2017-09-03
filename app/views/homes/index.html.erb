@@ -1031,17 +1031,17 @@ whattodo = "currentuser"
 <ul class="nav nav-tabs" id="myTab2" role="tablist">
  
   <li class="nav-item active">
-    <a class="nav-link" id="profile2-tab" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" onClick="document.getElementById('yourLinkID').click();">Estadisticas</a>
+    <a class="nav-link" id="profile2-tab" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" onClick="if(document.getElementById('estadisticasloaded').value=='x') document.getElementById('yourLinkID').click();document.getElementById('estadisticasloaded').value='';">Estadisticas</a>
   </li>
    <li class="nav-item">
-    <a class="nav-link" id="home2-tab" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-expanded="true" onClick="document.getElementById('yourLinkID2').click();">Mis Prospectos</a>
+    <a class="nav-link" id="home2-tab" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-expanded="true" onClick="if(document.getElementById('chartsloaded').value=='x') document.getElementById('yourLinkID2').click();document.getElementById('chartsloaded').value='';">Mis Prospectos</a>
   </li>
   <%
  if rol.nombre == "DN" or rol.nombre == "ACRM"  or rol.nombre =="D" or rol.nombre == "CP"
   %>
 
  <li class="nav-item">
-    <a class="nav-link" id="misp-tab" data-toggle="tab" href="#misp" role="tab" aria-controls="misp" aria-expanded="true" onClick="document.getElementById('yourLinkID3').click();">Mis Empleados</a>
+    <a class="nav-link" id="misp-tab" data-toggle="tab" href="#misp" role="tab" aria-controls="misp" aria-expanded="true" onClick="if(document.getElementById('misempleadosloaded').value=='x') document.getElementById('yourLinkID3').click();document.getElementById('misempleadosloaded').value='';">Mis Empleados</a>
   </li>
 <%end%>
 
