@@ -152,6 +152,43 @@ class ApplicationController < ActionController::Base
 
 #---------------------------------
 
+def self.getProspectosForUser2IncludesID (userid, userrole, usersede)
+
+    archivado = false
+      modelo = Configuracione.where(:user_id=>userid).first rescue nil
+      if modelo != nil
+        archivado = modelo.mostrar_archivados
+      end
+
+    rol = Role.where(:id=>userrole).first
+
+     
+
+    if rol == nil
+      return Prospecto.where(:archivado=>archivado).where(:sede_id=>user.sede).where(:user_id=>userid)
+    else
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
+
+ logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug Prospecto.where(:archivado=>archivado).size
+      logger.debug "llllllllllllllllllllllllllllllllllll"   
+
+
+        return Prospecto.where(:archivado=>archivado)
+      else
+        if rol.nombre == "D" or rol.nombre == "CP"
+
+          return Prospecto.where(:archivado=>archivado).where(:sede_id=>usersede)
+        else
+
+          return Prospecto.where(:archivado=>archivado).where(:sede_id=>usersede).where(:user_id=>userid)
+        end #end director
+      end #end else rol nombre
+    end #end else nil
+
+  end
+
+
   def self.getProspectosForUser2Includes (user)
 
     archivado = false

@@ -9,7 +9,232 @@ class HomesController < ApplicationController
 
   end
 
+  def fetch_dyna
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_id]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
 
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_role]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_sede]
+      logger.debug "llllllllllllllllllllllllllllllllllll"    
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:archivado]
+      logger.debug "llllllllllllllllllllllllllllllllllll"                 
+
+ archivado = false
+      modelo = Configuracione.where(:user_id=>params[:user_id]).first rescue nil
+      if modelo != nil
+        archivado = modelo.mostrar_archivados
+      end
+
+    rol = Role.where(:id=>params[:user_role]).first
+
+     selected = nil
+
+    if rol == nil
+      selected =Prospecto.where(:archivado=>archivado).where(:sede_id=>user.sede).where(:user_id=>params[:user_id])
+    else
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
+        selected = Prospecto.where(:archivado=>archivado)
+      else
+        if rol.nombre == "D" or rol.nombre == "CP"
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede])
+        else
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+        end #end director
+      end #end else rol nombre
+    end #end else nil
+
+
+
+
+      @selected = selected
+      
+ logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug @selected.size
+      logger.debug "llllllllllllllllllllllllllllllllllll"                 
+
+
+
+      respond_to do |format|
+          format.js
+      end
+  end
+
+  def fetch_chart
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_id]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_role]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_sede]
+      logger.debug "llllllllllllllllllllllllllllllllllll"    
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:archivado]
+      logger.debug "llllllllllllllllllllllllllllllllllll"                 
+
+ archivado = false
+      modelo = Configuracione.where(:user_id=>params[:user_id]).first rescue nil
+      if modelo != nil
+        archivado = modelo.mostrar_archivados
+      end
+
+    rol = Role.where(:id=>params[:user_role]).first
+
+     selected = nil
+
+    if rol == nil
+      selected =Prospecto.where(:archivado=>archivado).where(:sede_id=>user.sede).where(:user_id=>params[:user_id])
+    else
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
+        selected = Prospecto.where(:archivado=>archivado)
+      else
+        if rol.nombre == "D" or rol.nombre == "CP"
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede])
+        else
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+        end #end director
+      end #end else rol nombre
+    end #end else nil
+
+
+
+
+      @selected = selected
+      @curr = current_user
+
+
+
+      respond_to do |format|
+          format.js
+      end
+  end
+ def fetch_chart_sede
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_id]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_role]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_sede]
+      logger.debug "llllllllllllllllllllllllllllllllllll"    
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:archivado]
+      logger.debug "llllllllllllllllllllllllllllllllllll"                 
+
+ archivado = false
+      modelo = Configuracione.where(:user_id=>params[:user_id]).first rescue nil
+      if modelo != nil
+        archivado = modelo.mostrar_archivados
+      end
+
+    rol = Role.where(:id=>params[:user_role]).first
+
+     selected = nil
+
+    if rol == nil
+      selected =Prospecto.where(:archivado=>archivado).where(:sede_id=>user.sede).where(:user_id=>params[:user_id])
+    else
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
+        selected = Prospecto.where(:archivado=>archivado)
+      else
+        if rol.nombre == "D" or rol.nombre == "CP"
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede])
+        else
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+        end #end director
+      end #end else rol nombre
+    end #end else nil
+
+
+
+
+      @selected = selected
+      @curr = current_user
+
+
+
+      respond_to do |format|
+          format.js
+      end
+  end
+
+
+ def fetch_chart_sede_usuario
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_id]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_role]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_sede]
+      logger.debug "llllllllllllllllllllllllllllllllllll"    
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:archivado]
+      logger.debug "llllllllllllllllllllllllllllllllllll"                 
+
+ archivado = false
+      modelo = Configuracione.where(:user_id=>params[:user_id]).first rescue nil
+      if modelo != nil
+        archivado = modelo.mostrar_archivados
+      end
+
+    rol = Role.where(:id=>params[:user_role]).first
+
+     selected = nil
+
+    if rol == nil
+      selected =Prospecto.where(:archivado=>archivado).where(:sede_id=>user.sede).where(:user_id=>params[:user_id])
+    else
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
+        selected = Prospecto.where(:archivado=>archivado)
+      else
+        if rol.nombre == "D" or rol.nombre == "CP"
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede])
+        else
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+        end #end director
+      end #end else rol nombre
+    end #end else nil
+
+
+
+
+      @selected = selected
+      @curr = current_user
+
+
+
+      respond_to do |format|
+          format.js
+      end
+  end
 
   def index
     archivado = false

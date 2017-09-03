@@ -1,0 +1,119 @@
+
+    <h2>Estadisticas</h2>
+                <table class="table table-striped table-bordered table-condensed table-bordered table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Indicador</th>
+                      <th>Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+<%
+        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"  
+%>                    
+                      <tr>
+                        <td>Prospectos No Validados</td>
+                        <td><%=items.where(:validado=>false).size rescue nil%></td>
+                      </tr> 
+                      <tr>
+                        <td>Prospectos Validados</td>
+                        <td><%=items.where(:validado=>true).where(:issolicitante=>false).size rescue nil%></td>
+                      </tr>
+ 
+                      <tr>
+                        <td>Solicitantes</td>
+                        <td><%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Examinados/Entrevistados</td>
+                        <td><%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Admitidos</td>
+                        <td><%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Inscritos</td>
+                        <td><%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size rescue nil%></td>
+                      </tr>   
+              <%else%>    
+                      <tr>
+                        <td>Prospectos No Validados</td>
+                        <td><%=items.where(:validado=>false).size rescue nil%></td>
+                      </tr>                                                                                                                     
+                      <tr>
+                        <td>Prospectos Validados</td>
+                        <td><%=items.where(:validado=>true).where(:issolicitante=>false).size rescue nil%></td>
+                      </tr>
+
+                      <tr>
+                        <td>Solicitantes</td>
+                        <td><%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Examinados/Entrevistados</td>
+                        <td><%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Admitidos</td>
+                        <td><%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Inscritos</td>
+                        <td><%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size rescue nil%></td>
+                      </tr>                 
+              <%end%>
+                  </tbody>
+                </table>    
+                <br/>                        
+
+<canvas id="cvs" width="450" height="500">[No canvas support]</canvas>
+    <script>
+    /*
+    pagina de los charts
+    http://www.rgraph.net/examples/index.html
+    */
+
+<%
+@prospectosnovalidados = items.where(:validado=>false)
+@prospectosvalidados=items.where(:validado=>true)
+%>
+
+<%
+        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"  
+%>           
+                   var funnel = new RGraph.Funnel('cvs', [
+                    <%=@prospectosnovalidados.size + 1 %>,
+                    <%=@prospectosvalidados.where(:issolicitante=>false).size + 1 %>,
+                    <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size + 1 %>,
+                    <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size + 1 %>]);
+            
+<%else%>     
+                   var funnel = new RGraph.Funnel('cvs', [
+                    <%=@prospectosnovalidados.size + 1 %>,
+                    <%=@prospectosvalidados.where(:issolicitante=>false).size + 1 %>,
+                    <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size + 1 %>,
+                    <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size + 1 %>]);
+           
+<%end%>
+            funnel.Set('chart.gutter.left', 350);
+            funnel.Set('chart.labels.sticks', true);
+            funnel.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+            funnel.Set('chart.text.boxed', true);
+            funnel.Set('chart.labels.x', 10);
+            funnel.Set('chart.shadow', true);
+            funnel.Set('chart.shadow.offsetx', 0);
+            funnel.Set('chart.shadow.offsety', 0);
+            funnel.Set('chart.shadow.blur', 15);
+            funnel.Set('chart.shadow.color', 'gray');
+            funnel.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+            funnel.Draw();
+    </script>

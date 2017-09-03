@@ -195,6 +195,11 @@ resources :prospectos, only: :index do
  devise_for :prospectos, :skip => [:webtest] 
   root :to => "homes#force_redirect"
  
+get "/fetch_dyna" => 'homes#fetch_dyna', as: 'fetch_dyna'
+get "/fetch_chart" => 'homes#fetch_chart', as: 'fetch_chart'
+get "/fetch_chart_sede" => 'homes#fetch_chart_sede', as: 'fetch_chart_sede'
+get "/fetch_chart_sede_usuario" => 'homes#fetch_chart_sede_usuario', as: 'fetch_chart_sede_usuario'
+
   
   match "/solicitantes/:id/convertir_solicitante" => "solicitantes#convertir_solicitante", as: :convertir_solicitante
   match "/examinados/:id/convertir_examinado" => "examinados#convertir_examinado", as: :convertir_examinado

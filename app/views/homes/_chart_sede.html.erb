@@ -1,0 +1,134 @@
+                    <%@programas = Programa.all
+valor= true
+
+
+        rol = Role.where(:id=>usuario.role).first
+
+%>
+<%
+@prospectosnovalidados = items.where(:validado=>false)
+@prospectosvalidados=items.where(:validado=>true)
+%>
+
+<%
+
+ modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    archivado=false
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    else
+      Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
+    end 
+%>
+
+<%
+solicitantes1 = items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}
+examinados1 = items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}
+admitidos1 = items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}
+inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}
+
+%>
+
+
+                  <%valor =true
+valor1 =true
+                  %>
+
+
+
+
+   <div class="tabbable tabs-left">
+                <ul class="nav nav-tabs" id="myTaba3">
+                  <%User.where(:sede_id=>current_user.sede_id).each do |user|%>
+                      <li class=" <%if valor1 %>active<%end%>"><a href="#suser<%=user.id%>" data-toggle="tab"><%=user.username%> (<%=items.where(:user_id=>user.id).where(:archivado=>archivado).size%>)</a></li>
+                      <%if valor1%>
+                          <%valor1 = false%>
+                      <%end%>
+                  <%end%>
+                </ul>
+                <%valor1 =true%>
+
+                <div class="tab-content">
+                  <%User.where(:sede_id=>current_user.sede_id).each do |user|%>
+<%
+@prospectosnovalidados = items.where(:user_id=>user.id).where(:validado=>false)
+@prospectosvalidados=items.where(:user_id=>user.id).where(:validado=>true)
+%>                  
+                      <div class="tab-pane <%if valor1 %>active<%end%>" id="suser<%=user.id%>">
+                          <h1><small><%=user.username%></small></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="tabbable tabs-left">
+
+    <ul class="nav nav-tabs" id="myTaba">
+      <%@programas.each do |programa|%>
+          <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%><%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size%>)</a></li>      
+          <%if valor%>
+              <%valor = false%>
+          <%end%>
+      <%end%>
+    </ul>
+    <%valor =true%>
+
+    <div class="tab-content">
+      <%@programas.each do |programa|%>
+          <div class="tab-pane <%if valor %>active<%end%>" id="<%=user.id%><%=programa.id%>">
+                 <canvas id="cvs<%=user.id%><%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
+                      <script>
+
+                              var funnel<%=user.id%><%=programa.id%> = new RGraph.Funnel('cvs<%=user.id%><%=programa.id%>', 
+                                [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,
+                                <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=solicitantes1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=examinados1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>]);
+                              
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.gutter.left', 350);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.labels.sticks', true);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.text.boxed', true);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.labels.x', 10);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow', true);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.offsetx', 0);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.offsety', 0);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.blur', 15);
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.shadow.color', 'gray');
+                              funnel<%=user.id%><%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.<br /><%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %> Prospectos No validados para este programa (<%=programa.programa%>)', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnel<%=user.id%><%=programa.id%>.Draw();
+
+                      </script>
+
+              </div>      
+          <%if valor%>
+              <%valor = false%>
+          <%end%>      
+        
+      <%end%>
+
+      </div>
+    </div>
+
+
+
+                      </div>
+                      <%if valor1%>
+                          <%valor1 = false%>
+                      <%end%>
+                  <%end%>
+                </div>
+            </div> 
