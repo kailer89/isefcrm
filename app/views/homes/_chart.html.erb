@@ -28,6 +28,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
               <li class=""><a href="#<%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:programa_id=>programa.id).size%>)</a></li>
           <%end%>
       <%end%>
+      <li class=""><a href="#nil" data-toggle="tab">Sin Programa (<%=items.where(:programa_id=>nil).size%>)</a></li>
     </ul>
     <%valor =true%>
 
@@ -144,6 +145,61 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
           <%end%>      
         
       <%end%>
+
+<div class="tab-pane" id="nil">
+                 <canvas id="cvsnil" width="450" height="500">[No canvas support]</canvas>
+                      <script>
+<%        rol = Role.where(:id=>usuario.role).first
+
+        if rol.nombre == "ACRM"  %>
+                               var funnelnil = new RGraph.Funnel('cvsnil', [
+                                <%=@prospectosnovalidados.where(:programa_id=>nil).size + 1 %>,
+                                <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
+                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>nil).size + 1 %>,
+                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>nil).size + 1 %>,
+                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>nil).size + 1 %>,
+                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>nil).size + 1 %>]);
+                             
+                              funnelnil.Set('chart.gutter.left', 350);
+                              funnelnil.Set('chart.labels.sticks', true);
+                              funnelnil.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnelnil.Set('chart.text.boxed', true);
+                              funnelnil.Set('chart.labels.x', 10);
+                              funnelnil.Set('chart.shadow', true);
+                              funnelnil.Set('chart.shadow.offsetx', 0);
+                              funnelnil.Set('chart.shadow.offsety', 0);
+                              funnelnil.Set('chart.shadow.blur', 15);
+                              funnelnil.Set('chart.shadow.color', 'gray');
+                              funnelnil.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnelnil.Draw();                             
+<%else%>
+                              var funnelnil = new RGraph.Funnel('cvsnil', [
+                                <%=@prospectosnovalidados.where(:programa_id=>nil).size + 1 %>,
+                                <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
+                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where(:programa_id=>nil).where{solicitante.isexaminado==false}.size + 1 %>,
+                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>nil).size + 1 %>,
+                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>nil).size + 1 %>,
+                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>nil).size + 1 %>]);
+                             
+                              funnelnil.Set('chart.gutter.left', 350);
+                              funnelnil.Set('chart.labels.sticks', true);
+                              funnelnil.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnelnil.Set('chart.text.boxed', true);
+                              funnelnil.Set('chart.labels.x', 10);
+                              funnelnil.Set('chart.shadow', true);
+                              funnelnil.Set('chart.shadow.offsetx', 0);
+                              funnelnil.Set('chart.shadow.offsety', 0);
+                              funnelnil.Set('chart.shadow.blur', 15);
+                              funnelnil.Set('chart.shadow.color', 'gray');
+                              funnelnil.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnelnil.Draw();                                           
+<%end%>
+
+
+                      </script>
+              </div>
+
+
 
       </div>
     </div>
