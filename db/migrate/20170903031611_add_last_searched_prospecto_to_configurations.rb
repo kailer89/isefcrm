@@ -1,9 +1,9 @@
 class AddLastSearchedProspectoToConfigurations < ActiveRecord::Migration
   def change
-    add_column :Configuraciones, :LastSearchProspecto, :string
-    add_column :Configuraciones, :LastSearchSoliticante, :string
-    add_column :Configuraciones, :LastSearchExaminado, :string
-    add_column :Configuraciones, :LastSearchAdmitido, :string
-    add_column :Configuraciones, :LastSearchInscrito, :string
+    add_column :Configuraciones, :LastSearchProspecto, :text
+    add_column :Configuraciones, :LastSearchSoliticante, :text
+    add_column :Configuraciones, :LastSearchExaminado, :text
+    add_column :Configuraciones, :LastSearchAdmitido, :text
+    add_column :Configuraciones, :LastSearchInscrito, :text
   end
 end

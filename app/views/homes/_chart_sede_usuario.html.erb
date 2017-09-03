@@ -41,12 +41,12 @@ valor= true
                                   
                                       <div class="tabbable tabs-left">
                                           <ul class="nav nav-tabs" id="myTaba3">
-                                            <%User.where(:sede_id=>sede.id).each do |user|%>
+                                            <%User.where(:sede_id=>sede.id).each do |users|%>
 <div id="links2" style="display: none;">
-  <%idss= "yourLinkIDx".to_s + user.id.to_s%>
-  <%= link_to "Cargar Estadisticas", fetch_chart_sede_usuario_hijo_path(:user_id =>user.id, :user_role=>user.role, :user_sede=>user.sede.id,:archivado=>archivado), :remote => true, :id=>idss %>
+  <%idss= "yourLinkIDx".to_s + users.id.to_s%>
+  <%= link_to "Cargar Estadisticas", fetch_chart_sede_usuario_hijo_path(:user_id =>users.id, :user_role=>users.role, :user_sede=>users.sede.id,:archivado=>archivado), :remote => true, :id=>idss %>
 </div>                                            
-                                              <li class="<%if valor1 %>active<%end%>"><a href="#suserxx<%=user.id%>" data-toggle="tab" onClick="document.getElementById('<%=idss%>').click();"><%=user.username%> (<%=items.where(:sede_id=>sede.id).where(:user_id=>user.id).size%>)</a></li>
+                                              <li class="<%if valor1 %>active<%end%>"><a href="#suserxx<%=users.id%>" data-toggle="tab" onClick="document.getElementById('<%=idss%>').click();"><%=users.username%> (<%=items.where(:sede_id=>sede.id).where(:user_id=>users.id).size%>)</a></li>
                                                 <%if valor1%>
                                                     <%valor1 = false%>
                                                 <%end%>
@@ -55,17 +55,17 @@ valor= true
                                           <%valor1 =true%>
 
                                           <div class="tab-content">
-                                            <%User.where(:sede_id=>sede.id).each do |user|%>
+                                            <%User.where(:sede_id=>sede.id).each do |users|%>
 
 <%
-@prospectosnovalidados = items.where(:user_id=>user.id).where(:validado=>false).where(:sede_id=>sede.id)
-@prospectosvalidados=items.where(:user_id=>user.id).where(:validado=>true).where(:sede_id=>sede.id)
+@prospectosnovalidados = items.where(:user_id=>users.id).where(:validado=>false).where(:sede_id=>sede.id)
+@prospectosvalidados=items.where(:user_id=>users.id).where(:validado=>true).where(:sede_id=>sede.id)
 %>
 
                                             
-                                                <div class="tab-pane <%if valor1 %>active<%end%>" id="suserxx<%=user.id%>">
-                                                  <div id="suserx<%=user.id%>">
-                                                    <%=user.username%>
+                                                <div class="tab-pane <%if valor1 %>active<%end%>" id="suserxx<%=users.id%>">
+                                                  <div id="suserx<%=users.id%>">
+                                                    <%=users.username%>
                                                   </div>
                                                 </div>                                            
                                                 <%if valor1%>
