@@ -36,6 +36,8 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
           <%if valor%>
               <%valor = false%>
               <div class="tab-pane active" id="<%=programa.id%>">
+                <a href="/prospectos?utf8=✓&amp;q[c][0][a][0][name]=programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=programa.id%>&amp;q[c][1504415327283][a][0][name]=user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=usuario.id%>&amp;commit=Buscar"> Link a prospectos</a>
+                <br/>
                  <canvas id="cvs<%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
                       <script>
 <%        rol = Role.where(:id=>usuario.role).first
