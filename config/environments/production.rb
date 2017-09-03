@@ -67,7 +67,7 @@ ProtoCRM3::Application.configure do
   :email => {
     :email_prefix => "[Whatever] ",
     :sender_address => %{"notifier" <admin@protocrm.com>},
-    :exception_recipients => %w{israel.valdez.89@gmail.com,ngl_88@hotmail.com}
+    :exception_recipients => %w{israel.valdez.89@gmail.com}
   }
 
 

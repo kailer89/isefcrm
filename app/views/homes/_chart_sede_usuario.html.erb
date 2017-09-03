@@ -6,11 +6,6 @@ valor= true
 
 %>
 <%
-@prospectosnovalidados = items.where(:validado=>false)
-@prospectosvalidados=items.where(:validado=>true)
-%>
-
-<%
 
  modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
     archivado=false
@@ -55,14 +50,7 @@ valor= true
                                           <%valor1 =true%>
 
                                           <div class="tab-content">
-                                            <%User.where(:sede_id=>sede.id).each do |users|%>
-
-<%
-@prospectosnovalidados = items.where(:user_id=>users.id).where(:validado=>false).where(:sede_id=>sede.id)
-@prospectosvalidados=items.where(:user_id=>users.id).where(:validado=>true).where(:sede_id=>sede.id)
-%>
-
-                                            
+                                            <%User.where(:sede_id=>sede.id).each do |users|%>                                            
                                                 <div class="tab-pane <%if valor1 %>active<%end%>" id="suserxx<%=users.id%>">
                                                   <div id="suserx<%=users.id%>">
                                                     <%=users.username%>
