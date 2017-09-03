@@ -15,9 +15,9 @@ class SolicitantesController < ApplicationController
 
 
     if modelo == nil
-    @solicitantes = getSolicitantesForUser(current_user).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+    @solicitantes = getSolicitantesForUser(current_user).where{:isexaminado==false}.order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     else
-      @solicitantes = getSolicitantesForUser(current_user).where(:archivado=>archivado).where(:isexaminado=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @solicitantes = getSolicitantesForUser(current_user).where{:archivado==archivado}.where{:isexaminado==false}.order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     end
 
 
@@ -52,7 +52,7 @@ setnil = false
     if rol.nombre == "DN" or rol.nombre == "ACRM"  
       logger.debug "admin"
     else
-      @solicitantes=getSolicitantesForUser(current_user).where(:isexaminado=>false)
+      @solicitantes=getSolicitantesForUser(current_user).where{:isexaminado==false}
     end
 
 

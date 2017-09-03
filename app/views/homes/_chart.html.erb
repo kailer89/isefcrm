@@ -37,8 +37,8 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
           <%if valor%>
               <%valor = false%>
               <div class="tab-pane active" id="<%=programa.id%>">
-                <a href="/prospectos?utf8=✓&amp;q[c][0][a][0][name]=programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=programa.id%>&amp;q[c][1504415327283][a][0][name]=user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=usuario.id%>&amp;commit=Buscar"> Link a prospectos</a>
-                <br/>
+                <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.size + @prospectosvalidados.size, solicitantescount:  items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size} %>
+                
                  <canvas id="cvs<%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
                       <script>
 <%        rol = Role.where(:id=>usuario.role).first
@@ -47,7 +47,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
                               var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [
                                 <%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
-                                <%=solicitantes1.where(:programa_id=>programa.id).size + 1 %>,
+                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size + 1 %>,
                                 <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,
                                 <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,
                                 <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
@@ -91,6 +91,8 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
               </div>
           <%else%>
               <div class="tab-pane" id="<%=programa.id%>">
+                <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.where(:programa_id=>programa.id).size.size + @prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size, solicitantescount:  items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size} %>
+                
                  <canvas id="cvs<%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
                       <script>
 <%        rol = Role.where(:id=>usuario.role).first
@@ -147,6 +149,8 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
       <%end%>
 
 <div class="tab-pane" id="nil">
+
+  <%= render partial: 'links', locals: { programaid: nil, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.where(:programa_id=>nil).size + @prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size, solicitantescount:  solicitantes1.where(:programa_id=>nil).size} %>
                  <canvas id="cvsnil" width="450" height="500">[No canvas support]</canvas>
                       <script>
 <%        rol = Role.where(:id=>usuario.role).first

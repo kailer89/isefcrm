@@ -372,16 +372,16 @@ def getProspectosForUser (user)
     rol = Role.where(:id=>user.role).first
 
     if rol == nil
-      return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
+      return Solicitante.where(:archivado=>archivado).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
     else
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
-        return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
+        return Solicitante.where(:archivado=>archivado).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
       else
         if rol.nombre == "D" or rol.nombre == "CP"
-          return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
+          return Solicitante.where(:archivado=>archivado).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
         else
 
-          return Solicitante.where(:archivado=>archivado).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
+          return Solicitante.where(:archivado=>archivado).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user))
         end #end director
       end #end else rol nombre
     end #end else nil
@@ -401,16 +401,16 @@ def getProspectosForUser (user)
     rol = Role.where(:id=>user.role).first
 
     if rol == nil
-      return Examinado.where(:archivado=>archivado).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
+      return Examinado.where(:archivado=>archivado).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
     else
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Examinado.where(:archivado=>archivado)
       else
         if rol.nombre == "D" or rol.nombre == "CP"
-          return Examinado.where(:archivado=>archivado).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
+          return Examinado.where(:archivado=>archivado).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
         else
 
-          return Examinado.where(:archivado=>archivado).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
+          return Examinado.where(:archivado=>archivado).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))
         end #end director
       end #end else rol nombre
     end #end else nil
@@ -430,16 +430,16 @@ def getProspectosForUser (user)
     rol = Role.where(:id=>user.role).first
 
     if rol == nil
-      return Admitido.where(:archivado=>archivado).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
+      return Admitido.where(:archivado=>archivado).where("admitidos.examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
     else
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Admitido.where(:archivado=>archivado)
       else
         if rol.nombre == "D" or rol.nombre == "CP"
-          return Admitido.where(:archivado=>archivado).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
+          return Admitido.where(:archivado=>archivado).where("admitidos.examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
         else
 
-          return Admitido.where(:archivado=>archivado).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
+          return Admitido.where(:archivado=>archivado).where("admitidos.examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante})))
         end #end director
       end #end else rol nombre
     end #end else nil
@@ -457,16 +457,16 @@ def getProspectosForUser (user)
     rol = Role.where(:id=>user.role).first
 
     if rol == nil
-      return Inscrito.where(:archivado=>archivado).where("admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
+      return Inscrito.where(:archivado=>archivado).where("inscritos.admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("admitidos.examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
     else
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
         return Inscrito.where(:archivado=>archivado)
       else
         if rol.nombre == "D" or rol.nombre == "CP"
-          return Inscrito.where(:archivado=>archivado).where("admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
+          return Inscrito.where(:archivado=>archivado).where("inscritos.admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("admitidos.examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
         else
 
-          return Inscrito.where(:archivado=>archivado).where("admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
+          return Inscrito.where(:archivado=>archivado).where("inscritos.admitido_id in (:admitidos)",:admitidos=>getAdmitidosForUser(user).where("admitidos.examinado_id in (:examinados)",:examinados=>getExaminadosForUser(user).where("examinados.solicitante_id in (:solicitantes)",:solicitantes=>getSolicitantesForUser(user).where("solicitantes.prospecto_id in (:prospectos)",:prospectos=>getProspectosForUser(user).joins{solicitante}))))
         end #end director
       end #end else rol nombre
     end #end else nil

@@ -57,21 +57,6 @@ valor1 =true
                       <div class="tab-pane <%if valor1 %>active<%end%>" id="suser<%=user.id%>">
                           <h1><small><%=user.username%></small></h1>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="tabbable tabs-left">
 
     <ul class="nav nav-tabs" id="myTaba">
@@ -81,14 +66,16 @@ valor1 =true
               <%valor = false%>
           <%end%>
       <%end%>
+      <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%>nil" data-toggle="tab">Sin Programa (<%=items.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size%>)</a></li>  
     </ul>
     <%valor =true%>
 
     <div class="tab-content">
       <%@programas.each do |programa|%>
           <div class="tab-pane <%if valor %>active<%end%>" id="<%=user.id%><%=programa.id%>">
-            <a href="/prospectos?utf8=✓&amp;q[c][0][a][0][name]=programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=programa.id%>&amp;q[c][1504415327283][a][0][name]=user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=user.id%>&amp;commit=Buscar"> Link a prospectos</a>
-                <br/>
+            
+            <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.where(:programa_id=>programa.id).size.size + @prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size, solicitantescount:  solicitantes1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size} %>
+            
                  <canvas id="cvs<%=user.id%><%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
                       <script>
 
@@ -121,6 +108,38 @@ valor1 =true
           <%end%>      
         
       <%end%>
+
+<div class="tab-pane <%if valor %>active<%end%>" id="<%=user.id%>nil">
+  <%= render partial: 'links', locals: { programaid: nil, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.where(:programa_id=>nil).size.size + @prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size, solicitantescount:  solicitantes1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size} %>
+            
+                 <canvas id="cvs<%=user.id%>nil" width="450" height="500">[No canvas support]</canvas>
+                      <script>
+
+                              var funnel<%=user.id%>nil = new RGraph.Funnel('cvs<%=user.id%>nil', 
+                                [<%=@prospectosnovalidados.where(:programa_id=>nil).size + 1 %>,
+                                <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
+                                <%=solicitantes1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=examinados1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>]);
+                              
+                              funnel<%=user.id%>nil.Set('chart.gutter.left', 350);
+                              funnel<%=user.id%>nil.Set('chart.labels.sticks', true);
+                              funnel<%=user.id%>nil.Set('chart.strokestyle', 'rgba(0,0,0,0)');
+                              funnel<%=user.id%>nil.Set('chart.text.boxed', true);
+                              funnel<%=user.id%>nil.Set('chart.labels.x', 10);
+                              funnel<%=user.id%>nil.Set('chart.shadow', true);
+                              funnel<%=user.id%>nil.Set('chart.shadow.offsetx', 0);
+                              funnel<%=user.id%>nil.Set('chart.shadow.offsety', 0);
+                              funnel<%=user.id%>nil.Set('chart.shadow.blur', 15);
+                              funnel<%=user.id%>nil.Set('chart.shadow.color', 'gray');
+                              funnel<%=user.id%>nil.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.<br /><%=@prospectosnovalidados.where(:programa_id=>nil).size + 1 %> Prospectos No validados para este programa (Sin Programa)', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
+                              funnel<%=user.id%>nil.Draw();
+
+                      </script>
+
+              </div> 
+
 
       </div>
     </div>
