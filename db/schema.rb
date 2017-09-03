@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170821235514) do
+ActiveRecord::Schema.define(:version => 20170903031611) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -273,7 +273,12 @@ ActiveRecord::Schema.define(:version => 20170821235514) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "LimiteReportes",     :default => 50
+    t.integer  "LimiteReportes",        :default => 50
+    t.string   "LastSearchProspecto"
+    t.string   "LastSearchSoliticante"
+    t.string   "LastSearchExaminado"
+    t.string   "LastSearchAdmitido"
+    t.string   "LastSearchInscrito"
   end
 
   create_table "contactos", :force => true do |t|

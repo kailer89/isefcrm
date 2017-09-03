@@ -1265,3 +1265,66 @@ C:/Sites/isefcrm/app/views/programas/borrar.html.erb:24: syntax error, unexpecte
 [09/02/17 21:26:09 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `as' for #<User:0x731a5b8>
 [09/02/17 21:36:14 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `username' for #<ActiveRecord::Relation:0x6f62508>
 [09/02/17 21:36:26 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `username' for #<ActiveRecord::Relation:0x6f30768>
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Starting the New Relic agent in "development" environment.
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : New Relic Agent Developer Mode enabled.
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Environment: development
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : No known dispatcher detected.
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Application: My Application
+[09/02/17 22:15:53 -0500 alienware15 (9712)] WARN : Agent configured not to send data in this environment.
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing ActiveRecord instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing HTTPClient instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing Net instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing deferred Rack instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing Rack::Builder middleware instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing Rails 3+ middleware instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing Rails 3 Controller instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Installing Rails 3 Error instrumentation
+[09/02/17 22:15:53 -0500 alienware15 (9712)] INFO : Finished instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Starting the New Relic agent in "development" environment.
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : New Relic Agent Developer Mode enabled.
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Environment: development
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : No known dispatcher detected.
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Application: My Application
+[09/02/17 22:16:10 -0500 alienware15 (7828)] WARN : Agent configured not to send data in this environment.
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing ActiveRecord instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing HTTPClient instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing Net instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing deferred Rack instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing Rack::Builder middleware instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing Rails 3+ middleware instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing Rails 3 Controller instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Installing Rails 3 Error instrumentation
+[09/02/17 22:16:10 -0500 alienware15 (7828)] INFO : Finished instrumentation
+[09/02/17 22:24:27 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `merge' for #<String:0x5767500>
+[09/02/17 22:29:49 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: (eval):1: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+--- !map:ActiveSupport::HashWithIndifferentAccess 
+         ^
+(eval):2: syntax error, unexpected ':', expecting end-of-input
+c: !map:ActiveSupport::HashWithIndifferentAccess 
+  ^
+[09/02/17 22:29:59 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: (eval):1: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+--- !map:ActiveSupport::HashWithIndifferentAccess 
+         ^
+(eval):2: syntax error, unexpected ':', expecting end-of-input
+c: !map:ActiveSupport::HashWithIndifferentAccess 
+  ^
+[09/02/17 22:30:36 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: (eval):1: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+--- !map:ActiveSupport::HashWithIndifferentAccess 
+         ^
+(eval):2: syntax error, unexpected ':', expecting end-of-input
+c: !map:ActiveSupport::HashWithIndifferentAccess 
+  ^
+[09/02/17 22:39:04 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: no implicit conversion of nil into String
+[09/02/17 22:43:57 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 784: unexpected token at 'null'
+[09/02/17 22:44:03 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 784: unexpected token at 'null'
+[09/02/17 22:44:11 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 784: unexpected token at 'null'
+[09/02/17 22:45:09 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 784: unexpected token at 'null'
+[09/02/17 22:45:30 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 784: unexpected token at 'null'
+[09/02/17 22:47:44 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 784: unexpected token at 'null'
+[09/02/17 22:55:28 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: C:/Sites/isefcrm/isefcrm/app/controllers/admitidos_controller.rb:288: syntax error, unexpected keyword_end, expecting end-of-input

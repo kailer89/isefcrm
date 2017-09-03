@@ -28,6 +28,27 @@ class SolicitantesController < ApplicationController
     end  
 
     rol = Role.where(:id=>current_user.role).first
+
+
+
+
+
+setnil = false
+    if params[:q] == nil 
+    logger.debug "xxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    logger.debug params[:q].inspect
+    logger.debug "xxxxxxxxxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+
+      begin
+         params[:q] = JSON.parse(modelo.LastSearchSoliticante)
+        rescue => ex
+          logger.debug ex.message
+        end
+    else
+      setnil = true
+    end      
+
+
     if rol.nombre == "DN" or rol.nombre == "ACRM"  
       logger.debug "admin"
     else
@@ -48,10 +69,16 @@ class SolicitantesController < ApplicationController
           else
             @solicitantes  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page])
           end
-      
-       
+     
 
 
+ if setnil == true
+      modelo.update_attribute(:LastSearchSoliticante, params[:q].to_json)
+else
+  modelo.update_attribute(:LastSearchSoliticante, "")
+end
+
+ 
 
     respond_to do |format|
       format.html # index.html.erb

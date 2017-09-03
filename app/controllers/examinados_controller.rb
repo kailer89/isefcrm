@@ -19,6 +19,30 @@ class ExaminadosController < ApplicationController
     end
         rol = Role.where(:id=>current_user.role).first
 
+
+
+setnil = false
+    if params[:q] == nil 
+    logger.debug "xxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    logger.debug params[:q].inspect
+    logger.debug "xxxxxxxxxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+
+      begin
+         params[:q] = JSON.parse(modelo.LastSearchExaminado)
+        rescue => ex
+          logger.debug ex.message
+        end
+    else
+      setnil = true
+    end      
+
+
+
+
+
+
+
+
     if rol.nombre == "DN" or rol.nombre == "ACRM" 
       logger.debug "admin"
     else
@@ -40,7 +64,13 @@ class ExaminadosController < ApplicationController
 
 
 
-    
+ if setnil == true
+      modelo.update_attribute(:LastSearchExaminado, params[:q].to_json)
+else
+  modelo.update_attribute(:LastSearchExaminado, "")
+end
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @examinados }

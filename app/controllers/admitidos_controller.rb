@@ -19,6 +19,26 @@ class AdmitidosController < ApplicationController
     end
         rol = Role.where(:id=>current_user.role).first
 
+
+setnil = false
+    if params[:q] == nil 
+    logger.debug "xxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    logger.debug params[:q].inspect
+    logger.debug "xxxxxxxxxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+
+      begin
+         params[:q] = JSON.parse(modelo.LastSearchAdmitido)
+        rescue => ex
+          logger.debug ex.message
+        end
+    else
+      setnil = true
+    end          
+
+
+        
+
+
     if rol.nombre == "DN" or rol.nombre == "ACRM"
       logger.debug "admin"
     else
@@ -40,6 +60,17 @@ class AdmitidosController < ApplicationController
           else
             @admitidos  = params[:distinct].to_i.zero? ? @q.result.paginate(:per_page => 50, :page => params[:page])  : @q.result(distinct: true).paginate(:per_page => 50, :page => params[:page]) 
           end
+
+    logger.debug "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    logger.debug params[:q].inspect
+    logger.debug "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+ 
+
+ if setnil == true
+      modelo.update_attribute(:LastSearchAdmitido, params[:q].to_json)
+else
+  modelo.update_attribute(:LastSearchAdmitido, "")
+end
 
       
 

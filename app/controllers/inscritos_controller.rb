@@ -20,6 +20,25 @@ class InscritosController < ApplicationController
 
         rol = Role.where(:id=>current_user.role).first
 
+
+
+
+setnil = false
+    if params[:q] == nil 
+    logger.debug "xxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    logger.debug params[:q].inspect
+    logger.debug "xxxxxxxxxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+
+      begin
+         params[:q] = JSON.parse(modelo.LastSearchInscrito)
+        rescue => ex
+          logger.debug ex.message
+        end
+    else
+      setnil = true
+    end          
+
+
     if rol.nombre == "DN" or rol.nombre == "ACRM"
       logger.debug "admin"
     else
@@ -44,7 +63,15 @@ class InscritosController < ApplicationController
 
 
 
-      
+
+ if setnil == true
+      modelo.update_attribute(:LastSearchInscrito, params[:q].to_json)
+else
+  modelo.update_attribute(:LastSearchInscrito, "")
+end
+
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @inscritos }

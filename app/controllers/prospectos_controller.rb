@@ -124,7 +124,29 @@ class ProspectosController < ApplicationController
     modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
     if modelo != nil
       archivado = modelo.mostrar_archivados
-    end    
+    end  
+
+
+
+
+setnil = false
+    if params[:q] == nil 
+    logger.debug "xxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    logger.debug params[:q].inspect
+    logger.debug "xxxxxxxxxxxxxxxxxxxxxqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+
+      begin
+         params[:q] = JSON.parse(modelo.LastSearchProspecto)
+        rescue => ex
+          logger.debug ex.message
+        end
+    else
+      setnil = true
+    end          
+
+
+
+
     # @prospectos = Prospecto.all
     # or (current_user.role =="director")
     logger.debug "-----------------------"
@@ -173,6 +195,15 @@ class ProspectosController < ApplicationController
       end
     end
     
+
+
+ if setnil == true
+      modelo.update_attribute(:LastSearchProspecto, params[:q].to_json)
+else
+  modelo.update_attribute(:LastSearchProspecto, "")
+end
+
+
 
     respond_to do |format|
       format.html # index.html.erb
