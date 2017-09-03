@@ -207,7 +207,7 @@ class HomesController < ApplicationController
 
      selected = nil
 
-    selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+    selected = Prospecto.where(:archivado=>archivado)
 
       @selected = selected
       @curr = current_user

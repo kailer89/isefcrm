@@ -1013,7 +1013,7 @@ whattodo = "currentuser"
         if rol.nombre == "DN" or rol.nombre == "ACRM"  
           whattodo = "main"
 %>
-<%= link_to "Cargar Chart Sede", fetch_chart_sede_usuario_path(:user_id =>current_user.id, :user_role=>current_user.role, :user_sede=>current_user.sede.id,:archivado=>archivado), :remote => true, :id=>"yourLinkID3" %>
+<%= link_to "Cargar Chart Sede", fetch_chart_sede_usuario_path, :remote => true, :id=>"yourLinkID3" %>
 
 <%
           #do by sede, then user
