@@ -1230,3 +1230,38 @@ C:/Sites/isefcrm/app/views/programas/borrar.html.erb:24: syntax error, unexpecte
 [09/02/17 19:40:22 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `valor1' for #<#<Class:0x1491e520>:0x5c7b628>
 [09/02/17 19:40:30 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `valor1' for #<#<Class:0x1491e520>:0x75e7558>
 [09/02/17 19:41:07 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `valor1' for #<#<Class:0x1491e520>:0x6d3cfc8>
+[09/02/17 21:09:30 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: no implicit conversion of Fixnum into String
+[09/02/17 21:12:52 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing partial homes/chart_sede_usuario_hijo, application/chart_sede_usuario_hijo with {:locale=>[:en], :formats=>[:js, :html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "C:/Sites/isefcrm/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/kaminari-0.17.0/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.10/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+
+[09/02/17 21:13:14 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing partial homes/chart_sede_usuario_hijo, application/chart_sede_usuario_hijo with {:locale=>[:en], :formats=>[:js, :html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "C:/Sites/isefcrm/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/kaminari-0.17.0/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.10/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+
+[09/02/17 21:13:46 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing partial homes/chart_sede_usuario_hijo, application/chart_sede_usuario_hijo with {:locale=>[:en], :formats=>[:js, :html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "C:/Sites/isefcrm/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/kaminari-0.17.0/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.10/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+
+[09/02/17 21:13:48 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing partial homes/chart_sede_usuario_hijo, application/chart_sede_usuario_hijo with {:locale=>[:en], :formats=>[:js, :html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "C:/Sites/isefcrm/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/kaminari-0.17.0/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.10/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+
+[09/02/17 21:23:54 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `link_to' for #<User:0x7855938>
+[09/02/17 21:24:27 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for #<#<Class:0x10a1ae90>:0x5987ac0>
+[09/02/17 21:25:14 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for #<#<Class:0x10a1ae90>:0x58db218>
+[09/02/17 21:26:09 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `as' for #<User:0x731a5b8>
+[09/02/17 21:36:14 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `username' for #<ActiveRecord::Relation:0x6f62508>
+[09/02/17 21:36:26 -0500 alienware15 (10344)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `username' for #<ActiveRecord::Relation:0x6f30768>
