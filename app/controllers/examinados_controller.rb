@@ -16,9 +16,9 @@ class ExaminadosController < ApplicationController
 
 
     if modelo == nil     
-    @examinados = getExaminadosForUser(current_user).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+    @examinados = getExaminadosForUser(current_user).where(:isadmitido=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     else
-      @examinados = getExaminadosForUser(current_user).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+      @examinados = getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
     end
         rol = Role.where(:id=>current_user.role).first
 
@@ -49,7 +49,7 @@ setnil = false
     if rol.nombre == "DN" or rol.nombre == "ACRM" 
       logger.debug "admin"
     else
-      @examinados = getExaminadosForUser(current_user)
+      @examinados = getExaminadosForUser(current_user).where(:isadmitido=>false)
     end    
 
       @q = @examinados.ransack(params[:q])
