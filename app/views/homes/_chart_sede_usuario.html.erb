@@ -21,14 +21,6 @@ valor= true
     end 
 %>
 
-<%
-solicitantes1 = items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}
-examinados1 = items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}
-admitidos1 = items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}
-inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}
-
-%>
-
 
                   <%valor =true%>
                   <div class="tabbable tabs-left">
@@ -54,7 +46,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
   <%idss= "yourLinkIDx".to_s + user.id.to_s%>
   <%= link_to "Cargar Estadisticas", fetch_chart_sede_usuario_hijo_path(:user_id =>user.id, :user_role=>user.role, :user_sede=>user.sede.id,:archivado=>archivado), :remote => true, :id=>idss %>
 </div>                                            
-                                              <li class="<%if valor1 %>active<%end%>"><a href="#suserx<%=user.id%>" data-toggle="tab" onClick="document.getElementById('<%=idss%>').click();"><%=user.username%> (<%=items.where(:sede_id=>sede.id).size%>)</a></li>
+                                              <li class="<%if valor1 %>active<%end%>"><a href="#suserxx<%=user.id%>" data-toggle="tab" onClick="document.getElementById('<%=idss%>').click();"><%=user.username%> (<%=items.where(:sede_id=>sede.id).where(:user_id=>user.id).size%>)</a></li>
                                                 <%if valor1%>
                                                     <%valor1 = false%>
                                                 <%end%>
@@ -71,9 +63,10 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
 %>
 
                                             
-                                                <div class="tab-pane <%if valor1 %>active<%end%>" id="suserx<%=user.id%>">
-                                                    <h1><small><%=user.username%></small></h1>
-                                                  
+                                                <div class="tab-pane <%if valor1 %>active<%end%>" id="suserxx<%=user.id%>">
+                                                  <div id="suserx<%=user.id%>">
+                                                    <%=user.username%>
+                                                  </div>
                                                 </div>                                            
                                                 <%if valor1%>
                                                     <%valor1 = false%>         

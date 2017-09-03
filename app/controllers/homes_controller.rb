@@ -207,24 +207,7 @@ class HomesController < ApplicationController
 
      selected = nil
 
-    if rol == nil
-      selected =Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
-    else
-      if rol.nombre == "DN" or rol.nombre == "ACRM" 
-        selected = Prospecto.where(:archivado=>archivado)
-      else
-        if rol.nombre == "D" or rol.nombre == "CP"
-
-          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede])
-        else
-
-          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
-        end #end director
-      end #end else rol nombre
-    end #end else nil
-
-
-
+    selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
 
       @selected = selected
       @curr = current_user
@@ -264,27 +247,14 @@ class HomesController < ApplicationController
 
      selected = nil
 
-    if rol == nil
-      selected =Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
-    else
-      if rol.nombre == "DN" or rol.nombre == "ACRM" 
-        selected = Prospecto.where(:archivado=>archivado)
-      else
-        if rol.nombre == "D" or rol.nombre == "CP"
 
-          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede])
-        else
-
-          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
-        end #end director
-      end #end else rol nombre
-    end #end else nil
-
+    selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
 
 
 
       @selected = selected
       @curr = User.where(:id=>params[:user_id]).first
+      @id = params[:user_id]
 
       respond_to do |format|
           format.js
