@@ -55,14 +55,14 @@ def self.getCountBySedeItems(sede_id,archivado,items)
   end
 
 
-  def self.getProspectoCountByPrograma(programa_id,archivado,prospectos,prospectos2)
+  def self.getProspectoCountByPrograma(programa_id,user_id,archivado,prospectos,prospectos2)
       total = 0 
       total = total + prospectos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
       total = total + prospectos2.where(:programa_id=>programa_id).where(:archivado=>archivado).size
       return total
   end
 
-  def self.getOtherCountByPrograma(programa_id,archivado,target)
+  def self.getOtherCountByPrograma(programa_id,user_id,archivado,target)
       total = 0 
       total = total + target.where(:programa_id=>programa_id).where(:archivado=>archivado).size
       return total

@@ -48,7 +48,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
           <%if valor%>
               <%valor = false%>
               <div class="tab-pane active" id="<%=programa.id%>">
-                <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.size + @prospectosvalidados.size, solicitantescount:  items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size} %>
+                <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados), solicitantescount: ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,solicitantes1),examinadoscount: ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,examinados1), admitidoscount:  ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,admitidos1),inscritoscount:  ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,inscritos1)} %>
                 
                  <canvas id="cvs<%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
                       <script>
@@ -102,7 +102,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
               </div>
           <%else%>
               <div class="tab-pane" id="<%=programa.id%>">
-                <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.where(:programa_id=>programa.id).size.size + @prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size, solicitantescount:  items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size} %>
+                <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados), solicitantescount: ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,solicitantes1),examinadoscount: ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,examinados1), admitidoscount:  ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,admitidos1),inscritoscount:  ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,inscritos1)} %>
                 
                  <canvas id="cvs<%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
                       <script>
@@ -161,7 +161,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
 
 <div class="tab-pane" id="nil">
 
-  <%= render partial: 'links', locals: { programaid: nil, usuarioid: usuario.id, prospectoscount: @prospectosnovalidados.where(:programa_id=>nil).size + @prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size, solicitantescount:  solicitantes1.where(:programa_id=>nil).size} %>
+  <%= render partial: 'links', locals: { programaid: nil, usuarioid: usuario.id, prospectoscount: ApplicationController.getProspectoCountByPrograma(nil,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados), solicitantescount: ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,solicitantes1),examinadoscount: ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,examinados1), admitidoscount:  ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,admitidos1),inscritoscount:  ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,inscritos1)} %>
                  <canvas id="cvsnil" width="450" height="500">[No canvas support]</canvas>
                       <script>
 <%        rol = Role.where(:id=>usuario.role).first
