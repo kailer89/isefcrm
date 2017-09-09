@@ -6,6 +6,67 @@ class ApplicationController < ActionController::Base
     nil # disable whodunnit tracking
   end
 
+  def self.getCountByPrograma(programa_id,archivado,prospectos,prospectos2,solicitantes,examinados,admitidos,inscritos)
+      total = 0 
+      total = total + prospectos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + prospectos2.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + solicitantes.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + examinados.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + admitidos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + inscritos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      return total
+  end
+
+def self.getCountByUser(user_id,archivado,prospectos,prospectos2,solicitantes,examinados,admitidos,inscritos)
+      total = 0 
+      total = total + prospectos.where(:user_id=>user_id).where(:archivado=>archivado).size
+      total = total + prospectos2.where(:user_id=>user_id).where(:archivado=>archivado).size
+      total = total + solicitantes.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
+      total = total + examinados.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
+      total = total + admitidos.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
+      total = total + inscritos.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
+      return total
+  end
+
+def self.getCountByUserItems(user_id,archivado,items)
+      total = 0 
+      total = total + items.where(:archivado=>archivado).where(:issolicitante=>false).where(:user_id=>user_id).size
+      total = total + items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:user_id=>user_id).size
+      total = total + items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:user_id=>user_id).size
+      total = total + items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:user_id=>user_id).size
+      total = total + items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:user_id=>user_id).size
+
+
+      return total
+  end
+
+
+def self.getCountBySedeItems(sede_id,archivado,items)
+      total = 0 
+      filtereditems = items.where(:archivado=>archivado).where(:sede_id=>sede_id)
+      total = total + filtereditems.where(:issolicitante=>false).size
+      total = total + filtereditems.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size
+      total = total + filtereditems.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size
+      total = total + filtereditems.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size
+      total = total + filtereditems.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size
+
+
+      return total
+  end
+
+
+  def self.getProspectoCountByPrograma(programa_id,archivado,prospectos,prospectos2)
+      total = 0 
+      total = total + prospectos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + prospectos2.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      return total
+  end
+
+  def self.getOtherCountByPrograma(programa_id,archivado,target)
+      total = 0 
+      total = total + target.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      return total
+  end
 
   def getProspectosForUserIncludes (user)
 

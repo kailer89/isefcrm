@@ -18,8 +18,8 @@ valor= true
     end 
 %>
 <%
-@prospectosnovalidados = items.where(:archivado=>archivado).where(:validado=>false)
-@prospectosvalidados=items.where(:archivado=>archivado).where(:validado=>true)
+@prospectosnovalidados = items.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=>false)
+@prospectosvalidados=items.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=>false)
 %>
 
 <%
@@ -34,12 +34,12 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
       <%@programas.each do |programa|%>
           <%if valor%>
               <%valor = false%>
-              <li class="active"><a href="#<%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:archivado=>archivado).where(:programa_id=>programa.id).size%>)</a></li>
+              <li class="active"><a href="#<%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=ApplicationController.getCountByPrograma(programa.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
           <%else%>
-              <li class=""><a href="#<%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:archivado=>archivado).where(:programa_id=>programa.id).size%>)</a></li>
+              <li class=""><a href="#<%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=ApplicationController.getCountByPrograma(programa.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
           <%end%>
       <%end%>
-      <li class=""><a href="#nil" data-toggle="tab">Sin Programa (<%=items.where(:archivado=>archivado).where(:programa_id=>nil).size%>)</a></li>
+      <li class=""><a href="#nil" data-toggle="tab">Sin Programa (<%=ApplicationController.getCountByPrograma(nil,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
     </ul>
     <%valor =true%>
 
@@ -55,13 +55,13 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
 <%        rol = Role.where(:id=>usuario.role).first
 
         if rol.nombre == "ACRM"  %>
-                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [
-                                <%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,
+                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', 
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                                <%=solicitantes1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=examinados1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>]);
                               
                               funnel<%=programa.id%>.Set('chart.gutter.left', 350);
                               funnel<%=programa.id%>.Set('chart.labels.sticks', true);
@@ -76,13 +76,13 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
                               funnel<%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.<br /><%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %> Prospectos No validados para este programa (<%=programa.programa%>)', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
                               funnel<%=programa.id%>.Draw();
 <%else%>
-                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [
-                                <%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,
+                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', 
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                                <%=solicitantes1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=examinados1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>]);
                               
                               funnel<%=programa.id%>.Set('chart.gutter.left', 350);
                               funnel<%=programa.id%>.Set('chart.labels.sticks', true);
@@ -109,13 +109,13 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
 <%        rol = Role.where(:id=>usuario.role).first
 
         if rol.nombre == "ACRM"  %>
-                               var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [
-                                <%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,
+                               var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', 
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                                <%=solicitantes1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=examinados1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>]);
                              
                               funnel<%=programa.id%>.Set('chart.gutter.left', 350);
                               funnel<%=programa.id%>.Set('chart.labels.sticks', true);
@@ -130,13 +130,13 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
                               funnel<%=programa.id%>.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
                               funnel<%=programa.id%>.Draw();                             
 <%else%>
-                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', [
-                                <%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,
+                              var funnel<%=programa.id%> = new RGraph.Funnel('cvs<%=programa.id%>', 
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).where{solicitante.isexaminado==false}.size + 1 %>,
-                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>programa.id).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>programa.id).size + 1 %>]);
+                                <%=solicitantes1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=examinados1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>]);
                              
                               funnel<%=programa.id%>.Set('chart.gutter.left', 350);
                               funnel<%=programa.id%>.Set('chart.labels.sticks', true);
@@ -167,13 +167,13 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
 <%        rol = Role.where(:id=>usuario.role).first
 
         if rol.nombre == "ACRM"  %>
-                               var funnelnil = new RGraph.Funnel('cvsnil', [
-                                <%=@prospectosnovalidados.where(:programa_id=>nil).size + 1 %>,
+                               var funnelnil = new RGraph.Funnel('cvsnil', 
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
-                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:programa_id=>nil).size + 1 %>,
-                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>nil).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>nil).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>nil).size + 1 %>]);
+                                <%=solicitantes1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=examinados1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>]);
                              
                               funnelnil.Set('chart.gutter.left', 350);
                               funnelnil.Set('chart.labels.sticks', true);
@@ -188,13 +188,13 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
                               funnelnil.Set('chart.tooltips', ['<b>Prospectos No Validados</b><br />Los Prospectos No valdiados son aquellos que solo han sido introducidos al sistema.', '<b>Prospectos No Validados</b><br />Los Prospectos Valdiados son aquellos que han sido validados por un personal de rango.', '<b>Solictantes</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Examinados</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Admitidos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', '<b>Inscritos</b><br />Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..']);
                               funnelnil.Draw();                             
 <%else%>
-                              var funnelnil = new RGraph.Funnel('cvsnil', [
-                                <%=@prospectosnovalidados.where(:programa_id=>nil).size + 1 %>,
+                              var funnelnil = new RGraph.Funnel('cvsnil', 
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
-                                <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where(:programa_id=>nil).where{solicitante.isexaminado==false}.size + 1 %>,
-                                <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:programa_id=>nil).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:programa_id=>nil).size + 1 %>,
-                                <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:programa_id=>nil).size + 1 %>]);
+                                <%=solicitantes1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=examinados1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=admitidos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
+                                <%=inscritos1.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>]);
                              
                               funnelnil.Set('chart.gutter.left', 350);
                               funnelnil.Set('chart.labels.sticks', true);

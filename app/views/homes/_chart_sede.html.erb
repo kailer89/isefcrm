@@ -6,8 +6,8 @@ valor= true
 
 %>
 <%
-@prospectosnovalidados = items.where(:validado=>false)
-@prospectosvalidados=items.where(:validado=>true)
+@prospectosnovalidados = items.where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=>false)
+@prospectosvalidados=items.where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=>false)
 %>
 
 <%
@@ -40,7 +40,8 @@ valor1 =true
    <div class="tabbable tabs-left">
                 <ul class="nav nav-tabs" id="myTaba3">
                   <%User.where(:sede_id=>current_user.sede_id).each do |user|%>
-                      <li class=" <%if valor1 %>active<%end%>"><a href="#suser<%=user.id%>" data-toggle="tab"><%=user.username%> (<%=items.where(:user_id=>user.id).where(:archivado=>archivado).size%>)</a></li>
+                      <li class=" <%if valor1 %>active<%end%>"><a href="#suser<%=user.id%>" data-toggle="tab"><%=user.username%> (<%=
+ApplicationController.getCountByUser(user.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
                       <%if valor1%>
                           <%valor1 = false%>
                       <%end%>
@@ -51,8 +52,8 @@ valor1 =true
                 <div class="tab-content">
                   <%User.where(:sede_id=>current_user.sede_id).each do |user|%>
 <%
-@prospectosnovalidados = items.where(:user_id=>user.id).where(:validado=>false)
-@prospectosvalidados=items.where(:user_id=>user.id).where(:validado=>true)
+@prospectosnovalidados = items.where(:user_id=>user.id).where(:validado=>false).where(:issolicitante=>false)
+@prospectosvalidados=items.where(:user_id=>user.id).where(:validado=>true).where(:issolicitante=>false)
 %>                  
                       <div class="tab-pane <%if valor1 %>active<%end%>" id="suser<%=user.id%>">
                           <h1><small><%=user.username%></small></h1>
@@ -61,12 +62,12 @@ valor1 =true
 
     <ul class="nav nav-tabs" id="myTaba">
       <%@programas.each do |programa|%>
-          <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%><%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size%>)</a></li>      
+          <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%><%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=ApplicationController.getCountByPrograma(programa.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>      
           <%if valor%>
               <%valor = false%>
           <%end%>
       <%end%>
-      <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%>nil" data-toggle="tab">Sin Programa (<%=items.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size%>)</a></li>  
+      <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%>nil" data-toggle="tab">Sin Programa (<%=ApplicationController.getCountByPrograma(nil,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>  
     </ul>
     <%valor =true%>
 
@@ -80,7 +81,7 @@ valor1 =true
                       <script>
 
                               var funnel<%=user.id%><%=programa.id%> = new RGraph.Funnel('cvs<%=user.id%><%=programa.id%>', 
-                                [<%=@prospectosnovalidados.where(:programa_id=>programa.id).size + 1 %>,
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>programa.id).size + 1 %>,
                                 <%=solicitantes1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
                                 <%=examinados1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>programa.id).size + 1 %>,
@@ -116,7 +117,7 @@ valor1 =true
                       <script>
 
                               var funnel<%=user.id%>nil = new RGraph.Funnel('cvs<%=user.id%>nil', 
-                                [<%=@prospectosnovalidados.where(:programa_id=>nil).size + 1 %>,
+                                [<%=@prospectosnovalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
                                 <%=@prospectosvalidados.where(:issolicitante=>false).where(:programa_id=>nil).size + 1 %>,
                                 <%=solicitantes1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,
                                 <%=examinados1.where(:user_id=>user.id).where(:archivado=>archivado).where(:programa_id=>nil).size + 1 %>,

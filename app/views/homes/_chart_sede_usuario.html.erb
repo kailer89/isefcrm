@@ -21,7 +21,8 @@ valor= true
                   <div class="tabbable tabs-left">
                       <ul class="nav nav-tabs" id="myTaba4">
                         <%Sede.all.each do |sede|%>
-                            <li class="<%if valor %>active<%end%>"><a href="#sede<%=sede.id%>" data-toggle="tab"><%=sede.nombre%> (<%=items.where(:archivado=>archivado).where(:sede_id=>sede.id).size%>)</a></li>
+                            <li class="<%if valor %>active<%end%>"><a href="#sede<%=sede.id%>" data-toggle="tab"><%=sede.nombre%> (<%=
+ApplicationController.getCountBySedeItems(sede.id,archivado,items)%>)</a></li>
                             <%if valor%>
                                 <%valor = false%>
                             <%end%>
@@ -41,7 +42,7 @@ valor= true
   <%idss= "yourLinkIDx".to_s + users.id.to_s%>
   <%= link_to "Cargar Estadisticas", fetch_chart_sede_usuario_hijo_path(:user_id =>users.id, :user_role=>users.role, :user_sede=>users.sede.id,:archivado=>archivado), :remote => true, :id=>idss %>
 </div>                                            
-                                              <li class="<%if valor1 %>active<%end%>"><a href="#suserxx<%=users.id%>" data-toggle="tab" onClick="document.getElementById('<%=idss%>').click();"><%=users.username%> (<%=items.where(:archivado=>archivado).where(:sede_id=>sede.id).where(:user_id=>users.id).size%>)</a></li>
+                                              <li class="<%if valor1 %>active<%end%>"><a href="#suserxx<%=users.id%>" data-toggle="tab" onClick="document.getElementById('<%=idss%>').click();"><%=users.username%> (<%=ApplicationController.getCountByUserItems(users.id,archivado,items)%>)</a></li>
                                                 <%if valor1%>
                                                     <%valor1 = false%>
                                                 <%end%>
