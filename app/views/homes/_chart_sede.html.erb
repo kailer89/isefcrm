@@ -62,12 +62,12 @@ ApplicationController.getCountByUser(user.id,archivado,@prospectosvalidados,@pro
 
     <ul class="nav nav-tabs" id="myTaba">
       <%@programas.each do |programa|%>
-          <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%><%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=ApplicationController.getCountByPrograma(programa.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>      
+          <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%><%=programa.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=ApplicationController.getCountByPrograma(programa.id,user.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>      
           <%if valor%>
               <%valor = false%>
           <%end%>
       <%end%>
-      <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%>nil" data-toggle="tab">Sin Programa (<%=ApplicationController.getCountByPrograma(nil,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>  
+      <li class="<%if valor %>active<%end%>"><a href="#<%=user.id%>nil" data-toggle="tab">Sin Programa (<%=ApplicationController.getCountByPrograma(nil,user.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>  
     </ul>
     <%valor =true%>
 

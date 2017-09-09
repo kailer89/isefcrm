@@ -68,12 +68,12 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
         </script>
           <%if valor%>
               <%valor = false%>
-              <li class="active"><a href="#<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=ApplicationController.getCountByPrograma(programa.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
+              <li class="active"><a href="#<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=ApplicationController.getCountByPrograma(programa.id,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
           <%else%>
               <li class=""><a href="#<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:archivado=>archivado).where(:programa_id=>programa.id).size%>)</a></li>
           <%end%>
       <%end%>
-      <li class=""><a href="#nil<%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab">Sin Programa (<%=ApplicationController.getCountByPrograma(nil,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
+      <li class=""><a href="#nil<%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab">Sin Programa (<%=ApplicationController.getCountByPrograma(nil,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
     </ul>
     <%valor =true%>
 

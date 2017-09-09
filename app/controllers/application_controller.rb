@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     nil # disable whodunnit tracking
   end
 
-  def self.getCountByPrograma(programa_id,archivado,prospectos,prospectos2,solicitantes,examinados,admitidos,inscritos)
+  def self.getCountByPrograma(programa_id,user_id,archivado,prospectos,prospectos2,solicitantes,examinados,admitidos,inscritos)
       total = 0 
       total = total + prospectos.where(:issolicitante=>false).where(:programa_id=>programa_id).where(:archivado=>archivado).size
       total = total + prospectos2.where(:issolicitante=>false).where(:programa_id=>programa_id).where(:archivado=>archivado).size
