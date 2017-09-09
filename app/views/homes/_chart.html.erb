@@ -6,9 +6,20 @@ valor= true
         rol = Role.where(:id=>usuario.role).first
 
 %>
+
 <%
-@prospectosnovalidados = items.where(:validado=>false)
-@prospectosvalidados=items.where(:validado=>true)
+
+ modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    archivado=false
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    else
+      Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
+    end 
+%>
+<%
+@prospectosnovalidados = items.where(:archivado=>archivado).where(:validado=>false)
+@prospectosvalidados=items.where(:archivado=>archivado).where(:validado=>true)
 %>
 
 <%
