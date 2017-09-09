@@ -8,6 +8,19 @@ valor= true
         rol = Role.where(:id=>usuario.role).first
 
 %>
+
+
+<%
+
+ modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    archivado=false
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    else
+      Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
+    end 
+%>
+
 <%
 @prospectosnovalidados = items.where(:validado=>false)
 @prospectosvalidados=items.where(:validado=>true)
@@ -25,12 +38,12 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
       <%@programas.each do |programa|%>
           <%if valor%>
               <%valor = false%>
-              <li class="active"><a href="#<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:programa_id=>programa.id).size%>)</a></li>
+              <li class="active"><a href="#<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:archivado=>archivado).where(:programa_id=>programa.id).size%>)</a></li>
           <%else%>
-              <li class=""><a href="#<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:programa_id=>programa.id).size%>)</a></li>
+              <li class=""><a href="#<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"><%=programa.nivel rescue ""%> - <%=programa.programa%> (<%=items.where(:archivado=>archivado).where(:programa_id=>programa.id).size%>)</a></li>
           <%end%>
       <%end%>
-      <li class=""><a href="#nil<%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab">Sin Programa (<%=items.where(:programa_id=>nil).size%>)</a></li>
+      <li class=""><a href="#nil<%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab">Sin Programa (<%=items.where(:archivado=>archivado).where(:programa_id=>nil).size%>)</a></li>
     </ul>
     <%valor =true%>
 
