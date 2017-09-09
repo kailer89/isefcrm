@@ -23,10 +23,10 @@ valor= true
 %>
 
 <%
-solicitantes1 = items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}
-examinados1 = items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}
-admitidos1 = items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}
-inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}
+solicitantes1 = items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
+examinados1 = items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
+admitidos1 = items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
+inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:user_id=>usuario.id).where(:archivado=>archivado)
 
 %>
 
