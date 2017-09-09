@@ -1427,3 +1427,4 @@ c: !map:ActiveSupport::HashWithIndifferentAccess
 [09/09/17 10:33:41 -0500 alienware15 (7016)] INFO : Installing Rails 3 Error instrumentation
 [09/09/17 10:33:41 -0500 alienware15 (7016)] INFO : Finished instrumentation
 [09/09/17 10:33:44 -0500 alienware15 (7016)] INFO : Doing deferred dependency-detection before Rack startup
+[09/09/17 15:23:35 -0500 alienware15 (7016)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: wrong number of arguments (4 for 5)

@@ -5,10 +5,7 @@ valor= true
         rol = Role.where(:id=>usuario.role).first
 
 %>
-<%
-@prospectosnovalidados = items.where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=>false)
-@prospectosvalidados=items.where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=>false)
-%>
+
 
 <%
 
@@ -20,7 +17,10 @@ valor= true
       Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
     end 
 %>
-
+<%
+@prospectosnovalidados = items.where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=>false)
+@prospectosvalidados=items.where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=>false)
+%>
 <%
 solicitantes1 = items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
 examinados1 = items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
@@ -40,8 +40,7 @@ valor1 =true
    <div class="tabbable tabs-left">
                 <ul class="nav nav-tabs" id="myTaba3">
                   <%User.where(:sede_id=>current_user.sede_id).each do |user|%>
-                      <li class=" <%if valor1 %>active<%end%>"><a href="#suser<%=user.id%>" data-toggle="tab"><%=user.username%> (<%=
-ApplicationController.getCountByUser(user.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
+                      <li class=" <%if valor1 %>active<%end%>"><a href="#suser<%=user.id%>" data-toggle="tab"><%=user.username%> (<%=ApplicationController.getCountByUser(user.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
                       <%if valor1%>
                           <%valor1 = false%>
                       <%end%>
@@ -75,7 +74,7 @@ ApplicationController.getCountByUser(user.id,archivado,@prospectosvalidados,@pro
       <%@programas.each do |programa|%>
           <div class="tab-pane <%if valor %>active<%end%>" id="<%=user.id%><%=programa.id%>">
             
-            <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados), solicitantescount: ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,solicitantes1),examinadoscount: ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,examinados1), admitidoscount:  ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,admitidos1),inscritoscount:  ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,inscritos1)} %>
+            <%= render partial: 'links', locals: { programaid: programa.id, usuarioid: usuario.id, prospectoscount: ApplicationController.getProspectoCountByPrograma(programa.id,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados), solicitantescount: ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,solicitantes1),examinadoscount: ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,examinados1), admitidoscount:  ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,admitidos1),inscritoscount:  ApplicationController.getOtherCountByPrograma(programa.id,usuario.id,archivado,inscritos1)} %>
             
                  <canvas id="cvs<%=user.id%><%=programa.id%>" width="450" height="500">[No canvas support]</canvas>
                       <script>
@@ -111,7 +110,7 @@ ApplicationController.getCountByUser(user.id,archivado,@prospectosvalidados,@pro
       <%end%>
 
 <div class="tab-pane <%if valor %>active<%end%>" id="<%=user.id%>nil">
-  <%= render partial: 'links', locals: { programaid: nil, usuarioid: usuario.id, prospectoscount: ApplicationController.getProspectoCountByPrograma(nil,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados), solicitantescount: ApplicationController.getProspectoCountByPrograma(nil,usuario.id,archivado,solicitantes1),examinadoscount: ApplicationController.getProspectoCountByPrograma(nil,usuario.id,archivado,examinados1), admitidoscount:  ApplicationController.getProspectoCountByPrograma(nil,usuario.id,archivado,admitidos1),inscritoscount:  ApplicationController.getProspectoCountByPrograma(nil,usuario.id,archivado,inscritos1)} %>
+  <%= render partial: 'links', locals: { programaid: nil, usuarioid: usuario.id, prospectoscount: ApplicationController.getProspectoCountByPrograma(nil,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados), solicitantescount: ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,solicitantes1),examinadoscount: ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,examinados1), admitidoscount:  ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,admitidos1),inscritoscount:  ApplicationController.getOtherCountByPrograma(nil,usuario.id,archivado,inscritos1)} %>
             
                  <canvas id="cvs<%=user.id%>nil" width="450" height="500">[No canvas support]</canvas>
                       <script>

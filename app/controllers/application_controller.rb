@@ -21,10 +21,10 @@ def self.getCountByUser(user_id,archivado,prospectos,prospectos2,solicitantes,ex
       total = 0 
       total = total + prospectos.where(:issolicitante=>false).where(:user_id=>user_id).where(:archivado=>archivado).size
       total = total + prospectos2.where(:issolicitante=>false).where(:user_id=>user_id).where(:archivado=>archivado).size
-      total = total + solicitantes.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
-      total = total + examinados.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
-      total = total + admitidos.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
-      total = total + inscritos.where{prospectos.user_id==user_id}.where(:archivado=>archivado).size
+      total = total + solicitantes.where(:user_id=>user_id).where(:archivado=>archivado).size
+      total = total + examinados.where(:user_id=>user_id).where(:archivado=>archivado).size
+      total = total + admitidos.where(:user_id=>user_id).where(:archivado=>archivado).size
+      total = total + inscritos.where(:user_id=>user_id).where(:archivado=>archivado).size
       return total
   end
 
