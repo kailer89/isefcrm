@@ -261,6 +261,56 @@ class HomesController < ApplicationController
       end
   end
 
+  def fetch_chart_anio
+
+    paramAnio = params[:anio].to_i - 2000
+    @representative = params[:represent]
+    @periodos = PeriodoParaIngresar.find(:all, :conditions => ["valor LIKE ?", "%#{paramAnio}"]) #param anio va a ser 17,16,etc.
+
+          logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_id]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_role]
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:user_sede]
+      logger.debug "llllllllllllllllllllllllllllllllllll"    
+
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug params[:archivado]
+      logger.debug "llllllllllllllllllllllllllllllllllll"                 
+
+ archivado = false
+      modelo = Configuracione.where(:user_id=>params[:user_id]).first rescue nil
+      if modelo != nil
+        archivado = modelo.mostrar_archivados
+      end
+
+    rol = Role.where(:id=>params[:user_role]).first
+
+     selected = nil
+
+
+    selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+
+
+
+      @selected = selected
+      @curr = User.where(:id=>params[:user_id]).first
+      @programa_id = params[:programa_id]
+      @usuario_id = params[:usuario_id]
+      @usuario_sede_id = params[:usuario_sede_id]
+      @currAnio = params[:anio]
+      respond_to do |format|
+          format.js
+      end
+
+  end
+
+
   def index
     archivado = false
             rol = Role.where(:id=>current_user.role).first

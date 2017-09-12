@@ -1,0 +1,57 @@
+<%
+
+ modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    archivado=false
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    else
+      Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
+    end 
+%>
+<%
+@prospectosnovalidados = items.where(:programa_id=>@programa_id).where(:user_id=>@usuario_id).where(:sede_id=>@usuario_sede_id).where(:user_id=>usuario.id).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=>false)
+@prospectosvalidados=items.where(:programa_id=>@programa_id).where(:user_id=>@usuario_id).where(:sede_id=>@usuario_sede_id).where(:user_id=>usuario.id).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=>false)
+%>
+
+<%
+solicitantes1 = items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>@programa_id).where(:user_id=>@usuario_id).where(:sede_id=>@usuario_sede_id)
+examinados1 = items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>@programa_id).where(:user_id=>@usuario_id).where(:sede_id=>@usuario_sede_id)
+admitidos1 = items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>@programa_id).where(:user_id=>@usuario_id).where(:sede_id=>@usuario_sede_id)
+inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:user_id=>usuario.id).where(:archivado=>archivado).where(:programa_id=>@programa_id).where(:user_id=>@usuario_id).where(:sede_id=>@usuario_sede_id)
+
+%>
+
+<table class="table table-hover table-condensed table-responsive table-bordered table-striped">
+	<thead>
+  		<tr> 
+  			<th>Periodo</th>
+  			<th>Prospectos</th>
+  			<th>Solicitantes</th>
+  			<th>Examinados</th>
+  			<th>Admitidos</th>
+  			<th>Inscritos</th>
+  		</tr> 
+	</thead>
+	<tbody> 
+		<%@periodos.each do |periodo|%>
+			<tr> 
+				<th scope="row"><%=periodo.valor%></th> 
+				<td>
+					<a target="_blank" href="/prospectos?utf8=✓&amp;q[c][0][a][0][name]=programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=@programa_id%>&amp;q[c][1504415327283][a][0][name]=user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=@usuario_id%>&amp;q[c][1505076896400][a][0][name]=interes_basicos_periodo_para_ingresar_id&amp;q[c][1505076896400][p]=eq&amp;q[c][1505076896400][v][0][value]=1&amp;commit=Buscar"><%=ApplicationController.getProspectoCountByPeriodo(periodo.id,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados)%></a>
+					</td> 
+				<td>
+					<a target="_blank" href="/solicitantes?utf8=✓&amp;q[c][0][a][0][name]=prospectos_programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=@programa_id%>&amp;q[c][1504415327283][a][0][name]=prospectos_user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=@usuario_id%>&amp;q[c][1505076896400][a][0][name]=prospectos_interes_basicos_periodo_para_ingresar_id&amp;q[c][1505076896400][p]=eq&amp;q[c][1505076896400][v][0][value]=1&amp;commit=Buscar"><%=ApplicationController.getOtherCountByPeriodo(periodo.id,usuario.id,archivado,solicitantes1)%></a>
+					</td> 
+				<td>
+					<a target="_blank" href="/examinados?utf8=✓&amp;q[c][0][a][0][name]=solicitantes_prospectos_programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=@programa_id%>&amp;q[c][1504415327283][a][0][name]=solicitantes_prospectos_user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=@usuario_id%>&amp;q[c][1505076896400][a][0][name]=solicitantes_prospectos_interes_basicos_periodo_para_ingresar_id&amp;q[c][1505076896400][p]=eq&amp;q[c][1505076896400][v][0][value]=1&amp;commit=Buscar"><%=ApplicationController.getOtherCountByPeriodo(periodo.id,usuario.id,archivado,examinados1)%></a>
+					</td> 
+				<td>
+					<a target="_blank" href="/admitidos?utf8=✓&amp;q[c][0][a][0][name]=examinados_solicitantes_prospectos_programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=@programa_id%>&amp;q[c][1504415327283][a][0][name]=examinados_solicitantes_prospectos_user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=@usuario_id%>&amp;q[c][1505076896400][a][0][name]=examinados_solicitantes_prospectos_interes_basicos_periodo_para_ingresar_id&amp;q[c][1505076896400][p]=eq&amp;q[c][1505076896400][v][0][value]=1&amp;commit=Buscar"><%=ApplicationController.getOtherCountByPeriodo(periodo.id,usuario.id,archivado,admitidos1)%></a>
+					</td> 
+				<td>
+					<a target="_blank" href="/inscritos?utf8=✓&amp;q[c][0][a][0][name]=admitidos_examinados_solicitantes_prospectos_programa_id&amp;q[c][0][p]=eq&amp;q[c][0][v][0][value]=<%=@programa_id%>&amp;q[c][1504415327283][a][0][name]=admitidos_examinados_solicitantes_prospectos_user_id&amp;q[c][1504415327283][p]=eq&amp;q[c][1504415327283][v][0][value]=<%=@usuario_id%>&amp;q[c][1505076896400][a][0][name]=admitidos_examinados_solicitantes_prospectos_interes_basicos_periodo_para_ingresar_id&amp;q[c][1505076896400][p]=eq&amp;q[c][1505076896400][v][0][value]=1&amp;commit=Buscar"><%=ApplicationController.getOtherCountByPeriodo(periodo.id,usuario.id,archivado,inscritos1)%></a>
+					</td> 
+			</tr>
+		<%end%>
+	</tbody> 
+</table>

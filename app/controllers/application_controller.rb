@@ -55,10 +55,42 @@ def self.getCountBySedeItems(sede_id,archivado,items)
   end
 
 
+  def self.getCountByPeriodoItems(anio_id,programa_id,user_id,sede_id,archivado,items)
+      total = 0 
+      anio_id = anio_id - 2000
+      periodos = PeriodoParaIngresar.find(:all, :conditions => ["valor LIKE ?", "%#{anio_id}"]).map{|a| a.id}
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      logger.debug anio_id
+      logger.debug periodos.inspect
+      logger.debug "llllllllllllllllllllllllllllllllllll"
+      if periodos.size ==0
+
+      else
+
+        filtereditems = items.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id.in(periodos)}.where(:programa_id=>programa_id).where(:user_id=>user_id).where(:archivado=>archivado)
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id.in(periodos)}.where(:issolicitante=>false).where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id.in(periodos)}.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id.in(periodos)}.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id.in(periodos)}.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id.in(periodos)}.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:archivado=>archivado).size
+      end
+
+      return total
+  end
+
+
   def self.getProspectoCountByPrograma(programa_id,user_id,archivado,prospectos,prospectos2)
       total = 0 
       total = total + prospectos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
       total = total + prospectos2.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      return total
+  end
+
+
+   def self.getProspectoCountByPeriodo(periodo_id,user_id,archivado,prospectos,prospectos2)
+      total = 0 
+      total = total + prospectos.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.size
+      total = total + prospectos2.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.size
       return total
   end
 
@@ -67,6 +99,13 @@ def self.getCountBySedeItems(sede_id,archivado,items)
       total = total + target.where(:programa_id=>programa_id).where(:archivado=>archivado).size
       return total
   end
+
+ def self.getOtherCountByPeriodo(periodo_id,user_id,archivado,target)
+      total = 0 
+      total = total + target.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.size
+      return total
+  end
+
 
   def getProspectosForUserIncludes (user)
 

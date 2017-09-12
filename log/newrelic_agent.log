@@ -1428,3 +1428,55 @@ c: !map:ActiveSupport::HashWithIndifferentAccess
 [09/09/17 10:33:41 -0500 alienware15 (7016)] INFO : Finished instrumentation
 [09/09/17 10:33:44 -0500 alienware15 (7016)] INFO : Doing deferred dependency-detection before Rack startup
 [09/09/17 15:23:35 -0500 alienware15 (7016)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: wrong number of arguments (4 for 5)
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Starting the New Relic agent in "development" environment.
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : New Relic Agent Developer Mode enabled.
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Environment: development
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : No known dispatcher detected.
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Application: My Application
+[09/10/17 10:39:46 -0500 alienware15 (11744)] WARN : Agent configured not to send data in this environment.
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing ActiveRecord instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing HTTPClient instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing Net instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing deferred Rack instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing Rack::Builder middleware instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing Rails 3+ middleware instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing Rails 3 Controller instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Installing Rails 3 Error instrumentation
+[09/10/17 10:39:46 -0500 alienware15 (11744)] INFO : Finished instrumentation
+[09/10/17 10:39:49 -0500 alienware15 (11744)] INFO : Doing deferred dependency-detection before Rack startup
+[09/10/17 13:24:06 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: interes_basicos.periodo_id: SELECT COUNT(*) FROM "prospectos" INNER JOIN "interes_basicos" ON "interes_basicos"."prospecto_id" = "prospectos"."id" WHERE "prospectos"."archivado" = 'f' AND "prospectos"."sede_id" = 1 AND "prospectos"."user_id" = 3 AND "interes_basicos"."periodo_para_ingresar_id" IN ("interes_basicos"."periodo_id") AND "prospectos"."issolicitante" = 'f'
+[09/10/17 13:24:47 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: interes_basicos.periodo_id: SELECT COUNT(*) FROM "prospectos" INNER JOIN "interes_basicos" ON "interes_basicos"."prospecto_id" = "prospectos"."id" WHERE "prospectos"."archivado" = 'f' AND "prospectos"."sede_id" = 1 AND "prospectos"."user_id" = 2 AND "interes_basicos"."periodo_para_ingresar_id" IN ("interes_basicos"."periodo_id") AND "prospectos"."issolicitante" = 'f'
+[09/10/17 13:28:14 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: interes_basicos.periodo_id: SELECT COUNT(*) FROM "prospectos" INNER JOIN "interes_basicos" ON "interes_basicos"."prospecto_id" = "prospectos"."id" WHERE "prospectos"."archivado" = 'f' AND "prospectos"."sede_id" = 1 AND "prospectos"."user_id" = 3 AND "interes_basicos"."periodo_para_ingresar_id" IN ("interes_basicos"."periodo_id") AND "prospectos"."issolicitante" = 'f'
+[09/10/17 13:28:17 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: interes_basicos.periodo_id: SELECT COUNT(*) FROM "prospectos" INNER JOIN "interes_basicos" ON "interes_basicos"."prospecto_id" = "prospectos"."id" WHERE "prospectos"."archivado" = 'f' AND "prospectos"."sede_id" = 1 AND "prospectos"."user_id" = 2 AND "interes_basicos"."periodo_para_ingresar_id" IN ("interes_basicos"."periodo_id") AND "prospectos"."issolicitante" = 'f'
+[09/10/17 13:28:21 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: interes_basicos.periodo_id: SELECT COUNT(*) FROM "prospectos" INNER JOIN "interes_basicos" ON "interes_basicos"."prospecto_id" = "prospectos"."id" WHERE "prospectos"."archivado" = 'f' AND "prospectos"."sede_id" = 1 AND "prospectos"."user_id" = 2 AND "interes_basicos"."periodo_para_ingresar_id" IN ("interes_basicos"."periodo_id") AND "prospectos"."issolicitante" = 'f'
+[09/10/17 13:36:18 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: C:/Sites/isefcrm/isefcrm/app/views/homes/_chart_hijo.html.erb:216: syntax error, unexpected keyword_ensure, expecting end-of-input
+[09/10/17 13:40:05 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: C:/Sites/isefcrm/isefcrm/app/views/homes/_chart.html.erb:181: syntax error, unexpected keyword_ensure, expecting end-of-input
+[09/10/17 15:54:11 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `programaid' for #<#<Class:0x15ce8bd8>:0x74e0ed8>
+[09/10/17 16:00:30 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'periodo_para_ingresars' was not found on Solicitante; perhaps you misspelled it?
+[09/10/17 16:01:07 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'periodo_para_ingresars' was not found on Solicitante; perhaps you misspelled it?
+[09/10/17 16:06:49 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'periodo_para_ingresars' was not found on Solicitante; perhaps you misspelled it?
+[09/10/17 16:07:07 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'periodo_para_ingresars' was not found on Solicitante; perhaps you misspelled it?
+[09/10/17 16:07:16 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'periodo_para_ingresars' was not found on Solicitante; perhaps you misspelled it?
+[09/10/17 16:24:44 -0500 alienware15 (11744)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Association named 'periodo_para_ingresars' was not found on Solicitante; perhaps you misspelled it?
+[09/11/17 17:25:14 -0500 alienware15 (13524)] INFO : Starting the New Relic agent in "development" environment.
+[09/11/17 17:25:14 -0500 alienware15 (13524)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/11/17 17:25:14 -0500 alienware15 (13524)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[09/11/17 17:25:14 -0500 alienware15 (13524)] INFO : New Relic Agent Developer Mode enabled.
+[09/11/17 17:25:14 -0500 alienware15 (13524)] INFO : Environment: development
+[09/11/17 17:25:14 -0500 alienware15 (13524)] INFO : No known dispatcher detected.
+[09/11/17 17:25:14 -0500 alienware15 (13524)] INFO : Application: My Application
+[09/11/17 17:25:14 -0500 alienware15 (13524)] WARN : Agent configured not to send data in this environment.
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing ActiveRecord instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing HTTPClient instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing Net instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing deferred Rack instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing Rack::Builder middleware instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing Rails 3+ middleware instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing Rails 3 Controller instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Installing Rails 3 Error instrumentation
+[09/11/17 17:25:15 -0500 alienware15 (13524)] INFO : Finished instrumentation
+[09/11/17 17:25:17 -0500 alienware15 (13524)] INFO : Doing deferred dependency-detection before Rack startup

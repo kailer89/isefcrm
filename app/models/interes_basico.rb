@@ -17,7 +17,6 @@ class InteresBasico < ActiveRecord::Base
 
   validate :subsede_is_in_selected_sede
 
-
 private
 def subsede_is_in_selected_sede
   logger.debug "--------------------------------11111111111111111111111111111111111111111"

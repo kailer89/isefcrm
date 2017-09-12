@@ -266,7 +266,6 @@ end
                      <%= builder.input :comentarios, :as => :text ,:input_html => { :cols => 50, :rows => 3 } , :label=>"Comentarios:" %>
             <%= builder.hidden_field :latitude%>
             <%= builder.hidden_field :longitude%>
-            <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@prospecto.direccions.first.latitude}%2C#{@prospecto.direccions.first.longitude}" %>                   
                        </div>       
           <% end %>    
         </div>
