@@ -34,33 +34,19 @@ items =items.where(:archivado=>archivado)
 <%
 solicitantes1 = items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
 %>
-        <script type="text/javascript">
-            console.log('<%=solicitantes1.size%>');
-        </script>
 <%
 examinados1 = items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
 %>
-        <script type="text/javascript">
-            console.log('<%=examinados1.size%>');
-        </script>
 <%
 admitidos1 = items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:user_id=>usuario.id).where(:archivado=>archivado)
 %>
-        <script type="text/javascript">
-            console.log('<%=admitidos1.size%>');
-        </script>
 <%
 inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:user_id=>usuario.id).where(:archivado=>archivado)
 %>
-        <script type="text/javascript">
-            console.log('<%=inscritos1.size%>');
-        </script>
 <%
 
 %>
- <script type="text/javascript">
-            console.log('============================================');
-        </script>
+
     <ul class="nav nav-tabs" id="myTaba">
       <%@programas.each do |programa|%>
         <script type="text/javascript">
@@ -76,7 +62,17 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
       <li class=""><a href="#nil<%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab">Sin Programa (<%=ApplicationController.getCountByPrograma(nil,usuario.id,archivado,@prospectosvalidados,@prospectosnovalidados,solicitantes1,examinados1,admitidos1,inscritos1)%>)</a></li>
     </ul>
     <%valor =true%>
+<%
+periodoss = Hash.new
 
+          limit = 11;
+          for counter in 0..limit
+            currAnio = 2016 + counter
+            currAnio = currAnio -2000
+            periodoss[currAnio + 2000] = PeriodoParaIngresar.find(:all, :conditions => ["valor LIKE ?", "%#{currAnio}"]).map{|a| a.id}
+           end
+
+%>
     <div class="tab-content">
       <%@programas.each do |programa|%>
           <div class="tab-pane  <%if valor %>active<%end%>" id="<%=programa.id%><%=usuario.id%><%=usuario.sede.id%>">
@@ -96,7 +92,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
   <%idss= "yourLinkIDxa".to_s + programa.id.to_s + usuario.id.to_s + usuario.sede.id.to_s + currAnio.to_s %>
   <%= link_to "Cargar Estadisticas", fetch_chart_anio_path(:user_id =>usuario.id, :user_role=>usuario.role, :user_sede=>usuario.sede.id,:archivado=>archivado, :anio=>currAnio,:programa_id=>programa.id, :usuario_id=>usuario.id,:usuario_sede_id=>usuario.sede.id,:represent=>"hijo"), :remote => true, :id=>idss %>
 </div>            
-              <li class="<%if valora %>active<%end%>"><a href="#<%=currAnio%><%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"  onClick="document.getElementById('<%=idss%>').click();"><%=currAnio%> (<%=ApplicationController.getCountByPeriodoItems(currAnio,programa.id,usuario.id,usuario.sede.id,archivado,items)%>)</a></li>
+              <li class="<%if valora %>active<%end%>"><a href="#<%=currAnio%><%=programa.id%><%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"  onClick="document.getElementById('<%=idss%>').click();"><%=currAnio%> (<%=ApplicationController.getCountByPeriodoItems(currAnio,programa.id,usuario.id,usuario.sede.id,archivado,items,periodoss[currAnio])%>)</a></li>
           <%
           if valora 
               valora=false
@@ -160,7 +156,7 @@ inscritos1 = items.joins{solicitante.examinado.admitido.inscrito}.where{inscrito
 document.getElementById('<%=idss%>').click();
 </script>
 <%end%>
-              <li class="<%if valora %>active<%end%>"><a href="#<%=currAnio%>nil<%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"  onClick="document.getElementById('<%=idss%>').click();"><%=currAnio%> (<%=ApplicationController.getCountByPeriodoItems(currAnio,nil,usuario.id,usuario.sede.id,archivado,items)%>)</a></li>
+              <li class="<%if valora %>active<%end%>"><a href="#<%=currAnio%>nil<%=usuario.id%><%=usuario.sede.id%>" data-toggle="tab"  onClick="document.getElementById('<%=idss%>').click();"><%=currAnio%> (<%=ApplicationController.getCountByPeriodoItems(currAnio,nil,usuario.id,usuario.sede.id,archivado,items,periodoss[currAnio])%>)</a></li>
           <%
           if valora 
               valora=false

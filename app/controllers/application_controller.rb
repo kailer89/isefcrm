@@ -55,10 +55,10 @@ def self.getCountBySedeItems(sede_id,archivado,items)
   end
 
 
-  def self.getCountByPeriodoItems(anio_id,programa_id,user_id,sede_id,archivado,items)
+  def self.getCountByPeriodoItems(anio_id,programa_id,user_id,sede_id,archivado,items,periodos)
       total = 0 
       anio_id = anio_id - 2000
-      periodos = PeriodoParaIngresar.find(:all, :conditions => ["valor LIKE ?", "%#{anio_id}"]).map{|a| a.id}
+      
       logger.debug "llllllllllllllllllllllllllllllllllll"
       logger.debug anio_id
       logger.debug periodos.inspect
