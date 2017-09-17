@@ -59,7 +59,7 @@ class LlamadasController < ApplicationController
   def create
     @llamada = Llamada.new(params[:llamada])
 
-    if params[:llamada][:inicio_de_la_llamada].to_date > Date.today
+    if @llamada.inicio_de_la_llamada!=nil and @llamada.inicio_de_la_llamada.to_date > Date.today
       @llamada.pendiente = true
     end
 

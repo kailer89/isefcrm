@@ -7,26 +7,9 @@
   xmlns:html="http://www.w3.org/TR/REC-html40">
   <Worksheet ss:Name="Totales">
     <Table>
-<%
-rol = Role.where(:id=>current_user.role).first.nombre
-llamadas =nil
-%>
-<%if rol == "ACRM" or rol == "DN"%>
-      <%  
-      llamadas = Llamada.where{pendiente==true or pendiente==false}
-      %>
-<%elsif rol == "CP" or rol == "D"%>  
-      <%  
-      llamadas = Llamada.where(:sede_id=>current_user.sede.id)
-      %>
-<%else%>
-      <%  
-      llamadas = Llamada.where(:sede_id=>current_user.sede.id).where(:user_id=>current_user.id)
-      %>
-<%end%>
 
 
-<%if rol == "ACRM" or rol == "DN"%>
+<%if @rol == "ACRM" or @rol == "DN"%>
       <Row>
         <Cell><Data ss:Type="String">Contadores por sedes</Data></Cell>
       </Row>
@@ -37,24 +20,24 @@ llamadas =nil
           <Cell><Data ss:Type="String">Pendientes</Data></Cell>                                  
       </Row>
      <%
-     grouped = llamadas.group(:sede_id).count
+     grouped = @llamadas.group(:sede_id).count
      %>
      <%grouped.each do |a|%>
 <%
-      llamadas_realizadas = llamadas.where(:sede_id=>a[0],:pendiente=>false).size
-      llamadas_pendientes = llamadas.where(:sede_id=>a[0],:pendiente=>true).size
+      @llamadas_realizadas = @llamadas.where(:sede_id=>a[0]).where(:pendiente=>false).size
+      @llamadas_pendientes = @llamadas.where(:sede_id=>a[0]).where(:pendiente=>true).size
 %>
       <Row>
         <Cell><Data ss:Type="String"><%=Sede.where(:id=>a[0]).pluck(:nombre)[0]%></Data></Cell>
         <Cell><Data ss:Type="Number"><%=a[1]%></Data></Cell>
-        <Cell><Data ss:Type="Number"><%=llamadas_realizadas%></Data></Cell>
-        <Cell><Data ss:Type="Number"><%=llamadas_pendientes%></Data></Cell>
+        <Cell><Data ss:Type="Number"><%=@llamadas_realizadas%></Data></Cell>
+        <Cell><Data ss:Type="Number"><%=@llamadas_pendientes%></Data></Cell>
       </Row>      
      <%end%>
 <%end%>
 
 
-<%if rol == "CP" or rol == "D" or  rol == "ACRM" or rol == "DN"%>  
+<%if @rol == "CP" or @rol == "D" or  @rol == "ACRM" or @rol == "DN"%>  
       <Row>
         <Cell><Data ss:Type="String">Contadores por asesor</Data></Cell>
       </Row>
@@ -65,18 +48,18 @@ llamadas =nil
           <Cell><Data ss:Type="String">Pendientes</Data></Cell>                                  
       </Row>
      <%
-     grouped = llamadas.group(:user_id).count
+     grouped = @llamadas.group(:user_id).count
      %>
      <%grouped.each do |a|%>
 <%
-      llamadas_realizadas = llamadas.where(:user_id=>a[0],:pendiente=>false).size
-      llamadas_pendientes = llamadas.where(:user_id=>a[0],:pendiente=>true).size
+      @llamadas_realizadas = @llamadas.where(:user_id=>a[0],:pendiente=>false).size
+      @llamadas_pendientes = @llamadas.where(:user_id=>a[0],:pendiente=>true).size
 %>
       <Row>
         <Cell><Data ss:Type="String"><%=User.where(:id=>a[0]).pluck(:username)[0]%></Data></Cell>
         <Cell><Data ss:Type="Number"><%=a[1]%></Data></Cell>
-        <Cell><Data ss:Type="Number"><%=llamadas_realizadas%></Data></Cell>
-        <Cell><Data ss:Type="Number"><%=llamadas_pendientes%></Data></Cell>
+        <Cell><Data ss:Type="Number"><%=@llamadas_realizadas%></Data></Cell>
+        <Cell><Data ss:Type="Number"><%=@llamadas_pendientes%></Data></Cell>
       </Row>      
      <%end%>
 <%end%>
@@ -87,20 +70,6 @@ llamadas =nil
   </Worksheet>
  <Worksheet ss:Name="Comentarios">
     <Table>
-<%if rol == "ACRM" or rol == "DN"%>
-      <%  
-      llamadas = Llamada.where{pendiente==true or pendiente==false}
-      %>
-<%elsif rol == "CP" or rol == "D"%>  
-      <%  
-      llamadas = Llamada.where(:sede_id=>current_user.sede.id)
-      %>
-<%else%>
-      <%  
-      llamadas = Llamada.where(:sede_id=>current_user.sede.id).where(:user_id=>current_user.id)
-      %>
-<%end%>
-
       <Row>
         <Cell><Data ss:Type="String">Sede</Data></Cell>
         <Cell><Data ss:Type="String">Asesor</Data></Cell>
@@ -109,7 +78,7 @@ llamadas =nil
         <Cell><Data ss:Type="String">Liga al prospecto</Data></Cell>
         <Cell><Data ss:Type="String">Comentario</Data></Cell>                               
       </Row>
-      <%llamadas.each do |a|%>
+      <%@llamadas.each do |a|%>
         <Row>
           <Cell><Data ss:Type="String"><%=Sede.where(:id=>a.sede_id).pluck(:nombre)[0]%></Data></Cell>
           <Cell><Data ss:Type="String"><%=User.where(:id=>a.user_id).pluck(:username)[0]%></Data></Cell>

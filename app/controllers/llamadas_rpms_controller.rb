@@ -29,7 +29,23 @@ class LlamadasRpmsController < ApplicationController
   end
 
   def imprimir_llamadas_rpm
-    
+
+    @rol = Role.where(:id=>current_user.role).first.nombre
+    @llamadas =nil
+
+    if @rol == "ACRM" or @rol == "DN"
+          
+          @llamadas = Llamada.where{user_id!=nil}
+          
+    elsif @rol == "CP" or @rol == "D"
+            
+          @llamadas = Llamada.where(:sede_id=>current_user.sede.id)
+          
+    else
+            
+          @llamadas = Llamada.where(:sede_id=>current_user.sede.id).where(:user_id=>current_user.id)
+          
+    end
   end
 
   def update
