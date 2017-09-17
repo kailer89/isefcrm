@@ -33,7 +33,23 @@
               <%= f.submit %>
             <% end %>  
 </div>
-<%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), examinados_path(params.merge(format: 'xls')), :class => 'btn btn-mini btn-info' %>  
+<%if @examinados.total_entries > 100%> 
+
+
+ 
+       <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), multiexporte_path, :class => 'btn btn-mini btn-info' %>  
+
+
+ 
+      <%else%>   
+
+
+ 
+        <%= link_to raw("<i class=""icon-arrow-down""></i>Exportar a Excel<i class=""icon-arrow-down""></i>"), examinados_path(params.merge(format: 'xls')), :class => 'btn btn-mini btn-info' %>  
+
+
+ 
+    <%end%> 
 
 <hr/>
 <style type="text/css">
