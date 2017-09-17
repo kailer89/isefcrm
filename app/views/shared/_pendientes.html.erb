@@ -26,7 +26,7 @@
               <%if tareas != nil%>
 
                   <% tareas.each do |tarea| %>          
-                    <tr class="">
+                    <tr class="<%if tarea.pendiente%>error<%end%>">
                       <td><%= link_to tarea.id, tarea_path(tarea) %></td>
                       <td><%= link_to "#{tarea.model_name}" , "/#{tarea.model_name}/#{tarea.model_id}/edit" %></td>
                       <%
@@ -39,7 +39,7 @@ when "solicitantes"     #compare to 2
 when "examinados"
   nombreAUsar = Examinado.where{id == tarea.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
 when "admitidos"
-  nombreAUsar = Examinado.where{id == tarea.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+  nombreAUsar = Admitido.where{id == tarea.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
 when "inscritos"
   nombreAUsar = Inscrito.where{id == tarea.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
 else
@@ -110,7 +110,7 @@ when "solicitantes"     #compare to 2
 when "examinados"
   nombreAUsar = Examinado.where{id == llamada.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
 when "admitidos"
-  nombreAUsar = Examinado.where{id == llamada.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+  nombreAUsar = Admitido.where{id == llamada.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
 when "inscritos"
   nombreAUsar = Inscrito.where{id == llamada.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
 else
@@ -118,7 +118,7 @@ else
 end                      
 
                       %>
-                    <tr class="">
+                    <tr class="<%if llamada.pendiente%>error<%end%>">
                       <td><%= link_to llamada.id, llamada_path(llamada) %></td>
                       <td><%= link_to "#{llamada.model_name}" , "/#{llamada.model_name}/#{llamada.model_id}/edit" %></td>
                       <td><%= link_to llamada.asunto, llamada_path(llamada) %></td>
@@ -184,7 +184,7 @@ when "solicitantes"     #compare to 2
 when "examinados"
   nombreAUsar = Examinado.where{id == memo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
 when "admitidos"
-  nombreAUsar = Examinado.where{id == memo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+  nombreAUsar = Admitido.where{id == memo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
 when "inscritos"
   nombreAUsar = Inscrito.where{id == memo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
 else
@@ -192,7 +192,7 @@ else
 end                      
 
                       %>
-                  <tr>
+                  <tr class="<%if memo.pendiente%>error<%end%>">
                     <td><%= link_to memo.id, memo_path(memo) %></td>
                     <td><%= link_to "#{memo.model_name}" , "/#{memo.model_name}/#{memo.model_id}/edit" %></td>
                     <td><%= link_to memo.nombre, memo_path(memo) %></td>
@@ -257,7 +257,7 @@ when "solicitantes"     #compare to 2
 when "examinados"
   nombreAUsar = Examinado.where{id == correo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
 when "admitidos"
-  nombreAUsar = Examinado.where{id == correo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+  nombreAUsar = Admitido.where{id == correo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
 when "inscritos"
   nombreAUsar = Inscrito.where{id == correo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
 else
@@ -313,7 +313,7 @@ when "solicitantes"     #compare to 2
 when "examinados"
   nombreAUsar = Examinado.where{id == attachment.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
 when "admitidos"
-  nombreAUsar = Examinado.where{id == attachment.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+  nombreAUsar = Admitido.where{id == attachment.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
 when "inscritos"
   nombreAUsar = Inscrito.where{id == attachment.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
 else
