@@ -33,7 +33,6 @@ class Admitido < ActiveRecord::Base
 
 
 
-validates_presence_of :fecha_lim_fpi
 
 	accepts_nested_attributes_for :examinados, :reject_if => :all_blank, :allow_destroy => true
 	has_paper_trail

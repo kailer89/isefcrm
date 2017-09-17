@@ -8,12 +8,13 @@ class ApplicationController < ActionController::Base
 
   def self.getCountByPrograma(programa_id,user_id,archivado,prospectos,prospectos2,solicitantes,examinados,admitidos,inscritos)
       total = 0 
-      total = total + prospectos.where(:issolicitante=>false).where(:programa_id=>programa_id).where(:archivado=>archivado).size
-      total = total + prospectos2.where(:issolicitante=>false).where(:programa_id=>programa_id).where(:archivado=>archivado).size
-      total = total + solicitantes.where(:programa_id=>programa_id).where(:archivado=>archivado).size
-      total = total + examinados.where(:programa_id=>programa_id).where(:archivado=>archivado).size
-      total = total + admitidos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
-      total = total + inscritos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+
+      total = total + prospectos.where(:user_id=>user_id).where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + prospectos2.where(:user_id=>user_id).where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + solicitantes.where(:user_id=>user_id).where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + examinados.where(:user_id=>user_id).where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + admitidos.where(:user_id=>user_id).where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + inscritos.where(:user_id=>user_id).where(:programa_id=>programa_id).where(:archivado=>archivado).size
       return total
   end
 
@@ -58,12 +59,22 @@ def self.getCountBySedeItems(sede_id,archivado,items)
   def self.getCountByPeriodoItems(anio_id,programa_id,user_id,sede_id,archivado,items,periodos)
       total = 0 
       anio_id = anio_id - 2000
-      
-      logger.debug "llllllllllllllllllllllllllllllllllll"
+
+      logger.debug "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      logger.debug "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       logger.debug anio_id
       logger.debug periodos.inspect
-      logger.debug "llllllllllllllllllllllllllllllllllll"
-      if periodos.size ==0
+      logger.debug "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      logger.debug "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+      if  anio_id == 0
+
+        filtereditems = items.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id ==nil}.where(:programa_id=>programa_id).where(:user_id=>user_id).where(:archivado=>archivado)
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id ==nil}.where(:issolicitante=>false).where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id ==nil}.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id ==nil}.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id ==nil}.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:archivado=>archivado).size
+        total = total + filtereditems.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id ==nil}.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:archivado=>archivado).size
 
       else
 
@@ -81,28 +92,31 @@ def self.getCountBySedeItems(sede_id,archivado,items)
 
   def self.getProspectoCountByPrograma(programa_id,user_id,archivado,prospectos,prospectos2)
       total = 0 
-      total = total + prospectos.where(:programa_id=>programa_id).where(:archivado=>archivado).size
-      total = total + prospectos2.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      total = total + prospectos.where(:programa_id=>programa_id).where(:archivado=>archivado).where(:user_id=>user_id).size
+      total = total + prospectos2.where(:programa_id=>programa_id).where(:archivado=>archivado).where(:user_id=>user_id).size
       return total
   end
 
 
    def self.getProspectoCountByPeriodo(periodo_id,user_id,archivado,prospectos,prospectos2)
       total = 0 
-      total = total + prospectos.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.size
-      total = total + prospectos2.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.size
+      total = total + prospectos.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.where(:user_id=>user_id).size
+      total = total + prospectos2.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.where(:user_id=>user_id).size
       return total
   end
 
   def self.getOtherCountByPrograma(programa_id,user_id,archivado,target)
       total = 0 
-      total = total + target.where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      logger.debug "zzzzzzzzzzzzzzzzzzzz"
+      total = total + target.where(:user_id=>user_id).where(:programa_id=>programa_id).where(:archivado=>archivado).size
+      logger.debug total
+      logger.debug "zzzzzzzzzzzzzzzzzzzz"
       return total
   end
 
  def self.getOtherCountByPeriodo(periodo_id,user_id,archivado,target)
       total = 0 
-      total = total + target.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.size
+      total = total + target.joins{interes_basicos}.where{interes_basicos.periodo_para_ingresar_id==periodo_id}.where(:user_id=>user_id).size
       return total
   end
 

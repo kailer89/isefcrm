@@ -264,23 +264,37 @@ end
   #convierte el prospecto en solicitante
   # POST /examinados/:id/convertir
   def convertir_examinado
-    @examinado = Examinado.find(params[:id])
+
+begin
+      @examinado = Examinado.find(params[:id])
     @examinado.isadmitido=true
     @examinado.save
 
+
     hasInscritoAlready = Admitido.where(:examinado_id=>@examinado.id).first
+        logger.debug "examinado cnvertr"
+    logger.debug "examinado cnvertr"
+    logger.debug "examinado cnvertr"
+    logger.debug hasInscritoAlready.inspect
+    logger.debug "examinado cnvertr"
+    logger.debug "examinado cnvertr"
+    logger.debug "examinado cnvertr"
     if hasInscritoAlready != nil
       redirect_to edit_admitido_path(hasInscritoAlready), :flash => { :info => "Examinado ya habia sido convertido." }
       return
     end
 
     examinado=@examinado
-    newAdmitido=Admitido.create(:examinado_id=>examinado.id)
-    newAdmitido.isinscrito = false
+   newAdmitido=Admitido.create(:examinado_id=>@examinado.id)
+       newAdmitido.isinscrito = false
     newAdmitido.archivado =false
-    newAdmitido.save
+    newAdmitido.save(validate: false)
+
+
+
     @examinado.admitido_id = newAdmitido.id
     @examinado.save
+
 
     historial = History.new
     historial.model_name = "prospectos"
@@ -289,9 +303,14 @@ end
     historial.role = current_user.role        
     historial.action = "Convertido en Admitido"
     historial.save
-
     #new_user = User.new(old_user.attributes.merge(:login => "newlogin"))
     redirect_to edit_admitido_path(newAdmitido), :flash => { :info => "Examinado convertido en admitido." }
+rescue => ex
+  logger.debug "errorerrorerrorerrorerrorerrorerrorerrorerrorerrorerrorerrorerror"
+  logger.debug ex.message
+  logger.debug "errorerrorerrorerrorerrorerrorerrorerrorerrorerrorerrorerrorerror"
+end
+
   end  
   private
     def undo_link

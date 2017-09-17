@@ -43,11 +43,16 @@ ApplicationController.getCountBySedeItems(sede.id,archivado,items)%>)</a></li>
   <%= link_to "Cargar Estadisticas", fetch_chart_sede_usuario_hijo_path(:user_id =>users.id, :user_role=>users.role, :user_sede=>users.sede.id,:archivado=>archivado), :remote => true, :id=>idss %>
 </div>          
                                               <li class="<%if valor1 %>active<%end%>"><a href="#suserxx<%=users.id%>" data-toggle="tab" onClick="document.getElementById('<%=idss%>').click();"><%=users.username%> (<%=ApplicationController.getCountByUserItems(users.id,archivado,items)%>)</a></li>
+                                                
+                <%if valor1%>
+                <script>document.getElementById('<%=idss%>').click();</script>
+                <%end%>
                                                 <%if valor1%>
                                                     <%valor1 = false%>
                                                 <%end%>
                                             <%end%>
                                           </ul>
+
                                           <%valor1 =true%>
 
                                           <div class="tab-content">

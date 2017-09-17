@@ -1,0 +1,2 @@
+
+$("#yearssperiodocontent<%=@programa_id%><%=@usuario_id%><%=@usuario_sede_id%>").html("<%= escape_javascript(render partial: 'chart_anios', locals: { items: @selected, periodos: @periodos, usuario: @curr, currAnio: @currAnio, programa_id: @programa_id, usuario_id: @usuario_id, usuario_sede_id: @usuario_sede_id } ) %>"); 

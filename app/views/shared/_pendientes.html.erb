@@ -1,22 +1,22 @@
 <%if request.path_parameters[:action] != "new"%>
  <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tareas" data-toggle="tab">Tarea</a></li>
-    <li><a href="#llamadas" data-toggle="tab">Llamadas</a></li>
+    <li class="active"><a href="#llamadas" data-toggle="tab">Llamadas</a></li>
+    <li><a href="#tareas" data-toggle="tab">Tareas</a></li>
     <li><a href="#memos" data-toggle="tab">Notas</a></li>
     <li><a href="#correos" data-toggle="tab">Correos</a></li>
     <li><a href="#attachments" data-toggle="tab">Adjuntos</a></li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane active" id="tareas">
-        <div class="well">
-          <h3>Tareas</h3>
+    <div class="tab-pane" id="tareas">
+        <div class="well  well-small">
            <table class="table table-striped table-bordered table-condensed">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Procendencia</th>
-                <th>Nombre</th>
+                <th>Nombre tarea</th>
+                <th>Nombre prospecto</th>
                 <th>Creado en </th>
                 <th>Pendiente </th>
                 <th>Actions</th>
@@ -25,23 +25,34 @@
             <tbody>
               <%if tareas != nil%>
 
-                  <% tareas.each do |tarea| %>
-                      <%if tarea.fecha_de_inicio_de_la_tarea!=nil && tarea.fecha_de_inicio_de_la_tarea < Date.today - 2%>
-                        <%tareastatus="redrow whitetigger"%>
-                      <%end%>                
-                      <%if tarea.fecha_de_inicio_de_la_tarea != nil && tarea.fecha_de_inicio_de_la_tarea == Date.today - 1%>
-                        <%tareastatus="orangerow whitetigger"%>
-                      <%end%>
-                      <%if tarea.fecha_de_inicio_de_la_tarea != nil && tarea.fecha_de_inicio_de_la_tarea == Date.today%>
-                        <% tareastatus="navyrow linkcolor"%>
-                      <%end%>
-                      <%if tarea.fecha_de_inicio_de_la_tarea!= nil && tarea.fecha_de_inicio_de_la_tarea == Date.tomorrow%>
-                        <%tareastatus="stonerow linkcolor"%>
-                      <%end%>              
-                    <tr class="<%=tareastatus%>">
+                  <% tareas.each do |tarea| %>          
+                    <tr class="">
                       <td><%= link_to tarea.id, tarea_path(tarea) %></td>
                       <td><%= link_to "#{tarea.model_name}" , "/#{tarea.model_name}/#{tarea.model_id}/edit" %></td>
+                      <%
+nombreAUsar = ""                      
+case tarea.model_name # a_variable is the variable we want to compare
+when "prospectos"    #compare to 1
+  nombreAUsar = Prospecto.where{id == tarea.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "solicitantes"     #compare to 2
+  nombreAUsar = Solicitante.where{id == tarea.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "examinados"
+  nombreAUsar = Examinado.where{id == tarea.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
+when "admitidos"
+  nombreAUsar = Examinado.where{id == tarea.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+when "inscritos"
+  nombreAUsar = Inscrito.where{id == tarea.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
+else
+  nombreAUsar = ""
+end                      
+
+                      %>
                       <td><%= link_to tarea.nombre, tarea_path(tarea) %></td>
+                      <td>
+                        <%if nombreAUsar[0]!=nil%>
+                          <%= link_to "#{nombreAUsar[0][:id]} - #{nombreAUsar[0][:nombre]} #{nombreAUsar[0][:apellido_paterno]} #{nombreAUsar[0][:apellido_materno]}" , "/#{tarea.model_name}/#{tarea.model_id}/edit" , target: '_blank' %>
+                        <%end%>
+                      </td>                      
                       <td><%= link_to tarea.created_at, tarea_path(tarea) %></td>
                       <td>
                         <%if tarea.pendiente == nil%>
@@ -72,15 +83,15 @@
           </table>
         </div>
     </div>
-    <div class="tab-pane" id="llamadas">
-          <h3>Llamadas</h3>
-        <div class="well">
+    <div class="tab-pane active" id="llamadas">
+        <div class="well  well-small">
            <table class="table table-striped table-bordered table-condensed">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Procendencia</th>
-                <th>Asunto</th>
+                <th>Asunto llamada</th>
+                <th>Nombre prospecto</th>
                 <th>Creado en </th>
                 <th>Pendiente </th>
                 <th>Actions</th>
@@ -88,23 +99,34 @@
             </thead>
             <tbody>
               <%if llamadas != nil %>
-                  <% llamadas.each do |llamada| %>
-                    <%if llamada.inicio_de_la_llamada!=nil && llamada.inicio_de_la_llamada < Date.today - 2%>
-                      <%tareastatus="redrow whitetigger"%>
-                    <%end%>                
-                    <%if llamada.inicio_de_la_llamada != nil && llamada.inicio_de_la_llamada == Date.today - 1%>
-                      <%tareastatus="orangerow whitetigger"%>
-                    <%end%>
-                    <%if llamada.inicio_de_la_llamada != nil && llamada.inicio_de_la_llamada == Date.today%>
-                      <% tareastatus="navyrow linkcolor"%>
-                    <%end%>
-                    <%if llamada.inicio_de_la_llamada!= nil && llamada.inicio_de_la_llamada == Date.tomorrow%>
-                      <%tareastatus="stonerow linkcolor"%>
-                    <%end%>                
-                    <tr class="<%=tareastatus%>">
+                  <% llamadas.each do |llamada| %>  
+                                        <%
+nombreAUsar = ""                      
+case llamada.model_name # a_variable is the variable we want to compare
+when "prospectos"    #compare to 1
+  nombreAUsar = Prospecto.where{id == llamada.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "solicitantes"     #compare to 2
+  nombreAUsar = Solicitante.where{id == llamada.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "examinados"
+  nombreAUsar = Examinado.where{id == llamada.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
+when "admitidos"
+  nombreAUsar = Examinado.where{id == llamada.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+when "inscritos"
+  nombreAUsar = Inscrito.where{id == llamada.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
+else
+  nombreAUsar = ""
+end                      
+
+                      %>
+                    <tr class="">
                       <td><%= link_to llamada.id, llamada_path(llamada) %></td>
                       <td><%= link_to "#{llamada.model_name}" , "/#{llamada.model_name}/#{llamada.model_id}/edit" %></td>
                       <td><%= link_to llamada.asunto, llamada_path(llamada) %></td>
+                      <td>
+                        <%if nombreAUsar[0]!=nil%>
+                          <%= link_to "#{nombreAUsar[0][:id]} - #{nombreAUsar[0][:nombre]} #{nombreAUsar[0][:apellido_paterno]} #{nombreAUsar[0][:apellido_materno]}" , "/#{llamada.model_name}/#{llamada.model_id}/edit" , target: '_blank' %>
+                        <%end%>
+                      </td>                       
                       <td><%= link_to llamada.created_at, llamada_path(llamada) %></td>
                       <td>
                         <%if llamada.pendiente == nil%>
@@ -136,14 +158,14 @@
         </div>
     </div>
     <div class="tab-pane" id="memos">
-        <div class="well">
-          <h3>Notas</h3>
+        <div class="well  well-small">
            <table class="table table-striped table-bordered table-condensed">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Procendencia</th>
-                <th>Nombre</th>
+                <th>Nombre nota</th>
+                <th>Nombre prospecto</th>
                 <th>Creado en </th>
                 <th>Pendiente </th>
                 <th>Actions</th>
@@ -152,10 +174,33 @@
             <tbody>
               <%if memos != nil %>
                 <% memos.each do |memo| %>
+                                      <%
+nombreAUsar = ""                      
+case memo.model_name # a_variable is the variable we want to compare
+when "prospectos"    #compare to 1
+  nombreAUsar = Prospecto.where{id == memo.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "solicitantes"     #compare to 2
+  nombreAUsar = Solicitante.where{id == memo.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "examinados"
+  nombreAUsar = Examinado.where{id == memo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
+when "admitidos"
+  nombreAUsar = Examinado.where{id == memo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+when "inscritos"
+  nombreAUsar = Inscrito.where{id == memo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
+else
+  nombreAUsar = ""
+end                      
+
+                      %>
                   <tr>
                     <td><%= link_to memo.id, memo_path(memo) %></td>
                     <td><%= link_to "#{memo.model_name}" , "/#{memo.model_name}/#{memo.model_id}/edit" %></td>
                     <td><%= link_to memo.nombre, memo_path(memo) %></td>
+                      <td>
+                        <%if nombreAUsar[0]!=nil%>
+                          <%= link_to "#{nombreAUsar[0][:id]} - #{nombreAUsar[0][:nombre]} #{nombreAUsar[0][:apellido_paterno]} #{nombreAUsar[0][:apellido_materno]}" , "/#{memo.model_name}/#{memo.model_id}/edit" , target: '_blank' %>
+                        <%end%>
+                      </td>                     
                     <td><%= link_to memo.created_at, memo_path(memo) %></td>
                       <td>
                         <%if memo.pendiente == nil%>
@@ -187,14 +232,14 @@
         </div>  
     </div>
     <div class="tab-pane" id="correos">
-        <div class="well">
-          <h3>Correos</h3>
+        <div class="well  well-small">
            <table class="table table-striped table-bordered table-condensed">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Procendencia</th>
-                <th>Nombre</th>
+                <th>Nombre correo</th>
+                <th>Nombre prospecto</th>
                 <th>Creado en </th>
                 <th>Actions</th>
               </tr>
@@ -202,10 +247,33 @@
             <tbody>
               <%if correos != nil %>
                 <% correos.each do |correo| %>
+                                      <%
+nombreAUsar = ""                      
+case correo.model_name # a_variable is the variable we want to compare
+when "prospectos"    #compare to 1
+  nombreAUsar = Prospecto.where{id == correo.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "solicitantes"     #compare to 2
+  nombreAUsar = Solicitante.where{id == correo.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "examinados"
+  nombreAUsar = Examinado.where{id == correo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
+when "admitidos"
+  nombreAUsar = Examinado.where{id == correo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+when "inscritos"
+  nombreAUsar = Inscrito.where{id == correo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
+else
+  nombreAUsar = ""
+end                      
+
+                      %>
                   <tr>
                     <td><%= link_to correo.id, correo_path(correo) %></td>
                     <td><%= link_to "#{correo.model_name}" , "/#{correo.model_name}/#{correo.model_id}/edit" %></td>
                     <td><%= link_to correo.nombredelmail, correo_path(correo) %></td>
+                      <td>
+                        <%if nombreAUsar[0]!=nil%>
+                          <%= link_to "#{nombreAUsar[0][:id]} - #{nombreAUsar[0][:nombre]} #{nombreAUsar[0][:apellido_paterno]} #{nombreAUsar[0][:apellido_materno]}" , "/#{correo.model_name}/#{correo.model_id}/edit" , target: '_blank' %>
+                        <%end%>
+                      </td>                     
                     <td><%= link_to correo.created_at, correo_path(correo) %></td>
                     <td>
                       <%= link_to 'Edit', edit_correo_path(correo), :class => 'btn btn-mini' %>
@@ -220,14 +288,14 @@
         </div>  
     </div>
     <div class="tab-pane" id="attachments">
-        <div class="well">
-          <h3>Archivos Adjuntos</h3>
+        <div class="well  well-small">
            <table class="table table-striped table-bordered table-condensed">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Procendencia</th>
-                <th>Nombre</th>
+                <th>Nombre archivo</th>
+                <th>Nombre prospecto</th>
                 <th>Creado en </th>
                 <th>Actions</th>
               </tr>
@@ -235,10 +303,33 @@
             <tbody>
               <%if attachments != nil%>
                   <% attachments.each do |attachment| %>
+                                        <%
+nombreAUsar = ""                      
+case attachment.model_name # a_variable is the variable we want to compare
+when "prospectos"    #compare to 1
+  nombreAUsar = Prospecto.where{id == attachment.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "solicitantes"     #compare to 2
+  nombreAUsar = Solicitante.where{id == attachment.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }
+when "examinados"
+  nombreAUsar = Examinado.where{id == attachment.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  
+when "admitidos"
+  nombreAUsar = Examinado.where{id == attachment.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    
+when "inscritos"
+  nombreAUsar = Inscrito.where{id == attachment.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   
+else
+  nombreAUsar = ""
+end                      
+
+                      %>
                     <tr>
                       <td><%= link_to attachment.id, attachment_path(attachment) %></td>
                       <td><%= link_to "#{attachment.model_name}" , "/#{attachment.model_name}/#{attachment.model_id}/edit" %></td>
                       <td><%= link_to attachment.name, attachment_path(attachment) rescue nil%></td>
+                      <td>
+                        <%if nombreAUsar[0]!=nil%>
+                          <%= link_to "#{nombreAUsar[0][:id]} - #{nombreAUsar[0][:nombre]} #{nombreAUsar[0][:apellido_paterno]} #{nombreAUsar[0][:apellido_materno]}" , "/#{attachment.model_name}/#{attachment.model_id}/edit" , target: '_blank' %>
+                        <%end%>
+                      </td>                       
                       <td><%= link_to attachment.created_at, attachment_path(attachment) %></td>
                       <td>
                         <%= link_to 'Edit', edit_attachment_path(attachment), :class => 'btn btn-mini' %>

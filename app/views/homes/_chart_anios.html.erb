@@ -1,0 +1,86 @@
+<%
+
+ modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    archivado=false
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    else
+      Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
+    end 
+%>
+<%
+periodoss = Hash.new
+
+          limit = 11;
+          for counter in 0..limit
+            currAnio = 2016 + counter
+            currAnio = currAnio -2000
+            periodoss[currAnio + 2000] = PeriodoParaIngresar.find(:all, :conditions => ["valor LIKE ?", "%#{currAnio}"]).map{|a| a.id}
+           end
+
+%>
+    <ul class="nav nav-tabs" id="myTabax">
+          <%
+          valora =true
+          limit = 11;
+          for counter in 0..limit
+            currAnio = 2016 + counter
+            
+          %>
+<div id="links2" style="display: none;">
+  <%idss= "yourLinkIDxa".to_s + @programa_id.to_s + @usuario_id.to_s + @usuario_sede_id.to_s + currAnio.to_s %>
+  <%= link_to "Cargar Estadisticas", fetch_chart_anio_path(:user_id =>@usuario_id, :user_role=>usuario.role, :user_sede=>@usuario_sede_id,:archivado=>archivado, :anio=>currAnio,:programa_id=>@programa_id, :usuario_id=>@usuario_id,:usuario_sede_id=>@usuario_sede_id,:represent=>"hijo"), :remote => true, :id=>idss %>
+</div>            
+              <li class="<%if valora %>active<%end%>"><a href="#<%=currAnio%><%=@programa_id%><%=@usuario_id%><%=@usuario_sede_id%>" data-toggle="tab"  onClick="document.getElementById('<%=idss%>').click();"><%=currAnio%> (<%=ApplicationController.getCountByPeriodoItems(currAnio,@programa_id,@usuario_id,@usuario_sede_id,archivado,items,periodoss[currAnio])%>)</a></li>
+                           <%if valora%>
+                <script>document.getElementById('<%=idss%>').click();</script>
+                <%end%>
+          <%
+          if valora 
+              valora=false
+            end
+          end
+
+          %>
+
+<div id="links2" style="display: none;">
+  <%idss= "yourLinkIDxa".to_s + @programa_id.to_s + @usuario_id.to_s + @usuario_sede_id.to_s + "2000"%>
+  <%= link_to "Cargar Estadisticas", fetch_chart_anio_path(:user_id =>@usuario_id, :user_role=>usuario.role, :user_sede=>@usuario_sede_id,:archivado=>archivado, :anio=>2000,:programa_id=>@programa_id, :usuario_id=>@usuario_id,:usuario_sede_id=>@usuario_sede_id,:represent=>"hijo"), :remote => true, :id=>idss %>
+</div>  
+
+<li class=""><a href="#2000<%=@programa_id%><%=@usuario_id%><%=@usuario_sede_id%>" data-toggle="tab"  onClick="document.getElementById('<%=idss%>').click();">Sin Periodo (<%=ApplicationController.getCountByPeriodoItems(2000,@programa_id,@usuario_id,@usuario_sede_id,archivado,items,2000)%>)</a></li>
+
+
+    </ul>
+    <div class="tab-content">
+          <%
+          valora=true
+          limit = 11;
+          for counter in 0..limit
+            currAnio = 2016 + counter
+           
+          %>      
+            
+          <div class="tab-pane  <%if valora %>active<%end%>" id="<%=currAnio%><%=@programa_id%><%=@usuario_id%><%=@usuario_sede_id%>">
+
+              <div id="<%=currAnio%>hijosperiodocontent<%=@programa_id%><%=@usuario_id%><%=@usuario_sede_id%>">
+                                      
+              </div>          
+          </div>
+          <%if valora%>
+              <%valora = false%>
+          <%end%>              
+          <%
+                      if valora 
+              valora=false
+            end 
+          end
+
+          %>  
+
+          <div class="tab-pane " id="2000<%=@programa_id%><%=@usuario_id%><%=@usuario_sede_id%>">
+              <div id="2000hijosperiodocontent<%=@usuario_id%><%=@usuario_sede_id%>">
+                                      
+              </div>          
+          </div>    
+    </div>

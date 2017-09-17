@@ -1,0 +1,121 @@
+
+
+
+<div class="row-fluid">
+  <div class="span3">
+
+       
+          <%= search_form_for @q, url: fetch_search_path do |f| %>
+          	  <%= f.label :id_eq %>
+			  <%= f.search_field :id_eq %>
+
+			  <%= f.label :nombre_cont %>
+			  <%= f.search_field :nombre_cont %>
+
+			  <%= f.label :email_cont %>
+			  <%= f.search_field :email_cont %>
+
+			  <%= f.label :apellido_paterno_cont%>
+			  <%= f.search_field :apellido_paterno_cont %>
+
+
+			  <%= f.label :apellido_materno_cont %>
+			  <%= f.search_field :apellido_materno_cont %>
+
+
+			  <%= f.label :programa_id_eq %>
+			  <%= f.collection_select :programa_id_eq, Programa.all, :id, :programa, include_blank: true %>
+
+			  <%= f.label :interes_basicos_periodo_para_ingresar_id_eq %>
+			  <%= f.collection_select :interes_basicos_periodo_para_ingresar_id_eq, PeriodoParaIngresar.all, :id, :valor, include_blank: true %>
+
+			  <br/>
+              <%= f.submit %>
+            <% end %>  
+
+  </div>
+  <div class="span9">
+           <table class="table table-striped table-bordered table-condensed" id="MyTable">
+  <thead>
+    <tr>
+      <th><%= sort_link @q, :id, {}%></th>
+      <th><%= sort_link @q, :nombre, {}%></th>
+      <th>Estado </th>
+      <th><%= sort_link @q, :programa, {} %></th>
+      <th><%= sort_link @q, :importado_revisado, {}%></th>
+      <th><%= sort_link @q, :validado, {}%></th>
+      <th><%= sort_link @q, :created_at, {}%></th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @prospectos.each do |prospecto| %>
+    <%
+    pathtouse = "/prospectos/"
+    estado="Prospecto"
+    lastHistory = History.where(:model_id=>prospecto.id).last(:order => "created_at asc", :limit => 50)
+    idtouse = prospecto.id
+    modelo = "prospectos"
+	if lastHistory.action.include?("Solicitante") 
+		pathtouse = "/solicitantes/#{prospecto.solicitante_id}/edit"
+		estado="Solicitante"
+		modelo = "solicitantes"
+		idtouse = prospecto.solicitante_id
+	elsif lastHistory.action.include?("Examinado")
+		asd = Examinado.joins{solicitantes.prospectos}.where{solcitantes.prospectos.id==prospecto.id}.first
+		pathtouse = "/examinados/#{asd.id}/edit"
+		estado="Examinado"
+		modelo = "examinados"
+		idtouse = asd.id
+	elsif lastHistory.action.include?("Admitido")
+		asd = Admitido.joins{examinados.solicitantes.prospectos}.where{examinados.solcitantes.prospectos.id==prospecto.id}.first
+		pathtouse = "/admitidos/#{asd.id}/edit"
+		estado="Admitido"
+		modelo = "admitidos"
+		idtouse = asd.id
+	elsif lastHistory.action.include?("Inscrito")
+		asd = Inscrito.joins{admitidos.examinados.solicitantes.prospectos}.where{admitidos.examinados.solcitantes.prospectos.id==prospecto.id}.first
+		pathtouse = "/inscritos/#{asd.id}/edit"
+		estado="Inscrito"
+		modelo = "inscritos"
+		idtouse = asd.id
+	end   
+    %>
+      <tr>
+        <td><%= prospecto.id %></td>
+        <td><%= link_to "#{prospecto.nombre} #{prospecto.apellido_paterno} #{prospecto.apellido_materno}", "#{pathtouse}", :target=>"_blank" %></td>
+        <td>
+			<%=link_to "#{pathtouse}" , :target=>"_blank" do%>
+                <%=estado%>
+            <%end%>
+        </td>
+        <td><%= link_to "#{pathtouse}", :target=>"_blank" do %>
+            <%=prospecto.programa.nivel rescue nil%> - <%=prospecto.programa.programa rescue nil%>
+            <%end%>
+        </td>
+        <td><%=link_to "#{pathtouse}" , :target=>"_blank" do%>
+                <%= prospecto.importado_revisado == true ? "Revisada Importacion" : "Importacion No Revisada" %>
+            <%end%>
+        </td>
+        <td><%= link_to "#{pathtouse}", :target=>"_blank" do %>
+            <%=prospecto.validado == true ? "Validado" : "No Validado"%>
+          <%end%></td>        
+        <td><%= prospecto.created_at %></td>
+        <td>           
+          <%= link_to 'Edit', "#{pathtouse}", :class => 'btn btn-mini', :target=>"_blank" %>
+          <%= link_to 'Agregar llamada', "/llamadas/new?model_id=#{idtouse}&model_name=#{modelo}",:class=>'btn btn-primary btn-mini', :target=>"_blank"%>
+          <%= link_to 'Agregar tarea', "/tareas/new?model_id=#{idtouse}&model_name=#{modelo}",:class=>'btn btn-info btn-mini', :target=>"_blank"%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+    <%= will_paginate @prospectos  %>
+
+<br/>
+<%=@prospectos.size%> registros de un total de <%=@prospectos.total_entries%>
+
+  </div>
+</div>
+
+ 

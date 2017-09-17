@@ -201,6 +201,9 @@ get "/fetch_chart_sede" => 'homes#fetch_chart_sede', as: 'fetch_chart_sede'
 get "/fetch_chart_sede_usuario" => 'homes#fetch_chart_sede_usuario', as: 'fetch_chart_sede_usuario'
 get "/fetch_chart_sede_usuario_hijo" => 'homes#fetch_chart_sede_usuario_hijo', as: 'fetch_chart_sede_usuario_hijo'
 get "/fetch_chart_anio" => 'homes#fetch_chart_anio', as: 'fetch_chart_anio'
+get "/fetch_chart_anios" => 'homes#fetch_chart_anios', as: 'fetch_chart_anios'
+get "/fetch_pendientes" => 'homes#fetch_pendientes', as: 'fetch_pendientes'
+get "/fetch_search" => 'homes#fetch_search', as: 'fetch_search'
 
   
   match "/solicitantes/:id/convertir_solicitante" => "solicitantes#convertir_solicitante", as: :convertir_solicitante

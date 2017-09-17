@@ -18,9 +18,31 @@
   <li class="<%if rolx == "ACRM" or rolx == "DN"%><%else%>active<%end%>"><a href="#principal" data-toggle="tab">Principal</a></li>
   <li><a href="#metricas" data-toggle="tab">Cono de Ventas</a></li>
   <li class="<%if rolx == "ACRM" or rolx == "DN"%>active<%end%>"><a href="#campanas" data-toggle="tab">Estadísticas</a></li>
+  <li class=""><a href="#busqueda" data-toggle="tab">Busqueda global</a></li>
 </ul>
 <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in container-fluid" id="busqueda">
+      <a href="#a" data-toggle="tab" onClick="document.getElementById('busquedacool').src = '/fetch_search';">Borrar parametros de busqueda</a><br/>
+<iframe src="<%= fetch_search_path %>" frameborder="0" style="overflow: hidden; position: absolute;" height="100%" width="100%" id="busquedacool" class="span9">
+
+
+</iframe> 
+    </div>
     <div class="<%if rolx == "ACRM" or rolx == "DN"%> tab-pane fade <%else%>container-fluid tab-pane fade in active<%end%>" id="principal">
+
+
+        
+              <div id="links2" style="display: block;">
+  <%idss= "mispend"%>
+  <%= link_to "Recargar pendientes", fetch_pendientes_path, :remote => true, :id=>idss %>
+</div>    
+
+        <div id="mispendientes">
+
+        </div>
+          <script>document.getElementById('<%=idss%>').click();</script>
+
+
         <!-- Example row of columns -->
         <div class="row-fluid">
           <div class="span4">

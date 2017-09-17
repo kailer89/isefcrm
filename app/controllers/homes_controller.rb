@@ -265,7 +265,14 @@ class HomesController < ApplicationController
 
     paramAnio = params[:anio].to_i - 2000
     @representative = params[:represent]
+    if paramAnio > 0
+      logger.debug "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     @periodos = PeriodoParaIngresar.find(:all, :conditions => ["valor LIKE ?", "%#{paramAnio}"]) #param anio va a ser 17,16,etc.
+  else
+    logger.debug "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    logger.debug paramAnio.inspect
+    @periodos = nil
+    end
 
           logger.debug "llllllllllllllllllllllllllllllllllll"
       logger.debug params[:user_id]
@@ -308,6 +315,49 @@ class HomesController < ApplicationController
           format.js
       end
 
+  end
+
+
+   def fetch_chart_anios
+     archivado = false
+      modelo = Configuracione.where(:user_id=>params[:user_id]).first rescue nil
+      if modelo != nil
+        archivado = modelo.mostrar_archivados
+      end
+
+    rol = Role.where(:id=>params[:user_role]).first
+      @selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+
+      @curr = User.where(:id=>params[:user_id]).first
+      @programa_id = params[:programa_id]
+      @usuario_id = params[:usuario_id]
+      @usuario_sede_id = params[:usuario_sede_id]
+      respond_to do |format|
+          format.js
+      end
+
+  end
+
+
+def fetch_search
+     archivado = false
+    modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    end    
+    # @prospectos = Prospecto.all
+    # or (current_user.role =="director")
+    logger.debug "-----------------------"
+    logger.debug current_user.inspect
+    logger.debug "--------------------"
+    rol = Role.where(:id=>current_user.role).first
+
+    @q = getProspectosForUser(current_user).ransack(params[:q])
+    @prospectos = @q.result(:distinct => true).paginate(:per_page => 10, :page => params[:page]) 
+
+
+
+     render :partial => 'homes/search', :layout => "layouts/small"
   end
 
 
