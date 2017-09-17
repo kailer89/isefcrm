@@ -159,8 +159,8 @@ end
                       </td>
                     </tr>
                   <% end %>
-                  <b><%=@tareas.size%> Pendientes</b>
                   <br/><%= will_paginate @tareas  %>
+                  <b><%=@tareas.size%> registros de un total de <%=@tareas.total_entries%></b>
                 <%end%>
             </tbody>
           </table>
@@ -261,8 +261,8 @@ end
                       </td>
                     </tr>
                   <% end %>
-                  <b><%=@llamadas.size%> Pendientes</b>
                   <br/><%= will_paginate @llamadas  %>
+                  <b><%=@llamadas.size%> registros de un total de <%=@llamadas.total_entries%></b>
               <%end%>
             </tbody>
           </table>
@@ -348,8 +348,8 @@ end
                     </td>
                   </tr>
                 <% end %>
-                <b><%=@memos.size%> Pendientes</b>
                 <br/><%= will_paginate @memos  %>
+                <b><%=@memos.size%> registros de un total de <%=@memos.total_entries%></b>
               <%end%>
             </tbody>
           </table>
