@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170903031611) do
+ActiveRecord::Schema.define(:version => 20170917043419) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -671,6 +671,7 @@ ActiveRecord::Schema.define(:version => 20170903031611) do
     t.string   "clave_del_programa"
     t.integer  "programa_id"
     t.integer  "modalidad_id"
+    t.string   "prepa_abierta"
   end
 
   create_table "live_reports", :force => true do |t|

@@ -320,8 +320,8 @@ end
       <Cell><Data ss:Type="String"><%=printValue("Estado",prospecto.direccions.first.estado)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Pais",prospecto.direccions.first.pais)%></Data></Cell>    <Cell><Data ss:Type="String"><%=printValue("Código Postal",prospecto.direccions.first.codigo_postal)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Comentarios",prospecto.direccions.first.comentarios)%></Data></Cell> <Cell><Data ss:Type="String"><%valor=prospecto.interes_basicos.first.ultimo_grado_de_estudio.grado_de_estudio rescue nil%><%=printValue("Ultimo grado de estudios",valor)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%valor = prospecto.interes_basicos.first.preparatoria_o_universidad_de_origen.valor rescue nil%><%=printValue("Preparatoria / Universidad de origen",valor)%></Data></Cell>
-      <Cell><Data ss:Type="String"><%valor = prospecto.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen.valor rescue nil%><%=printValue("Municipio de la Preparatoria / Universidad de origen",valor)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%valor = prospecto.interes_basicos.first.prepa_abierta rescue nil%><%=printValue("Preparatoria / Universidad de origen",valor)%></Data></Cell>
+      <Cell><Data ss:Type="String"><%valor = prospecto.interes_basicos.first.prepa_abierta rescue nil%><%=printValue("Municipio de la Preparatoria / Universidad de origen",valor)%></Data></Cell>
       <Cell><Data ss:Type="String"><%=printValue("Año de graduación",prospecto.interes_basicos.first.ano_de_graduacion)%></Data></Cell>
       <Cell><Data ss:Type="String"><%valor =prospecto.interes_basicos.first.sede.nombre rescue nilvalor = valor + " - " + prospecto.interes_basicos.first.subsede.nombre rescue nil %><%=printValue("Sede y subsede de interés",valor)%></Data></Cell>
       <Cell><Data ss:Type="String"><%valor = prospecto.interes_basicos.first.nivel.valor rescue nil %><%=printValue("Nivel",valor)%></Data></Cell>

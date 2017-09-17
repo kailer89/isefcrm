@@ -74,7 +74,7 @@ end
             <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">          
               <%= builder.association :ultimo_grado_de_estudio,:include_blank => false, :label_method => :grado_de_estudio, :label=>"Último grado de estudios:"%>
-              <%= builder.association :preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Preparatoria/Universidad de procedencia:" %>
+              <%= builder.input :prepa_abierta , :label=>"Preparatoria/Universidad de procedencia:" %>
               <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Estado de la Preparatoria / Universidad de procedencia:" %>
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
@@ -270,7 +270,7 @@ end
  <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">          
               <%= builder.association :ultimo_grado_de_estudio,:include_blank => false, :label_method => :grado_de_estudio, :label=>"Último grado de estudios:"%>
-              <%= builder.association :preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Preparatoria/Universidad de procedencia:" %>
+              <%= builder.input :prepa_abierta, :label=>"Preparatoria/Universidad de procedencia:" %>
               <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Estado de la Preparatoria / Universidad de procedencia:" %>
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 

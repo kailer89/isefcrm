@@ -100,13 +100,15 @@
         Sin Interes Basico
      <%else%>     
      <fieldset>
+
+
         <p>
           <%valor=f.interes_basicos.first.ultimo_grado_de_estudio.grado_de_estudio rescue nil%>
           <%=printIfAvailable("Ultimo grado de estudios",valor)%>
         </p>
 
         <p>
-          <%valor = f.interes_basicos.first.preparatoria_o_universidad_de_origen.valor rescue nil%>
+          <%valor=f.interes_basicos.first.prepa_abierta rescue nil%>
           <%=printIfAvailable("Preparatoria / Universidad de origen",valor)%>
         </p>
 
@@ -221,7 +223,7 @@
         <%end%> 
       </fieldset>
       </div>
-      
+
      <div class="tab-pane fade" id="medio<%=prospectoid%>">
      <%if f.medio_de_contactos.empty?%>
         Sin Medio de Contacto
