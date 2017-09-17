@@ -51,12 +51,13 @@
   <tbody>
     <% @prospectos.each do |prospecto| %>
     <%
-    pathtouse = "/prospectos/"
+    pathtouse = "/prospectos/#{prospecto.id}/edit"
     estado="Prospecto"
-    hasSoliticantelastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Solicitante')}.exists?
-    hasExaminadolastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Examinado')}.exists?
-    hasAdmitidolastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Admitido')}.exists?
-    hasInscritolastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Inscrito')}.exists?
+    hmain = History.where{model_id==prospecto.id.to_s}
+    hasSoliticantelastHistory = hmain.where{(action =~ '%Solicitante')}.exists?
+    hasExaminadolastHistory = hmain.where{(action =~ '%Examinado')}.exists?
+    hasAdmitidolastHistory = hmain.where{(action =~ '%Admitido')}.exists?
+    hasInscritolastHistory = hmain.where{(action =~ '%Inscrito')}.exists?
 
     %>
 
