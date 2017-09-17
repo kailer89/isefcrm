@@ -1,5 +1,8 @@
 ProtoCRM3::Application.routes.draw do
 
+  resources :llamadas_rpms
+
+
 match "web" => "prospectos#webtest", as: :web
   resources :searches
 
@@ -204,6 +207,7 @@ get "/fetch_chart_anio" => 'homes#fetch_chart_anio', as: 'fetch_chart_anio'
 get "/fetch_chart_anios" => 'homes#fetch_chart_anios', as: 'fetch_chart_anios'
 get "/fetch_pendientes" => 'homes#fetch_pendientes', as: 'fetch_pendientes'
 get "/fetch_search" => 'homes#fetch_search', as: 'fetch_search'
+get "/imprimir_llamadas_rpm" => 'llamadas_rpms#imprimir_llamadas_rpm', as: 'imprimir_llamadas_rpm'
 
   
   match "/solicitantes/:id/convertir_solicitante" => "solicitantes#convertir_solicitante", as: :convertir_solicitante

@@ -1732,3 +1732,97 @@ C:/Sites/isefcrm/isefcrm/app/views/homes/_search.html.erb:133: syntax error, une
 [09/17/17 00:33:42 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `name' for nil:NilClass
 [09/17/17 00:39:31 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `name' for nil:NilClass
 [09/17/17 00:49:18 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `examinados_olicitantes_prospectos_nombre_cont' for #<Ransack::Search:0xf575778>
+[09/17/17 02:10:43 -0500 alienware15 (22356)] INFO : Starting the New Relic agent in "development" environment.
+[09/17/17 02:10:43 -0500 alienware15 (22356)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/17/17 02:10:43 -0500 alienware15 (22356)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[09/17/17 02:10:43 -0500 alienware15 (22356)] INFO : New Relic Agent Developer Mode enabled.
+[09/17/17 02:10:43 -0500 alienware15 (22356)] INFO : Environment: development
+[09/17/17 02:10:43 -0500 alienware15 (22356)] INFO : No known dispatcher detected.
+[09/17/17 02:10:43 -0500 alienware15 (22356)] INFO : Application: My Application
+[09/17/17 02:10:43 -0500 alienware15 (22356)] WARN : Agent configured not to send data in this environment.
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing ActiveRecord instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing HTTPClient instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing Net instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing deferred Rack instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing Rack::Builder middleware instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing Rails 3+ middleware instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing Rails 3 Controller instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Installing Rails 3 Error instrumentation
+[09/17/17 02:10:44 -0500 alienware15 (22356)] INFO : Finished instrumentation
+[09/17/17 02:12:01 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `permiso' for nil:NilClass
+[09/17/17 02:15:33 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `permiso' for nil:NilClass
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Starting the New Relic agent in "development" environment.
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Reading configuration from config/newrelic.yml (C:/Sites/isefcrm/isefcrm)
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : New Relic Agent Developer Mode enabled.
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Environment: development
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : No known dispatcher detected.
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Application: My Application
+[09/17/17 02:17:11 -0500 alienware15 (13484)] WARN : Agent configured not to send data in this environment.
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing ActiveRecord instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing HTTPClient instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing Net instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing deferred Rack instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing Rack::Builder middleware instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing Rails 3+ middleware instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing Rails 3 Controller instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Installing Rails 3 Error instrumentation
+[09/17/17 02:17:11 -0500 alienware15 (13484)] INFO : Finished instrumentation
+[09/17/17 02:18:15 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `object' for #<#<Class:0xa33c038>:0x58907e8>
+[09/17/17 02:25:42 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".
+[09/17/17 02:26:05 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template llamadas_rpms/imprimir_llamadas_rpm, application/imprimir_llamadas_rpm with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "C:/Sites/isefcrm/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/kaminari-0.17.0/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.10/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+
+[09/17/17 02:30:44 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template llamadas_rpms/imprimir_llamadas_rpm, application/imprimir_llamadas_rpm with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "C:/Sites/isefcrm/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/kaminari-0.17.0/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.10/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+
+[09/17/17 02:30:50 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template llamadas_rpms/imprimir_llamadas_rpm, application/imprimir_llamadas_rpm with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "C:/Sites/isefcrm/isefcrm/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-0.4.9/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/kaminari-0.17.0/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-3.5.10/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+
+[09/17/17 08:40:24 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: llamadas.sede: SELECT COUNT(*) AS count_all, sede_id AS sede_id FROM "llamadas"  WHERE "llamadas"."sede" = 1 GROUP BY sede_id
+[09/17/17 08:40:50 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: llamadas.sede: SELECT COUNT(*) AS count_all, sede_id AS sede_id FROM "llamadas"  WHERE "llamadas"."sede" = 1 GROUP BY "llamadas"."sede_id"
+[09/17/17 08:41:25 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `sede_id' for [1, 7]:Array
+[09/17/17 09:00:24 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: users.nombre: SELECT "users"."nombre" FROM "users"  WHERE "users"."id" = 3
+[09/17/17 09:01:50 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `group' for #<Array:0x55ca268>
+[09/17/17 09:03:01 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `group' for #<Array:0x592a4c0>
+[09/17/17 09:09:48 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `model_name' for #<#<Class:0x7463a18>:0x5c2bb28>
+[09/17/17 09:17:50 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:119: syntax error, unexpected '>'
+...@output_buffer.safe_concat('"%></Data></Cell>
+...                               ^
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:119: unknown regexp options - Cll
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:120: syntax error, unexpected '<'
+          <Cell><Data ss:Type="String">'...
+           ^
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:120: dynamic constant assignment
+          <Cell><Data ss:Type="String">');@output_buffer.ap...
+                              ^
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:120: unknown regexp options - Cll
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:121: syntax error, unexpected '<'
+        </Row>    
+         ^
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:123: unknown regexp options - Tabl
+unmatched close parenthesis: /Row>    
+');      end
+@output_buffer.safe_concat('    </
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:124: syntax error, unexpected '<'
+  </Worksheet>  
+   ^
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:125: unknown regexp options - Wrkbk
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:126: unterminated string meets end of file
+C:/Sites/isefcrm/isefcrm/app/views/llamadas_rpms/imprimir_llamadas_rpm.xls.erb:126: syntax error, unexpected end-of-input, expecting ')'
+[09/17/17 09:20:30 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `new_llamadas_rpms_path' for #<#<Class:0x15398e50>:0xac8e0a0>
+[09/17/17 09:20:44 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `new_llamadas_rpms_path' for #<#<Class:0x7f20048>:0x7f96a70>

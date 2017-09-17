@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170917043419) do
+ActiveRecord::Schema.define(:version => 20170917071046) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -700,6 +700,14 @@ ActiveRecord::Schema.define(:version => 20170917043419) do
     t.boolean  "pendiente"
     t.string   "duracion_texto"
     t.string   "efectividad"
+  end
+
+  create_table "llamadas_rpms", :force => true do |t|
+    t.boolean  "realizadas"
+    t.boolean  "pendientes"
+    t.boolean  "por_realizar"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "medio_de_contactos", :force => true do |t|

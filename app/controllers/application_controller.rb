@@ -772,6 +772,11 @@ if request.path_parameters[:action].include? "web"
   logger.debug "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii1"
   return true
 end
+
+if  request.path_parameters[:controller].include? "llamadas_rpms"
+  return true
+end
+
       if not request.path_parameters[:controller].include? "console" 
       if not request.path_parameters[:controller].include? "configuraciones" 
       if not request.path_parameters[:controller].include? "imports" 
