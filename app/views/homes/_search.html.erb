@@ -53,7 +53,7 @@
     <%
     pathtouse = "/prospectos/"
     estado="Prospecto"
-    lastHistory = History.where(:model_id=>prospecto.id).last(:order => "created_at asc", :limit => 50)
+    lastHistory = History.where(:model_id=>prospecto.id).order(:created_at).last()
     idtouse = prospecto.id
     modelo = "prospectos"
 	if lastHistory.action.include?("Solicitante") 
