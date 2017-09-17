@@ -1709,3 +1709,4 @@ C:/Sites/isefcrm/isefcrm/app/views/homes/_search.html.erb:133: syntax error, une
 [09/16/17 19:52:55 -0500 alienware15 (10380)] INFO : Installing Rails 3 Error instrumentation
 [09/16/17 19:52:55 -0500 alienware15 (10380)] INFO : Finished instrumentation
 [09/16/17 19:52:56 -0500 alienware15 (10380)] INFO : Doing deferred dependency-detection before Rack startup
+[09/16/17 22:56:51 -0500 alienware15 (10380)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: comparison of String with Date failed

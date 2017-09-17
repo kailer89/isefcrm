@@ -13,8 +13,12 @@ end
       <div class="tab-pane fade in active" id="informacion">
 
         <fieldset>
-          <!--<legend><%= controller.action_name.capitalize %> Prospecto</legend>-->
-  <div  class="well">        
+          <!--<legend><%= controller.action_name.capitalize %> Prospecto</legend>-->  
+
+<div class="row-fluid">
+  <div class="span4">
+    <div class="well">
+
       <%= g.input :nombre, :label=>"Nombre(s):" %>
           <%= g.input :apellido_paterno, :label=>"Apellido Paterno:"  %>
           <%= g.input :apellido_materno, :label=>"Apellido Materno:" %>
@@ -65,33 +69,13 @@ end
           <%= g.input :importado_revisado%>
           <%=g.input :archivado%>
         </div>
-
-      </div>
-
-       <div class="tab-pane fade form-horizontal" id="direccion">
-          <%= g.simple_fields_for :direccions , :html => { :class => 'form-horizontal' } do |builder| %>
-  <div  class="well"> <%= builder.input :calle, :label=>"Calle:"%>
-                     <%= builder.input :no_interior, :label=>"No. Interior:"  %>
-                     <%= builder.input :no_exterior, :label=>"No. Exterior:"  %>
-                     <%= builder.input :colonia , :label=>"Colonia:" %>
-                     <%= builder.input :delegacion_municipio , :label=>"Delegación/Municipio:" %>
-                     <%= builder.input :estado, :label=>"Estado" %>
-                     <%= builder.input :pais, :label=>"País" %>
-                     <%= builder.input :codigo_postal , :label=>"Código Postal:"%> 
-                     <%= builder.hidden_field :blank, :value=>"default"%>
-                     <%= builder.input :comentarios, :as => :text ,:input_html => { :cols => 50, :rows => 3 } , :label=>"Comentarios:" %>
-            <%= builder.hidden_field :latitude%>
-            <%= builder.hidden_field :longitude%>
-            <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@prospecto.direccions.first.latitude}%2C#{@prospecto.direccions.first.longitude}" %>                   
-                       </div>       
-          <% end %>    
-        </div>
-       <div class="tab-pane fade form-horizontal" id="interesbasico">
-          <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
+</div>
+<div class="span4">
+            <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">          
               <%= builder.association :ultimo_grado_de_estudio,:include_blank => false, :label_method => :grado_de_estudio, :label=>"Último grado de estudios:"%>
               <%= builder.association :preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Preparatoria/Universidad de procedencia:" %>
-              <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Municipio de la Preparatoria / Universidad de procedencia:" %>
+              <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Estado de la Preparatoria / Universidad de procedencia:" %>
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
 <%
@@ -121,16 +105,43 @@ end
               <%= builder.hidden_field :blank, :value=>"default"%>
               <%= builder.input :comentarios, :input_html => { :cols => 50, :rows => 3 }, :label=>"Comentarios:"%><br/></div>
           <% end %>  
-        </div>
-        <div class="tab-pane fade form-horizontal" id="interesacademico">
-          <%= g.simple_fields_for :interes_academicos, :html => { :class => 'form-horizontal' }  do |builder| %>
+
+<%= g.simple_fields_for :interes_academicos, :html => { :class => 'form-horizontal' }  do |builder| %>
   <div  class="well">
             <%=builder.input :opcion_1, :input_html => { :cols => 50, :rows => 3 }, :label=>"Opción 1: otro posgrado/carrera de interés" %>
             <%=builder.input :opcion_2, :input_html => { :cols => 50, :rows => 3 }, :label=>"Opción 2: otro posgrado/carrera de interés"%>
             <%= builder.hidden_field :blank, :value=>"default"%>
             <%=builder.input :opcion_3, :input_html => { :cols => 50, :rows => 3 }, :label=>"Opción 3: otro posgrado/carrera de interés"%></div>
           <%end%>
+
+</div>
+
+
+</div>
+
+
+
+      </div>
+
+       <div class="tab-pane fade form-horizontal" id="direccion">
+          <%= g.simple_fields_for :direccions , :html => { :class => 'form-horizontal' } do |builder| %>
+  <div  class="well"> <%= builder.input :calle, :label=>"Calle:"%>
+                     <%= builder.input :no_interior, :label=>"No. Interior:"  %>
+                     <%= builder.input :no_exterior, :label=>"No. Exterior:"  %>
+                     <%= builder.input :colonia , :label=>"Colonia:" %>
+                     <%= builder.input :delegacion_municipio , :label=>"Delegación/Municipio:" %>
+                     <%= builder.input :estado, :label=>"Estado" %>
+                     <%= builder.input :pais, :label=>"País" %>
+                     <%= builder.input :codigo_postal , :label=>"Código Postal:"%> 
+                     <%= builder.hidden_field :blank, :value=>"default"%>
+                     <%= builder.input :comentarios, :as => :text ,:input_html => { :cols => 50, :rows => 3 } , :label=>"Comentarios:" %>
+            <%= builder.hidden_field :latitude%>
+            <%= builder.hidden_field :longitude%>
+            <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@prospecto.direccions.first.latitude}%2C#{@prospecto.direccions.first.longitude}" %>                   
+                       </div>       
+          <% end %>    
         </div>
+
        <div class="tab-pane fade form-horizontal" id="medio">
           <%= g.simple_fields_for :medio_de_contactos , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">            <p>
@@ -196,6 +207,11 @@ end
   <%= f.simple_fields_for :prospectos, :html => { :class => 'form-horizontal' } do |g| %>
         <div class="tab-pane fade" id="informacion">
 
+<div class="row-fluid">
+  <div class="span4">
+
+
+
         <fieldset>
           <!--<legend><%= controller.action_name.capitalize %> Prospecto</legend>-->
   <div  class="well">        
@@ -249,32 +265,13 @@ end
           <%= g.input :importado_revisado%>
           <%=g.input :archivado%>
         </div>
-
-      </div>
-
-       <div class="tab-pane fade form-horizontal" id="direccion">
-          <%= g.simple_fields_for :direccions , :html => { :class => 'form-horizontal' } do |builder| %>
-  <div  class="well"> <%= builder.input :calle, :label=>"Calle:"%>
-                     <%= builder.input :no_interior, :label=>"No. Interior:"  %>
-                     <%= builder.input :no_exterior, :label=>"No. Exterior:"  %>
-                     <%= builder.input :colonia , :label=>"Colonia:" %>
-                     <%= builder.input :delegacion_municipio , :label=>"Delegación/Municipio:" %>
-                     <%= builder.input :estado, :label=>"Estado" %>
-                     <%= builder.input :pais, :label=>"País" %>
-                     <%= builder.input :codigo_postal , :label=>"Código Postal:"%> 
-                     <%= builder.hidden_field :blank, :value=>"default"%>
-                     <%= builder.input :comentarios, :as => :text ,:input_html => { :cols => 50, :rows => 3 } , :label=>"Comentarios:" %>
-            <%= builder.hidden_field :latitude%>
-            <%= builder.hidden_field :longitude%>
-                       </div>       
-          <% end %>    
-        </div>
-       <div class="tab-pane fade form-horizontal" id="interesbasico">
-          <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
+</div>
+<div class="span4">
+ <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">          
               <%= builder.association :ultimo_grado_de_estudio,:include_blank => false, :label_method => :grado_de_estudio, :label=>"Último grado de estudios:"%>
               <%= builder.association :preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Preparatoria/Universidad de procedencia:" %>
-              <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Municipio de la Preparatoria / Universidad de procedencia:" %>
+              <%= builder.association :municipio_de_la_preparatoria_o_universidad_de_origen,:include_blank => false, :label_method => :valor , :label=>"Estado de la Preparatoria / Universidad de procedencia:" %>
               <%= builder.input :ano_de_graduacion , :label=>"Año de Graduación:"%>
 
               
@@ -300,16 +297,37 @@ end
               <%= builder.hidden_field :blank, :value=>"default"%>
               <%= builder.input :comentarios, :input_html => { :cols => 50, :rows => 3 }, :label=>"Comentarios:"%><br/></div>
           <% end %>  
-        </div>
-        <div class="tab-pane fade form-horizontal" id="interesacademico">
-          <%= g.simple_fields_for :interes_academicos, :html => { :class => 'form-horizontal' }  do |builder| %>
+<%= g.simple_fields_for :interes_academicos, :html => { :class => 'form-horizontal' }  do |builder| %>
   <div  class="well">
             <%=builder.input :opcion_1, :input_html => { :cols => 50, :rows => 3 }, :label=>"Opción 1: otro posgrado/carrera de interés" %>
             <%=builder.input :opcion_2, :input_html => { :cols => 50, :rows => 3 }, :label=>"Opción 2: otro posgrado/carrera de interés"%>
             <%= builder.hidden_field :blank, :value=>"default"%>
             <%=builder.input :opcion_3, :input_html => { :cols => 50, :rows => 3 }, :label=>"Opción 3: otro posgrado/carrera de interés"%></div>
           <%end%>
+
+
         </div>
+        </div>
+
+      </div>
+       <div class="tab-pane fade form-horizontal" id="direccion">
+          <%= g.simple_fields_for :direccions , :html => { :class => 'form-horizontal' } do |builder| %>
+  <div  class="well"> <%= builder.input :calle, :label=>"Calle:"%>
+                     <%= builder.input :no_interior, :label=>"No. Interior:"  %>
+                     <%= builder.input :no_exterior, :label=>"No. Exterior:"  %>
+                     <%= builder.input :colonia , :label=>"Colonia:" %>
+                     <%= builder.input :delegacion_municipio , :label=>"Delegación/Municipio:" %>
+                     <%= builder.input :estado, :label=>"Estado" %>
+                     <%= builder.input :pais, :label=>"País" %>
+                     <%= builder.input :codigo_postal , :label=>"Código Postal:"%> 
+                     <%= builder.hidden_field :blank, :value=>"default"%>
+                     <%= builder.input :comentarios, :as => :text ,:input_html => { :cols => 50, :rows => 3 } , :label=>"Comentarios:" %>
+            <%= builder.hidden_field :latitude%>
+            <%= builder.hidden_field :longitude%>
+                       </div>       
+          <% end %>    
+        </div>
+
        <div class="tab-pane fade form-horizontal" id="medio">
           <%= g.simple_fields_for :medio_de_contactos , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">            <p>

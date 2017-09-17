@@ -59,6 +59,10 @@ class LlamadasController < ApplicationController
   def create
     @llamada = Llamada.new(params[:llamada])
 
+    if params[:llamada][:inicio_de_la_llamada].to_date > Date.today
+      @llamada.pendiente = true
+    end
+
     respond_to do |format|
       if @llamada.save
         format.html { redirect_to "/#{@llamada.model_name}/#{@llamada.model_id}/edit/", notice: 'Llamada was successfully created.' }
@@ -74,6 +78,8 @@ class LlamadasController < ApplicationController
   # PUT /llamadas/1.json
   def update
     @llamada = Llamada.find(params[:id])
+
+
 
     respond_to do |format|
       if @llamada.update_attributes(params[:llamada])

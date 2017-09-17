@@ -12,6 +12,10 @@
   end
 %>
 <div class="tab-pane fade<%=isactive%>" id="informacion<%=prospectoid%>">
+
+<div class="row-fluid">
+  <div class="span4">
+
   <fieldset>
     <p>
       <%=printIfAvailable("Nombre(s)",f.nombre)%>
@@ -88,6 +92,94 @@
         <%=printIfAvailable("Archivado",f.archivado ? "Archivado": "")%>
       </p>
   </fieldset>
+
+</div>
+<div class="span4">
+
+     <%if f.interes_basicos.empty?%>
+        Sin Interes Basico
+     <%else%>     
+     <fieldset>
+        <p>
+          <%valor=f.interes_basicos.first.ultimo_grado_de_estudio.grado_de_estudio rescue nil%>
+          <%=printIfAvailable("Ultimo grado de estudios",valor)%>
+        </p>
+
+        <p>
+          <%valor = f.interes_basicos.first.preparatoria_o_universidad_de_origen.valor rescue nil%>
+          <%=printIfAvailable("Preparatoria / Universidad de origen",valor)%>
+        </p>
+
+        <p>
+          <%valor = f.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen.valor rescue nil%>
+          <%=printIfAvailable("Estado de la Preparatoria / Universidad de origen",valor)%>
+        </p>
+
+        <p>
+          <%=printIfAvailable("Año de graduación",f.interes_basicos.first.ano_de_graduacion)%>
+        </p>
+
+        <p>
+          <%valor =f.interes_basicos.first.sede.nombre rescue nil
+          valor = valor + " - " + f.interes_basicos.first.subsede.nombre rescue nil %>
+          <%=printIfAvailable("Sede y Extensión de interés",valor)%>
+        </p>
+
+     <p>
+          <%valor = f.interes_basicos.first.modalidad.valor rescue nil %>
+          <%=printIfAvailable("Modalidad",valor)%>
+        </p>
+
+        <p>
+          <%valor = f.interes_basicos.first.turno.valor rescue nil %>
+          <%=printIfAvailable("Turno",valor)%>          
+        </p>
+
+        <p>
+          <%valor = f.interes_basicos.first.periodo_para_ingresar.valor rescue nil %>
+          <%=printIfAvailable("Periodo para ingresar",valor)%>           
+        </p>
+
+        <p>
+          <%valor = f.interes_basicos.first.status_de_interes_de_prospecto_validado.valor rescue nil %>
+          <%=printIfAvailable("Status de interes del prospecto validado",valor)%>
+        </p>
+
+        <p>
+          <%=printIfAvailable("Comentarios",f.interes_basicos.first.comentarios)%>
+        </p>
+      <%end%>  
+      </fieldset>   
+     <%if f.interes_academicos.empty?%>
+        Sin Interes Academico
+     <%else%>   
+     <fieldset>   
+        <p>
+          <%=printIfAvailable("Opción 1",f.interes_academicos.first.opcion_1)%>
+        </p>
+
+        <p>
+          <%=printIfAvailable("Opción 2",f.interes_academicos.first.opcion_2)%>
+        </p>
+
+        <p>
+          <%=printIfAvailable("Opción 3",f.interes_academicos.first.opcion_3)%>
+        </p>
+      <%end%> 
+      </fieldset> 
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
 </div>
      <div class="tab-pane fade" id="direccion<%=prospectoid%>">
      <%if f.direccions.empty?%>
@@ -129,81 +221,7 @@
         <%end%> 
       </fieldset>
       </div>
-     <div class="tab-pane fade" id="interesbasico<%=prospectoid%>">
-     <%if f.interes_basicos.empty?%>
-        Sin Interes Basico
-     <%else%>     
-     <fieldset>
-        <p>
-          <%valor=f.interes_basicos.first.ultimo_grado_de_estudio.grado_de_estudio rescue nil%>
-          <%=printIfAvailable("Ultimo grado de estudios",valor)%>
-        </p>
-
-        <p>
-          <%valor = f.interes_basicos.first.preparatoria_o_universidad_de_origen.valor rescue nil%>
-          <%=printIfAvailable("Preparatoria / Universidad de origen",valor)%>
-        </p>
-
-        <p>
-          <%valor = f.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen.valor rescue nil%>
-          <%=printIfAvailable("Municipio de la Preparatoria / Universidad de origen",valor)%>
-        </p>
-
-        <p>
-          <%=printIfAvailable("Año de graduación",f.interes_basicos.first.ano_de_graduacion)%>
-        </p>
-
-        <p>
-          <%valor =f.interes_basicos.first.sede.nombre rescue nil
-          valor = valor + " - " + f.interes_basicos.first.subsede.nombre rescue nil %>
-          <%=printIfAvailable("Sede y Extensión de interés",valor)%>
-        </p>
-
-		 <p>
-          <%valor = f.interes_basicos.first.modalidad.valor rescue nil %>
-          <%=printIfAvailable("Modalidad",valor)%>
-        </p>
-
-        <p>
-          <%valor = f.interes_basicos.first.turno.valor rescue nil %>
-          <%=printIfAvailable("Turno",valor)%>          
-        </p>
-
-        <p>
-          <%valor = f.interes_basicos.first.periodo_para_ingresar.valor rescue nil %>
-          <%=printIfAvailable("Periodo para ingresar",valor)%>           
-        </p>
-
-        <p>
-          <%valor = f.interes_basicos.first.status_de_interes_de_prospecto_validado.valor rescue nil %>
-          <%=printIfAvailable("Status de interes del prospecto validado",valor)%>
-        </p>
-
-        <p>
-          <%=printIfAvailable("Comentarios",f.interes_basicos.first.comentarios)%>
-        </p>
-      <%end%>  
-      </fieldset>      
-      </div>
-      <div class="tab-pane fade" id="interesacademico<%=prospectoid%>">
-     <%if f.interes_academicos.empty?%>
-        Sin Interes Academico
-     <%else%>   
-     <fieldset>   
-        <p>
-          <%=printIfAvailable("Opción 1",f.interes_academicos.first.opcion_1)%>
-        </p>
-
-        <p>
-          <%=printIfAvailable("Opción 2",f.interes_academicos.first.opcion_2)%>
-        </p>
-
-        <p>
-          <%=printIfAvailable("Opción 3",f.interes_academicos.first.opcion_3)%>
-        </p>
-      <%end%> 
-      </fieldset>       
-      </div>
+      
      <div class="tab-pane fade" id="medio<%=prospectoid%>">
      <%if f.medio_de_contactos.empty?%>
         Sin Medio de Contacto

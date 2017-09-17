@@ -151,7 +151,10 @@
 			modelo = "inscritos"
 			idtouse = asd.id			
 		end
-	end   
+	end  
+
+	pathtouse = pathtouse + "?model_name=#{modelo}&model_id=#{idtouse}"
+
     %>
       <tr>
         <td><%= prospecto.id %></td>

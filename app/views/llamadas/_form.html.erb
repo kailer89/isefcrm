@@ -77,7 +77,8 @@
           <%=f.association :sede,:label_method=>:nombre,:include_blank => false%>
     <%=f.hidden_field :model_name %>
     <%=f.hidden_field :model_id %>
-    <%=f.hidden_field :pendiente %>
+
+    <%=f.input :pendiente , input_html: { checked: false } %>
     <%=f.input :comentarios%>
   </div>
 <%end%>

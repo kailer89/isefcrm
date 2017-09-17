@@ -131,7 +131,7 @@ class ImportsController < ApplicationController
                   end
                   
                   if  direccion["programa"] != nil
-                      @programa = Programa.find_or_create_by_programa_and_nivel(getEmtpyForNik(direccion["programa"]),getEmtpyForNik(direccion["nivel"]))
+                      @programa = Programa.find_by_programa_and_nivel(getEmtpyForNik(direccion["programa"]),getEmtpyForNik(direccion["nivel"]))
                       if direccion["nivel"] != nil
                         @programa.nivel = getEmtpyForNik(direccion["nivel"])
                         @programa.save
@@ -157,9 +157,10 @@ class ImportsController < ApplicationController
                   @objecto.interes_basicos.build
                   @objecto.interes_basicos.first.comentarios = direccion["commentarios"]
                   if direccion["nivel"] != nil
-                      @nivel = Nivel.find_or_create_by_valor(getEmtpyForNik(direccion["nivel"]))
+                      @nivel = Nivel.find_by_valor(getEmtpyForNik(direccion["nivel"]))
+                      if @nivel!=nil
                        @objecto.interes_basicos.first.nivel_id = @nivel.id
-
+                      end
                   end       
 
 
@@ -215,33 +216,50 @@ class ImportsController < ApplicationController
                   
 
                   if direccion["ultimo_grado_de_estudio"] != nil
-                      @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_or_create_by_grado_de_estudio(getEmtpyForNik(direccion["ultimo_grado_de_estudio"]))
+                      @ultimo_grado_de_estudio = UltimoGradoDeEstudio.find_by_grado_de_estudio(getEmtpyForNik(direccion["ultimo_grado_de_estudio"]))
+                      if @ultimo_grado_de_estudio !=nil
                        @objecto.interes_basicos.first.ultimo_grado_de_estudio_id = @ultimo_grado_de_estudio.id
+                      end
                   end
                   
                   if direccion["preparatoria_o_universidad_de_origen"] != nil or direccion["preparatoria_o_universidad_de_origen"] != nil
-                      @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(getEmtpyForNik(direccion["preparatoria_o_universidad_de_origen"]))
-                      @objecto.interes_basicos.first.preparatoria_o_universidad_de_origen_id = @preparatoria_o_universidad_de_origen.id
+                      @preparatoria_o_universidad_de_origen = PreparatoriaOUniversidadDeOrigen.find_by_valor(getEmtpyForNik(direccion["preparatoria_o_universidad_de_origen"]))
+                      if @preparatoria_o_universidad_de_origen !=nil
+                        @objecto.interes_basicos.first.preparatoria_o_universidad_de_origen_id = @preparatoria_o_universidad_de_origen.id
+                      end
                   end
                 
                   if direccion["municipio_de_la_preparatoria_o_universidad_de_origen"] != nil
-                      @municipio_de_la_preparatoria_o_universidad_de_origen = MunicipioDeLaPreparatoriaOUniversidadDeOrigen.find_or_create_by_valor(getEmtpyForNik(direccion["municipio_de_la_preparatoria_o_universidad_de_origen"]))
-                      @objecto.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen_id = @municipio_de_la_preparatoria_o_universidad_de_origen.id
+                      @municipio_de_la_preparatoria_o_universidad_de_origen = MunicipioDeLaPreparatoriaOUniversidadDeOrigen.find_by_valor(getEmtpyForNik(direccion["municipio_de_la_preparatoria_o_universidad_de_origen"]))
+                      if @municipio_de_la_preparatoria_o_universidad_de_origen !=nil
+                        @objecto.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen_id = @municipio_de_la_preparatoria_o_universidad_de_origen.id
+                      end
                   end
                   @objecto.interes_basicos.first.ano_de_graduacion=direccion["ano_de_graduacion"]
 
      
                   if direccion["turno"] != nil
-                      @turno = Turno.find_or_create_by_valor(getEmtpyForNik(direccion["turno"]))
-                      @objecto.interes_basicos.first.turno_id = @turno.id
+                      @turno = Turno.find_by_valor(getEmtpyForNik(direccion["turno"]))
+                      if @turno!=nil
+                        @objecto.interes_basicos.first.turno_id = @turno.id
+                      end
                   end
                   if direccion["modalidad"] != nil
-                      @modalidad = Modalidad.find_or_create_by_valor(getEmtpyForNik(direccion["modalidad"]))
-                      @objecto.interes_basicos.first.modalidad_id = @modalidad.id
+                      @modalidad = Modalidad.find_by_valor(getEmtpyForNik(direccion["modalidad"]))
+                      if @modalidad != nil
+                        @objecto.interes_basicos.first.modalidad_id = @modalidad.id
+                      end
                   end              
                   if direccion["periodo_para_ingresar"] != nil
-                      @periodo_para_ingresar = PeriodoParaIngresar.find_or_create_by_valor(getEmtpyForNik(direccion["periodo_para_ingresar"]))
-                      @objecto.interes_basicos.first.periodo_para_ingresar_id = @periodo_para_ingresar.id
+                      @periodo_para_ingresar = PeriodoParaIngresar.find_by_valor(getEmtpyForNik(direccion["periodo_para_ingresar"]))
+                      if @periodo_para_ingresar == nil
+                        @periodo_para_ingresar=PeriodoParaIngresar.where{(valor =~ '%#{Time.current.year - 2000}')}
+                          if @periodo_para_ingresar !=nil
+                            @objecto.interes_basicos.first.periodo_para_ingresar_id = @periodo_para_ingresar.id
+                          end
+                      else
+                        @objecto.interes_basicos.first.periodo_para_ingresar_id = @periodo_para_ingresar.id
+                      end
                   end              
                   logger.debug "2#######################################################################"
                   #medio de contactos

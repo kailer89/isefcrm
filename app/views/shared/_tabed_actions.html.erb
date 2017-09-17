@@ -38,17 +38,17 @@
                         <%tareastatus="stonerow linkcolor"%>
                       <%end%>              
                     <tr class="<%=tareastatus%>">
-                      <td><%= link_to tarea.id, tarea_path(tarea) %></td>
-                      <td><%= link_to tarea.nombre, tarea_path(tarea) %></td>
-                      <td><%= link_to tarea.created_at, tarea_path(tarea) %></td>
+                      <td><%= link_to tarea.id, tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                      <td><%= link_to tarea.nombre, tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                      <td><%= link_to tarea.created_at, tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
                       <td>
                         <%if tarea.pendiente == nil%>
-                          <%= link_to "No Pendiente", tarea_path(tarea) rescue nil%>
+                          <%= link_to "No Pendiente", tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>
                         <%else%>
                           <%if tarea.pendiente == true%>
-                              <%= link_to "Pendiente", tarea_path(tarea) rescue nil%>
+                              <%= link_to "Pendiente", tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>
                           <%else%>
-                              <%= link_to "No Pendiente", tarea_path(tarea) rescue nil%>                          
+                              <%= link_to "No Pendiente", tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>                          
                           <%end%>
                         <%end%>
                       </td>                      
@@ -56,10 +56,10 @@
                         <%if tarea.pendiente == nil%>
                         <%else%>
                           <%if tarea.pendiente == true%>
-                              <%= link_to 'Acciones pendientes', edit_tarea_path(tarea), :class => 'btn btn-mini btn-warning' %>                        
+                              <%= link_to 'Acciones pendientes', edit_tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini btn-warning' %>                        
                           <%end%>
                         <%end%>                        
-                        <%= link_to 'Edit', edit_tarea_path(tarea), :class => 'btn btn-mini' %>
+                        <%= link_to 'Edit', edit_tarea_path(tarea,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini' %>
                         <%= link_to 'Destroy', tarea_path(tarea), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
                       </td>
                     </tr>
@@ -101,17 +101,17 @@
                       <%tareastatus="stonerow linkcolor"%>
                     <%end%>                
                     <tr class="<%=tareastatus%>">
-                      <td><%= link_to llamada.id, llamada_path(llamada) %></td>
-                      <td><%= link_to llamada.asunto, llamada_path(llamada) %></td>
-                      <td><%= link_to llamada.created_at, llamada_path(llamada) %></td>
+                      <td><%= link_to llamada.id, llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                      <td><%= link_to llamada.asunto, llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                      <td><%= link_to llamada.created_at, llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
                       <td>
                         <%if llamada.pendiente == nil%>
-                          <%= link_to "No Pendiente", llamada_path(llamada) rescue nil%>
+                          <%= link_to "No Pendiente", llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>
                         <%else%>
                           <%if llamada.pendiente == true%>
-                              <%= link_to "Pendiente", llamada_path(llamada) rescue nil%>
+                              <%= link_to "Pendiente", llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>
                           <%else%>
-                              <%= link_to "No Pendiente", llamada_path(llamada) rescue nil%>                          
+                              <%= link_to "No Pendiente", llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>                          
                           <%end%>
                         <%end%>
                       </td>
@@ -119,10 +119,10 @@
                         <%if llamada.pendiente == nil%>
                         <%else%>
                           <%if llamada.pendiente == true%>
-                              <%= link_to 'Acciones pendientes', edit_llamada_path(llamada), :class => 'btn btn-mini btn-warning' %>                        
+                              <%= link_to 'Acciones pendientes', edit_llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini btn-warning' %>                        
                           <%end%>
                         <%end%>
-                        <%= link_to 'Edit', edit_llamada_path(llamada), :class => 'btn btn-mini' %>
+                        <%= link_to 'Edit', edit_llamada_path(llamada,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini' %>
                         <%= link_to 'Destroy', llamada_path(llamada), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
                       </td>
                     </tr>
@@ -152,17 +152,17 @@
                 <%if memos[0] != nil%>
                 <% memos.each do |memo| %>
                   <tr>
-                    <td><%= link_to memo.id, memo_path(memo) %></td>
-                    <td><%= link_to memo.nombre, memo_path(memo) %></td>
-                    <td><%= link_to memo.created_at, memo_path(memo) %></td>
+                    <td><%= link_to memo.id, memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                    <td><%= link_to memo.nombre, memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                    <td><%= link_to memo.created_at, memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
                       <td>
                         <%if memo.pendiente == nil%>
-                          <%= link_to "No Pendiente", memo_path(memo) rescue nil%>
+                          <%= link_to "No Pendiente", memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>
                         <%else%>
                           <%if memo.pendiente == true%>
-                              <%= link_to "Pendiente", memo_path(memo) rescue nil%>
+                              <%= link_to "Pendiente", memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>
                           <%else%>
-                              <%= link_to "No Pendiente", memo_path(memo) rescue nil%>                          
+                              <%= link_to "No Pendiente", memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%>                          
                           <%end%>
                         <%end%>
                       </td>
@@ -170,10 +170,10 @@
                         <%if memo.pendiente == nil%>
                         <%else%>
                           <%if memo.pendiente == true%>
-                              <%= link_to 'Acciones pendientes', edit_memo_path(memo), :class => 'btn btn-mini btn-warning' %>                        
+                              <%= link_to 'Acciones pendientes', edit_memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini btn-warning' %>                        
                           <%end%>
                         <%end%>
-                      <%= link_to 'Edit', edit_memo_path(memo), :class => 'btn btn-mini' %>
+                      <%= link_to 'Edit', edit_memo_path(memo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini' %>
                       <%= link_to 'Destroy', memo_path(memo), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
                     </td>
                   </tr>
@@ -202,11 +202,11 @@
                 <%if correos[0] != nil%>
                 <% correos.each do |correo| %>
                   <tr>
-                    <td><%= link_to correo.id, correo_path(correo) %></td>
-                    <td><%= link_to correo.nombredelmail, correo_path(correo) %></td>
-                    <td><%= link_to correo.created_at, correo_path(correo) %></td>
+                    <td><%= link_to correo.id, correo_path(correo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                    <td><%= link_to correo.nombredelmail, correo_path(correo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                    <td><%= link_to correo.created_at, correo_path(correo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
                     <td>
-                      <%= link_to 'Edit', edit_correo_path(correo), :class => 'btn btn-mini' %>
+                      <%= link_to 'Edit', edit_correo_path(correo,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini' %>
                       <%= link_to 'Destroy', correo_path(correo), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
                     </td>
                   </tr>
@@ -239,11 +239,11 @@
                 <%if attachments[0] != nil%>
                   <% attachments.each do |attachment| %>
                     <tr>
-                      <td><%= link_to attachment.id, attachment_path(attachment) %></td>
-                      <td><%= link_to attachment.name, attachment_path(attachment) rescue nil%></td>
-                      <td><%= link_to attachment.created_at, attachment_path(attachment) %></td>
+                      <td><%= link_to attachment.id, attachment_path(attachment,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
+                      <td><%= link_to attachment.name, attachment_path(attachment,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) rescue nil%></td>
+                      <td><%= link_to attachment.created_at, attachment_path(attachment,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id) %></td>
                       <td>
-                        <%= link_to 'Edit', edit_attachment_path(attachment), :class => 'btn btn-mini' %>
+                        <%= link_to 'Edit', edit_attachment_path(attachment,:model_name=>request.path_parameters[:controller],:model_id=>prospecto_id), :class => 'btn btn-mini' %>
                         <%= link_to 'Destroy', attachment_path(attachment), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
                       </td>
                     </tr>
