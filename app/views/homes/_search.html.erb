@@ -53,27 +53,32 @@
     <%
     pathtouse = "/prospectos/"
     estado="Prospecto"
-    lastHistory = History.where(:model_id=>prospecto.id).last()
+    hasSoliticantelastHistory = History.where{(action =~ '%Solicitante')}.exists?
+    hasExaminadolastHistory = History.where{(action =~ '%Examinado')}.exists?
+    hasAdmitidolastHistory = History.where{(action =~ '%Admitido')}.exists?
+    hasInscritolastHistory = History.where{(action =~ '%Inscrito')}.exists?
+
+
     idtouse = prospecto.id
     modelo = "prospectos"
-	if lastHistory.action.include?("Solicitante") 
+	if hasSoliticantelastHistory and not hasExaminadolastHistory
 		pathtouse = "/solicitantes/#{prospecto.solicitante_id}/edit"
 		estado="Solicitante"
 		modelo = "solicitantes"
 		idtouse = prospecto.solicitante_id
-	elsif lastHistory.action.include?("Examinado")
+	elsif hasExaminadolastHistory and not hasAdmitidolastHistory
 		asd = Examinado.joins{solicitantes.prospectos}.where{solcitantes.prospectos.id==prospecto.id}.first
 		pathtouse = "/examinados/#{asd.id}/edit"
 		estado="Examinado"
 		modelo = "examinados"
 		idtouse = asd.id
-	elsif lastHistory.action.include?("Admitido")
+	elsif hasAdmitidolastHistory and not hasInscritolastHistory
 		asd = Admitido.joins{examinados.solicitantes.prospectos}.where{examinados.solcitantes.prospectos.id==prospecto.id}.first
 		pathtouse = "/admitidos/#{asd.id}/edit"
 		estado="Admitido"
 		modelo = "admitidos"
 		idtouse = asd.id
-	elsif lastHistory.action.include?("Inscrito")
+	elsif hasInscritolastHistory
 		asd = Inscrito.joins{admitidos.examinados.solicitantes.prospectos}.where{admitidos.examinados.solcitantes.prospectos.id==prospecto.id}.first
 		pathtouse = "/inscritos/#{asd.id}/edit"
 		estado="Inscrito"
