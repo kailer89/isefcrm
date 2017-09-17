@@ -26,8 +26,9 @@ gem "twitter-bootstrap-rails"
 
 platforms :ruby do # linux
 
-  gem 'unicorn'
-gem "iconv",:group => :production
+  gem 'unicorn',:group => :production
+  gem "iconv",:group => :production
+  gem 'unicorn-worker-killer',:group => :production
 end
 
 platforms :mswin do
