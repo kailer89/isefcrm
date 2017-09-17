@@ -7,10 +7,20 @@
       Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
     end  
 %>
+  <div class="row-fluid">
+    <div class="span10">
+      <div class="page-header hidden-phone hidden-tablet">
+        <h1>Bienvenid@ <%=current_user.username%>!<small>Selecciona alguna de las opciones para ver mas informacion.</small></h1>
+      </div>
+    </div>
+    <div class="span1">
+      <a class="printbox">
+        <img src="/images/anahuac.png" alt="Logo" style="width:100px;height:50px;">
+        <img src="/images/ijpii.png" alt="Logo" style="width:100px;height:50px;">
+      </a>
+    </div>
+  </div>
 
-<div class="page-header hidden-phone hidden-tablet">
-  <h1>Bienvenid@ <%=current_user.username%>!<small>Selecciona alguna de las opciones para ver mas informacion.</small></h1>
-</div>
 
 <%rolx = Role.where(:id=>current_user.role).first.nombre%>
 

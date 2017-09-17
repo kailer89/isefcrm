@@ -122,8 +122,8 @@
         </p>
 
         <p>
-          <%valor =f.interes_basicos.first.sede.nombre rescue nil
-          valor = valor + " - " + f.interes_basicos.first.subsede.nombre rescue nil %>
+          <%valor =f.interes_basicos.first.sede.nombre rescue "Sin Dato"
+          valor = valor + " - " + f.interes_basicos.first.subsede.nombre rescue "Sin Dato" %>
           <%=printIfAvailable("Sede y Plantel de interés",valor)%>
         </p>
 

@@ -157,11 +157,13 @@ setnil = false
     if request.path_parameters[:format] != 'xls'
       if rol.nombre == "DN" or rol.nombre == "ACRM" 
           @q = getProspectosForUser(current_user).ransack(params[:q])
+          @qx = getProspectosForUser(current_user).ransack(params[:q])
           @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?        
       else
           @q = getProspectosForUser(current_user).ransack(params[:q])
+          @qx = getProspectosForUser(current_user).ransack(params[:q])
           @prospectos = @q.result(:distinct => true).where(:issolicitante=> false).paginate(:per_page => 50, :page => params[:page]) 
           @q.build_condition if @q.conditions.empty?
           @q.build_sort if @q.sorts.empty?            
@@ -176,6 +178,7 @@ setnil = false
 
       if rol.nombre == "DN" or rol.nombre == "ACRM"  
           @q = getProspectosForUser(current_user).ransack(params[:q])
+          @qx = getProspectosForUser(current_user).ransack(params[:q])
           if ini != nil
             @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           else
@@ -185,6 +188,7 @@ setnil = false
           @q.build_sort if @q.sorts.empty?        
       else
           @q = getProspectosForUser(current_user).ransack(params[:q])
+          @qx = getProspectosForUser(current_user).ransack(params[:q])
           if ini != nil
             @prospectos = @q.result(:distinct => true).where(:issolicitante=> false)
           else

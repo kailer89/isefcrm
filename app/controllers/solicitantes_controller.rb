@@ -61,6 +61,7 @@ setnil = false
 
 
       @q = @solicitantes.ransack(params[:q])
+      @qx = @solicitantes.ransack(params[:q])
       @q.build_grouping unless @q.groupings.any?
 
 

@@ -1,5 +1,38 @@
 <h1>Inscritos</h1>
+<div class="form-horizontal">
+    <%= search_form_for @q, url: inscritos_path do |f| %>
 
+    <div class="row-fluid">
+      <div class="span3">
+        <%= f.label :id_eq %>
+        <%= f.search_field :id_eq %>
+
+        <%= f.label :admitidos_examinados_solicitantes_prospectos_nombre_cont %>
+        <%= f.search_field :admitidos_examinados_solicitantes_prospectos_nombre_cont %>
+
+        <%= f.label :admitidos_examinados_solicitantes_prospectos_email_cont %>
+        <%= f.search_field :admitidos_examinados_solicitantes_prospectos_email_cont %>
+      </div>
+      <div class="span3">
+        <%= f.label :admitidos_examinados_solicitantes_prospectos_apellido_paterno_cont%>
+        <%= f.search_field :admitidos_examinados_solicitantes_prospectos_apellido_paterno_cont %>
+
+
+        <%= f.label :admitidos_examinados_solicitantes_prospectos_apellido_materno_cont %>
+        <%= f.search_field :admitidos_examinados_solicitantes_prospectos_apellido_materno_cont %>
+
+
+        <%= f.label :admitidos_examinados_solicitantes_prospectos_programa_id_eq %>
+        <%= f.collection_select :admitidos_examinados_solicitantes_prospectos_programa_id_eq, Programa.all, :id, :programa, include_blank: true %>
+      </div>
+      <div class="span3">
+        <%= f.label :admitidos_examinados_solicitantes_prospectos_interes_basicos_periodo_para_ingresar_id_eq %>
+        <%= f.collection_select :admitidos_examinados_solicitantes_prospectos_interes_basicos_periodo_para_ingresar_id_eq, PeriodoParaIngresar.all, :id, :valor, include_blank: true %>
+      </div>
+        <br/>
+              <%= f.submit %>
+            <% end %>  
+</div>
 <%if @inscritos.total_entries > 100%> 
 
 
