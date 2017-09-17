@@ -68,22 +68,45 @@
 		idtouse = prospecto.solicitante_id
 	elsif hasExaminadolastHistory and not hasAdmitidolastHistory
 		asd = Examinado.joins{solicitantes.prospectos}.where{solcitantes.prospectos.id==prospecto.id}.first
-		pathtouse = "/examinados/#{asd.id}/edit"
-		estado="Examinado"
-		modelo = "examinados"
-		idtouse = asd.id
+		if asd == nil
+			pathtouse = "/solicitantes/#{prospecto.solicitante_id}/edit"
+			estado="Solicitante"
+			modelo = "solicitantes"
+			idtouse = asd.id
+		else
+			pathtouse = "/examinados/#{asd.id}/edit"
+			estado="Examinado"
+			modelo = "examinados"
+			idtouse = asd.id			
+		end
 	elsif hasAdmitidolastHistory and not hasInscritolastHistory
 		asd = Admitido.joins{examinados.solicitantes.prospectos}.where{examinados.solcitantes.prospectos.id==prospecto.id}.first
-		pathtouse = "/admitidos/#{asd.id}/edit"
-		estado="Admitido"
-		modelo = "admitidos"
-		idtouse = asd.id
+		if asd ==nil
+			asd = Examinado.joins{solicitantes.prospectos}.where{solcitantes.prospectos.id==prospecto.id}.first
+			pathtouse = "/examinados/#{asd.id}/edit"
+			estado="Examinado"
+			modelo = "examinados"
+			idtouse = asd.id			
+		else
+			pathtouse = "/admitidos/#{asd.id}/edit"
+			estado="Admitido"
+			modelo = "admitidos"
+			idtouse = asd.id			
+		end
 	elsif hasInscritolastHistory
 		asd = Inscrito.joins{admitidos.examinados.solicitantes.prospectos}.where{admitidos.examinados.solcitantes.prospectos.id==prospecto.id}.first
-		pathtouse = "/inscritos/#{asd.id}/edit"
-		estado="Inscrito"
-		modelo = "inscritos"
-		idtouse = asd.id
+		if asd == nil
+			asd = Admitido.joins{examinados.solicitantes.prospectos}.where{examinados.solcitantes.prospectos.id==prospecto.id}.first
+			pathtouse = "/admitidos/#{asd.id}/edit"
+			estado="Admitido"
+			modelo = "admitidos"
+			idtouse = asd.id			
+		else
+			pathtouse = "/inscritos/#{asd.id}/edit"
+			estado="Inscrito"
+			modelo = "inscritos"
+			idtouse = asd.id			
+		end
 	end   
     %>
       <tr>
