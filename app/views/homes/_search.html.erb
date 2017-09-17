@@ -53,10 +53,15 @@
     <%
     pathtouse = "/prospectos/"
     estado="Prospecto"
-    hasSoliticantelastHistory = History.where{(action =~ '%Solicitante')}.exists?
-    hasExaminadolastHistory = History.where{(action =~ '%Examinado')}.exists?
-    hasAdmitidolastHistory = History.where{(action =~ '%Admitido')}.exists?
-    hasInscritolastHistory = History.where{(action =~ '%Inscrito')}.exists?
+    hasSoliticantelastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Solicitante')}.exists?
+    hasExaminadolastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Examinado')}.exists?
+    hasAdmitidolastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Admitido')}.exists?
+    hasInscritolastHistory = History.where(:model_id=>prospecto.id).where{(action =~ '%Inscrito')}.exists?
+
+    %>
+
+    <%
+
 
 
     idtouse = prospecto.id
