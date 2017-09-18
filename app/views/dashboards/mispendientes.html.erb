@@ -25,16 +25,16 @@
     elsif @rol == "CP" or @rol == "D"
 
 
-        @tareas = Tarea.all.where(:sede_id=>current_user.sede.id)
-        @memos = Memo.all.where(:sede_id=>current_user.sede.id)
-        @llamadas = Llamada.all.where(:sede_id=>current_user.sede.id)
+        @tareas = Tarea.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
+        @memos = Memo.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
+        @llamadas = Llamada.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
         @attachments = Attachment.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
         @correos = Correo.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
           
     else
-        @tareas = Tarea.all.where(:user_id=>current_user.id)
-        @memos = Memo.all.where(:user_id=>current_user.id)
-        @llamadas = Llamada.all.where(:user_id=>current_user.id)
+        @tareas = Tarea.where{model_name!=""}.where(:user_id=>current_user.id)
+        @memos = Memo.where{model_name!=""}.where(:user_id=>current_user.id)
+        @llamadas = Llamada.where{model_name!=""}.where(:user_id=>current_user.id)
         @attachments = Attachment.where{model_name!=""}
         @correos = Correo.where{model_name!=""}
 
