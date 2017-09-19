@@ -16,7 +16,7 @@ end
           <!--<legend><%= controller.action_name.capitalize %> Prospecto</legend>-->  
 
 <div class="row-fluid">
-  <div class="span7">
+  <div class="span6">
     <div class="well">
 
       <%= g.input :nombre, :label=>"Nombre(s):" %>
@@ -70,7 +70,7 @@ end
           <%=g.input :archivado%>
         </div>
 </div>
-<div class="span5">
+<div class="span6">
             <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">          
               <%= builder.association :ultimo_grado_de_estudio,:include_blank => false, :label_method => :grado_de_estudio, :label=>"Último grado de estudios:"%>
@@ -208,7 +208,7 @@ end
         <div class="tab-pane fade" id="informacion">
 
 <div class="row-fluid">
-  <div class="span7">
+  <div class="span6">
 
 
 
@@ -266,7 +266,7 @@ end
           <%=g.input :archivado%>
         </div>
 </div>
-<div class="span5">
+<div class="span6">
  <%= g.simple_fields_for :interes_basicos  , :html => { :class => 'form-horizontal' } do |builder| %>
   <div  class="well">          
               <%= builder.association :ultimo_grado_de_estudio,:include_blank => false, :label_method => :grado_de_estudio, :label=>"Último grado de estudios:"%>
