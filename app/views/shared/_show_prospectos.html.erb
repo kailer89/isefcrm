@@ -14,7 +14,7 @@
 <div class="tab-pane fade<%=isactive%>" id="informacion<%=prospectoid%>">
 
 <div class="row-fluid">
-  <div class="span4">
+  <div class="span7">
 
   <fieldset>
     <p>
@@ -94,7 +94,7 @@
   </fieldset>
 
 </div>
-<div class="span4">
+<div class="span5">
 
      <%if f.interes_basicos.empty?%>
         Sin Interes Basico
@@ -124,7 +124,7 @@
         <p>
           <%valor =f.interes_basicos.first.sede.nombre rescue "Sin Dato"
           valor = valor + " - " + f.interes_basicos.first.subsede.nombre rescue "Sin Dato" %>
-          <%=printIfAvailable("Sede y Plantel de interés",valor)%>
+          <%=printIfAvailable("Plantel y Extensión de interés",valor)%>
         </p>
 
      <p>
