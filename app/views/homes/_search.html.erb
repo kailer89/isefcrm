@@ -9,9 +9,9 @@
           	<div class="row-fluid span12">
 			  <%= f.text_field :id_eq,:placeholder=>"Id es igual a" %>
 			  <%= f.text_field :nombre_cont,:placeholder=>"Nombre contiene" %>
-			  <%= f.text_field :email_cont,:placeholder=>"Id es igual a" %>
+			  <%= f.text_field :email_cont,:placeholder=>"Email contiene" %>
 			  <%= f.text_field :apellido_paterno_cont,:placeholder=>"Apellido paterno contiene" %>
-			  <%= f.text_field :apellido_materno_cont,:placeholder=>"Apellido paterno contiene" %>
+			  <%= f.text_field :apellido_materno_cont,:placeholder=>"Apellido materno contiene" %>
 			</div>
 			<div class="row-fluid span12">
 
@@ -21,8 +21,8 @@
 				</div>
 
 				<div class="input-prepend">
-				  <span class="add-on">Interes basico Periodo para ingresar es igual a</span>
-				  <%= f.collection_select :interes_basicos_periodo_para_ingresar_id_eq, PeriodoParaIngresar.all, :id, :valor, include_blank: true,:placeholder=>"Interes basico Periodo para ingresar es igual a" %>
+				  <span class="add-on">Periodo para ingresar es igual a</span>
+				  <%= f.collection_select :interes_basicos_periodo_para_ingresar_id_eq, PeriodoParaIngresar.all, :id, :valor, include_blank: true,:placeholder=>"Periodo para ingresar es igual a" %>
 				</div>
 			  
 			  <br/>
