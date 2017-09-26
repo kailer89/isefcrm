@@ -103,7 +103,7 @@
 
 
         <p>
-          <%valor=f.interes_basicos.first.ultimo_grado_de_estudio.grado_de_estudio rescue nil%>
+          <%valor=f.interes_basicos.first.ultimo_grado_de_estudio.grado_de_estudio rescue "sin información"%>
           <%=printIfAvailable("Ultimo grado de estudios",valor)%>
         </p>
 
@@ -113,7 +113,7 @@
         </p>
 
         <p>
-          <%valor = f.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen.valor rescue nil%>
+          <%valor = f.interes_basicos.first.municipio_de_la_preparatoria_o_universidad_de_origen.valor rescue  "sin información"%>
           <%=printIfAvailable("Estado de la Preparatoria / Universidad de origen",valor)%>
         </p>
 
@@ -138,12 +138,12 @@
         </p>
 
         <p>
-          <%valor = f.interes_basicos.first.periodo_para_ingresar.valor rescue nil %>
+          <%valor = f.interes_basicos.first.periodo_para_ingresar.valor rescue  "sin información" %>
           <%=printIfAvailable("Periodo para ingresar",valor)%>           
         </p>
 
         <p>
-          <%valor = f.interes_basicos.first.status_de_interes_de_prospecto_validado.valor rescue nil %>
+          <%valor = f.interes_basicos.first.status_de_interes_de_prospecto_validado.valor rescue  "sin información" %>
           <%=printIfAvailable("Status de interes del prospecto validado",valor)%>
         </p>
 
