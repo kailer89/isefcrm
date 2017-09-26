@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170917071046) do
+ActiveRecord::Schema.define(:version => 20170926233647) do
 
   create_table "Duraciontextos", :force => true do |t|
     t.string   "valor"
@@ -345,6 +345,8 @@ ActiveRecord::Schema.define(:version => 20170917071046) do
     t.string   "codigo_postal"
     t.string   "estado"
     t.string   "pais"
+    t.string   "no_interior_texto"
+    t.string   "no_exterior_texto"
   end
 
   create_table "division_territorials", :force => true do |t|
