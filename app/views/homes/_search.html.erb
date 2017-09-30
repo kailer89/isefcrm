@@ -180,6 +180,7 @@
           <%= link_to 'Edit', "#{pathtouse}", :class => 'btn btn-mini', :target=>"_blank" %>
           <%= link_to 'Agregar llamada', "/llamadas/new?model_id=#{idtouse}&model_name=#{modelo}",:class=>'btn btn-primary btn-mini', :target=>"_blank"%>
           <%= link_to 'Agregar tarea', "/tareas/new?model_id=#{idtouse}&model_name=#{modelo}",:class=>'btn btn-info btn-mini', :target=>"_blank"%>
+          <%= link_to 'Borrar', "/#{modelo}/#{idtouse}",:target=>"_blank", :method => :delete, :confirm => 'Estas seguro de borrar el registro?', :class => 'btn btn-mini btn-danger'%>
         </td>
       </tr>
     <% end %>
