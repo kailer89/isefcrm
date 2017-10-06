@@ -1,4 +1,13 @@
+<%
 
+ modelo = Configuracione.where(:user_id=>current_user.id).first rescue nil
+    archivado=false
+    if modelo != nil
+      archivado = modelo.mostrar_archivados
+    else
+      Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
+    end 
+%>
     <h2>Estadisticas</h2>
                 <table class="table table-striped table-bordered table-condensed table-bordered table-condensed">
                   <thead>
@@ -8,9 +17,14 @@
                     </tr>
                   </thead>
                   <tbody>
- <tr>
+<%
+        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"  
+%>                    
+                      <tr>
                         <td>Prospectos No Validados</td>
-                        <td><%=items.where(:validado=>false).where(:issolicitante=>false).where(:archivado=>archivado).size rescue nil%></td>
+                        <td><%=items.where(:validado=>false).where(:archivado=>archivado).size rescue nil%></td>
                       </tr> 
                       <tr>
                         <td>Prospectos Validados</td>
@@ -33,6 +47,33 @@
                         <td>Inscritos</td>
                         <td><%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:archivado=>archivado).size rescue nil%></td>
                       </tr>   
+              <%else%>    
+                      <tr>
+                        <td>Prospectos No Validados</td>
+                        <td><%=items.where(:validado=>false).where(:archivado=>archivado).size rescue nil%></td>
+                      </tr>                                                                                                                     
+                      <tr>
+                        <td>Prospectos Validados</td>
+                        <td><%=items.where(:validado=>true).where(:issolicitante=>false).where(:archivado=>archivado).size rescue nil%></td>
+                      </tr>
+
+                      <tr>
+                        <td>Solicitantes</td>
+                        <td><%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:archivado=>archivado).size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Examinados/Entrevistados</td>
+                        <td><%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:archivado=>archivado).size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Admitidos</td>
+                        <td><%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:archivado=>archivado).size rescue nil%></td>
+                      </tr>
+                      <tr>
+                        <td>Inscritos</td>
+                        <td><%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:archivado=>archivado).size rescue nil%></td>
+                      </tr>                 
+              <%end%>
                   </tbody>
                 </table>    
                 <br/>                        
@@ -49,14 +90,29 @@
 @prospectosvalidados=items.where(:validado=>true)
 %>
 
-    var funnel = new RGraph.Funnel('cvs', [
-                    <%=@prospectosnovalidados.size + 1 %>,
-                    <%=@prospectosvalidados.where(:issolicitante=>false).size + 1 %>,
-                    <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.size + 1 %>,
-                    <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.size + 1 %>,
-                    <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.size + 1 %>,
-                    <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.size + 1 %>]);
+<%
+        rol = Role.where(:id=>current_user.role).first
+
+        if rol.nombre == "ACRM"  
+%>           
+                   var funnel = new RGraph.Funnel('cvs', [
+                    <%=@prospectosnovalidados.where(:archivado=>archivado).size + 1 %>,
+                    <%=@prospectosvalidados.where(:issolicitante=>false).where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:archivado=>archivado).size + 1 %>]);
             
+<%else%>     
+                   var funnel = new RGraph.Funnel('cvs', [
+                    <%=@prospectosnovalidados.where(:archivado=>archivado).size + 1 %>,
+                    <%=@prospectosvalidados.where(:issolicitante=>false).where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante}.where{solicitantes.archivado==archivado}.where{solicitante.isexaminado==false}.where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante.examinado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{examinados.isadmitido==false}.where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where{admitidos.isinscrito==false}.where(:archivado=>archivado).size + 1 %>,
+                    <%=items.joins{solicitante.examinado.admitido.inscrito}.where{inscritos.archivado == archivado}.where{admitidos.archivado==archivado}.where{examinados.archivado==archivado}.where{solicitantes.archivado==archivado}.where(:archivado=>archivado).size + 1 %>]);
+           
+<%end%>
             funnel.Set('chart.gutter.left', 350);
             funnel.Set('chart.labels.sticks', true);
             funnel.Set('chart.strokestyle', 'rgba(0,0,0,0)');
