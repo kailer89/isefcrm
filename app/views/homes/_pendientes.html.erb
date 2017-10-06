@@ -9,8 +9,30 @@
       Configuracione.create(:user_id=>current_user.id,:mostrar_archivados=>false)
     end  
 
+rol = Role.where(:id=>params[:user_role]).first
 
-    prospectos = Prospecto.where(:archivado=>archivado).where(:user_id=>current_user.id)
+     selected = nil
+
+    if rol == nil
+      selected =Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+    else
+      if rol.nombre == "DN" or rol.nombre == "ACRM" 
+        selected = Prospecto.where(:archivado=>archivado)
+      else
+        if rol.nombre == "D" or rol.nombre == "CP"
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede])
+        else
+
+          selected = Prospecto.where(:archivado=>archivado).where(:sede_id=>params[:user_sede]).where(:user_id=>params[:user_id])
+        end #end director
+      end #end else rol nombre
+    end #end else nil
+
+
+
+
+    prospectos = selected
 
 @tareas1 = Tarea.where(:model_name=>"prospectos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
  @memos1 = Memo.where(:model_name=>"prospectos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
@@ -20,7 +42,7 @@
 
 
 
-    prospectos = Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id))
+    prospectos = Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id))
 
         @tareas2 = Tarea.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @memos2 = Memo.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
@@ -29,7 +51,7 @@
         @correos2 = Correo.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos) 
 
 
-          prospectos = Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id)))
+          prospectos = Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id)))
 
         @tareas3 = Tarea.where(:model_name=>"examinados").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @memos3 = Memo.where(:model_name=>"examinados").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
@@ -40,7 +62,7 @@
 
 
 
-          prospectos =Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id))))
+          prospectos =Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id))))
 
 
         @tareas4 = Tarea.where(:model_name=>"admitidos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
@@ -51,7 +73,7 @@
 
 
 
-          prospectos = Inscrito.where("admitido_id in (:admitidos)",:admitidos=>Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>Prospecto.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id)))))
+          prospectos = Inscrito.where("admitido_id in (:admitidos)",:admitidos=>Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id)))))
 
 
         @tareas5 = Tarea.where(:model_name=>"inscritos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
