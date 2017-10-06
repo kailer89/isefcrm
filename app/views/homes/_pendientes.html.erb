@@ -34,34 +34,43 @@ rol = Role.where(:id=>current_user.role).first
       end #end else rol nombre
     end #end else nil
 
+    if rol.nombre == "ACRM" or rol.nombre == "DN"
+          
+        @tareas1 = Tarea.where{model_name!=""}
+        @memos1 = Memo.where{model_name!=""}
+        @llamadas1 = Llamada.where{model_name!=""}
 
+    elsif rol.nombre == "CP" or rol.nombre == "D"
+
+
+        @tareas1 = Tarea.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
+        @memos1 = Memo.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
+        @llamadas1 = Llamada.where{model_name!=""}.where(:sede_id=>current_user.sede.id)
+          
+    else
+        @tareas1 = Tarea.where{model_name!=""}.where(:user_id=>current_user.id)
+        @memos1 = Memo.where{model_name!=""}.where(:user_id=>current_user.id)
+        @llamadas1 = Llamada.where{model_name!=""}.where(:user_id=>current_user.id)
+
+    end
 
 
     prospectos = selected
 
-@tareas1 = Tarea.where(:model_name=>"prospectos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
- @memos1 = Memo.where(:model_name=>"prospectos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @attachments1 = Attachment.where(:model_name=>"prospectos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @llamadas1 = Llamada.where(:model_name=>"prospectos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @correos1 = Correo.where(:model_name=>"prospectos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
 
 
 
     prospectos = Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id))
 
-        @tareas2 = Tarea.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @memos2 = Memo.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @attachments2 = Attachment.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @llamadas2 = Llamada.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @correos2 = Correo.where(:model_name=>"solicitantes").where("model_id in (:prospectoss)", :prospectoss=>prospectos) 
 
 
           prospectos = Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id)))
 
-        @tareas3 = Tarea.where(:model_name=>"examinados").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @memos3 = Memo.where(:model_name=>"examinados").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @attachments3 = Attachment.where(:model_name=>"examinados").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @llamadas3 = Llamada.where(:model_name=>"examinados").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @correos3 = Correo.where(:model_name=>"examinados").where("model_id in (:prospectoss)", :prospectoss=>prospectos) 
 
 
@@ -70,10 +79,7 @@ rol = Role.where(:id=>current_user.role).first
           prospectos =Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id))))
 
 
-        @tareas4 = Tarea.where(:model_name=>"admitidos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @memos4 = Memo.where(:model_name=>"admitidos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @attachments4 = Attachment.where(:model_name=>"admitidos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @llamadas4 = Llamada.where(:model_name=>"admitidos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @correos4 = Correo.where(:model_name=>"admitidos").where("model_id in (:prospectoss)", :prospectoss=>prospectos) 
 
 
@@ -81,10 +87,7 @@ rol = Role.where(:id=>current_user.role).first
           prospectos = Inscrito.where("admitido_id in (:admitidos)",:admitidos=>Admitido.where("examinado_id in (:examinados)",:examinados=>Examinado.where("solicitante_id in (:solicitantes)",:solicitantes=>Solicitante.where("prospecto_id in (:prospectos)",:prospectos=>selected.joins{solicitante}.where(:archivado=>archivado).where(:user_id=>current_user.id)))))
 
 
-        @tareas5 = Tarea.where(:model_name=>"inscritos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @memos5 = Memo.where(:model_name=>"inscritos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @attachments5 = Attachment.where(:model_name=>"inscritos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
-        @llamadas5 = Llamada.where(:model_name=>"inscritos").where("model_id in (:prospectoss)", :prospectoss=>prospectos)
         @correos5 = Correo.where(:model_name=>"inscritos").where("model_id in (:prospectoss)", :prospectoss=>prospectos) 
 
 
@@ -98,9 +101,9 @@ planesIDs = MiPlanEstrategicoDePromocionPep.where(:user_id=>current_user.id)
         @correos6 = Correo.where(:model_name=>"mi_plan_estrategico_de_promocion_peps").where("model_id in (:prospectoss)", :prospectoss=>planesIDs) 
 
 
-      @tareas=[@tareas1,@tareas2,@tareas3,@tareas4,@tareas5,@tareas6].flatten.compact.sort
-      @llamadas =[@llamadas1,@llamadas2,@llamadas3,@llamadas4,@llamadas5,@llamadas6].flatten.compact.sort
-      @memos =[@memos1,@memos2,@memos3,@memos4,@memos5,@memos6].flatten.compact.sort
+      @tareas=[@tareas1,@tareas6].flatten.compact.sort
+      @llamadas =[@llamadas1,@llamadas6].flatten.compact.sort
+      @memos =[@memos1,@memos6].flatten.compact.sort
       @correos =[@correos1,@correos2,@correos3,@correos4,@correos5,@correos6].flatten.compact.sort
       @attachments =[@attachments1,@attachments2,@attachments3,@attachments4,@attachments5,@attachments6].flatten.compact.sort 
 
