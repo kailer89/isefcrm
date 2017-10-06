@@ -33,17 +33,17 @@
 nombreAUsar = ""                      
 case tarea.model_name # a_variable is the variable we want to compare
 when "prospectos"    #compare to 1
-  nombreAUsar = Prospecto.where{id == tarea.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Prospecto.where{id == tarea.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "solicitantes"     #compare to 2
-  nombreAUsar = Solicitante.where{id == tarea.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Solicitante.where{id == tarea.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "examinados"
-  nombreAUsar = Examinado.where{id == tarea.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor" 
+  nombreAUsar = Examinado.where{id == tarea.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil]
 when "admitidos"
-  nombreAUsar = Admitido.where{id == tarea.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"    
+  nombreAUsar = Admitido.where{id == tarea.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil] 
 when "inscritos"
-  nombreAUsar = Inscrito.where{id == tarea.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor"
+  nombreAUsar = Inscrito.where{id == tarea.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil]
 else
-  nombreAUsar = ""
+  nombreAUsar = [nil]
 end                      
 
                       %>
@@ -104,17 +104,17 @@ end
 nombreAUsar = ""                      
 case llamada.model_name # a_variable is the variable we want to compare
 when "prospectos"    #compare to 1
-  nombreAUsar = Prospecto.where{id == llamada.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Prospecto.where{id == llamada.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "solicitantes"     #compare to 2
-  nombreAUsar = Solicitante.where{id == llamada.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Solicitante.where{id == llamada.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "examinados"
-  nombreAUsar = Examinado.where{id == llamada.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor" 
+  nombreAUsar = Examinado.where{id == llamada.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil]
 when "admitidos"
-  nombreAUsar = Admitido.where{id == llamada.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   rescue "Sin Valor"  
+  nombreAUsar = Admitido.where{id == llamada.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   rescue  [nil]
 when "inscritos"
-  nombreAUsar = Inscrito.where{id == llamada.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    rescue "Sin Valor"
+  nombreAUsar = Inscrito.where{id == llamada.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    rescue  [nil]
 else
-  nombreAUsar = ""
+  nombreAUsar = [nil]
 end                      
 
                       %>
@@ -178,17 +178,17 @@ end
 nombreAUsar = ""                      
 case memo.model_name # a_variable is the variable we want to compare
 when "prospectos"    #compare to 1
-  nombreAUsar = Prospecto.where{id == memo.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Prospecto.where{id == memo.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "solicitantes"     #compare to 2
-  nombreAUsar = Solicitante.where{id == memo.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Solicitante.where{id == memo.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "examinados"
-  nombreAUsar = Examinado.where{id == memo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor" 
+  nombreAUsar = Examinado.where{id == memo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil] 
 when "admitidos"
-  nombreAUsar = Admitido.where{id == memo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor"   
+  nombreAUsar = Admitido.where{id == memo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil] 
 when "inscritos"
-  nombreAUsar = Inscrito.where{id == memo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    rescue "Sin Valor"
+  nombreAUsar = Inscrito.where{id == memo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    rescue  [nil]
 else
-  nombreAUsar = ""
+  nombreAUsar = [nil]
 end                      
 
                       %>
@@ -251,17 +251,17 @@ end
 nombreAUsar = ""                      
 case correo.model_name # a_variable is the variable we want to compare
 when "prospectos"    #compare to 1
-  nombreAUsar = Prospecto.where{id == correo.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Prospecto.where{id == correo.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "solicitantes"     #compare to 2
-  nombreAUsar = Solicitante.where{id == correo.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Solicitante.where{id == correo.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "examinados"
-  nombreAUsar = Examinado.where{id == correo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor" 
+  nombreAUsar = Examinado.where{id == correo.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil]
 when "admitidos"
-  nombreAUsar = Admitido.where{id == correo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    rescue "Sin Valor" 
+  nombreAUsar = Admitido.where{id == correo.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }    rescue  [nil]
 when "inscritos"
-  nombreAUsar = Inscrito.where{id == correo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor"  
+  nombreAUsar = Inscrito.where{id == correo.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil] 
 else
-  nombreAUsar = ""
+  nombreAUsar =  [nil]
 end                      
 
                       %>
@@ -307,17 +307,17 @@ end
 nombreAUsar = ""                      
 case attachment.model_name # a_variable is the variable we want to compare
 when "prospectos"    #compare to 1
-  nombreAUsar = Prospecto.where{id == attachment.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Prospecto.where{id == attachment.model_id}.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "solicitantes"     #compare to 2
-  nombreAUsar = Solicitante.where{id == attachment.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"
+  nombreAUsar = Solicitante.where{id == attachment.model_id}.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil]
 when "examinados"
-  nombreAUsar = Examinado.where{id == attachment.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue "Sin Valor"  
+  nombreAUsar = Examinado.where{id == attachment.model_id}.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} } rescue  [nil] 
 when "admitidos"
-  nombreAUsar = Admitido.where{id == attachment.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   rescue "Sin Valor"  
+  nombreAUsar = Admitido.where{id == attachment.model_id}.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }   rescue  [nil]  
 when "inscritos"
-  nombreAUsar = Inscrito.where{id == attachment.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue "Sin Valor"  
+  nombreAUsar = Inscrito.where{id == attachment.model_id}.first.admitidos.first.examinados.first.solicitantes.first.prospectos.select([:id, :nombre,:apellido_paterno,:apellido_materno]).map {|e| {id: e.id, nombre: e.nombre, apellido_paterno: e.apellido_paterno, apellido_materno: e.apellido_materno} }  rescue  [nil] 
 else
-  nombreAUsar = ""
+  nombreAUsar =  [nil]
 end                      
 
                       %>
