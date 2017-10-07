@@ -70,5 +70,5 @@ ProtoCRM3::Application.configure do
     :exception_recipients => %w{israel.valdez.89@gmail.com}
   }
 
-
+config.time_zone = "Mexico City"
 end
