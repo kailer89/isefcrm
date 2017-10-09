@@ -101,11 +101,11 @@ planesIDs = MiPlanEstrategicoDePromocionPep.where(:user_id=>current_user.id)
         @correos6 = Correo.where(:model_name=>"mi_plan_estrategico_de_promocion_peps").where("model_id in (:prospectoss)", :prospectoss=>planesIDs) 
 
 
-      @tareas=[@tareas1,@tareas6].flatten.compact.sort
-      @llamadas =[@llamadas1,@llamadas6].flatten.compact.sort
-      @memos =[@memos1,@memos6].flatten.compact.sort
-      @correos =[@correos1,@correos2,@correos3,@correos4,@correos5,@correos6].flatten.compact.sort
-      @attachments =[@attachments1,@attachments2,@attachments3,@attachments4,@attachments5,@attachments6].flatten.compact.sort 
+      @tareas=[@tareas1,@tareas6].uniq.flatten.compact.sort
+      @llamadas =[@llamadas1,@llamadas6].uniq.flatten.compact.sort
+      @memos =[@memos1,@memos6].uniq.flatten.compact.sort
+      @correos =[@correos1,@correos2,@correos3,@correos4,@correos5,@correos6].uniq.flatten.compact.sort
+      @attachments =[@attachments1,@attachments2,@attachments3,@attachments4,@attachments5,@attachments6].uniq.flatten.compact.sort 
 
 %>
 <div style="display: none;">
