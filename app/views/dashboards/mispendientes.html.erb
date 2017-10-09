@@ -41,13 +41,13 @@
     end
 
 @q = @tareas.ransack(params[:q])
-@tareas = @q.result(:distinct => true).paginate(:per_page => 10, :page => params[:page]) 
+@tareas = @q.result(:distinct => true).paginate(:per_page => 50, :page => params[:page]) 
 
 @q1 = @llamadas.ransack(params[:q])
-@llamadas = @q1.result(:distinct => true).paginate(:per_page => 10, :page => params[:page]) 
+@llamadas = @q1.result(:distinct => true).paginate(:per_page => 50, :page => params[:page]) 
 
 @q2 = @memos.ransack(params[:q])
-@memos = @q2.result(:distinct => true).paginate(:per_page => 10, :page => params[:page]) 
+@memos = @q2.result(:distinct => true).paginate(:per_page => 50, :page => params[:page]) 
 
 whatToAcivate1 = "active"
 whatToAcivate2 = ""
