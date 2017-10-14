@@ -31,7 +31,6 @@ class CorreosController < ApplicationController
 
 
     mailAEnviar = params[:mailAEnviar]
-
     CorreosMailer.enviar_correo(current_user.email, @correo,mailAEnviar,adjuntos).deliver     
     
     
@@ -53,43 +52,43 @@ class CorreosController < ApplicationController
 
 
   rol = Role.where(:id=>current_user.role).first
-
-      @correo.a_quien_enviarle_correo.each do |aquien|
-        logger.debug aquien
-        case aquien
+  logger.debug "debug"
+    logger.debug @correo.a_quien_enviarle_correo
+    logger.debug "debug"
+      case @correo.a_quien_enviarle_correo
           when "a_todos"
              if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
+                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq  
               else
-                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
+                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq  
               end                
           
           when "por_usuarios"
             if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
+                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq  
             else
-                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:user_id=>@correo.user_id).uniq
+                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:user_id=>@correo.user_id).map{|x| x.email}.uniq  
             end        
           
           when "por_sedes"
               if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
+                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq  
               else
-                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:sede_id=>@correo.sede_id).uniq
+                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:sede_id=>@correo.sede_id).map{|x| x.email}.uniq  
               end        
           
           when "por_grupos"
             if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
+                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq  
             else
-                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:grupo_id=>@correo.grupo_id).uniq
+                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:grupo_id=>@correo.grupo_id).map{|x| x.email}.uniq  
             end        
           
           when "por_programa"
             if rol.nombre == "DN" or rol.nombre == "ACRM"    
-               @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
+               @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq  
             else
-                @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:programa_id=>@correo.programa_id).uniq
+                @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:programa_id=>@correo.programa_id).map{|x| x.email}.uniq  
             end        
           
           when "por_periodo"
@@ -99,53 +98,27 @@ class CorreosController < ApplicationController
 
 
               if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:id=>periodo.prospecto_id).uniq
+                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:id=>periodo.prospecto_id).map{|x| x.email}.uniq  
               else
-                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:id=>periodo.prospecto_id).uniq
+                    @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:id=>periodo.prospecto_id).map{|x| x.email}.uniq  
               end        
             end
           
           when "por_estado"
-            @correo.por_estado.each do |estado|
-                case estado
-                when "prospectos"
-                  if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                        @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
-                  else
-                        @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).uniq
-                  end              
+                case @correo.por_estado
+                when 0
+                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq             
                 
-                when "solicitantes"
-                  if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                        @mails=getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).uniq
-                  else
-                        @mails=getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).uniq
-                  end              
-                
-                when "examinados"
-                  if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                        @mails=getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).uniq
-                  else
-                        @mails=getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).uniq
-                  end   
-                           
-                when "adminitidos"
-                  if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                        @mails=getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).uniq
-                  else
-                        @mails=getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).uniq
-                  end              
-                when "inscritos"
-                  if rol.nombre == "DN" or rol.nombre == "ACRM"    
-                        @mails=getInscritosForUser(current_user).uniq
-                  else
-                        @mails=getInscritosForUser(current_user).uniq
-                  end              
+                when 1
+                    @mails=getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).map{|x| x.prospectos.first.email}.uniq
+                when 2
+                  @mails=getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).map{|x| x.solicitantes.first.prospectos.first.email}.uniq     
+                when 3
+                  @mails=getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).map{|x| x.examinados.first.solicitantes.first.prospectos.first.email}.uniq              
+                when 4
+                  @mails=getInscritosForUser(current_user).map{|x| x.admitidos.first.examinados.first.solicitantes.first.prospectos.first.email}.uniq                            
               end
-            end
-        end            
-      end
-
+        end 
 
 
   end
@@ -237,7 +210,7 @@ redirect_to "/correos/#{@correo.id}/edit/"
     @correo.user_id =current_user.id
     @correo.sede_id =current_user.sede_id 
     
-    if params[:model_name] == "prospectos" or params[:model_name] == "solicitantes" or params[:model_name] == "examinados" or params[:model_name] == "adminitidos" or params[:model_name] == "inscritos"   
+    if params[:model_name] == "prospectos" or params[:model_name] == "solicitantes" or params[:model_name] == "examinados" or params[:model_name] == "admitidos" or params[:model_name] == "inscritos"   
       @correo.es_uno_a_uno = true 
     else
       @correo.es_uno_a_uno = false 
@@ -252,6 +225,12 @@ redirect_to "/correos/#{@correo.id}/edit/"
   # GET /correos/1/edit
   def edit
     @correo = Correo.find(params[:id])
+
+        logger.debug "aaaaaaaaaaaa/////////////////////////////////////////////////////////////////////"
+    logger.debug  @correo.inspect
+    logger.debug "aaaaaaaaaaaa/////////////////////////////////////////////////////////////////////"
+
+
   end
 
   # correo /correos
@@ -275,16 +254,12 @@ redirect_to "/correos/#{@correo.id}/edit/"
   def update
     @correo = Correo.find(params[:id])
 
-    logger.debug "/////////////////////////////////////////////////////////////////////"
-    logger.debug  params[:correo][:maildata]
-    logger.debug "/////////////////////////////////////////////////////////////////////"
-#<img src="https://www.willows-consulting.com/images/stories/Epicor-osCommerce.JPG" width="100%" height="100%" title="Image: https://www.willows-consulting.com/images/stories/Epicor-osCommerce.JPG">
-
-
-
     if params[:enviar] != nil
         
     end
+
+
+
     respond_to do |format|
       if @correo.update_attributes(params[:correo])
         format.html { redirect_to "/correos/#{@correo.id}/edit/", notice: 'correo was successfully created.' }

@@ -1,10 +1,20 @@
-
+<p>
+  <%=link_to "Volver",edit_correo_path(params[:id])%>
+</p>
+<p>
 Enviados <b id="counter">0</b> correo(s) de <b><%=@mails.size   %></b>
-
+ <br/><b>Enviado a</b>: <div id="debug"></div>
+ <br/><b>No enviado a</b>: <div id="debug2"></div>
+</p>
 <script type="text/javascript">
 
 function callMail(valor)
 {
+  if(valor == "nohaycorreo@correo.com" || valor =="vacio@vacio.com") 
+    {
+      $('#debug2').append(valor + " <br/>")
+      return;
+    } 
     jQuery.ajax({
      url: '<%=send_correo_individually_path(:id=>params[:id])%>' + encodeURI('?mailAEnviar=' + valor ),
           success: function (result) {
@@ -13,7 +23,9 @@ function callMail(valor)
                   alert(result.message);
                 }
                 else{
-                  $('#counter').html( parseInt($('#counter').text()) + 1 ) 
+                  console.log('running email for ' + valor);
+                  $('#counter').html(parseInt($('#counter').text()) + 1 ) 
+                  $('#debug').append(valor + " <br/>")
                 }
           },
           async: true
@@ -24,16 +36,20 @@ function callMail(valor)
 (function($) {
 $(document).ready(function(){
 
-<%
+var arr = [<%
 
     @mails.each do |mail|
-        if mail.email != ""
-          %>
-          callMail('<%=mail.email%>');
-        <%
+        if mail != ""
+          %>'<%=mail%>',<%
         end             
       end
-        %>
+        %>];
+
+    arr.forEach(function(element) {
+        
+          callMail(element);
+
+    });
 
 
 });

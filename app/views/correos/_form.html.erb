@@ -121,7 +121,7 @@ logger.debug "action1111"
       <%end%> 
     </div>                
     <div id="por_estado">
-      <%=f.input :por_estado, :as=>:check_boxes,:collection=>[["Prospectos","prospectos"],["Solicitantes","solicitantes"],["Admitidos","admitidos"],["Examinados","examinados"],["Inscritos","inscritos"]],:checked => @correo.por_estado%>
+      <%=f.input :por_estado, :as=>:radio_buttons,:collection=>[["Prospectos",0],["Solicitantes",1],["Admitidos",2],["Examinados",3],["Inscritos",4]]%>
     </div>
           </div>
         <%=f.hidden_field :model_name %>
