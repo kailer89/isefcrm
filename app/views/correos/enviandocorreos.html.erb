@@ -6,6 +6,23 @@ Enviados <b id="counter">0</b> correo(s) de <b><%=@mails.size   %></b>
  <br/><b>Enviado a</b>: <div id="debug"></div>
  <br/><b>No enviado a</b>: <div id="debug2"></div>
 </p>
+<button id="lanzarCorreos" name="lanzarCorreos">Presiona aqui para enviar correos</button>
+
+<p>
+  <b>Se intentara enviar correos a la siguiente lista</b>
+  <div id="data">
+    <%
+
+    @mails.each do |mail|
+        if mail != ""
+          %>'<%=mail%>' </br><%
+        end             
+      end
+        %>
+  </div>
+  </p>
+
+
 <script type="text/javascript">
 
 function callMail(valor)
@@ -35,8 +52,15 @@ function callMail(valor)
 
 (function($) {
 $(document).ready(function(){
+  var storeDataButton = document.getElementById("lanzarCorreos");
+  storeDataButton.onclick = function () {
+                    runData();
+                };
+function runData()
+{
 
-var arr = [<%
+
+  var arr = [<%
 
     @mails.each do |mail|
         if mail != ""
@@ -50,6 +74,8 @@ var arr = [<%
           callMail(element);
 
     });
+
+}
 
 
 });
