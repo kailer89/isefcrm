@@ -87,7 +87,7 @@ logger.debug "action1111"
   <div>
     <legend>Seleccionar a quien enviar el correo</legend>
 
-    <%=f.input :a_quien_enviarle_correo,:checked => @correo.a_quien_enviarle_correo, :collection=>[["A todos","a_todos"],["Por Usuarios","por_usuarios"],["Por Sedes","por_sedes"],["Por Grupos","por_grupos"],["Por Programa","por_programa"],["Por periodo","por_periodo"],["Por Estado","por_estado"]],:as=>:check_boxes%>
+    <%=f.input :a_quien_enviarle_correo,:checked => @correo.a_quien_enviarle_correo, :collection=>[["A todos","a_todos"],["Por Usuarios","por_usuarios"],["Por Sedes","por_sedes"],["Por Grupos","por_grupos"],["Por Programa","por_programa"],["Por periodo","por_periodo"],["Por Estado","por_estado"]],:as=>:radio_buttons%>
   </div>
   <div>
     <legend>Datos Adicionales</legend>
@@ -163,7 +163,85 @@ $(document).ready(function(){
       $("#por_periodo").hide();
       $("#por_estado").hide();
       $("#por_programa").hide();
-  $(" input[name='correo[a_quien_enviarle_correo][]']").click(function()
+
+function resetSel()
+{
+// remove "selected" from any options that might already be selected
+$('#por_usuarios option[selected="selected"]').each(
+    function() {
+        $(this).removeAttr('selected');
+    }
+);
+
+
+// mark the first option as selected
+$("#por_usuarios option:first").attr('selected','selected');
+
+
+// remove "selected" from any options that might already be selected
+$('#por_sedes option[selected="selected"]').each(
+    function() {
+        $(this).removeAttr('selected');
+    }
+);
+
+
+// mark the first option as selected
+$("#por_sedes option:first").attr('selected','selected');
+
+
+// remove "selected" from any options that might already be selected
+$('#por_grupos option[selected="selected"]').each(
+    function() {
+        $(this).removeAttr('selected');
+    }
+);
+
+
+// mark the first option as selected
+$("#por_grupos option:first").attr('selected','selected');
+
+
+// remove "selected" from any options that might already be selected
+$('#por_periodo option[selected="selected"]').each(
+    function() {
+        $(this).removeAttr('selected');
+    }
+);
+
+
+// mark the first option as selected
+$("#por_periodo option:first").attr('selected','selected');
+
+
+// remove "selected" from any options that might already be selected
+$('#por_estado option[selected="selected"]').each(
+    function() {
+        $(this).removeAttr('selected');
+    }
+);
+
+
+// mark the first option as selected
+$("#por_estado option:first").attr('selected','selected');
+
+
+// remove "selected" from any options that might already be selected
+$('#por_programa option[selected="selected"]').each(
+    function() {
+        $(this).removeAttr('selected');
+    }
+);
+
+
+// mark the first option as selected
+$("#por_programa option:first").attr('selected','selected');
+
+
+
+}
+
+  $(" input[name='correo[a_quien_enviarle_correo]']").click(function()
   {
     switch($(this).val())
     {
@@ -174,24 +252,75 @@ $(document).ready(function(){
       $("#por_periodo").hide();
       $("#por_estado").hide();
       $("#por_programa").hide();
+
+resetSel();
+
       break;
     case "por_usuarios":
       $("#por_usuarios").show();
+
+
+
+
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+resetSel();
       break;
     case "por_sedes":
       $("#por_sedes").show();
+
+
+      $("#por_usuarios").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+resetSel();
       break;
     case "por_grupos":
       $("#por_grupos").show();
+
+      $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+resetSel();
       break;            
     case "por_periodo":
       $("#por_periodo").show();
+
+
+      $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+resetSel();
       break;      
     case "por_estado":
       $("#por_estado").show();
+
+      $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_programa").hide();
+resetSel();
       break;   
     case "por_programa":
       $("#por_programa").show();
+
+
+      $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+resetSel();
       break;                 
     default:
       
@@ -200,7 +329,7 @@ $(document).ready(function(){
   });
   $("#test").click(function(){
     var values = new Array();
-    $.each($(" input[name='correo[a_quien_enviarle_correo][]']:checked"), function() {
+    $.each($(" input[name='correo[a_quien_enviarle_correo]']:checked"), function() {
       values.push($(this).val());
       alert($(this).val());
       // or you can do something to the actual checked checkboxes by working directly with  'this'
@@ -211,26 +340,56 @@ $(document).ready(function(){
 
   <%if @correo.user != nil%>
     $("#por_usuarios").show();
-  <%end%>
 
-  <%if @correo.sede != nil%>
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+  <%elsif @correo.sede != nil%>
     $("#por_sedes").show();
-  <%end%>  
-
-  <%if @correo.grupo != nil%>
+          $("#por_usuarios").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+  <%elsif @correo.grupo != nil%>
     $("#por_grupos").show();
-  <%end%>  
-  
-  <%if @correo.programa_id != nil%>
+          $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+  <%elsif @correo.programa_id != nil%>
     $("#por_programa").show();
-  <%end%> 
-
-  <%if @correo.por_periodo != nil%>
+          $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+  <%elsif @correo.por_periodo != nil%>
     $("#por_periodo").show();
-  <%end%> 
 
-  <%if @correo.por_estado != nil%>
+      $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();
+  <%elsif @correo.por_estado != nil%>
     $("#por_estado").show();
+
+      $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_programa").hide();
+  <%else%>
+     $("#por_usuarios").hide();
+      $("#por_sedes").hide();
+      $("#por_grupos").hide();
+      $("#por_periodo").hide();
+      $("#por_estado").hide();
+      $("#por_programa").hide();  
   <%end%>
 
 
