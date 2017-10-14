@@ -112,8 +112,4 @@ planesIDs = MiPlanEstrategicoDePromocionPep.where(:user_id=>current_user.id)
       @attachments =[@attachments1,@attachments2,@attachments3,@attachments4,@attachments5,@attachments6].flatten.compact.uniq { |h| h[:id] }.sort 
 
 %>
-<div style="display: none;">
-  <%=@tareas.inspect%>//////
-  <%=@tareas6.inspect%>
-</div>
 <%=render :partial=>"shared/pendientes", :locals=>{:tareas=>@tareas,:memos=>@memos,:llamadas=>@llamadas,:correos=>@correos,:attachments=>@attachments}%>
