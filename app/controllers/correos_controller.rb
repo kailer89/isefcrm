@@ -57,27 +57,27 @@ class CorreosController < ApplicationController
     logger.debug "debug"
       case @correo.a_quien_enviarle_correo
           when "a_todos"
-             @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq                
+             @mails=getProspectosForUser(current_user).where(:archivado=>archivado).map{|x| x.email}.uniq                
           when "por_usuarios"
-            @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:user_id=>@correo.user_id).map{|x| x.email}.uniq  
+            @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:user_id=>@correo.user_id).map{|x| x.email}.uniq  
           when "por_sedes"
-             @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:sede_id=>@correo.sede_id).map{|x| x.email}.uniq       
+             @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:sede_id=>@correo.sede_id).map{|x| x.email}.uniq       
           when "por_grupos"
-            @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:grupo_id=>@correo.grupo_id).map{|x| x.email}.uniq  
+            @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:grupo_id=>@correo.grupo_id).map{|x| x.email}.uniq  
           when "por_programa"
-            @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:programa_id=>@correo.programa_id).map{|x| x.email}.uniq  
+            @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:programa_id=>@correo.programa_id).map{|x| x.email}.uniq  
           
           when "por_periodo"
             periodos=InteresBasico.where(:periodo_para_ingresar_id=>@correo.por_periodo)
 
             periodos.each do |periodo|
-              @mails.push(getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).where(:id=>periodo.prospecto_id).map{|x| x.email}.uniq)
+              @mails.push(getProspectosForUser(current_user).where(:archivado=>archivado).where(:id=>periodo.prospecto_id).map{|x| x.email}.uniq)
             end
           
           when "por_estado"
                 case @correo.por_estado
                 when 0
-                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).map{|x| x.email}.uniq             
+                  @mails=getProspectosForUser(current_user).where(:archivado=>archivado).map{|x| x.email}.uniq             
                 when 1
                     @mails=getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).map{|x| x.prospectos.first.email}.uniq
                 when 2
