@@ -98,7 +98,7 @@ this.Search = (function() {
 	    </div><!--End Rowfluid-->
 	    <div class="clearfooter"></div>
 	</div><!--Container Fluid-->
-	<div id="toTop">^ Back to Top</div>
+	<div id="toTop" class="hidden-phone hidden-tablet">^ Back to Top</div>
 </body>
 </html>
 
@@ -106,10 +106,8 @@ this.Search = (function() {
 
 $().ready(function() {  
   $('.zero2').tooltip();
+  $('[data-toggle="tooltip"]').tooltip();
 
 });
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-})
 
 </script>
