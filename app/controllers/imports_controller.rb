@@ -24,10 +24,17 @@ class ImportsController < ApplicationController
         @objecto = nil
         @theobject = nil
         begin
-        csv_text = File.read("public/" + @import.filename_url.to_s)
-        #utf8_string = csv_text#.encode('utf-8')
+
+
+          csv_text = File.read("public/" + @import.filename_url.to_s)
         utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
         csv = CSV.parse(utf8_string, :headers => true) 
+
+
+        #csv_text = File.read("public/" + @import.filename_url.to_s)
+        #utf8_string = csv_text#.encode('utf-8')
+        #utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
+        #csv = CSV.parse(utf8_string, :headers => true) 
         csv.each do |row| 
           begin
             ActiveRecord::Base.transaction do
