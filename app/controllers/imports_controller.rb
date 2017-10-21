@@ -28,32 +28,43 @@ class ImportsController < ApplicationController
 
           csv_text = File.read("public/" + @import.filename_url.to_s)
         utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
+        #utf8_string = csv_text.encode('utf-8')
         #csv = CSV.parse(utf8_string, :headers => true) 
-        csv = CSV.parse(import_file, headers: true, skip_blanks: true).delete_if { |row| row.to_hash.values.all?(&:blank?) }
+        csv = CSV.parse(utf8_string, headers: true, skip_blanks: true).delete_if { |row| row.to_hash.values.all?(&:blank?) }
 
         #csv_text = File.read("public/" + @import.filename_url.to_s)
         #utf8_string = csv_text#.encode('utf-8')
         #utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
         #csv = CSV.parse(utf8_string, :headers => true) 
-        csv.each do |row| 
+        csv.each do |orow| 
           begin
             ActiveRecord::Base.transaction do
 
             logger.debug "INFO************************************************"
-            logger.debug row
-            logger.debug "INFO************************************************"
-            row = row.to_hash.with_indifferent_access 
+            logger.debug "nombre"
+            logger.debug orow.fields[0]
+            logger.debug "INFO************************************************"  
+
+            row = orow.to_hash 
             prospecto=row
+
+            
+
+
             direccion= row.to_hash 
 
 
             #*Nombre(s):
 
-            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase == "*NOMBRE(S):"
+            if orow.fields[0]!= nil && orow.fields[0].upcase == "*NOMBRE(S):"
               next
             end
+            if orow.fields[0]!=nil && orow.fields[0] == "*Nombre(s):"
+              next
+            end
+            #*Nombre(s):
 
-            if prospecto["nombre"]!=nil and prospecto["nombre"].upcase =="AL MOMENTO DE GUARDAR"
+            if orow.fields[0]!=nil && orow.fields[0].upcase =="AL MOMENTO DE GUARDAR"
               next
             end
 
@@ -67,7 +78,8 @@ class ImportsController < ApplicationController
               else
                   prospecto["sexo"] = false
               end
-
+              prospecto.delete("nombre")
+              prospecto.delete(" nombre")
               prospecto.delete("calle")
               prospecto.delete("no_exterior")
               prospecto.delete("no_interior")
@@ -105,6 +117,20 @@ class ImportsController < ApplicationController
                     prospecto["email"] = 'vacio@vacio.com'
                   end
 
+                  logger.debug "dataeee************************************************"
+                  #prospecto["nombre"] = orow.fields[0]
+                  prospecto.each do |key, va|
+                    prospecto.delete(key)
+                    break
+                  end
+                  prospecto.each do |key, va|
+                    if va == nil
+                      prospecto.delete(key)
+                    end
+                  end
+                  logger.debug prospecto.to_hash
+                  prospecto["nombre"] = orow.fields[0]
+                  logger.debug prospecto.to_hash
                   logger.debug "dataeee************************************************"
               @objecto =Prospecto.create!(prospecto.to_hash.symbolize_keys)
 
@@ -310,14 +336,14 @@ class ImportsController < ApplicationController
             end
           rescue => error
             logger.debug "ERROR#######################################################################ERROR"
-            logger.debug "Error during processing: #{$!}" 
-            logger.debug "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
+            logger.error "Error during processing: #{$!}" 
+            logger.error "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
             nError = "Error during processing: #{$!}\n" 
             nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
-            @errordetails.push([row,nError])
-            logger.debug row
+            @errordetails.push([orow,nError])
+            logger.debug orow
             logger.debug error.inspect
             @errores.push(nError)
             logger.debug "ERROR#######################################################################ERROR"
@@ -330,8 +356,8 @@ class ImportsController < ApplicationController
           rescue => error
             logger.debug "ERROR#######################################################################ERROR"
             logger.debug error.inspect
-            logger.debug "Error during processing: #{$!}" 
-            logger.debug "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
+            logger.error "Error during processing: #{$!}" 
+            logger.error "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
             nError = "Error during processing: #{$!}\n" 
             nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
