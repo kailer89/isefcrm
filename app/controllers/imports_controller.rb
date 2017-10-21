@@ -28,8 +28,8 @@ class ImportsController < ApplicationController
 
           csv_text = File.read("public/" + @import.filename_url.to_s)
         utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
-        csv = CSV.parse(utf8_string, :headers => true) 
-
+        #csv = CSV.parse(utf8_string, :headers => true) 
+        csv = CSV.parse(import_file, headers: true, skip_blanks: true).delete_if { |row| row.to_hash.values.all?(&:blank?) }
 
         #csv_text = File.read("public/" + @import.filename_url.to_s)
         #utf8_string = csv_text#.encode('utf-8')
