@@ -350,7 +350,7 @@ end
               <%= builder.hidden_field :blank, :value=>"default"%>
               <%= builder.input :comentarios,:input_html => { :cols => 50, :rows => 3 }, :label=>"Comentarios:"%>
               <%= builder.input :comentarios,:input_html => { :cols => 50, :rows => 3 }, :label=>"Comentarios:"%>
-<%= builder.input :Referido,:label=>"Referido interno",:collection=>Prospecto.all.map{|c| [c.nombre + ' ' + ((c.apellido_paterno == nil) ? '' : c.apellido_paterno ) + ' ' + ((c.apellido_materno == nil) ? '' : c.apellido_materno),c.id] }.sort,:include_blank=>true%>
+<%= builder.input :Referido,:label=>"Referido interno",:collection=>Prospecto.all.map{|c| [ ((c.nombre == nil) ? '' : c.nombre) + ' ' + ((c.apellido_paterno == nil) ? '' : c.apellido_paterno ) + ' ' + ((c.apellido_materno == nil) ? '' : c.apellido_materno),c.id] }.sort,:include_blank=>true%>
               <%= builder.input :referido_externo,:label=>"Referido externo"%><br/>
             </p></div>
           <% end %>          
