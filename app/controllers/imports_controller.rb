@@ -25,8 +25,8 @@ class ImportsController < ApplicationController
         @theobject = nil
         begin
         csv_text = File.read("public/" + @import.filename_url.to_s)
-        #utf8_string = csv_text#.encode('utf-8')
-        utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
+        utf8_string = csv_text#.encode('utf-8')
+        #utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
         csv = CSV.parse(utf8_string, :headers => true) 
         csv.each do |row| 
           begin
@@ -121,7 +121,7 @@ class ImportsController < ApplicationController
 
                   logger.debug "datasss************************************************"
                   
-      nProspecto.nombre = prospecto["nombre"]
+      nProspecto.nombre = prospecto[0]
                   nProspecto.apellido_paterno = prospecto["apellido_paterno"]
                   nProspecto.apellido_materno = prospecto["apellido_materno"]
                   nProspecto.fecha_de_nacimiento = prospecto["fecha_de_nacimiento"]
@@ -131,6 +131,7 @@ nProspecto.sexo = prospecto["sexo"]
 
                   logger.debug "dataeee************************************************"
               @objecto =nProspecto# Prospecto.create!(prospecto.to_hash.symbolize_keys)
+              @objecto.nombre = prospecto["nombre"]
 
               logger.debug "1#######################################################################"
                 if(@import.module.singularize.camelize=="Prospecto")
@@ -145,7 +146,9 @@ nProspecto.sexo = prospecto["sexo"]
 
                   if direccion["nacionalidad"] != nil
                       @nacionalidad = Nacionalidad.where(:nacionalidad=>getEmtpyForNik(direccion["nacionalidad"]),:pais=>getEmtpyForNik(direccion["pais"])).first
-                      @objecto.nacionalidad_id = @nacionalidad[:id]
+                      if @nacionalidad!=nil
+                        @objecto.nacionalidad_id = @nacionalidad[:id]
+                      end
                   end
                   
                   if  direccion["programa"] != nil
@@ -159,7 +162,10 @@ nProspecto.sexo = prospecto["sexo"]
                       else
                         @programa = Programa.find_by_programa("sin información")
                       end
-                      @objecto.programa_id = @programa[:id]
+                      if @programa!=nil
+                        @objecto.programa_id = @programa[:id]
+                      end
+
                   end
 
 
@@ -202,9 +208,10 @@ nProspecto.sexo = prospecto["sexo"]
                         logger.debug "c************************************************"
                     logger.debug "c************************************************"
                     logger.debug "c************************************************"
+                    if subs.first!=nil
                           @objecto.interes_basicos.first.sede_id = subs.first[:sede_id]
                           @objecto.interes_basicos.first.subsede_id = subs.first[:id]
-                              
+                              end
                       else
                           logger.debug "d************************************************"
                     logger.debug "d************************************************"
@@ -328,10 +335,16 @@ nProspecto.sexo = prospecto["sexo"]
             end
           rescue => error
             logger.debug "ERROR#######################################################################ERROR"
-            @errordetails.push([row,error])
+            logger.debug "Error during processing: #{$!}" 
+            logger.debug "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
+
+            nError = "Error during processing: #{$!}" 
+            nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
+
+            @errordetails.push([row,nError])
             logger.debug row
             logger.debug error.inspect
-            @errores.push(error)
+            @errores.push(error + error.backtrace)
             logger.debug "ERROR#######################################################################ERROR"
             next
 
@@ -342,7 +355,12 @@ nProspecto.sexo = prospecto["sexo"]
           rescue => error
             logger.debug "ERROR#######################################################################ERROR"
             logger.debug error.inspect
-            @errores.push(error)
+            logger.debug "Error during processing: #{$!}" 
+            logger.debug "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
+
+            nError = "Error during processing: #{$!}" 
+            nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
+            @errores.push(nError)
             logger.debug "ERROR#######################################################################ERROR"
           end
 
