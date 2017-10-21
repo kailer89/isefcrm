@@ -27,8 +27,8 @@ class ImportsController < ApplicationController
 
 
           csv_text = File.read("public/" + @import.filename_url.to_s)
-        utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
-        #utf8_string = csv_text.encode('utf-8')
+        #utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
+        utf8_string = csv_text.encode('utf-8')
         #csv = CSV.parse(utf8_string, :headers => true) 
         csv = CSV.parse(utf8_string, headers: true, skip_blanks: true).delete_if { |row| row.to_hash.values.all?(&:blank?) }
 
@@ -36,6 +36,7 @@ class ImportsController < ApplicationController
         #utf8_string = csv_text#.encode('utf-8')
         #utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
         #csv = CSV.parse(utf8_string, :headers => true) 
+        rowToShow = nil
         csv.each do |orow| 
           begin
             ActiveRecord::Base.transaction do
@@ -46,8 +47,9 @@ class ImportsController < ApplicationController
             logger.debug "INFO************************************************"  
 
             row = orow.to_hash 
+            
             prospecto=row
-
+rowToShow = prospecto
             
 
 
@@ -342,7 +344,7 @@ class ImportsController < ApplicationController
             nError = "Error during processing: #{$!}\n" 
             nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
-            @errordetails.push([orow,nError])
+            @errordetails.push([rowToShow,nError])
             logger.debug orow
             logger.debug error.inspect
             @errores.push(nError)
