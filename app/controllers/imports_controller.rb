@@ -25,8 +25,8 @@ class ImportsController < ApplicationController
         @theobject = nil
         begin
         csv_text = File.read("public/" + @import.filename_url.to_s)
-        utf8_string = csv_text#.encode('utf-8')
-        #utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
+        #utf8_string = csv_text#.encode('utf-8')
+        utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
         csv = CSV.parse(utf8_string, :headers => true) 
         csv.each do |row| 
           begin
@@ -97,41 +97,9 @@ class ImportsController < ApplicationController
                   if prospecto["email"] == nil
                     prospecto["email"] = 'vacio@vacio.com'
                   end
-                  nProspecto = Prospecto.new
-                  if %w(telefono_particular telefono_movil otro_telefono).all?{|attr| prospecto[attr].blank?}
-                    if  prospecto["telefono_particular"].blank?
-                      nProspecto.telefono_particular = 0
-                      prospecto["telefono_particular"] = 0
-                    else
-                      nProspecto.telefono_particular = prospecto["telefono_particular"]
-                    end
-                    if  prospecto["telefono_movil"].blank?
-                      nProspecto.telefono_movil = 0
-                      prospecto["telefono_movil"] = 0
-                    else
-                      nProspecto.telefono_movil = prospecto["telefono_movil"]
-                    end
-                    if  prospecto["otro_telefono"].blank?
-                      nProspecto.otro_telefono = 0
-                      prospecto["otro_telefono"] = 0
-                    else
-                      nProspecto.otro_telefono = prospecto["otro_telefono"]                      
-                    end
-                  end
-
-                  logger.debug "datasss************************************************"
-                  
-      nProspecto.nombre = prospecto[0]
-                  nProspecto.apellido_paterno = prospecto["apellido_paterno"]
-                  nProspecto.apellido_materno = prospecto["apellido_materno"]
-                  nProspecto.fecha_de_nacimiento = prospecto["fecha_de_nacimiento"]
-                  prospecto.delete_if { |k, v| v.empty? rescue true }
-nProspecto.email                                                       = prospecto["email"]
-nProspecto.sexo = prospecto["sexo"]
 
                   logger.debug "dataeee************************************************"
-              @objecto =nProspecto# Prospecto.create!(prospecto.to_hash.symbolize_keys)
-              @objecto.nombre = prospecto["nombre"]
+              @objecto =Prospecto.create!(prospecto.to_hash.symbolize_keys)
 
               logger.debug "1#######################################################################"
                 if(@import.module.singularize.camelize=="Prospecto")
@@ -338,13 +306,13 @@ nProspecto.sexo = prospecto["sexo"]
             logger.debug "Error during processing: #{$!}" 
             logger.debug "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
-            nError = "Error during processing: #{$!}" 
+            nError = "Error during processing: #{$!}\n" 
             nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
             @errordetails.push([row,nError])
             logger.debug row
             logger.debug error.inspect
-            @errores.push(error + error.backtrace)
+            @errores.push(nError)
             logger.debug "ERROR#######################################################################ERROR"
             next
 
@@ -358,7 +326,7 @@ nProspecto.sexo = prospecto["sexo"]
             logger.debug "Error during processing: #{$!}" 
             logger.debug "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
-            nError = "Error during processing: #{$!}" 
+            nError = "Error during processing: #{$!}\n" 
             nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
             @errores.push(nError)
             logger.debug "ERROR#######################################################################ERROR"
