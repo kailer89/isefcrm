@@ -26,10 +26,11 @@ class ImportsController < ApplicationController
         begin
 
 
-          csv_text = File.read("public/" + @import.filename_url.to_s)
-        utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
-        #utf8_string = csv_text.encode('utf-8')
+          csv_text = File.open("public/" + @import.filename_url.to_s, "r:ISO-8859-1") #File.read("public/" + @import.filename_url.to_s)
+        #utf8_string = Iconv.iconv('utf-8', 'iso8859-1', csv_text).first
+        utf8_string = csv_text
         #csv = CSV.parse(utf8_string, :headers => true) 
+
         csv = CSV.parse(utf8_string, headers: true, skip_blanks: true).delete_if { |row| row.to_hash.values.all?(&:blank?) }
 
         #csv_text = File.read("public/" + @import.filename_url.to_s)
@@ -121,12 +122,12 @@ rowToShow = prospecto
 
                   logger.debug "dataeee************************************************"
                   #prospecto["nombre"] = orow.fields[0]
+                  #prospecto.each do |key, va|
+                  #  prospecto.delete(key)
+                  #  break
+                  #end
                   prospecto.each do |key, va|
-                    prospecto.delete(key)
-                    break
-                  end
-                  prospecto.each do |key, va|
-                    if va == nil
+                    if key == nil
                       prospecto.delete(key)
                     end
                   end
