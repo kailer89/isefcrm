@@ -362,20 +362,14 @@ def fetch_search
 
 
   def index
-    archivado = false
-            rol = Role.where(:id=>current_user.role).first
-    modelo = Configuracione.where(:user_id=>user.id).first rescue nil
-    
-    if modelo != nil
-      archivado = modelo.mostrar_archivados
-    end   
-    
-      @prospectosnovalidados=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
-      @prospectosvalidados=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
-      @solicitantes=getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)
-      @examinados=getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).all(:limit=>5)
-      @admitidos=getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).all(:limit=>5)
-      @inscritos=getInscritosForUser(current_user).where(:archivado=>archivado).all(:limit=>5)
+      @prospectosnovalidados=getProspectosForUser(current_user).where(:validado=>false).where(:issolicitante=> false).limit(5)
+      @prospectosvalidados=getProspectosForUser(current_user).where(:validado=>true).where(:issolicitante=> false).limit(5)
+
+
+      @solicitantes=getSolicitantesForUser(current_user).where(:isexaminado=> false).all(:limit=>5)
+      @examinados=getExaminadosForUser(current_user).where(:isadmitido=>false).all(:limit=>5)
+      @admitidos=getAdmitidosForUser(current_user).where(:isinscrito=>false).all(:limit=>5)
+      @inscritos=getInscritosForUser(current_user).all(:limit=>5)
 
       @tareas =Tarea.where(:user_id =>current_user.id).limit(5).order(:fecha_de_inicio_de_la_tarea)
       @memos=Memo.where(:user_id =>current_user.id).limit(5)
