@@ -370,7 +370,6 @@ def fetch_search
       archivado = modelo.mostrar_archivados
     end   
     
-    if rol.nombre == "ACRM"   or rol.nombre == "DN" 
       @prospectosnovalidados=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
       @prospectosvalidados=getProspectosForUser(current_user).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
       @solicitantes=getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)
@@ -381,18 +380,6 @@ def fetch_search
       @tareas =Tarea.where(:user_id =>current_user.id).limit(5).order(:fecha_de_inicio_de_la_tarea)
       @memos=Memo.where(:user_id =>current_user.id).limit(5)
       @llamadas=Llamada.where(:user_id =>current_user.id).limit(5)
-    else
-      @prospectosnovalidados=getProspectosForUser(current_user).where(:issolicitante=> false).where(:archivado=>archivado).where(:validado=>false).where(:issolicitante=> false).limit(5)
-      @prospectosvalidados=getProspectosForUser(current_user).where(:issolicitante=> false).where(:archivado=>archivado).where(:validado=>true).where(:issolicitante=> false).limit(5)
-      @solicitantes=getSolicitantesForUser(current_user).where(:isexaminado=> false).where(:archivado=>archivado).where(:isexaminado=> false).all(:limit=>5)
-      @examinados=getExaminadosForUser(current_user).where(:archivado=>archivado).where(:isadmitido=>false).all(:limit=>5)
-      @admitidos=getAdmitidosForUser(current_user).where(:archivado=>archivado).where(:isinscrito=>false).all(:limit=>5)
-      @inscritos=getInscritosForUser(current_user).all(:limit=>5)
-
-      @tareas =Tarea.where(:user_id =>current_user.id).limit(5).order(:fecha_de_inicio_de_la_tarea)
-      @memos=Memo.where(:user_id =>current_user.id).limit(5)
-      @llamadas=Llamada.where(:user_id =>current_user.id).limit(5)      
-    end
 #Load facebook.yml info
    #config = YAML::load(File.open("#{Rails.root}/config/facebook.yml"))
   
