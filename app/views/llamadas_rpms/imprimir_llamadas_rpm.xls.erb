@@ -68,6 +68,9 @@
    
     </Table>
   </Worksheet>
+
+
+
  <Worksheet ss:Name="Comentarios">
     <Table>
       <Row>
@@ -76,7 +79,8 @@
         <Cell><Data ss:Type="String">ID del prospecto</Data></Cell>
         <Cell><Data ss:Type="String">Estado del prospecto</Data></Cell>
         <Cell><Data ss:Type="String">Liga al prospecto</Data></Cell>
-        <Cell><Data ss:Type="String">Comentario</Data></Cell>                               
+        <Cell><Data ss:Type="String">Comentario de llamada</Data></Cell>  
+        <Cell><Data ss:Type="String">Comentario de prosecto</Data></Cell>                             
       </Row>
       <%@llamadas.each do |a|%>
         <Row>
@@ -87,6 +91,29 @@
           <%link = "http://isefcrm.herokuapp.com/#{a.model_name}/#{a.model_id}/edit"%>
           <Cell ss:HRef="<%=link%>"><Data ss:Type="String"><%=link_to link %></Data></Cell>
           <Cell><Data ss:Type="String"><%=a.comentarios%></Data></Cell>
+          <Cell><Data ss:Type="String">
+            <%
+            #get comentarios of the current record
+            #Prospecto.where(:id => a.model_id).first.ireccions.first.pluck(:comentarios)
+            case a.model_name # a_variable is the variable we want to compare
+            when "prospectos"    #compare to 1
+              %><%=Prospecto.where(:id => a.model_id).first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+            when "solicitantes"    #compare to 2
+                 %><%=Solicitante.where(:id=>a.model_id).first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+            when "examinados"
+              %><%=Examinado.where(:id=>a.model_id).first.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+            when "admitidos"
+              %><%=Admitido.where(:id=>a.model_id).first.examinados.first.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+            when "inscritos"
+              %><%=Inscrito.where(:id=>a.model_id).first.admitidos.first.examinados.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+            else 
+              
+            end            
+
+            %>
+
+
+          </Data></Cell>
         </Row>    
       <%end%>
     </Table>
