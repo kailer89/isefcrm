@@ -60,27 +60,43 @@ rowToShow = prospecto
             #*Nombre(s):
 
             if orow.fields[0]!= nil && orow.fields[0].upcase == "*NOMBRE(S):"
+            logger.debug "INFO************************************************"
+            logger.debug "skip1"
+            logger.debug "INFO************************************************"  
               next
             end
             if orow.fields[0]!=nil && orow.fields[0] == "*Nombre(s):"
+            logger.debug "INFO************************************************"
+            logger.debug "skip2"
+            logger.debug "INFO************************************************"               
               next
             end
             #*Nombre(s):
 
             if orow.fields[0]!=nil && orow.fields[0].upcase =="AL MOMENTO DE GUARDAR"
+            logger.debug "INFO************************************************"
+            logger.debug "skip3"
+            logger.debug "INFO************************************************"               
               next
             end
 
             #remove extra fields
             if prospecto["nombre"]!=nil and prospecto["nombre"].upcase.match(/^NOMBRE/)
-              
+                          logger.debug "INFO************************************************"
+            logger.debug "skip4"
+            logger.debug "INFO************************************************" 
             elsif prospecto["sexo"] != nil
-
+            logger.debug "INFO************************************************"
+            logger.debug "skip5"
+            logger.debug "INFO************************************************" 
               if getEmtpyForNik(prospecto["sexo"]).upcase == "MASCULINO"
                   prospecto["sexo"] = true
               else
                   prospecto["sexo"] = false
               end
+                          logger.debug "INFO************************************************"
+            logger.debug "skip6"
+            logger.debug "INFO************************************************" 
               prospecto.delete("nombre")
               prospecto.delete(" nombre")
               prospecto.delete("calle")
@@ -343,8 +359,10 @@ rowToShow = prospecto
             logger.error "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
 
             nError = "Error during processing: #{$!}\n" 
-            nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
-
+            if nError.include? "La validacion fallo"
+            else
+              nError = nError + "Backtrace:\n\t#{error.backtrace.join("\n\t")}"
+            end
             @errordetails.push([rowToShow,nError])
             logger.debug orow
             logger.debug error.inspect

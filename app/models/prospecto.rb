@@ -39,7 +39,7 @@ class Prospecto < ActiveRecord::Base
   validates_uniqueness_of :nombre, :scope => [:apellido_paterno, :fecha_de_nacimiento, :sexo, :email]
   validate :any_present?
 
-  validates_format_of :email, :with => /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i , :if => lambda {self.email != nil}
+  #validates_format_of :email, :with => /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i , :if => lambda {self.email != nil}
   def any_present?
     if %w(telefono_particular telefono_movil otro_telefono).all?{|attr| self[attr].blank?}
       if (self.telefono_particular.blank?) or (!self.telefono_movil.blank? or !self.otro_telefono.blank?)
