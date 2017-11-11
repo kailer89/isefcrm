@@ -97,15 +97,15 @@
             #Prospecto.where(:id => a.model_id).first.ireccions.first.pluck(:comentarios)
             case a.model_name # a_variable is the variable we want to compare
             when "prospectos"    #compare to 1
-              %><%=Prospecto.where(:id => a.model_id).first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+              %><%=Prospecto.where(:id => a.model_id).first.interes_basicos.limit(1).pluck(:comentarios)[0] rescue ""%><%
             when "solicitantes"    #compare to 2
-                 %><%=Solicitante.where(:id=>a.model_id).first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+                 %><%=Solicitante.where(:id=>a.model_id).first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0] rescue ""%><%
             when "examinados"
-              %><%=Examinado.where(:id=>a.model_id).first.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+              %><%=Examinado.where(:id=>a.model_id).first.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0] rescue ""%><%
             when "admitidos"
-              %><%=Admitido.where(:id=>a.model_id).first.examinados.first.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+              %><%=Admitido.where(:id=>a.model_id).first.examinados.first.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0] rescue ""%><%
             when "inscritos"
-              %><%=Inscrito.where(:id=>a.model_id).first.admitidos.first.examinados.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0]%><%
+              %><%=Inscrito.where(:id=>a.model_id).first.admitidos.first.examinados.solicitantes.first.prospectos.first.interes_basicos.limit(1).pluck(:comentarios)[0] rescue ""%><%
             else 
               
             end            
